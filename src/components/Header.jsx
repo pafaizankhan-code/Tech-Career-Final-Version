@@ -531,7 +531,7 @@ const Header = () => {
             <img
               src={logoImg}
               alt="Tech Career IT Solution LLP"
-              className="h-11 lg:h-[60px] w-auto object-contain transition-transform duration-500 "
+              className="h-16 lg:h-[90px] w-auto object-contain transition-transform duration-500 "
             />
           </Link>
 
