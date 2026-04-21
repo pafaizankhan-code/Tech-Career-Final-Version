@@ -11,9 +11,9 @@ import StartProject from '../components/StartProject'
 const portfolioJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Our Work · Case Studies',
+  name: 'What We Build · Capability Showcase',
   description:
-    'A curated archive of 250+ IT projects shipped for Australian and global clients — from fintech unicorns to Fortune 500 logistics.',
+    'A capability showcase from Tech Career IT Solutions LLP — the websites, e-commerce stores, custom CRM / HRMS, mobile apps and marketing work we build for Indian businesses from our studio in Ahmedabad.',
   url: `${SITE.baseUrl}/portfolio`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -24,10 +24,10 @@ const portfolioJsonLd = {
 const Portfolio = () => (
   <>
     <Seo
-      title="Our Work — IT Case Studies from Australia's Best | Portfolio"
-      description="Explore 250+ shipped projects — SaaS, fintech, cloud, AI and security work from Australia's premier IT consultancy. Real clients, real outcomes, real metrics."
-      keywords="IT portfolio Australia, software development case studies, SaaS projects Sydney, fintech app case studies Melbourne, cloud migration projects Australia, AI ML case studies, enterprise IT portfolio"
-      canonical="https://techcareerit.com.au/portfolio"
+      title="What We Build — Capability Showcase | Tech Career IT Solutions LLP"
+      description="A transparent capability showcase from a new Ahmedabad studio — the websites, e-commerce stores, custom CRM / HRMS and mobile apps we can ship for you, with realistic timelines and pricing."
+      keywords="web development portfolio ahmedabad, shopify developer portfolio india, custom crm hrms portfolio, mobile app developer gujarat, ecommerce agency showcase, tech career it solutions work"
+      canonical="https://tech-career-final-version.vercel.app/portfolio"
       jsonLd={portfolioJsonLd}
     />
     <PortfolioHero />

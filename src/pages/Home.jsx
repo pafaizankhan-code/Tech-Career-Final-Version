@@ -12,10 +12,10 @@ import StartProject from '../components/StartProject'
 const Home = () => (
   <>
     <Seo
-      title="Best IT Company in Australia — Software, Cloud, AI & Cybersecurity"
-      description="Tech Career IT Solutions is Australia's premier IT consultancy for custom software, cloud, AI, and cybersecurity. ISO 27001 & SOC 2 certified. 250+ projects delivered."
-      keywords="best IT company Australia, top IT consultancy Sydney, software development Melbourne, enterprise IT Australia, cloud consulting AU, AI development Australia, cybersecurity Australia, ISO 27001 IT partner, SOC 2 consultants, custom software Sydney"
-      canonical="https://techcareerit.com.au/"
+      title="Web Development & Digital Marketing Agency in Ahmedabad"
+      description="Tech Career IT Solutions LLP — a founder-led studio in Ahmedabad building websites, e-commerce stores, custom CRM / HRMS, mobile apps and digital marketing campaigns. Transparent pricing. Open for new projects."
+      keywords="web development ahmedabad, digital marketing agency ahmedabad, ecommerce website ahmedabad, custom crm hrms india, shopify developer gujarat, react developer ahmedabad, mobile app development india, wordpress developer ahmedabad, tech career it solutions llp"
+      canonical="https://tech-career-final-version.vercel.app/"
       jsonLd={organizationJsonLd}
     />
     <Preloader />

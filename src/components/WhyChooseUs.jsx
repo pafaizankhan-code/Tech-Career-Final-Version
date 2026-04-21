@@ -4,41 +4,18 @@ import { Link } from 'react-router-dom'
 const reasons = [
   {
     no: '01',
-    title: 'Senior Engineering, End to End',
-    desc: 'No juniors throwing code over the wall. Every project is led by architects with 10+ years of shipping production systems.',
+    title: 'Founder-Led Attention',
+    desc: 'You talk directly to the people writing the code — no account managers, no handoffs, no game of telephone.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14v7M5 11.5V17a2 2 0 001 1.7l5 2.8a2 2 0 002 0l5-2.8a2 2 0 001-1.7v-5.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87m10-4a4 4 0 10-8 0 4 4 0 008 0z" />
       </svg>
     ),
   },
   {
     no: '02',
-    title: 'Predictable Delivery',
-    desc: 'Agile sprints with transparent roadmaps, burn-down charts and weekly demos — you always know what is shipping and when.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <circle cx="12" cy="12" r="9" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
-      </svg>
-    ),
-  },
-  {
-    no: '03',
-    title: 'Security-First by Default',
-    desc: 'ISO 27001 processes, SOC 2 practices, encrypted pipelines, and quarterly pentests — baked in, not bolted on.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    no: '04',
     title: 'Transparent Pricing',
-    desc: 'Fixed-scope, T&M, or retainer — you pick the model. No surprise invoices, no hidden scope, no change-order theatre.',
+    desc: 'Fixed scope, fixed quote, GST invoice. You see the breakdown before we start — no surprise invoices, no hidden scope.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
@@ -46,32 +23,54 @@ const reasons = [
     ),
   },
   {
-    no: '05',
-    title: 'Scale Without Rewrites',
-    desc: 'We design for the 10× scenario from day one — modular architecture, clean contracts, observability built in.',
+    no: '03',
+    title: 'Modern Tech Stack',
+    desc: 'React, Next.js, Node, React Native, Shopify, WordPress — we pick what is right for the job, not what is old and familiar.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
+      </svg>
+    ),
+  },
+  {
+    no: '04',
+    title: 'Launch-Client Pricing',
+    desc: 'We are a new studio in 2025 — our first clients get real attention, launch-friendly pricing, and a team that has everything to prove.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
+  },
+  {
+    no: '05',
+    title: 'Ahmedabad Based · India Timezone',
+    desc: 'We work out of iHub, University Area, Ahmedabad — you can meet the team in person, or work with us remotely across India and beyond.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
+        <circle cx="12" cy="9" r="2.5" />
       </svg>
     ),
   },
   {
     no: '06',
-    title: 'Long-Term Partnership',
-    desc: '98% client retention. We stay after launch — monitoring, iterating, evolving — so your product keeps winning.',
+    title: 'Support After Launch',
+    desc: 'Launching is only day one. We stay for bug fixes, small changes and roadmap work on a simple monthly retainer — or zero pressure if you do not need one.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87m10-4a4 4 0 10-8 0 4 4 0 008 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-3-6.7L21 8" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 3v5h-5" />
       </svg>
     ),
   },
 ]
 
 const pillars = [
-  { k: 'ISO 27001', v: 'Certified' },
-  { k: '24 / 7', v: 'Support SLA' },
-  { k: '2.3 wks', v: 'Avg. MVP Ship' },
-  { k: '98%', v: 'Retention' },
+  { k: '100%', v: 'Founder Led' },
+  { k: '< 24h', v: 'Reply Time' },
+  { k: '2–4 wks', v: 'MVP Ship' },
+  { k: 'IN', v: 'Ahmedabad' },
 ]
 
 const WhyChooseUs = () => {
@@ -114,13 +113,13 @@ const WhyChooseUs = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Six reasons teams keep{' '}
-              <span className="text-[#0276E2] italic">coming back.</span>
+              Six reasons to pick a{' '}
+              <span className="text-[#0276E2] italic">fresh</span> studio.
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[460px]">
-              We are not the biggest IT firm — and that is the point. We are the partner you call
-              when the work actually has to be right.
+              We're a new studio from Ahmedabad — which means our first clients get the kind of
+              attention, ownership and pricing only a small, hungry team can offer.
             </p>
 
             {/* Pillars strip */}

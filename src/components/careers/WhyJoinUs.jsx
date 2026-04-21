@@ -3,8 +3,19 @@ import React from 'react'
 const benefits = [
   {
     no: '01',
-    title: 'Above-Market Compensation',
-    desc: 'Senior-only salary bands, top-quartile of the market, with transparent leveling and annual reviews.',
+    title: 'Real Ownership',
+    desc: 'You work directly with the founder — your code ships to real clients, and your voice actually shapes product decisions.',
+    tag: 'Impact',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
+      </svg>
+    ),
+  },
+  {
+    no: '02',
+    title: 'Fair Starting Pay',
+    desc: 'A clean, market-fair salary for Ahmedabad — no lowball startup excuses, with transparent reviews as the studio grows.',
     tag: 'Pay',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -13,20 +24,9 @@ const benefits = [
     ),
   },
   {
-    no: '02',
-    title: 'ESOP for Every Teammate',
-    desc: 'Meaningful equity from day one. We win together, we exit together — with a founder-grade cap table.',
-    tag: 'Equity',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-      </svg>
-    ),
-  },
-  {
     no: '03',
-    title: 'Remote-First, Async-Default',
-    desc: 'Work from anywhere in the world. Four-hour overlap windows. No meetings on Wednesdays.',
+    title: 'Hybrid Work',
+    desc: 'Work from iHub a few days a week, rest from home. Walking distance to cafes, classrooms and the occasional cricket match.',
     tag: 'Flexibility',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -37,8 +37,8 @@ const benefits = [
   },
   {
     no: '04',
-    title: 'Unlimited Learning Budget',
-    desc: '₹80k/year per engineer for books, courses, and conferences. Plus two paid conference trips, anywhere.',
+    title: 'Learn on Real Work',
+    desc: 'No sandbox projects. You ship for paying clients from day one — the fastest way to genuinely level up.',
     tag: 'Growth',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -48,58 +48,56 @@ const benefits = [
   },
   {
     no: '05',
-    title: 'Family Health Cover',
-    desc: 'Comprehensive insurance for you, your partner, your kids, and your parents. ₹25 L coverage, cashless.',
-    tag: 'Health',
+    title: 'Founder Mentorship',
+    desc: 'One-on-one time with the founder every week — architecture reviews, code feedback, career conversations, no HR layer.',
+    tag: 'Mentorship',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12M6 12h12" />
-        <circle cx="12" cy="12" r="9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87m10-4a4 4 0 10-8 0 4 4 0 008 0z" />
       </svg>
     ),
   },
   {
     no: '06',
-    title: 'Sabbatical After 4 Years',
-    desc: 'Every engineer gets a fully paid 6-week sabbatical every four years. Not optional. Strongly encouraged.',
-    tag: 'Time',
+    title: 'Modern Tech Stack',
+    desc: 'React, Next.js, Node, React Native, Shopify, Tailwind — you use what is actually being paid to use today, not legacy Java.',
+    tag: 'Stack',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <circle cx="12" cy="12" r="9" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
       </svg>
     ),
   },
   {
     no: '07',
-    title: 'Top-Tier Home Office',
-    desc: '₹1.5 L one-time setup budget. Apple hardware. Your pick of monitor, chair, desk, and mic.',
-    tag: 'Setup',
+    title: 'Shape the Culture',
+    desc: 'You are one of the first — which means your habits, your standards and your taste become the studio\'s default.',
+    tag: 'Culture',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h18v11H3zM8 20h8M12 16v4" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
   },
   {
     no: '08',
-    title: 'Open-Source Fridays',
-    desc: 'One Friday a month, paid, to contribute to libraries the industry depends on. We sponsor the maintenance.',
-    tag: 'Impact',
+    title: 'No Bureaucracy',
+    desc: 'No HR portals, no 5-round interviews, no timesheet theatre. Small team, short chains, everything over WhatsApp and direct chat.',
+    tag: 'Simplicity',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
       </svg>
     ),
   },
 ]
 
 const manifest = [
-  'We hire senior and expect ownership.',
-  'We ship in small teams, not committees.',
-  'We document everything — including mistakes.',
+  'We hire for ownership, not years of experience.',
+  'We ship small, ship weekly, and learn in the open.',
+  'We write plain-language scopes — no jargon.',
   'We say "I do not know" out loud, often.',
-  'We protect deep-work time fiercely.',
+  'We treat our first clients as partners, not transactions.',
 ]
 
 const WhyJoinUs = () => {
@@ -135,12 +133,13 @@ const WhyJoinUs = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Designed so your <span className="text-[#0276E2] italic">best</span> work can happen here.
+              A small studio, with <span className="text-[#0276E2] italic">real</span> upside.
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[640px]">
-              We treat compensation, environment, and time like the serious decisions they are. No
-              ping-pong tables. No vanity perks. Just the conditions great engineers ask for.
+              We are not a big IT firm with slick perks — we are a new team in Ahmedabad offering
+              the thing big firms cannot: ownership, clarity, and the chance to grow with a studio
+              you helped build.
             </p>
           </div>
 

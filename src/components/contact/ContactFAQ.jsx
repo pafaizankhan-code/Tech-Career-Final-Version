@@ -4,35 +4,35 @@ import { Link } from 'react-router-dom'
 const faqs = [
   {
     q: 'How quickly will I get a reply?',
-    a: 'Every inbound message is read and triaged by a senior strategist within four business hours. If your message comes in during Indian working hours, you will usually hear back the same day — often within 90 minutes.',
+    a: 'The founder reads every message personally. You will hear back within 24 hours on email and usually within a few hours on WhatsApp during the day (Mon to Sat, 10:00 – 20:00 IST).',
   },
   {
-    q: 'What does your typical engagement look like?',
-    a: 'We start with a one-week discovery sprint (₹ paid) that ends in a written scope, timeline, and fixed or T&M proposal. From there, most projects run 9 – 20 weeks with two-week sprints, Friday demos, and a public burn-down chart.',
+    q: 'What does a typical project look like?',
+    a: 'A free 30-minute discovery call, a written scope with a fixed quote before any work, Figma designs you sign off, weekly demos on a staging link, and a handover walkthrough at the end. Most builds run 2 – 8 weeks.',
   },
   {
-    q: 'Do you sign NDAs before a call?',
-    a: 'Yes. A mutual NDA takes us under ten minutes to turn around — send yours or we can send ours. We also accept DocuSign, Adobe Sign, or a simple PDF with e-signatures.',
+    q: 'Do you sign an NDA before a call?',
+    a: 'Yes — happily. Send yours or we can send ours. A simple e-signed PDF is enough. Your ideas stay your ideas.',
   },
   {
-    q: 'What project sizes do you work on?',
-    a: 'Our smallest engagements are around ₹5 L (one-week advisory sprints, audit, or a discrete feature build). Our largest are multi-year retainers north of ₹5 Cr. Most sit between ₹15 L and ₹80 L.',
+    q: 'What size projects do you work on?',
+    a: 'Smallest: basic business websites and landing pages from around ₹50K. Most builds sit between ₹2 L and ₹10 L (e-commerce stores, custom CRM / HRMS, mobile apps). Larger custom projects are quoted individually.',
   },
   {
-    q: 'Do you work with startups or only enterprises?',
-    a: 'Both. About 40% of our book is early-stage founders and 60% is enterprise. We keep the same team, same process, same code quality standards for every engagement — and the same ESOP-grade commitment.',
+    q: 'Do you work with startups or only established businesses?',
+    a: 'Both — we are built for small and mid-sized Indian businesses, early-stage founders and growing brands. If you know what you want to build and want it done honestly, you are our kind of client.',
   },
   {
-    q: 'Can I see the code you ship?',
-    a: 'Absolutely. We are happy to share redacted GitHub repos, architecture diagrams, and test coverage reports for past projects under NDA. Ask on your first call — most clients are surprised at how open our craft review goes.',
+    q: 'Will I own the code and accounts?',
+    a: 'Absolutely. Domain, hosting, GitHub, analytics, ad accounts — everything is created in your name or transferred to you at handover. No vendor lock-in, ever.',
   },
   {
     q: 'Where are you based and how do you work remotely?',
-    a: 'Headquartered in Ahmedabad with offices in Bengaluru and Dubai. We are remote-first and async-default — core overlap hours from 12:00 – 18:00 IST. We have shipped for clients across 14 countries without ever requiring on-site presence.',
+    a: 'We are based at iHub, University Area, Ahmedabad. For clients outside Gujarat, we work entirely over WhatsApp, email, and Google Meet with weekly video demos — no on-site visits required.',
   },
   {
     q: 'What happens after the project goes live?',
-    a: 'Every build comes with a 30-day bug-fix window. Beyond that we offer monthly support retainers, quarterly health reviews, and a 24/7 on-call tier for production incidents. 98% of our clients continue with us after go-live.',
+    a: 'Every build comes with a free 30-day bug-fix window after launch. Beyond that we offer an optional monthly retainer for small changes, updates, and SEO / digital marketing. No retainer is required, and it is opt-in.',
   },
 ]
 

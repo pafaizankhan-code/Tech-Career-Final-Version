@@ -3,140 +3,63 @@ import React, { useState, useMemo } from 'react'
 const jobs = [
   {
     id: 1,
-    title: 'Principal Engineer, Platform',
+    title: 'Full-Stack Developer',
     dept: 'Engineering',
     location: 'Ahmedabad',
     remote: true,
     type: 'Full-time',
-    exp: '10+ yrs',
-    salary: '₹55 L – ₹85 L',
-    badges: ['Featured', 'ESOP'],
+    exp: '1–3 yrs',
+    salary: 'Market fair',
+    badges: ['Featured', 'Founding'],
   },
   {
     id: 2,
-    title: 'Staff Frontend Engineer',
-    dept: 'Engineering',
-    location: 'Remote',
+    title: 'UI / UX Designer',
+    dept: 'Design',
+    location: 'Ahmedabad',
     remote: true,
     type: 'Full-time',
-    exp: '8+ yrs',
-    salary: '₹40 L – ₹60 L',
-    badges: ['ESOP'],
+    exp: '1–3 yrs',
+    salary: 'Market fair',
+    badges: ['Founding'],
   },
   {
     id: 3,
-    title: 'Senior Backend Engineer',
-    dept: 'Engineering',
-    location: 'Bengaluru',
+    title: 'Digital Marketing Lead',
+    dept: 'Growth',
+    location: 'Ahmedabad',
     remote: true,
     type: 'Full-time',
-    exp: '6+ yrs',
-    salary: '₹30 L – ₹48 L',
+    exp: '2–4 yrs',
+    salary: 'Market fair',
     badges: [],
   },
   {
     id: 4,
-    title: 'Staff Cloud Architect',
-    dept: 'Cloud & DevOps',
-    location: 'Ahmedabad',
-    remote: true,
-    type: 'Full-time',
-    exp: '9+ yrs',
-    salary: '₹42 L – ₹65 L',
-    badges: ['AWS'],
-  },
-  {
-    id: 5,
-    title: 'Lead Product Designer',
-    dept: 'Design',
-    location: 'Remote',
-    remote: true,
-    type: 'Full-time',
-    exp: '7+ yrs',
-    salary: '₹28 L – ₹45 L',
-    badges: ['Design System'],
-  },
-  {
-    id: 6,
-    title: 'UX Researcher',
-    dept: 'Design',
-    location: 'Bengaluru',
-    remote: false,
-    type: 'Full-time',
-    exp: '5+ yrs',
-    salary: '₹22 L – ₹35 L',
-    badges: [],
-  },
-  {
-    id: 7,
-    title: 'Principal Data Engineer',
-    dept: 'Data & AI',
-    location: 'Remote',
-    remote: true,
-    type: 'Full-time',
-    exp: '9+ yrs',
-    salary: '₹45 L – ₹70 L',
-    badges: ['LLM'],
-  },
-  {
-    id: 8,
-    title: 'ML Engineer',
-    dept: 'Data & AI',
-    location: 'Ahmedabad',
-    remote: true,
-    type: 'Full-time',
-    exp: '4+ yrs',
-    salary: '₹25 L – ₹40 L',
-    badges: [],
-  },
-  {
-    id: 9,
-    title: 'Security Engineer',
-    dept: 'Security',
-    location: 'Remote',
-    remote: true,
-    type: 'Full-time',
-    exp: '6+ yrs',
-    salary: '₹32 L – ₹50 L',
-    badges: ['SOC 2'],
-  },
-  {
-    id: 10,
-    title: 'Engagement Manager',
-    dept: 'Delivery',
-    location: 'Ahmedabad',
-    remote: false,
-    type: 'Full-time',
-    exp: '8+ yrs',
-    salary: '₹30 L – ₹50 L',
-    badges: [],
-  },
-  {
-    id: 11,
-    title: 'Technical Recruiter',
-    dept: 'People',
-    location: 'Bengaluru',
-    remote: true,
-    type: 'Full-time',
-    exp: '5+ yrs',
-    salary: '₹18 L – ₹28 L',
-    badges: [],
-  },
-  {
-    id: 12,
-    title: 'Engineering Intern',
+    title: 'Web Development Intern',
     dept: 'Engineering',
     location: 'Ahmedabad',
     remote: false,
     type: 'Internship',
-    exp: 'Final year',
-    salary: '₹40k / month',
-    badges: ['6 months'],
+    exp: 'Final year / new grad',
+    salary: 'Paid stipend',
+    badges: ['3–6 months'],
+  },
+  {
+    id: 5,
+    title: 'Content & SEO Intern',
+    dept: 'Growth',
+    location: 'Ahmedabad',
+    remote: true,
+    type: 'Internship',
+    exp: 'Any',
+    salary: 'Paid stipend',
+    badges: ['3 months'],
   },
 ]
 
-const departments = ['All Teams', 'Engineering', 'Design', 'Cloud & DevOps', 'Data & AI', 'Security', 'Delivery', 'People']
-const locations = ['All Locations', 'Ahmedabad', 'Bengaluru', 'Remote']
+const departments = ['All Teams', 'Engineering', 'Design', 'Growth']
+const locations = ['All Locations', 'Ahmedabad', 'Remote']
 const types = ['All Types', 'Full-time', 'Internship']
 
 const OpenPositions = () => {
@@ -196,13 +119,13 @@ const OpenPositions = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Twelve chairs,{' '}
-              <span className="text-[#0276E2] italic">open.</span>
+              A handful of{' '}
+              <span className="text-[#0276E2] italic">founding</span> seats.
             </h2>
 
             <p className="mt-4 text-[14px] leading-[1.7] text-black/65 max-w-[520px]">
-              Filter by team, location, or keyword. Every posting links to the full brief, comp
-              band, and the hiring manager's Loom intro.
+              A few honest roles to get this studio off the ground. If the listing resonates, drop
+              us a short note — a résumé plus two lines on why you are keen is enough to start.
             </p>
           </div>
 
@@ -435,7 +358,7 @@ const OpenPositions = () => {
           </div>
 
           <a
-            href="mailto:careers@techcareerit.com"
+            href="mailto:inquiry.techcareer@gmail.com?subject=General%20Application"
             className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >

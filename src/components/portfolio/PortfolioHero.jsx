@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const stats = [
-  { k: '250+', v: 'Projects Shipped' },
-  { k: '14', v: 'Industries Served' },
-  { k: '99.99%', v: 'Avg. Uptime' },
-  { k: '4.9/5', v: 'Client Score' },
+  { k: '2025', v: 'New Studio · Ahmedabad' },
+  { k: '06', v: 'Core Capabilities' },
+  { k: '< 24h', v: 'Reply Time' },
+  { k: '05', v: 'Flagship Slots Open' },
 ]
 
 const PortfolioHero = () => {
@@ -46,7 +46,7 @@ const PortfolioHero = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Portfolio · 2013 — 2026
+                Capability Showcase · 2025
               </span>
             </div>
 
@@ -54,15 +54,15 @@ const PortfolioHero = () => {
               className="text-5xl sm:text-6xl lg:text-[96px] xl:text-[108px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Work that <span className="text-[#0276E2] italic">works.</span>
+              What we can <span className="text-[#0276E2] italic">build.</span>
               <br />
-              Long after launch.
+              Starting with yours.
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              A living archive of products we have designed, shipped, and kept shipping with —
-              from fintech unicorns to Fortune 500 logistics. Every system below is still in
-              production and still compounding.
+              We are a new studio — so instead of a decade of client logos, here is a transparent
+              showcase of exactly what we can build for you: the formats, the stack, and honest
+              timelines for each. Your project could be the first one we feature here.
             </p>
           </div>
 
@@ -75,14 +75,14 @@ const PortfolioHero = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Signature Result
+                — Launch-Client Offer
               </p>
 
               <p
-                className="text-[64px] lg:text-[88px] font-extrabold leading-none"
+                className="text-[48px] lg:text-[64px] font-extrabold leading-none"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                $1.4B
+                First 5
                 <span className="text-black">.</span>
               </p>
 
@@ -90,7 +90,7 @@ const PortfolioHero = () => {
                 className="mt-4 text-[11px] uppercase tracking-[0.25em] text-white/80"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                Revenue flowing through <br /> products we have built · to date.
+                Flagship clients at launch pricing <br /> · limited slots · apply inside.
               </p>
 
               <div className="mt-6 pt-5 border-t border-white/30 flex items-center justify-between">
@@ -98,7 +98,7 @@ const PortfolioHero = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.25em] text-white"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  Aggregate · Client Data
+                  Open · Apply Now
                 </span>
                 <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />

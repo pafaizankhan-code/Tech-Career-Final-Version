@@ -7,9 +7,9 @@ import StartProject from '../components/StartProject'
 const servicesJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'IT Services in Australia',
+  name: 'Web, E-commerce & Digital Marketing Services in Ahmedabad',
   description:
-    'Fifteen expert IT services across development, cloud, AI, design, and digital growth — delivered to Australia\u2019s most ambitious teams.',
+    'A curated set of services from Tech Career IT Solutions LLP — web development, e-commerce stores, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing, delivered from our studio at iHub, Ahmedabad.',
   url: `${SITE.baseUrl}/services`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -26,10 +26,10 @@ const servicesJsonLd = {
 const Services = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
     <Seo
-      title="IT Services in Australia — Web, Mobile, Cloud, AI, Security, Design"
-      description="Australia's full-stack IT partner. Fifteen specialised services across development, cloud, AI, cybersecurity, design & digital growth. Trusted by 80+ teams."
-      keywords="IT services Australia, software development Sydney, mobile app development Melbourne, cloud consulting Australia, AI ML services AU, cybersecurity services Australia, UI UX design Sydney, DevOps Australia, digital marketing services Australia"
-      canonical="https://techcareerit.com.au/services"
+      title="Our Services — Web, E-commerce, CRM, Mobile & Digital Marketing"
+      description="Tech Career IT Solutions LLP offers honest, founder-led web development, e-commerce, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing services out of iHub, Ahmedabad."
+      keywords="web development services ahmedabad, shopify developer services india, custom crm hrms services, mobile app developer gujarat, ui ux design services ahmedabad, digital marketing agency services india"
+      canonical="https://tech-career-final-version.vercel.app/services"
       jsonLd={servicesJsonLd}
     />
     {/* ─── HERO ──────────────────────────────────────── */}
@@ -65,7 +65,7 @@ const Services = () => (
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Services · 5 Practices · 15 Offerings
+                Services · 5 Practices · {services.length} Offerings
               </span>
             </div>
 
@@ -73,14 +73,14 @@ const Services = () => (
               className="text-5xl sm:text-6xl lg:text-[96px] xl:text-[104px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Every service,{' '}
-              <span className="text-[#0276E2] italic">one</span> bar of craft.
+              Everything you need,{' '}
+              <span className="text-[#0276E2] italic">one</span> honest studio.
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              From first line of code to last line of SEO — fifteen specialised offerings, organised
-              into five practices. Every engagement is led by a senior architect and shipped to the
-              same quality standard.
+              From your first website to custom business software, mobile apps and digital
+              marketing — a focused set of services, delivered by a founder-led team in Ahmedabad,
+              with fixed quotes and realistic timelines on every engagement.
             </p>
           </div>
 
@@ -119,9 +119,9 @@ const Services = () => (
         <div className="mt-14 lg:mt-20 grid grid-cols-2 lg:grid-cols-4 border-t-2 border-black">
           {[
             { k: '5', v: 'Practices' },
-            { k: '15', v: 'Offerings' },
-            { k: '250+', v: 'Projects' },
-            { k: '14', v: 'Countries' },
+            { k: String(services.length), v: 'Offerings' },
+            { k: '2–8 wk', v: 'Typical Timeline' },
+            { k: '24h', v: 'Reply Time' },
           ].map((s, i) => (
             <div
               key={s.v}
@@ -287,7 +287,7 @@ const Services = () => (
             className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            Book a Discovery Call
+            Book a Free Discovery Call
             <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
               <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />

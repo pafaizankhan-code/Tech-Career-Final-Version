@@ -13,10 +13,10 @@ import StartProject from '../components/StartProject'
 const aboutJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Tech Career IT Solutions',
+  name: 'About Tech Career IT Solutions LLP',
   url: `${SITE.baseUrl}/about`,
   description:
-    'Meet Australia\u2019s senior-only engineering studio — our story, mission, values, leadership, and milestones since 2013.',
+    'Meet Tech Career IT Solutions LLP — a new, founder-led web development, e-commerce and digital marketing studio based in Ahmedabad, India. Our story, mission, values and team.',
   mainEntity: { '@id': `${SITE.baseUrl}/#organization` },
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -27,10 +27,10 @@ const aboutJsonLd = {
 const About = () => (
   <>
     <Seo
-      title="About Us — Australia's Senior-Only Engineering Studio"
-      description="Since 2013, Tech Career IT Solutions has partnered with Australian CTOs, founders, and Fortune 500 leaders. Meet the team, mission, and values of the country's best IT company."
-      keywords="about Tech Career IT, Australian IT consultancy, senior engineering team Sydney, Australian software studio, IT company story, leadership team, ISO 27001 IT Australia"
-      canonical="https://techcareerit.com.au/about"
+      title="About Us — Founder-Led Web & Marketing Studio in Ahmedabad"
+      description="Tech Career IT Solutions LLP is a new founder-led studio based at iHub, Ahmedabad — building websites, e-commerce stores, custom CRM / HRMS, mobile apps and digital marketing for growing teams."
+      keywords="about tech career it solutions llp, web development studio ahmedabad, new digital agency india, founder led software studio, ecommerce agency gujarat, ihub ahmedabad startup"
+      canonical="https://tech-career-final-version.vercel.app/about"
       ogType="article"
       jsonLd={aboutJsonLd}
     />

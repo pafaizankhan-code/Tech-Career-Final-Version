@@ -5,14 +5,14 @@ import { useLocation } from 'react-router-dom'
 export const SITE = {
   name: 'Tech Career IT Solutions',
   brand: 'Tech Career IT Solutions LLP',
-  tagline: 'Best IT Company in Australia',
-  baseUrl: 'https://techcareerit.com.au',
-  defaultImage: 'https://techcareerit.com.au/og-default.jpg',
-  twitter: '@techcareerit',
-  region: 'AU',
-  locale: 'en_AU',
-  phone: '+61 2 8000 4321',
-  email: 'hello@techcareerit.com.au',
+  tagline: 'Web Development & Digital Marketing Agency in Ahmedabad',
+  baseUrl: 'https://tech-career-final-version.vercel.app',
+  defaultImage: 'https://tech-career-final-version.vercel.app/og-default.jpg',
+  twitter: '@techcareerllp',
+  region: 'IN',
+  locale: 'en_IN',
+  phone: '+91 70966 08771',
+  email: 'inquiry.techcareer@gmail.com',
 }
 
 // Render-time SEO primitive. Uses React 19 native head hoisting — no extra dependencies.
@@ -45,12 +45,12 @@ const Seo = ({
       <meta name="author" content={SITE.brand} />
       <meta name="publisher" content={SITE.brand} />
 
-      {/* Geo / regional signals (AU focus) */}
+      {/* Geo / regional signals (India focus — Ahmedabad) */}
       <meta name="geo.region" content={SITE.region} />
-      <meta name="geo.placename" content="Australia" />
-      <meta name="ICBM" content="-33.8688,151.2093" />
+      <meta name="geo.placename" content="Ahmedabad, Gujarat, India" />
+      <meta name="ICBM" content="23.0225,72.5714" />
       <meta name="language" content="English" />
-      <meta httpEquiv="content-language" content="en-AU" />
+      <meta httpEquiv="content-language" content="en-IN" />
 
       {/* Canonical */}
       <link rel="canonical" href={url} />
@@ -96,55 +96,35 @@ export const organizationJsonLd = {
   logo: `${SITE.baseUrl}/logo.png`,
   image: SITE.defaultImage,
   description:
-    'Australia\u2019s premier IT consultancy \u2014 enterprise software development, cloud architecture, AI, and cybersecurity. ISO 27001 & SOC 2 certified.',
-  foundingDate: '2013',
-  slogan: 'Crafting Digital Excellence for Australia\u2019s Most Ambitious Teams.',
-  address: [
-    {
-      '@type': 'PostalAddress',
-      streetAddress: 'Level 17, 123 Pitt Street',
-      addressLocality: 'Sydney',
-      addressRegion: 'NSW',
-      postalCode: '2000',
-      addressCountry: 'AU',
-    },
-    {
-      '@type': 'PostalAddress',
-      streetAddress: 'Collins Street',
-      addressLocality: 'Melbourne',
-      addressRegion: 'VIC',
-      postalCode: '3000',
-      addressCountry: 'AU',
-    },
-  ],
+    'Tech Career IT Solutions LLP — a founder-led web development, e-commerce, custom CRM / HRMS, mobile app and digital marketing agency based in Ahmedabad, India.',
+  foundingDate: '2025',
+  slogan: 'Crafting Digital Excellence from Ahmedabad.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'iHub, University Area',
+    addressLocality: 'Ahmedabad',
+    addressRegion: 'GJ',
+    postalCode: '380015',
+    addressCountry: 'IN',
+  },
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: SITE.phone,
     email: SITE.email,
     contactType: 'sales',
-    areaServed: 'AU',
-    availableLanguage: ['English'],
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Hindi', 'Gujarati'],
   },
   sameAs: [
-    'https://www.linkedin.com/company/techcareerit',
-    'https://twitter.com/techcareerit',
-    'https://www.facebook.com/techcareerit',
-    'https://www.instagram.com/techcareerit',
+    'https://www.instagram.com/techcareer.llp',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '240',
-    bestRating: '5',
-    worstRating: '1',
-  },
   areaServed: {
     '@type': 'Country',
-    name: 'Australia',
+    name: 'India',
   },
   serviceArea: {
     '@type': 'AdministrativeArea',
-    name: 'Australia',
+    name: 'India',
   },
 }
 
@@ -158,14 +138,14 @@ export const buildServiceJsonLd = (service) => ({
     name: SITE.brand,
     url: SITE.baseUrl,
   },
-  areaServed: { '@type': 'Country', name: 'Australia' },
+  areaServed: { '@type': 'Country', name: 'India' },
   description: service.intro,
   url: `${SITE.baseUrl}/services/${service.slug}`,
   offers: {
     '@type': 'AggregateOffer',
     lowPrice: service.pricing?.[0]?.price?.replace(/[^\d]/g, '') || '',
     highPrice: service.pricing?.[service.pricing.length - 1]?.price?.replace(/[^\d]/g, '') || '',
-    priceCurrency: 'AUD',
+    priceCurrency: 'INR',
     offerCount: service.pricing?.length || 3,
   },
 })

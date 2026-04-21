@@ -7,8 +7,8 @@ const steps = [
     phase: 'Discovery',
     duration: 'Week 1',
     title: 'Understand the problem.',
-    desc: 'Stakeholder interviews, competitive teardown, technical audit, and a written problem statement we both sign off on.',
-    deliverables: ['Research Brief', 'Scope Doc', 'Risk Map'],
+    desc: 'A free discovery call, competitor teardown, and a written scope we both sign off on — so there are no surprises later.',
+    deliverables: ['Free Call', 'Scope Doc', 'Fixed Quote'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <circle cx="11" cy="11" r="7" />
@@ -34,8 +34,8 @@ const steps = [
     phase: 'Development',
     duration: 'Week 4–8',
     title: 'Ship, sprint by sprint.',
-    desc: 'Two-week sprints with demo Fridays. Code reviewed, tested, and merged behind feature flags — no big-bang releases.',
-    deliverables: ['Sprint Demos', 'CI/CD Pipeline', 'Test Coverage'],
+    desc: 'Weekly demos on WhatsApp / video call. Code reviewed, tested, deployed to a staging link you can click on every Friday — no big-bang releases.',
+    deliverables: ['Weekly Demos', 'Staging Link', 'WhatsApp Group'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
@@ -47,8 +47,8 @@ const steps = [
     phase: 'Launch',
     duration: 'Week 9',
     title: 'Go live, confidently.',
-    desc: 'Staged rollout with observability dashboards, on-call rotations, and rollback runbooks tested before go-live.',
-    deliverables: ['Deploy Plan', 'Runbooks', 'Monitoring'],
+    desc: 'Deploy to your hosting, connect your domain, set up analytics and basic monitoring — plus a handover walkthrough so your team owns the product.',
+    deliverables: ['Deploy + Domain', 'Analytics', 'Handover Doc'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 14l6 6 10-18-8 6-4-2-4 8z" />
@@ -57,11 +57,11 @@ const steps = [
   },
   {
     no: '05',
-    phase: 'Scale & Support',
+    phase: 'Support & Growth',
     duration: 'Ongoing',
     title: 'Evolve, don\u2019t erode.',
-    desc: 'SLA-backed support, quarterly health reviews, performance tuning, and a roadmap that keeps compounding.',
-    deliverables: ['24/7 SLA', 'Quarterly Reviews', 'Roadmap'],
+    desc: 'Optional monthly retainer for bug fixes, small features, SEO and digital marketing — so your product keeps improving without scrambling for help.',
+    deliverables: ['Monthly Retainer', 'Bug Fixes', 'Growth Work'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-3-6.7L21 8" />

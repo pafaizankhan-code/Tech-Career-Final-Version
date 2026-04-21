@@ -4,10 +4,10 @@ const channels = [
   {
     no: '01',
     title: 'Email Us',
-    sub: 'Reply within 4 business hours',
-    value: 'hello@techcareerit.com',
+    sub: 'Founder replies within 24 hours',
+    value: 'inquiry.techcareer@gmail.com',
     cta: 'Compose Email',
-    href: 'mailto:hello@techcareerit.com',
+    href: 'mailto:inquiry.techcareer@gmail.com',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" />
@@ -16,11 +16,11 @@ const channels = [
   },
   {
     no: '02',
-    title: 'Phone / WhatsApp',
-    sub: 'Mon — Sat · 09:00 – 21:00 IST',
-    value: '+91 98765 43210',
-    cta: 'Dial Now',
-    href: 'tel:+919876543210',
+    title: 'WhatsApp / Call',
+    sub: 'Mon — Sat · 10:00 – 20:00 IST',
+    value: '+91 70966 08771',
+    cta: 'Chat on WhatsApp',
+    href: 'https://wa.me/917096608771',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.9 1.37l.9 2.69a2 2 0 01-.45 2L8.5 10.5a11 11 0 005 5l1.44-1.13a2 2 0 012-.45l2.69.9A2 2 0 0121 16.72V19a2 2 0 01-2 2A16 16 0 013 5z" />
@@ -29,11 +29,11 @@ const channels = [
   },
   {
     no: '03',
-    title: 'Book a Call',
-    sub: '30-min, with a senior strategist',
-    value: 'cal.com/techcareer',
-    cta: 'Pick a Slot',
-    href: '#',
+    title: 'Free Discovery Call',
+    sub: '30-min, directly with the founder',
+    value: 'Book by email / WhatsApp',
+    cta: 'Request a Slot',
+    href: 'mailto:inquiry.techcareer@gmail.com?subject=Discovery%20Call',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <rect x="3" y="5" width="18" height="16" rx="2" />
@@ -43,15 +43,15 @@ const channels = [
   },
   {
     no: '04',
-    title: 'Existing Client',
-    sub: 'Support · billing · change requests',
-    value: 'support@techcareerit.com',
-    cta: 'Open a Ticket',
-    href: 'mailto:support@techcareerit.com',
+    title: 'Visit the Studio',
+    sub: 'iHub · University Area · Ahmedabad',
+    value: 'Pincode 380015 · Gujarat',
+    cta: 'Get Directions',
+    href: 'https://maps.google.com/?q=iHub+University+Area+Ahmedabad',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <circle cx="12" cy="12" r="9" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.1 9a3 3 0 115.7 1c0 2-3 2-3 4M12 17h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
+        <circle cx="12" cy="9" r="2.5" />
       </svg>
     ),
   },

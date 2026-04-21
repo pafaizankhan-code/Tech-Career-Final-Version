@@ -10,9 +10,9 @@ const careersJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/careers`,
-  name: 'Careers at Tech Career IT Solutions',
+  name: 'Careers at Tech Career IT Solutions LLP',
   description:
-    'Join Australia\u2019s senior-only engineering studio. 12 open roles across engineering, design, cloud, AI, and security. Remote-first, ESOP for every teammate.',
+    'Help us build a new, founder-led web and digital marketing studio in Ahmedabad. A small team, interesting first clients, and real ownership from day one.',
   url: `${SITE.baseUrl}/careers`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -22,17 +22,16 @@ const careersJsonLd = {
     '@type': 'Organization',
     name: SITE.brand,
     sameAs: SITE.baseUrl,
-    numberOfEmployees: { '@type': 'QuantitativeValue', value: 85 },
   },
 }
 
 const Careers = () => (
   <>
     <Seo
-      title="Careers in Australia — Senior Engineering, Design & Cloud Jobs"
-      description="Join Australia's senior-only engineering studio. 12 open roles with ESOP, top-quartile pay, remote-first culture, and a 4.9★ Glassdoor rating."
-      keywords="IT jobs Australia, engineering careers Sydney, senior developer jobs Melbourne, remote developer jobs Australia, cloud engineer roles AU, AI ML jobs Australia, UX designer jobs Sydney, ESOP developer jobs Australia"
-      canonical="https://techcareerit.com.au/careers"
+      title="Careers — Help Build a New Ahmedabad Studio"
+      description="Join a new, founder-led web and digital marketing studio in Ahmedabad. Open roles for full-stack developers, designers and interns — with real ownership and the chance to shape the studio from day one."
+      keywords="developer jobs ahmedabad, react developer jobs gujarat, web designer jobs ahmedabad, internship ahmedabad it, startup jobs ahmedabad, digital marketing jobs gujarat"
+      canonical="https://tech-career-final-version.vercel.app/careers"
       ogType="article"
       jsonLd={careersJsonLd}
     />

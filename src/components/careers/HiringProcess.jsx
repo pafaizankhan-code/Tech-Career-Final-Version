@@ -6,7 +6,7 @@ const stages = [
     label: 'Apply',
     duration: 'Day 0',
     title: 'Send a short, honest application.',
-    desc: 'No cover letter gymnastics. A résumé and two paragraphs on what you want to build next is enough to start.',
+    desc: 'No cover letter gymnastics. A resume and two paragraphs on what you want to build next is enough to start.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -18,8 +18,8 @@ const stages = [
     no: '02',
     label: 'Intro Call',
     duration: 'Day 2 – 4',
-    title: '30 minutes with the hiring manager.',
-    desc: 'A conversation, not an interrogation. We talk about your work, your ambition, and whether the role actually fits.',
+    title: '30 minutes with the founder.',
+    desc: 'A conversation, not an interrogation. We talk about your past work, what you want to do next, and whether the role actually fits.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 2H7a3 3 0 00-3 3v10a3 3 0 003 3h2l3 3 3-3h2a3 3 0 003-3V5a3 3 0 00-3-3z" />
@@ -31,7 +31,7 @@ const stages = [
     label: 'Craft Review',
     duration: 'Day 5 – 8',
     title: 'We look at real work, together.',
-    desc: 'Walk us through a past project you\u2019re proud of, or take home a small, paid exercise. No whiteboard leet-code. Ever.',
+    desc: 'Walk us through a past project you are proud of, or take home a small paid exercise. No whiteboard leet-code. Ever.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" />
@@ -42,10 +42,10 @@ const stages = [
   },
   {
     no: '04',
-    label: 'Team Fit',
+    label: 'Team Chat',
     duration: 'Day 10 – 12',
-    title: 'Meet three future teammates.',
-    desc: 'Three 45-minute conversations with people you\u2019ll work with. They share context and get yours. Decisions are collective.',
+    title: 'A casual chat at iHub (or on Meet).',
+    desc: 'A visit to the studio, coffee, and an unstructured chat about how you like to work. You meet the founding team and get a real feel for the place before committing.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20v-2a4 4 0 00-3-3.87M7 20v-2a4 4 0 013-3.87M15 10a4 4 0 11-8 0 4 4 0 018 0zM22 20v-2a4 4 0 00-3-3.87" />
@@ -57,7 +57,7 @@ const stages = [
     label: 'Offer',
     duration: 'Day 14',
     title: 'A clear, signed offer — within 48 hours.',
-    desc: 'Transparent comp band, levelling, and ESOP grant. Negotiate with numbers, not nerves. We say yes or no quickly.',
+    desc: 'Transparent salary, role and scope in writing. You negotiate with numbers, not nerves, and we say yes or no quickly — no ghosting.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -67,9 +67,9 @@ const stages = [
 ]
 
 const promises = [
-  { k: '14 days', v: 'Average cycle, apply → offer' },
-  { k: '48 hrs', v: 'Reply SLA on every application' },
-  { k: '₹ Paid', v: 'Take-home exercises, always' },
+  { k: '14 days', v: 'Average cycle, apply to offer' },
+  { k: '72 hrs', v: 'Reply on every application' },
+  { k: 'Paid', v: 'Take-home exercises, always' },
   { k: '100%', v: 'No whiteboard leet-code' },
 ]
 
@@ -116,8 +116,8 @@ const HiringProcess = () => {
           </h2>
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[620px] mx-auto">
-            We believe the interview loop should respect your time and show you what the job
-            actually feels like. Here's the entire journey, in plain sight.
+            A tiny studio means a tiny interview loop. Here is the entire journey, written out
+            — so you know what to expect before you even apply.
           </p>
         </div>
 

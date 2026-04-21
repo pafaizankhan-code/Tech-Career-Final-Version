@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const heroStats = [
-  { k: '12+', v: 'Years in the Industry' },
-  { k: '80+', v: 'Global Clients' },
-  { k: '14', v: 'Countries Served' },
-  { k: '250+', v: 'Projects Delivered' },
+  { k: '2025', v: 'Founded · New Studio' },
+  { k: '100%', v: 'Founder-Led Team' },
+  { k: '< 24h', v: 'Reply Time' },
+  { k: '∞', v: 'Projects Ahead' },
 ]
 
 const AboutHero = () => {
@@ -57,15 +57,16 @@ const AboutHero = () => {
               className="text-5xl sm:text-6xl lg:text-[92px] xl:text-[104px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              We build software
+              A new studio
               <br />
-              <span className="text-[#0276E2] italic">people trust.</span>
+              <span className="text-[#0276E2] italic">built on trust.</span>
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              Since 2013, we have partnered with founders, CTOs, and enterprise leaders across four
-              continents to design, build, and scale digital platforms that outlast trends — and
-              survive audits.
+              Tech Career IT Solutions LLP is a founder-led web development, e-commerce and digital
+              marketing studio based at iHub, Ahmedabad — building software and campaigns for
+              growing Indian businesses with honest scopes, honest quotes and a team that answers
+              its own phone.
             </p>
           </div>
 
@@ -84,11 +85,11 @@ const AboutHero = () => {
 
               <dl className="space-y-3 text-[13px]">
                 {[
-                  ['Founded', '2013 · Ahmedabad, India'],
+                  ['Founded', '2025 · Ahmedabad, India'],
                   ['Legal Entity', 'Tech Career IT Solutions LLP'],
-                  ['Team Size', '85 · full-time employees'],
-                  ['Headquarters', 'Ahmedabad · Gujarat'],
-                  ['Industries', 'Fintech · SaaS · Health · Logistics'],
+                  ['Team', 'Founder-led · small team'],
+                  ['Headquarters', 'iHub · Ahmedabad · 380015'],
+                  ['Focus', 'Web · E-commerce · CRM · Marketing'],
                 ].map(([k, v]) => (
                   <div key={k} className="flex items-start justify-between gap-4 pb-3 border-b border-white/15 last:border-0 last:pb-0">
                     <dt

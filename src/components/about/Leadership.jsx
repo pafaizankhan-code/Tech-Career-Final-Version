@@ -2,52 +2,34 @@ import React from 'react'
 
 const leaders = [
   {
-    name: 'Karan Patel',
-    role: 'Founder & Managing Partner',
-    bio: 'Ex-Infosys architect. 18 years engineering and scaling systems across fintech and SaaS.',
-    initials: 'KP',
-    accent: 'blue',
-    meta: ['18 yrs', 'IIT-BHU'],
-  },
-  {
-    name: 'Ayesha Khan',
-    role: 'Co-founder & CTO',
-    bio: 'Formerly at Amazon and Stripe. Leads architecture and DevOps practice across 4 regions.',
-    initials: 'AK',
-    accent: 'black',
-    meta: ['AWS Hero', 'BITS Pilani'],
-  },
-  {
-    name: 'Rohan Desai',
-    role: 'Head of Engineering',
-    bio: 'Full-stack veteran with production experience across React, Go, and distributed systems.',
-    initials: 'RD',
-    accent: 'blue',
-    meta: ['OSS Maintainer', 'NIT Surat'],
-  },
-  {
-    name: 'Priya Iyer',
-    role: 'Head of Design',
-    bio: 'Design systems specialist. Built the UI languages behind two unicorn fintechs and a bank.',
-    initials: 'PI',
-    accent: 'black',
-    meta: ['ADP Jury', 'NID'],
-  },
-  {
     name: 'Faizan Pathan',
-    role: 'VP Client Solutions',
-    bio: 'Translator between business goals and engineering reality. 12 years in enterprise sales & strategy.',
+    role: 'Founder',
+    bio: 'Full-stack developer and the person you will actually work with. Handles strategy, scoping, development and delivery — and answers his own phone.',
     initials: 'FP',
     accent: 'blue',
-    meta: ['12 yrs', 'IIM-A'],
+    meta: ['Founder', 'Ahmedabad'],
+    chip: 'Founder',
+    isOpen: false,
   },
   {
-    name: 'Lena Müller',
-    role: 'Head of Security',
-    bio: 'Cybersecurity specialist leading our ISO 27001 and SOC 2 readiness engagements.',
-    initials: 'LM',
+    name: 'Design Partner',
+    role: 'UI / UX Lead',
+    bio: 'We partner with a trusted design lead on Figma wireframes, prototypes and UI systems — brought in when a project needs design depth.',
+    initials: 'UI',
     accent: 'black',
-    meta: ['CISSP', 'TU Munich'],
+    meta: ['Figma', 'Design Systems'],
+    chip: 'Partner',
+    isOpen: false,
+  },
+  {
+    name: 'Joining Soon',
+    role: 'Full-Stack Developer',
+    bio: 'We are hiring a second full-stack engineer to grow with our first clients. If that sounds like you, send a note — no long JD, no pointless rounds.',
+    initials: '+',
+    accent: 'blue',
+    meta: ['React', 'Node.js'],
+    chip: 'Open Role',
+    isOpen: true,
   },
 ]
 
@@ -80,7 +62,7 @@ const Leadership = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              The people you will{' '}
+              The team you will{' '}
               <span className="text-[#0276E2] italic">actually</span> work with.
             </h2>
           </div>
@@ -89,7 +71,7 @@ const Leadership = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            No bait-and-switch. Every engagement is led by one of these humans — not a junior you have never met.
+            We are a small, founder-led studio — so the person you meet in the sales call is the same person building your product. No bait-and-switch.
           </p>
         </div>
 
@@ -127,22 +109,29 @@ const Leadership = () => {
                   className="absolute top-4 left-4 px-3 py-1.5 bg-white text-black border-2 border-black text-[10px] font-bold uppercase tracking-[0.25em]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  Partner
+                  {l.chip}
                 </span>
 
-                {/* Social tile */}
-                <div className="absolute top-4 right-4 flex gap-1">
-                  {['in', 'X'].map((s) => (
+                {/* Social / apply tile */}
+                {!l.isOpen && (
+                  <div className="absolute top-4 right-4 flex gap-1">
                     <a
-                      key={s}
-                      href="#"
+                      href="https://www.instagram.com/techcareer.llp"
                       className="w-8 h-8 bg-white text-black flex items-center justify-center text-[10px] font-bold hover:bg-black hover:text-white transition-colors"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      {s}
+                      IG
                     </a>
-                  ))}
-                </div>
+                  </div>
+                )}
+                {l.isOpen && (
+                  <span
+                    className="absolute top-4 right-4 px-2.5 py-1 bg-[#0276E2] border-2 border-white text-white text-[10px] font-bold uppercase tracking-[0.25em]"
+                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                  >
+                    Hiring
+                  </span>
+                )}
               </div>
 
               {/* Content */}
@@ -187,22 +176,22 @@ const Leadership = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — We're Hiring
+              — Early Team
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-black leading-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              85 teammates. 12 open roles.
+              Want to build this studio with us?
             </h4>
           </div>
 
           <a
-            href="#"
+            href="mailto:inquiry.techcareer@gmail.com?subject=Join%20Tech%20Career%20IT%20Solutions%20LLP"
             className="group inline-flex items-center gap-3 h-12 px-6 border-2 border-black text-black text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-black hover:text-white transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            View Open Positions
+            Send Us a Note
             <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

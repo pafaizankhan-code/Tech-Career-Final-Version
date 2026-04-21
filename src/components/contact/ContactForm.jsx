@@ -7,15 +7,15 @@ const inquiryTypes = [
   { key: 'media', label: 'Press / Media', desc: 'Interview, speaker, feature.' },
 ]
 
-const services = ['Web App', 'Mobile App', 'Cloud & DevOps', 'AI / ML', 'Cybersecurity', 'UI / UX', 'Other']
-const budgets = ['< ₹5 L', '₹5 L – ₹15 L', '₹15 L – ₹50 L', '₹50 L +', 'Undecided']
-const timelines = ['ASAP', '1 – 3 months', '3 – 6 months', '6+ months']
+const services = ['Website', 'E-commerce', 'Mobile App', 'CRM / HRMS', 'UI / UX', 'Digital Marketing', 'Other']
+const budgets = ['< ₹50 K', '₹50 K – ₹2 L', '₹2 L – ₹10 L', '₹10 L +', 'Undecided']
+const timelines = ['ASAP', 'Within 1 month', '1 – 3 months', 'Exploring']
 
 const ContactForm = () => {
   const [inquiry, setInquiry] = useState('project')
-  const [service, setService] = useState('Web App')
-  const [budget, setBudget] = useState('₹5 L – ₹15 L')
-  const [timeline, setTimeline] = useState('1 – 3 months')
+  const [service, setService] = useState('Website')
+  const [budget, setBudget] = useState('₹50 K – ₹2 L')
+  const [timeline, setTimeline] = useState('Within 1 month')
   const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = (e) => {
@@ -70,7 +70,7 @@ const ContactForm = () => {
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/85 max-w-[420px]">
               The more context you share, the better our first reply. If you have a brief, a deck,
-              or an existing codebase — attach it. We read everything.
+              or screenshots of a reference — attach it. We read everything.
             </p>
 
             <ul
@@ -78,10 +78,10 @@ const ContactForm = () => {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               {[
-                'Reply within 4 business hours',
-                'NDA-protected · zero spam',
-                'Answered by a senior architect',
-                'Free response-estimate included',
+                'Founder replies within 24 hours',
+                'NDA on request · zero spam',
+                'Free discovery call, no pressure',
+                'Fixed written quote before any work',
               ].map((p) => (
                 <li key={p} className="flex items-center gap-3 text-[13px] font-semibold">
                   <span className="w-5 h-5 bg-black flex items-center justify-center shrink-0">
@@ -149,7 +149,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     required
-                    placeholder="Priya Nair"
+                    placeholder="Your Full Name"
                     className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
                   />
                 </label>
@@ -160,7 +160,7 @@ const ContactForm = () => {
                   <input
                     type="email"
                     required
-                    placeholder="priya@company.com"
+                    placeholder="you@company.com"
                     className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
                   />
                 </label>
@@ -174,7 +174,7 @@ const ContactForm = () => {
                   </span>
                   <input
                     type="text"
-                    placeholder="Nexora Analytics"
+                    placeholder="Your Company / Brand"
                     className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
                   />
                 </label>
@@ -184,7 +184,7 @@ const ContactForm = () => {
                   </span>
                   <input
                     type="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 70966 08771"
                     className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
                   />
                 </label>
@@ -296,7 +296,7 @@ const ContactForm = () => {
               {/* Submit + success */}
               <div className="mt-6 pt-6 border-t-2 border-black flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <p className="text-[11px] text-black/50">
-                  We reply within <span className="font-bold text-black">4 business hours</span>.
+                  Founder replies within <span className="font-bold text-black">24 hours</span>.
                 </p>
 
                 <button
@@ -325,7 +325,7 @@ const ContactForm = () => {
                     </svg>
                   </span>
                   <p className="text-[13px] font-semibold">
-                    Message received. A senior strategist will reply within 4 business hours.
+                    Message received. The founder will reply within 24 hours.
                   </p>
                 </div>
               </div>

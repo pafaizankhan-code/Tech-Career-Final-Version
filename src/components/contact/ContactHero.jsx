@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const stats = [
-  { k: '< 4 hrs', v: 'Avg. First Reply' },
-  { k: '24 / 7', v: 'Client Support SLA' },
-  { k: '3', v: 'Global Offices' },
-  { k: '98%', v: 'Resolved First Contact' },
+  { k: '< 24h', v: 'First Reply' },
+  { k: 'iHub', v: 'Ahmedabad Base' },
+  { k: 'Free', v: 'Discovery Call' },
+  { k: 'Direct', v: 'Founder Access' },
 ]
 
 const ContactHero = () => {
@@ -84,8 +84,9 @@ const ContactHero = () => {
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              No chatbots, no call-centre scripts. Every inbound message is triaged by a senior
-              strategist within one business day — often sooner. Tell us what you're building.
+              No chatbots, no call-centre scripts. Every message lands directly with the founder,
+              and you get a personal reply within 24 hours — usually faster on WhatsApp. Tell us
+              what you're building.
             </p>
 
             <div
@@ -105,7 +106,7 @@ const ContactHero = () => {
               </a>
 
               <a
-                href="tel:+919876543210"
+                href="tel:+917096608771"
                 className="group inline-flex items-center gap-3 h-14 px-6 border-2 border-black text-black text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
               >
                 Call Us Directly
@@ -131,34 +132,34 @@ const ContactHero = () => {
 
               <dl className="space-y-4 text-[13px]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 <div className="pb-4 border-b border-white/30">
-                  <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">General</dt>
+                  <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">Email · All Inquiries</dt>
                   <dd>
-                    <a href="mailto:hello@techcareerit.com" className="font-bold hover:text-black transition-colors">
-                      hello@techcareerit.com
+                    <a href="mailto:inquiry.techcareer@gmail.com" className="font-bold hover:text-black transition-colors break-all">
+                      inquiry.techcareer@gmail.com
                     </a>
                   </dd>
                 </div>
                 <div className="pb-4 border-b border-white/30">
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">New Projects</dt>
                   <dd>
-                    <a href="mailto:projects@techcareerit.com" className="font-bold hover:text-black transition-colors">
-                      projects@techcareerit.com
+                    <a href="mailto:inquiry.techcareer@gmail.com?subject=New%20Project" className="font-bold hover:text-black transition-colors break-all">
+                      inquiry.techcareer@gmail.com
                     </a>
                   </dd>
                 </div>
                 <div className="pb-4 border-b border-white/30">
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">Careers</dt>
                   <dd>
-                    <a href="mailto:careers@techcareerit.com" className="font-bold hover:text-black transition-colors">
-                      careers@techcareerit.com
+                    <a href="mailto:inquiry.techcareer@gmail.com?subject=Careers" className="font-bold hover:text-black transition-colors break-all">
+                      inquiry.techcareer@gmail.com
                     </a>
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">Phone · 24 / 7</dt>
+                  <dt className="text-[10px] uppercase tracking-[0.25em] text-white/70 mb-1">Phone / WhatsApp</dt>
                   <dd>
-                    <a href="tel:+919876543210" className="font-bold hover:text-black transition-colors">
-                      +91 98765 43210
+                    <a href="tel:+917096608771" className="font-bold hover:text-black transition-colors">
+                      +91 70966 08771
                     </a>
                   </dd>
                 </div>

@@ -3,84 +3,79 @@ import { Link } from 'react-router-dom'
 
 const projects = [
   {
-    id: 'nexora',
+    id: 'dashboard',
     no: '01',
-    year: '2025',
-    category: 'Web Platform',
-    client: 'Nexora Analytics',
-    title: 'Data at the speed of decision.',
-    desc: 'A real-time SaaS analytics suite serving 40k+ concurrent users — with sub-second query response across 3 regions. Rebuilt from a legacy monolith into a modular, event-driven architecture.',
-    stack: ['Next.js', 'PostgreSQL', 'Kafka', 'AWS'],
+    category: 'Web App',
+    client: 'Admin Dashboards',
+    title: 'Turn your data into decisions.',
+    desc: 'Custom admin panels and analytics dashboards — from internal tools replacing spreadsheets to full SaaS control rooms. Role-based access, clean charts, and exports your team actually uses.',
+    stack: ['Next.js', 'React', 'PostgreSQL', 'Tailwind'],
     metrics: [
-      { k: '40K+', v: 'Active Users' },
-      { k: '0.4s', v: 'Avg. Query' },
-      { k: '3×', v: 'Engagement' },
+      { k: '3–6', v: 'Week Build' },
+      { k: 'Role', v: 'Based Access' },
+      { k: 'CSV', v: 'Exports Built-in' },
     ],
     preview: 'dashboard',
   },
   {
-    id: 'finlytic',
+    id: 'mobile',
     no: '02',
-    year: '2025',
     category: 'Mobile App',
-    client: 'Finlytic Banking',
-    title: 'Finance, redesigned for the thumb.',
-    desc: 'An award-winning consumer neo-banking app featuring biometric auth, AI-powered spending insights, and instant UPI transfers. Rated 4.9★ in the App Store within six weeks of launch.',
-    stack: ['Swift', 'Kotlin', 'Node.js', 'Plaid'],
+    client: 'Mobile Applications',
+    title: 'One codebase. Both stores.',
+    desc: 'iOS and Android apps built once in React Native or Flutter — with push notifications, payments, biometric auth and a backend that scales as you grow.',
+    stack: ['React Native', 'Flutter', 'Node.js', 'Firebase'],
     metrics: [
-      { k: '4.9★', v: 'App Rating' },
-      { k: '210K', v: 'Installs / mo' },
-      { k: '6 wks', v: 'Time to Launch' },
+      { k: 'iOS +', v: 'Android' },
+      { k: 'Push', v: 'Notifications' },
+      { k: 'UPI /', v: 'Payments' },
     ],
     preview: 'phone',
   },
   {
-    id: 'orbital',
+    id: 'ecommerce',
     no: '03',
-    year: '2024',
-    category: 'Cloud & DevOps',
-    client: 'Orbital Logistics',
-    title: 'Infra that never sleeps.',
-    desc: 'Zero-downtime Kubernetes migration across seven regions for a global logistics leader. Automated provisioning, observability, and blue-green deploys cut release cycles from days to minutes.',
-    stack: ['Kubernetes', 'Terraform', 'GCP', 'Grafana'],
+    category: 'E-commerce',
+    client: 'Online Stores',
+    title: 'Sell everywhere, manage in one place.',
+    desc: 'Shopify builds or custom e-commerce with catalogue management, Razorpay / Stripe checkout, inventory, shipping zones and order tracking — ready to launch and optimised for conversions.',
+    stack: ['Shopify', 'WooCommerce', 'Razorpay', 'Stripe'],
     metrics: [
-      { k: '7', v: 'Regions' },
-      { k: '99.99%', v: 'Uptime' },
-      { k: '82%', v: 'Faster Deploys' },
+      { k: '2–4', v: 'Week Launch' },
+      { k: 'UPI', v: 'Razorpay Stripe' },
+      { k: 'SEO', v: 'Ready' },
     ],
-    preview: 'cloud',
+    preview: 'ecom',
   },
   {
-    id: 'sentio',
+    id: 'crm',
     no: '04',
-    year: '2024',
-    category: 'AI / ML',
-    client: 'Sentio Intelligence',
-    title: 'A copilot that actually knows.',
-    desc: 'A retrieval-augmented LLM assistant trained on proprietary internal documents, adopted by 12 teams to automate research, reporting, and compliance answers with auditable citations.',
-    stack: ['Python', 'LangChain', 'Pinecone', 'OpenAI'],
+    category: 'Custom Software',
+    client: 'CRM & HRMS',
+    title: 'Software that fits your workflow.',
+    desc: 'Custom CRM, HRMS, billing tools and internal portals — tailored to exactly how your team works. No bloated off-the-shelf tool trying to bend around you.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
     metrics: [
-      { k: '12', v: 'Teams Active' },
-      { k: '63%', v: 'Time Saved' },
-      { k: '2M+', v: 'Docs Indexed' },
+      { k: 'Custom', v: 'Workflows' },
+      { k: 'Cloud', v: 'Hosted' },
+      { k: '∞', v: 'Team Seats' },
     ],
-    preview: 'ai',
+    preview: 'crm',
   },
   {
-    id: 'aegis',
+    id: 'marketing',
     no: '05',
-    year: '2023',
-    category: 'Cybersecurity',
-    client: 'Aegis Healthcare',
-    title: 'Compliance without compromise.',
-    desc: 'End-to-end security hardening and audit readiness for a healthcare unicorn — delivered SOC 2 Type II and ISO 27001 certification in a single quarter without slowing product velocity.',
-    stack: ['SOC 2', 'ISO 27001', 'SIEM', 'Pentest'],
+    category: 'Digital Marketing',
+    client: 'Marketing & Growth',
+    title: 'Bring traffic the website deserves.',
+    desc: 'SEO, Google Ads, Meta Ads and organic social handled by a team that understands your tech stack — measurable campaigns with clear monthly reporting, not vanity metrics.',
+    stack: ['SEO', 'Google Ads', 'Meta Ads', 'Analytics'],
     metrics: [
-      { k: '100%', v: 'Audit Pass' },
-      { k: '1 Qtr', v: 'To Certified' },
-      { k: '0', v: 'Critical Findings' },
+      { k: 'SEO', v: 'Audit + Fix' },
+      { k: 'Ads', v: 'Managed' },
+      { k: 'Monthly', v: 'Reporting' },
     ],
-    preview: 'shield',
+    preview: 'marketing',
   },
 ]
 
@@ -159,79 +154,97 @@ const Preview = ({ type }) => {
     )
   }
 
-  if (type === 'cloud') {
+  if (type === 'ecom') {
     return (
-      <div className={`${base} flex items-center justify-center`}>
-        <svg viewBox="0 0 160 160" className="w-3/4 h-3/4 text-white">
-          {[0, 1, 2, 3].map((r) =>
-            [0, 1, 2, 3, 4, 5].map((c) => {
-              const cx = 15 + c * 26
-              const cy = 40 + r * 26
-              const isCore = r === 1 && c === 2
-              return (
-                <g key={`${r}-${c}`}>
-                  {!isCore && (
-                    <line x1={80} y1={66} x2={cx} y2={cy} stroke="white" strokeWidth="0.4" opacity="0.4" />
-                  )}
-                  <circle cx={cx} cy={cy} r={isCore ? 6 : 2} fill={isCore ? 'white' : 'rgba(255,255,255,0.55)'} />
-                  {isCore && <circle cx={cx} cy={cy} r="10" fill="none" stroke="white" strokeWidth="0.8" />}
-                </g>
-              )
-            })
-          )}
-        </svg>
-      </div>
-    )
-  }
-
-  if (type === 'ai') {
-    return (
-      <div className={`${base} flex items-center justify-center p-8`}>
-        <div className="w-full max-w-[320px] space-y-3">
-          <div className="bg-white border-2 border-black p-3">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 bg-black"></span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-black">User</span>
+      <div className={`${base} p-6 lg:p-8`}>
+        <div className="relative w-full h-full bg-white border-2 border-black overflow-hidden">
+          <div className="flex items-center justify-between px-4 py-3 border-b-2 border-black">
+            <span className="h-2 w-16 bg-black"></span>
+            <div className="flex items-center gap-2">
+              <span className="h-1.5 w-10 bg-black/50"></span>
+              <span className="w-5 h-5 bg-[#0276E2]"></span>
             </div>
-            <div className="h-1.5 bg-black/60 w-4/5"></div>
-            <div className="h-1.5 bg-black/40 w-3/5 mt-1.5"></div>
           </div>
-          <div className="bg-black text-white p-3 ml-8 border-2 border-[#0276E2]">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 bg-[#0276E2] flex items-center justify-center">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest">Sentio</span>
-            </div>
-            <div className="h-1.5 bg-white/80 w-full"></div>
-            <div className="h-1.5 bg-white/60 w-5/6 mt-1.5"></div>
-            <div className="h-1.5 bg-white/40 w-2/3 mt-1.5"></div>
+          <div className="p-4 grid grid-cols-3 gap-3">
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="border border-black/15 p-2">
+                <div className={`h-10 ${i % 2 ? 'bg-[#0276E2]/20' : 'bg-black/10'}`}></div>
+                <div className="mt-2 h-1.5 bg-black/60 w-3/4"></div>
+                <div className="mt-1.5 flex items-center justify-between">
+                  <span className="h-1.5 w-6 bg-black"></span>
+                  <span className="h-4 w-6 bg-[#0276E2]"></span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     )
   }
 
-  if (type === 'shield') {
+  if (type === 'crm') {
     return (
-      <div className={`${base} flex items-center justify-center`}>
-        <div className="relative">
-          <svg
-            viewBox="0 0 24 24"
-            className="w-40 h-40 lg:w-48 lg:h-48 text-white"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-          </svg>
-          <span className="absolute -top-3 -right-3 w-8 h-8 bg-[#0276E2] border-2 border-white flex items-center justify-center">
-            <span className="text-white text-[10px] font-extrabold">SOC</span>
-          </span>
-          <span className="absolute -bottom-3 -left-3 w-8 h-8 bg-black border-2 border-white flex items-center justify-center">
-            <span className="text-white text-[10px] font-extrabold">ISO</span>
-          </span>
+      <div className={`${base} p-6 lg:p-8`}>
+        <div className="relative w-full h-full bg-white border-2 border-black overflow-hidden grid grid-cols-4">
+          <div className="col-span-1 bg-black p-3 space-y-2">
+            <span className="block h-1.5 w-4/5 bg-white/60"></span>
+            <span className="block h-1.5 w-3/5 bg-white/40"></span>
+            <span className="block h-1.5 w-4/5 bg-[#0276E2]"></span>
+            <span className="block h-1.5 w-2/3 bg-white/30"></span>
+            <span className="block h-1.5 w-3/4 bg-white/30"></span>
+          </div>
+          <div className="col-span-3 p-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="h-2 w-24 bg-black"></span>
+              <span className="h-6 w-16 bg-[#0276E2]"></span>
+            </div>
+            {[0, 1, 2, 3].map((i) => (
+              <div key={i} className="flex items-center gap-3 border border-black/10 p-2">
+                <span className={`w-6 h-6 ${i % 2 ? 'bg-[#0276E2]' : 'bg-black'}`}></span>
+                <div className="flex-1">
+                  <span className="block h-1.5 w-2/3 bg-black/70"></span>
+                  <span className="block h-1 w-1/3 bg-black/30 mt-1"></span>
+                </div>
+                <span className="h-1.5 w-10 bg-black/40"></span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (type === 'marketing') {
+    return (
+      <div className={`${base} flex items-center justify-center p-8`}>
+        <div className="w-full max-w-[360px] space-y-3">
+          <div className="bg-white border-2 border-black p-3">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-black">SEO Ranking</span>
+              <span className="text-[10px] font-bold text-[#0276E2]">↑ 32%</span>
+            </div>
+            <div className="h-12 border border-black/15 flex items-end gap-1 p-1">
+              {[20, 28, 36, 30, 48, 55, 70, 85].map((h, i) => (
+                <span
+                  key={i}
+                  className={`flex-1 ${i === 7 ? 'bg-[#0276E2]' : 'bg-black/60'}`}
+                  style={{ height: `${h}%` }}
+                ></span>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-black text-white p-3 border-2 border-[#0276E2]">
+              <span className="block text-[9px] uppercase tracking-widest text-white/60">Ad Spend</span>
+              <span className="block text-[15px] font-extrabold mt-1">₹ 48k</span>
+              <span className="block text-[9px] text-[#0276E2] mt-1">3.2× ROAS</span>
+            </div>
+            <div className="bg-white border-2 border-black p-3">
+              <span className="block text-[9px] uppercase tracking-widest text-black/60">Clicks</span>
+              <span className="block text-[15px] font-extrabold mt-1 text-black">12,480</span>
+              <span className="block text-[9px] text-[#0276E2] mt-1">CTR 4.1%</span>
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -246,7 +259,7 @@ const OurWork = () => {
 
   return (
     <section
-      id="portfolio"
+      id="capabilities"
       className="relative bg-white py-20 lg:py-28 overflow-hidden"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
@@ -270,7 +283,7 @@ const OurWork = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Our Work
+                What We Build
               </span>
             </div>
 
@@ -278,16 +291,16 @@ const OurWork = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Work that we are{' '}
-              <span className="text-[#0276E2] italic">proud</span> to sign.
+              A studio ready to ship{' '}
+              <span className="text-[#0276E2] italic">your</span> first product.
             </h2>
 
             <p
               className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[560px]"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              A curated showcase of recent collaborations — each one shipped, stress-tested, and
-              still running in production.
+              We're a new LLP — so instead of old case studies, here is exactly what we can build
+              for you, the stack we use, and a realistic timeline.
             </p>
           </div>
 
@@ -299,7 +312,7 @@ const OurWork = () => {
             <button
               onClick={() => setActive((i) => (i - 1 + projects.length) % projects.length)}
               className="w-12 h-12 border-2 border-black text-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
-              aria-label="Previous project"
+              aria-label="Previous capability"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -313,7 +326,7 @@ const OurWork = () => {
             <button
               onClick={() => setActive((i) => (i + 1) % projects.length)}
               className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
-              aria-label="Next project"
+              aria-label="Next capability"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -324,7 +337,7 @@ const OurWork = () => {
 
         {/* MAIN SHOWCASE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-          {/* Left: project index */}
+          {/* Left: capability index */}
           <div className="lg:col-span-4">
             <div className="border-t-2 border-black">
               {projects.map((p, i) => {
@@ -338,7 +351,6 @@ const OurWork = () => {
                     }`}
                   >
                     <div className="flex items-stretch">
-                      {/* Index bar */}
                       <div
                         className={`shrink-0 w-14 sm:w-16 flex items-center justify-center border-r-2 transition-colors ${
                           isActive ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'border-black text-black/50'
@@ -352,7 +364,6 @@ const OurWork = () => {
                         </span>
                       </div>
 
-                      {/* Row content */}
                       <div className="flex-1 p-4 sm:p-5 flex items-center justify-between gap-3">
                         <div className="min-w-0">
                           <p
@@ -361,7 +372,7 @@ const OurWork = () => {
                             }`}
                             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                           >
-                            {p.category} · {p.year}
+                            {p.category}
                           </p>
                           <p
                             className={`mt-1 text-[16px] sm:text-[18px] font-extrabold truncate`}
@@ -389,17 +400,15 @@ const OurWork = () => {
             </div>
           </div>
 
-          {/* Right: featured project */}
+          {/* Right: featured capability */}
           <div className="lg:col-span-8">
             <article
               key={project.id}
               className="relative border-2 border-black bg-white animate-[fadeUp_0.4s_ease_both]"
             >
-              {/* Preview */}
               <div className="relative aspect-[16/9] border-b-2 border-black">
                 <Preview type={project.preview} />
 
-                {/* Meta overlays */}
                 <div className="absolute top-4 left-4 flex items-center gap-2 z-10">
                   <span
                     className="px-3 py-1.5 bg-white border-2 border-black text-[10px] font-bold uppercase tracking-[0.25em] text-black"
@@ -411,7 +420,7 @@ const OurWork = () => {
                     className="px-3 py-1.5 bg-black text-white text-[10px] font-bold uppercase tracking-[0.25em]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    {project.year}
+                    Demo
                   </span>
                 </div>
 
@@ -420,22 +429,20 @@ const OurWork = () => {
                     className="px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    Case Study {project.no}
+                    Capability {project.no}
                   </span>
                 </div>
 
-                {/* Corner markers */}
                 <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-white z-10"></span>
                 <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-white z-10"></span>
               </div>
 
-              {/* Content */}
               <div className="p-6 sm:p-8 lg:p-10">
                 <p
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Client · {project.client}
+                  — Capability · {project.client}
                 </p>
 
                 <h3
@@ -449,7 +456,6 @@ const OurWork = () => {
                   {project.desc}
                 </p>
 
-                {/* Metrics */}
                 <div className="mt-8 grid grid-cols-3 border-t-2 border-black">
                   {project.metrics.map((m, i) => (
                     <div
@@ -473,7 +479,6 @@ const OurWork = () => {
                   ))}
                 </div>
 
-                {/* Stack + CTA */}
                 <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-black/10">
                   <div className="flex flex-wrap gap-2">
                     {project.stack.map((t) => (
@@ -488,11 +493,11 @@ const OurWork = () => {
                   </div>
 
                   <Link
-                    to="/portfolio"
+                    to="/contact"
                     className="group inline-flex items-center gap-3 h-12 pl-5 pr-2 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors shrink-0"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    Read Case Study
+                    Get a Quote
                     <span className="w-9 h-9 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
                       <svg
                         className="w-3.5 h-3.5 text-white group-hover:text-[#0276E2]"
@@ -518,45 +523,40 @@ const OurWork = () => {
                   className={`h-1 flex-1 transition-colors ${
                     i === active ? 'bg-[#0276E2]' : i < active ? 'bg-black' : 'bg-black/15'
                   }`}
-                  aria-label={`Project ${i + 1}`}
+                  aria-label={`Capability ${i + 1}`}
                 ></button>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom strip */}
+        {/* Bottom strip — honest CTA */}
         <div className="mt-16 lg:mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t-2 border-black">
           <div className="flex items-center gap-4">
-            <span className="flex -space-x-2">
-              {['N', 'F', 'O', 'S'].map((l, i) => (
-                <span
-                  key={l}
-                  className={`w-10 h-10 border-2 border-white flex items-center justify-center text-[11px] font-extrabold ${
-                    i % 2 === 0 ? 'bg-black text-white' : 'bg-[#0276E2] text-white'
-                  }`}
-                >
-                  {l}
-                </span>
-              ))}
+            <span className="w-12 h-12 bg-[#0276E2] flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
             </span>
             <div>
               <p
                 className="text-[14px] font-extrabold text-black"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                80+ Happy Clients
+                Your project could be our first feature.
               </p>
-              <p className="text-[11px] uppercase tracking-[0.2em] text-black/50">Across 14 Countries</p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-black/50">
+                Launch-client pricing · limited slots
+              </p>
             </div>
           </div>
 
           <Link
-            to="/portfolio"
+            to="/contact"
             className="group inline-flex items-center gap-3 h-12 px-6 border-2 border-black text-black text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-black hover:text-white transition-colors"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            Explore Full Portfolio
+            Book a Free Call
             <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

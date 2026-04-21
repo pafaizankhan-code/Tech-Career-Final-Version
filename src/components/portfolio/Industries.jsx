@@ -3,20 +3,20 @@ import React from 'react'
 const industries = [
   {
     no: '01',
-    name: 'Fintech & Banking',
-    count: '48 Projects',
-    clients: ['Finlytic', 'Plutus Bank', 'Ledgr'],
+    name: 'Retail & E-commerce',
+    count: 'Shopify · Custom',
+    clients: ['Product Stores', 'Fashion Brands', 'D2C'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.5 3M5.5 6h15L18 14H7m-1.5-8L7 14m0 0a2 2 0 100 4 2 2 0 000-4zm10 4a2 2 0 100 4 2 2 0 000-4z" />
       </svg>
     ),
   },
   {
     no: '02',
-    name: 'Healthcare',
-    count: '32 Projects',
-    clients: ['Aegis', 'Medly', 'Klaris Bio'],
+    name: 'Healthcare & Wellness',
+    count: 'Clinics · Labs',
+    clients: ['Clinics', 'Diagnostic Labs', 'Wellness Brands'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12M6 12h12M12 22a10 10 0 110-20 10 10 0 010 20z" />
@@ -25,43 +25,9 @@ const industries = [
   },
   {
     no: '03',
-    name: 'Logistics & Supply',
-    count: '26 Projects',
-    clients: ['Orbital', 'TransNet', 'Carta Flow'],
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7h13l5 5v5a2 2 0 01-2 2h-1M3 7v10a2 2 0 002 2h1M3 7l2-3h10M8 19a2 2 0 11-4 0 2 2 0 014 0zM20 19a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
-  },
-  {
-    no: '04',
-    name: 'SaaS & Enterprise',
-    count: '64 Projects',
-    clients: ['Nexora', 'Plexa HR', 'Stridr'],
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <rect x="3" y="4" width="18" height="14" rx="1" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h18M8 4v14M16 4v14" />
-      </svg>
-    ),
-  },
-  {
-    no: '05',
-    name: 'E-Commerce & Retail',
-    count: '38 Projects',
-    clients: ['Linea', 'Market Nest', 'Loom & Co.'],
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.5 3M5.5 6h15L18 14H7m-1.5-8L7 14m0 0a2 2 0 100 4 2 2 0 000-4zm10 4a2 2 0 100 4 2 2 0 000-4z" />
-      </svg>
-    ),
-  },
-  {
-    no: '06',
-    name: 'Education & EdTech',
-    count: '22 Projects',
-    clients: ['LearnLoop', 'Gradely', 'Axiom Labs'],
+    name: 'Education & Coaching',
+    count: 'Courses · Classes',
+    clients: ['Coaching Classes', 'Online Courses', 'Schools'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -70,25 +36,58 @@ const industries = [
     ),
   },
   {
-    no: '07',
-    name: 'Media & Entertainment',
-    count: '18 Projects',
-    clients: ['Strata', 'Reelcast', 'Octave'],
+    no: '04',
+    name: 'Real Estate & Property',
+    count: 'Listings · CRM',
+    clients: ['Developers', 'Brokers', 'Rental Platforms'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <polygon strokeLinecap="round" strokeLinejoin="round" points="10 8 16 12 10 16" />
-        <circle cx="12" cy="12" r="9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 22h18M5 22V10l7-5 7 5v12M9 22V13h6v9" />
+      </svg>
+    ),
+  },
+  {
+    no: '05',
+    name: 'Services & Agencies',
+    count: 'Websites · Portals',
+    clients: ['Consulting', 'CA / Legal', 'Creative Agencies'],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <rect x="3" y="4" width="18" height="14" rx="1" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8h18M8 4v14M16 4v14" />
+      </svg>
+    ),
+  },
+  {
+    no: '06',
+    name: 'Logistics & Manufacturing',
+    count: 'CRM · Dashboards',
+    clients: ['Factories', 'Transport', 'Supply Chain'],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7h13l5 5v5a2 2 0 01-2 2h-1M3 7v10a2 2 0 002 2h1M3 7l2-3h10M8 19a2 2 0 11-4 0 2 2 0 014 0zM20 19a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
+    no: '07',
+    name: 'Food & Hospitality',
+    count: 'Orders · Bookings',
+    clients: ['Restaurants', 'Cloud Kitchens', 'Hotels'],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 11h18M5 11V7a2 2 0 012-2h10a2 2 0 012 2v4M5 11v8a2 2 0 002 2h10a2 2 0 002-2v-8" />
       </svg>
     ),
   },
   {
     no: '08',
-    name: 'Government & Public',
-    count: '12 Projects',
-    clients: ['Civic Nexus', 'GovWave', 'UrbanOS'],
+    name: 'Startups & SaaS',
+    count: 'MVP · Growth',
+    clients: ['Early Stage', 'Founders', 'SaaS Tools'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 22h18M5 22V10l7-5 7 5v12M9 22V13h6v9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
   },
@@ -131,8 +130,8 @@ const Industries = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Eight verticals.{' '}
-              <span className="text-[#0276E2] italic">One</span> standard of craft.
+              Eight spaces{' '}
+              <span className="text-[#0276E2] italic">we love</span> to build for.
             </h2>
           </div>
 
@@ -140,7 +139,7 @@ const Industries = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-white/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Enterprise software has no shortcuts — but there are patterns. We have shipped them all.
+            Every industry has its own quirks — these are the ones our founder-led team already understands and is actively open to working in.
           </p>
         </div>
 
@@ -184,7 +183,7 @@ const Industries = () => {
                   className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/40 mb-2 group-hover:text-white/70 transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  Select Clients
+                  Typical Clients
                 </p>
                 <ul
                   className="text-[12px] text-white/80 space-y-1"

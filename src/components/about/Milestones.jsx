@@ -1,12 +1,12 @@
 import React from 'react'
 
 const milestones = [
-  { year: '2013', title: 'Founded', desc: 'Two engineers, a two-desk office in Ahmedabad, and one conviction.', metric: '02', metricLabel: 'Founders' },
-  { year: '2016', title: 'First Fortune 500', desc: '14-month digital transformation for a global logistics leader.', metric: '1st', metricLabel: 'F500 Client' },
-  { year: '2019', title: 'Bengaluru Office', desc: 'Crossed 50 engineers and opened our second office in India.', metric: '50+', metricLabel: 'Team' },
-  { year: '2022', title: 'ISO 27001 Certified', desc: 'Formalised our security-first posture with dual certification.', metric: '100%', metricLabel: 'Audit Pass' },
-  { year: '2024', title: '80+ Clients Milestone', desc: 'Crossed 80 active client partnerships across 14 countries.', metric: '14', metricLabel: 'Countries' },
-  { year: '2026', title: 'Twelve Years Strong', desc: 'Still independent. Still bootstrapped. Still shipping craft.', metric: '12', metricLabel: 'Years' },
+  { year: '2025', title: 'LLP Registered', desc: 'Tech Career IT Solutions LLP is officially incorporated in Ahmedabad, Gujarat.', metric: 'Day', metricLabel: 'One' },
+  { year: '2025', title: 'iHub Studio', desc: 'Set up our first studio space at iHub, University Area — our home for building.', metric: '01', metricLabel: 'Office' },
+  { year: '2026', title: 'Open for Projects', desc: 'Publicly open for first clients — launch-friendly pricing, founder-led delivery.', metric: 'Now', metricLabel: 'Booking' },
+  { year: 'Next', title: 'First 5 Clients', desc: 'Partnering with a small, hand-picked set of first clients — every one a flagship.', metric: '05', metricLabel: 'Flagship Slots' },
+  { year: 'Next', title: 'Growing the Team', desc: 'Adding designers, developers and a growth lead — hiring only for the work in hand.', metric: '3–5', metricLabel: 'Early Hires' },
+  { year: 'Goal', title: 'Long-Term Partners', desc: 'The long game — building a studio our first clients still recommend five years in.', metric: '5y+', metricLabel: 'Partnerships' },
 ]
 
 const Milestones = () => {
@@ -40,34 +40,34 @@ const Milestones = () => {
             className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            Twelve years, one{' '}
-            <span className="text-[#0276E2] italic">honest</span> line.
+            Chapter one,{' '}
+            <span className="text-[#0276E2] italic">written honestly.</span>
           </h2>
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[620px] mx-auto">
-            A decade-plus of compounding decisions — and the moments that defined how we work today.
+            We are a new studio — so here is our timeline so far, and what we are working toward next. No back-dated wins, no invented history.
           </p>
         </div>
 
         {/* Desktop horizontal rail */}
         <div className="hidden lg:block relative">
           <div className="absolute top-[38px] left-0 right-0 h-px bg-black/15"></div>
-          <div className="absolute top-[38px] left-0 h-px bg-[#0276E2]" style={{ width: '83%' }}></div>
+          <div className="absolute top-[38px] left-0 h-px bg-[#0276E2]" style={{ width: '42%' }}></div>
 
           <div className="grid grid-cols-6 gap-5">
             {milestones.map((m, i) => (
               <div key={m.year} className="relative group">
                 <div className="flex justify-center mb-8">
                   <div className="relative">
-                    <span className={`relative z-10 w-20 h-20 flex items-center justify-center border-2 font-extrabold text-[17px] ${
-                      i < 5 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-white border-black text-black'
+                    <span className={`relative z-10 w-20 h-20 flex items-center justify-center border-2 font-extrabold text-[15px] ${
+                      i < 3 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-white border-black text-black'
                     }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       {m.year}
                     </span>
                     <span className={`absolute left-1/2 -translate-x-1/2 -bottom-[14px] w-3 h-3 border-2 ${
-                      i < 5 ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-white border-black'
+                      i < 3 ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-white border-black'
                     }`}></span>
                   </div>
                 </div>

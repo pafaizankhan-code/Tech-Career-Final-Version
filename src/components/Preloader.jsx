@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 // not on every in-app navigation back to Home.
 let hasShownLoader = false
 
-const DURATION = 5000 // 5 seconds
+const DURATION = 1000 // 5 seconds
 
 const statusMessages = [
   { label: 'Booting', sub: 'Initialising core assets' },

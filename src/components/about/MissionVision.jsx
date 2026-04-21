@@ -42,26 +42,26 @@ const MissionVision = () => {
           {[
             {
               kind: 'Mission',
-              title: 'Make enterprise software feel like craft.',
+              title: 'Make good software feel within reach.',
               body:
-                'To build reliable, beautiful, and honest software for organisations that care about the difference — and to teach the next generation of engineers to do the same.',
+                'To give small and mid-sized Indian businesses the kind of websites, stores and internal tools that usually only big-budget teams get — at a price and pace that actually fits their business.',
               bullets: [
-                'Senior engineering, end-to-end',
-                'Transparent scopes and invoices',
-                'Architecture reviews, not guesswork',
+                'Founder-led attention, end-to-end',
+                'Transparent scopes and GST invoices',
+                'Honest estimates, honest timelines',
               ],
               bg: 'bg-white text-black',
               accent: 'bg-[#0276E2]',
             },
             {
               kind: 'Vision',
-              title: 'Be the partner serious teams call first.',
+              title: 'Grow slowly. Build things that last.',
               body:
-                'To be the quiet name behind the world\u2019s most trusted digital products — recognised not by our marketing, but by the longevity of the systems we leave behind.',
+                'To grow one happy client at a time — and become the studio that businesses in Ahmedabad and across India recommend to the next business, without us ever asking.',
               bullets: [
-                'One name across four continents',
-                'Zero-bug-tolerance culture',
-                'Compounding client relationships',
+                'Launch-client pricing, done right',
+                'Every project treated as flagship',
+                'Long-term partnerships over volume',
               ],
               bg: 'bg-[#0276E2] text-white',
               accent: 'bg-black',

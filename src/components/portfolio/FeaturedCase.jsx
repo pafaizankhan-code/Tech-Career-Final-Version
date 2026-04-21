@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const metrics = [
-  { k: '40K+', v: 'Concurrent Users', sub: 'From 2.4K at kickoff' },
-  { k: '0.4s', v: 'Avg. Query Latency', sub: 'Down from 6.2s' },
-  { k: '3×', v: 'Engagement Lift', sub: 'Month-over-month' },
-  { k: '$12M', v: 'ARR Unlocked', sub: 'Year-one impact' },
+const commitments = [
+  { k: '2–4 wk', v: 'Typical Launch', sub: 'For a 5–8 page build' },
+  { k: '< 1.5s', v: 'Page Load Target', sub: 'On 4G mobile · fully built' },
+  { k: '100/100', v: 'Lighthouse SEO', sub: 'Technical SEO out of the box' },
+  { k: '30 days', v: 'Free Bug Fixes', sub: 'Post-launch window included' },
 ]
 
 const FeaturedCase = () => {
@@ -32,15 +32,15 @@ const FeaturedCase = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Featured Case Study
+                Capability Spotlight
               </span>
             </div>
             <h2
               className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Nexora Analytics — <br />
-              <span className="text-[#0276E2] italic">from monolith to modular.</span>
+              A business website, <br />
+              <span className="text-[#0276E2] italic">done properly.</span>
             </h2>
           </div>
 
@@ -49,11 +49,11 @@ const FeaturedCase = () => {
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             <span className="w-1.5 h-1.5 bg-white"></span>
-            Shipping since 2025
+            Example Build · Concept
           </span>
         </div>
 
-        {/* Hero preview */}
+        {/* Dashboard / website preview mockup */}
         <div className="relative border-2 border-black bg-[#0276E2] aspect-[16/9] lg:aspect-[21/9] overflow-hidden mb-10">
           <div className="absolute inset-8 lg:inset-12 bg-white border-2 border-black">
             <div className="flex items-center gap-1.5 px-4 py-3 border-b-2 border-black">
@@ -61,7 +61,7 @@ const FeaturedCase = () => {
               <span className="w-3 h-3 rounded-full bg-black/30"></span>
               <span className="w-3 h-3 rounded-full bg-[#0276E2]"></span>
               <span className="ml-4 text-[11px] font-bold tracking-[0.15em] text-black/50 uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                nexora.io / dashboard
+                yourbrand.in / home
               </span>
             </div>
             <div className="p-4 lg:p-6 grid grid-cols-12 gap-3 h-[calc(100%-52px)]">
@@ -123,28 +123,28 @@ const FeaturedCase = () => {
           <span className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-white"></span>
         </div>
 
-        {/* Challenge / Solution / Impact */}
+        {/* What we do / How we do it / What you get */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {[
             {
-              label: 'The Challenge',
-              title: 'A legacy monolith buckling under scale.',
+              label: 'What We Build',
+              title: 'A website you will keep for years.',
               body:
-                'Nexora\u2019s Rails monolith was taking 6+ seconds per query, dropping 12% of sessions, and blocking the launch of four revenue-critical product lines for eighteen months.',
+                'A modern, SEO-friendly business website — 5 to 10 pages — built in Next.js or WordPress, fully responsive, with a simple CMS so your team can update content without calling us every time.',
               accent: 'bg-[#0276E2]',
             },
             {
-              label: 'Our Approach',
-              title: 'A modular, event-driven rebuild.',
+              label: 'How We Do It',
+              title: 'Written scope first. No surprises.',
               body:
-                'We re-architected the core into 14 bounded services, introduced a read-optimised PostgreSQL + Kafka pipeline, and migrated the storefront to Next.js with edge rendering — all without a single planned outage.',
+                'A free discovery call, a written scope with a fixed quote, Figma designs you sign off before we code, and weekly demos on a staging link — so you always know exactly where we are.',
               accent: 'bg-black',
             },
             {
-              label: 'The Impact',
-              title: 'Performance and revenue, unlocked.',
+              label: 'What You Get',
+              title: 'Code, credentials, and confidence.',
               body:
-                'Within 120 days of soft launch, Nexora tripled daily actives, shipped the four blocked product lines, and attributed $12M in new ARR directly to the replatform.',
+                'A live website on your domain, your hosting and analytics set up, admin access in your name, a handover walkthrough, and 30 days of free bug fixes after launch.',
               accent: 'bg-[#0276E2]',
             },
           ].map((b, i) => (
@@ -179,17 +179,17 @@ const FeaturedCase = () => {
           ))}
         </div>
 
-        {/* Metrics */}
+        {/* Commitments */}
         <div className="grid grid-cols-2 lg:grid-cols-4 border-2 border-black">
-          {metrics.map((m, i) => (
+          {commitments.map((m, i) => (
             <div
               key={m.v}
-              className={`p-6 lg:p-8 ${i !== metrics.length - 1 ? 'lg:border-r-2 border-black' : ''} ${
+              className={`p-6 lg:p-8 ${i !== commitments.length - 1 ? 'lg:border-r-2 border-black' : ''} ${
                 i < 2 ? 'border-b-2 lg:border-b-0 border-black' : ''
               } ${i % 2 === 1 ? 'border-l-2 lg:border-l-0 border-black' : ''}`}
             >
               <p
-                className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-black leading-none"
+                className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-black leading-none"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {m.k}
@@ -206,7 +206,7 @@ const FeaturedCase = () => {
           ))}
         </div>
 
-        {/* Client quote + CTA */}
+        {/* Founder note + engagement card */}
         <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-8 relative bg-black text-white p-6 sm:p-8 lg:p-10">
             <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
@@ -222,8 +222,9 @@ const FeaturedCase = () => {
               className="relative text-xl sm:text-2xl lg:text-[26px] font-medium leading-[1.4]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              &ldquo;The rebuild paid for itself in the first quarter after launch. That is a thing I
-              have never been able to say about an IT engagement — until now.&rdquo;
+              We would rather build one website really well than ten websites half-way.
+              That is the whole point of starting with first clients — you get the quality a
+              studio usually saves for its biggest accounts.
             </p>
 
             <div className="mt-8 pt-6 border-t border-white/20 flex items-center gap-4">
@@ -231,11 +232,11 @@ const FeaturedCase = () => {
                 className="w-12 h-12 bg-[#0276E2] flex items-center justify-center text-[14px] font-extrabold"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                PN
+                FP
               </span>
               <div>
-                <p className="font-bold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Priya Nair</p>
-                <p className="text-[11px] text-white/60 uppercase tracking-[0.2em]">VP Engineering · Nexora Analytics</p>
+                <p className="font-bold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Faizan Pathan</p>
+                <p className="text-[11px] text-white/60 uppercase tracking-[0.2em]">Founder · Tech Career IT Solutions LLP</p>
               </div>
             </div>
           </div>
@@ -246,17 +247,17 @@ const FeaturedCase = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Engagement
+                — Typical Engagement
               </p>
               <dl
                 className="space-y-3 text-[12px]"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 {[
-                  ['Duration', '9 months'],
-                  ['Team', '12 engineers'],
-                  ['Model', 'Fixed + Retainer'],
-                  ['Stack', 'Next.js · Kafka · AWS'],
+                  ['Duration', '2–4 weeks'],
+                  ['Team', 'Founder-led'],
+                  ['Model', 'Fixed Quote'],
+                  ['Stack', 'Next.js · WordPress'],
                 ].map(([k, v]) => (
                   <div key={k} className="flex items-start justify-between pb-2 border-b border-black/10 last:border-0">
                     <dt className="uppercase tracking-[0.2em] text-black/50">{k}</dt>
@@ -267,11 +268,11 @@ const FeaturedCase = () => {
             </div>
 
             <Link
-              to="/portfolio"
+              to="/contact"
               className="group mt-6 inline-flex items-center justify-between gap-2 h-12 px-4 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              Read Full Case Study
+              Get a Quote
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
               </svg>

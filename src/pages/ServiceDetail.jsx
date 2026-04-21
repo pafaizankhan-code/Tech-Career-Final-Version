@@ -11,16 +11,16 @@ import StartProject from '../components/StartProject'
 
 // Build per-service SEO title, description, and keywords from existing data.
 const buildServiceSeo = (service, category) => {
-  const title = `${service.title} Services in Australia — ${service.tagline}`
-  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Delivered by Australia's senior-only IT studio. ISO 27001 & SOC 2 certified.`
+  const title = `${service.title} in Ahmedabad — ${service.tagline}`
+  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Built by Tech Career IT Solutions LLP, a founder-led studio at iHub, Ahmedabad.`
   const keywords = [
-    `${service.title} Australia`,
-    `${service.title} Sydney`,
-    `${service.title} Melbourne`,
+    `${service.title} Ahmedabad`,
+    `${service.title} India`,
+    `${service.title} Gujarat`,
     `${service.title} services`,
-    `${service.title} consultants`,
-    `${category?.label} Australia`,
-    ...service.stack.map((t) => `${t} development Australia`),
+    `${service.title} agency`,
+    `${category?.label} Ahmedabad`,
+    ...service.stack.map((t) => `${t} developer India`),
   ].join(', ')
   return { title, description, keywords }
 }

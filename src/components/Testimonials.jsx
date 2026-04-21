@@ -1,68 +1,53 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-const testimonials = [
+const faqs = [
   {
     id: 1,
-    rating: 5,
-    quote:
-      'Tech Career did not just deliver a product — they delivered a point of view. Every sprint demo sharpened our thinking, and the final platform is genuinely the cleanest codebase our team has inherited.',
-    name: 'Priya Nair',
-    role: 'VP Engineering',
-    company: 'Nexora Analytics',
-    initials: 'PN',
+    tag: 'Trust',
+    question: 'You are a new studio — why should I trust you with my project?',
+    answer:
+      'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+    initials: 'Q1',
     accent: 'blue',
   },
   {
     id: 2,
-    rating: 5,
-    quote:
-      'We briefed them on a Monday and had a working prototype on the Thursday of the following week. Six weeks later, we were on the App Store at 4.9 stars. Rare to find a partner that moves at founder speed.',
-    name: 'Arjun Mehta',
-    role: 'Founder & CEO',
-    company: 'Finlytic Banking',
-    initials: 'AM',
+    tag: 'Timeline',
+    question: 'How long will it take to build my website, app or CRM?',
+    answer:
+      'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope — and if we ever slip, we tell you before the deadline, not after.',
+    initials: 'Q2',
     accent: 'black',
   },
   {
     id: 3,
-    rating: 5,
-    quote:
-      'Migrating seven production regions to Kubernetes without a single minute of downtime — and with rollback runbooks we actually trust — is the kind of outcome you plan a year for. They did it in a quarter.',
-    name: 'Lena Müller',
-    role: 'CTO',
-    company: 'Orbital Logistics',
-    initials: 'LM',
+    tag: 'Pricing',
+    question: 'How do you price projects? Any hidden costs?',
+    answer:
+      'We quote a fixed price based on a written scope before any work starts — with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre — if scope grows mid-project, we quote the delta upfront.',
+    initials: 'Q3',
     accent: 'blue',
   },
   {
     id: 4,
-    rating: 5,
-    quote:
-      'SOC 2 Type II inside a single quarter — without slowing our product roadmap. The audit partner literally asked who wrote our runbooks. Worth every rupee.',
-    name: 'Dr. Rahul Iyer',
-    role: 'Head of Security',
-    company: 'Aegis Healthcare',
-    initials: 'RI',
+    tag: 'Location',
+    question: 'Where are you based? Can we meet in person?',
+    answer:
+      'We are based at iHub, University Area, Ahmedabad, Gujarat — 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
+    initials: 'Q4',
     accent: 'black',
   },
 ]
 
-const logos = ['NEXORA', 'FINLYTIC', 'ORBITAL', 'SENTIO', 'LINEA', 'AEGIS']
+const techStack = ['React', 'Next.js', 'Node.js', 'React Native', 'Shopify', 'WordPress', 'Figma', 'Tailwind']
 
 const Testimonials = () => {
   const [active, setActive] = useState(0)
-  const t = testimonials[active]
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setActive((i) => (i + 1) % testimonials.length)
-    }, 7000)
-    return () => clearInterval(id)
-  }, [])
+  const t = faqs[active]
 
   return (
     <section
-      id="testimonials"
+      id="faq"
       className="relative bg-white py-20 lg:py-28 overflow-hidden"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
@@ -85,7 +70,7 @@ const Testimonials = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Testimonials
+                Honest FAQ
               </span>
             </div>
 
@@ -93,8 +78,8 @@ const Testimonials = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Words from teams we have{' '}
-              <span className="text-[#0276E2] italic">stood beside.</span>
+              Real questions.{' '}
+              <span className="text-[#0276E2] italic">Honest</span> answers.
             </h2>
           </div>
 
@@ -103,9 +88,9 @@ const Testimonials = () => {
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             <button
-              onClick={() => setActive((i) => (i - 1 + testimonials.length) % testimonials.length)}
+              onClick={() => setActive((i) => (i - 1 + faqs.length) % faqs.length)}
               className="w-12 h-12 border-2 border-black text-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
-              aria-label="Previous testimonial"
+              aria-label="Previous question"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -114,12 +99,12 @@ const Testimonials = () => {
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-black/60 px-2">
               <span className="text-black">{String(active + 1).padStart(2, '0')}</span>
               <span className="mx-1 text-black/30">/</span>
-              {String(testimonials.length).padStart(2, '0')}
+              {String(faqs.length).padStart(2, '0')}
             </span>
             <button
-              onClick={() => setActive((i) => (i + 1) % testimonials.length)}
+              onClick={() => setActive((i) => (i + 1) % faqs.length)}
               className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
-              aria-label="Next testimonial"
+              aria-label="Next question"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -128,9 +113,9 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Main testimonial */}
+        {/* Main FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Feature quote */}
+          {/* Feature FAQ */}
           <article
             key={t.id}
             className="relative lg:col-span-8 border-2 border-black bg-white p-8 sm:p-10 lg:p-14 animate-[fadeUp_0.4s_ease_both]"
@@ -140,40 +125,43 @@ const Testimonials = () => {
             <span className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#0276E2]"></span>
             <span className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
 
-            {/* Huge quote mark */}
             <span
               className="absolute top-6 right-8 lg:top-10 lg:right-12 text-[120px] lg:text-[180px] leading-none font-black text-[#0276E2]/10 select-none pointer-events-none"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              &ldquo;
+              ?
             </span>
 
-            {/* Stars */}
-            <div className="flex items-center gap-1 mb-6">
-              {[...Array(t.rating)].map((_, i) => (
-                <svg key={i} className="w-5 h-5 text-[#0276E2]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
-                </svg>
-              ))}
+            <div className="flex items-center gap-3 mb-6">
               <span
-                className="ml-3 text-[10px] font-bold uppercase tracking-[0.3em] text-black/60"
+                className="px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.3em]"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                5.0 · Verified Client
+                {t.tag}
+              </span>
+              <span
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/60"
+                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+              >
+                FAQ · {String(active + 1).padStart(2, '0')}
               </span>
             </div>
 
-            <p
-              className="relative text-2xl sm:text-3xl lg:text-[38px] font-medium text-black leading-[1.35] tracking-tight"
+            <h3
+              className="relative text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-black leading-[1.25] tracking-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              &ldquo;{t.quote}&rdquo;
+              {t.question}
+            </h3>
+
+            <p className="relative mt-5 text-[15px] sm:text-[16px] leading-[1.75] text-black/75 max-w-[680px]">
+              {t.answer}
             </p>
 
             <div className="mt-8 lg:mt-10 pt-6 border-t-2 border-black flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <span
-                  className={`w-14 h-14 flex items-center justify-center text-white text-[15px] font-extrabold border-2 ${
+                  className={`w-14 h-14 flex items-center justify-center text-white text-[13px] font-extrabold border-2 ${
                     t.accent === 'blue' ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-black border-black'
                   }`}
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
@@ -182,35 +170,36 @@ const Testimonials = () => {
                 </span>
                 <div>
                   <p
-                    className="text-[17px] font-extrabold text-black leading-tight"
+                    className="text-[13px] font-extrabold text-black leading-tight"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    {t.name}
+                    Answered by the founding team
                   </p>
-                  <p className="text-[12px] text-black/60 mt-0.5">
-                    {t.role} · <span className="text-[#0276E2] font-semibold">{t.company}</span>
+                  <p className="text-[11px] text-black/60 mt-0.5">
+                    Tech Career IT Solutions LLP ·{' '}
+                    <span className="text-[#0276E2] font-semibold">Ahmedabad</span>
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
-                {testimonials.map((_, i) => (
+                {faqs.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setActive(i)}
                     className={`h-1.5 transition-all ${
                       i === active ? 'w-8 bg-[#0276E2]' : 'w-3 bg-black/20 hover:bg-black/40'
                     }`}
-                    aria-label={`View testimonial ${i + 1}`}
+                    aria-label={`View question ${i + 1}`}
                   ></button>
                 ))}
               </div>
             </div>
           </article>
 
-          {/* Side stack — rating card + mini testimonials */}
+          {/* Side stack */}
           <aside className="lg:col-span-4 flex flex-col gap-6">
-            {/* Rating stat card */}
+            {/* Availability card */}
             <div className="bg-black text-white p-6 sm:p-8 relative">
               <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
               <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
@@ -219,48 +208,52 @@ const Testimonials = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Client Score
+                — Availability
               </p>
 
-              <div className="flex items-baseline gap-3">
-                <p
-                  className="text-[68px] lg:text-[84px] font-extrabold leading-none"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  4.9
-                  <span className="text-[#0276E2]">/</span>
-                  <span className="text-white/40">5</span>
-                </p>
-              </div>
+              <p
+                className="text-[44px] lg:text-[54px] font-extrabold leading-[0.95]"
+                style={{ fontFamily: 'Playfair Display, serif' }}
+              >
+                Taking our
+                <br />
+                <span className="text-[#0276E2] italic">first</span> clients.
+              </p>
 
-              <div className="flex items-center gap-1 mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-[#0276E2]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
-                  </svg>
-                ))}
+              <div className="mt-5 flex items-center gap-2">
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
+                  <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                </span>
+                <span
+                  className="text-[11px] uppercase tracking-[0.25em] text-white/80 font-semibold"
+                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                >
+                  Open · Apr 2026
+                </span>
               </div>
 
               <p
                 className="mt-4 text-[11px] uppercase tracking-[0.25em] text-white/60"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                Based on 240+ verified reviews <br /> across Clutch · GoodFirms · Google
+                Launch-client pricing for a limited<br />
+                number of projects this quarter.
               </p>
             </div>
 
-            {/* Mini testimonial chips */}
+            {/* Other questions */}
             <div className="border-2 border-black bg-white p-6 flex-1 relative">
               <p
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Jump To
+                — Other Questions
               </p>
 
               <ul className="divide-y divide-black/10">
-                {testimonials.map((tm, i) => (
-                  <li key={tm.id}>
+                {faqs.map((q, i) => (
+                  <li key={q.id}>
                     <button
                       onClick={() => setActive(i)}
                       className={`w-full text-left py-3 flex items-center gap-3 transition-colors ${
@@ -275,16 +268,16 @@ const Testimonials = () => {
                         }`}
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
-                        {tm.initials}
+                        {q.initials}
                       </span>
                       <div className="min-w-0 flex-1">
                         <p
-                          className="text-[13px] font-bold truncate"
+                          className="text-[12px] font-bold truncate"
                           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                         >
-                          {tm.name}
+                          {q.tag}
                         </p>
-                        <p className="text-[11px] text-black/50 truncate">{tm.company}</p>
+                        <p className="text-[11px] text-black/50 truncate">{q.question}</p>
                       </div>
                       {i === active && <span className="w-1.5 h-1.5 rounded-full bg-[#0276E2]"></span>}
                     </button>
@@ -295,14 +288,14 @@ const Testimonials = () => {
           </aside>
         </div>
 
-        {/* Client logos marquee */}
+        {/* Tech stack marquee */}
         <div className="mt-16 lg:mt-20 relative border-t-2 border-b-2 border-black bg-white">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-white z-10 [mask-image:linear-gradient(to_right,black_40%,transparent)]"></div>
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-white z-10 [mask-image:linear-gradient(to_left,black_40%,transparent)]"></div>
 
           <div className="flex overflow-hidden">
             <div className="flex animate-[marquee_28s_linear_infinite] whitespace-nowrap">
-              {[...logos, ...logos].map((l, i) => (
+              {[...techStack, ...techStack].map((l, i) => (
                 <span
                   key={i}
                   className="flex items-center gap-6 px-8 py-6 text-[15px] sm:text-[18px] font-black tracking-[0.35em] text-black/80"

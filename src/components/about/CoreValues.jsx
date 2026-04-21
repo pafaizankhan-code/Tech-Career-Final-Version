@@ -4,7 +4,7 @@ const values = [
   {
     no: '01',
     title: 'Craft Over Speed',
-    desc: 'We ship fast, but we ship right. Finished on all six sides — tested, documented, reviewed.',
+    desc: 'We ship fast, but we ship right — tested, documented, reviewed. A website we hand over today should still feel good six months in.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -14,7 +14,7 @@ const values = [
   {
     no: '02',
     title: 'Truth Over Theatre',
-    desc: 'Honest estimates. Real progress. We tell you what is broken before you have to ask.',
+    desc: 'Honest quotes, real weekly progress, and straight answers. If something will slip, you hear it from us before the deadline — not after.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7" />
@@ -33,8 +33,8 @@ const values = [
   },
   {
     no: '04',
-    title: 'Learn in Public',
-    desc: 'We write post-mortems after every major release and share what we broke. Even the uncomfortable parts.',
+    title: 'Learn in the Open',
+    desc: 'We explain decisions in plain language — not jargon or buzzwords. You should understand what we are building, and why, even if you are non-technical.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 20h9M4 4h16v12H4zM4 8h16" />
@@ -100,7 +100,7 @@ const CoreValues = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Not slogans on a wall — the filters we actually use when we hire, ship, and choose who to work with.
+            Not slogans on a wall — these are the filters we actually use when we ship, when we hire, and when we choose which projects to take on.
           </p>
         </div>
 

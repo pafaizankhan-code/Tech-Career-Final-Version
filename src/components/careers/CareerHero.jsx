@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const stats = [
-  { k: '12', v: 'Open Roles' },
-  { k: '85', v: 'Teammates' },
-  { k: '4.9/5', v: 'Glassdoor Score' },
-  { k: '3', v: 'Global Offices' },
+  { k: '2–3', v: 'Open Roles' },
+  { k: 'Small', v: 'Founding Team' },
+  { k: 'iHub', v: 'Ahmedabad Base' },
+  { k: '< 72h', v: 'Reply SLA' },
 ]
 
 const CareerHero = () => {
@@ -49,7 +49,7 @@ const CareerHero = () => {
                 <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
               </span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Now Hiring · 12 Open Roles
+                Hiring · Early Team
               </span>
             </div>
 
@@ -57,16 +57,16 @@ const CareerHero = () => {
               className="text-5xl sm:text-6xl lg:text-[96px] xl:text-[108px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Build the web's
+              Help build a<br />
+              <span className="text-[#0276E2] italic">new studio</span>
               <br />
-              <span className="text-[#0276E2] italic">most trusted</span>
-              <br />
-              software, with us.
+              from day one.
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              We are a senior-only engineering studio. No juniors throwing code over the wall. If
-              you want to spend your best decade shipping craft — not sprint points — this might be home.
+              We are a brand-new founder-led studio based at iHub, Ahmedabad. If you want real
+              ownership, direct access to the founder, and the chance to shape a studio rather than
+              slot into someone else's org chart — there's a seat for you.
             </p>
 
             <div
@@ -119,7 +119,7 @@ const CareerHero = () => {
                 className="text-[26px] lg:text-[30px] font-extrabold leading-[1.15] tracking-tight"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Principal Engineer, Platform
+                Full-Stack Developer
               </h3>
 
               <dl
@@ -127,10 +127,10 @@ const CareerHero = () => {
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 {[
-                  ['Team', 'Platform Engineering'],
-                  ['Location', 'Ahmedabad · Remote-OK'],
+                  ['Team', 'Founding Engineering'],
+                  ['Location', 'iHub, Ahmedabad · Hybrid-OK'],
                   ['Type', 'Full-time'],
-                  ['Compensation', '₹55 L – ₹85 L + ESOP'],
+                  ['Stack', 'React · Node.js · WordPress'],
                 ].map(([k, v]) => (
                   <div key={k} className="flex items-start justify-between pb-2.5 border-b border-white/15 last:border-0 last:pb-0">
                     <dt className="uppercase tracking-[0.2em] text-white/50">{k}</dt>

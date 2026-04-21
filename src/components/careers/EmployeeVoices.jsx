@@ -1,36 +1,36 @@
 import React from 'react'
 
-const voices = [
+const cards = [
   {
-    initials: 'MS',
+    initials: 'FP',
     accent: 'blue',
-    name: 'Meera Shah',
-    role: 'Staff Engineer · 4 yrs',
+    name: 'Faizan Pathan',
+    role: 'Founder',
     quote:
-      'I joined to build one platform. I stayed because I was trusted to own an entire practice by year two. That never happens at the big shops.',
+      'I am hiring people I would have wanted to work for when I was starting out. That is the whole hiring bar — no jargon, no ego, no fake urgency. If you like building real things for real clients, this is a good place to be.',
   },
   {
-    initials: 'RT',
+    initials: 'We',
     accent: 'black',
-    name: 'Rahim Tariq',
-    role: 'Principal Architect · 6 yrs',
+    name: 'What To Expect',
+    role: 'Week 1',
     quote:
-      'The no-meeting Wednesdays are real. I have shipped more meaningful code here in a quarter than in four years at my previous role.',
+      'In your first week you ship something small to a real project, meet the founder one-on-one, pair-program on an existing codebase, and get walked through how we scope and deliver. No three-month onboarding slide deck.',
   },
   {
-    initials: 'AP',
+    initials: 'We',
     accent: 'blue',
-    name: 'Ananya Pillai',
-    role: 'Lead Designer · 3 yrs',
+    name: 'Honest Warning',
+    role: 'New Studio',
     quote:
-      'Design is treated like a discipline, not a decoration. Our design system is read by engineers, and engineers are in our design reviews.',
+      'We are new. You will sometimes be the only designer or the only developer on a project. If that sounds exciting, you will thrive here. If you need a 200-person org to hide inside, this is not it — and that is OK.',
   },
 ]
 
-const perks = [
-  { k: '4.9', v: 'Glassdoor Score', sub: 'Based on 86 reviews' },
-  { k: '96%', v: 'Would Recommend', sub: 'To an engineer friend' },
-  { k: '3.8 yrs', v: 'Avg. Tenure', sub: 'Industry avg: 1.9 yrs' },
+const stats = [
+  { k: 'iHub', v: 'Ahmedabad Base', sub: 'University Area · 380015' },
+  { k: 'Direct', v: 'To the Founder', sub: 'No HR layer · no middle manager' },
+  { k: 'Real', v: 'Client Work', sub: 'Day one · no sandbox tasks' },
 ]
 
 const EmployeeVoices = () => {
@@ -57,7 +57,7 @@ const EmployeeVoices = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                Employee Voices
+                A Note on Culture
               </span>
             </div>
 
@@ -65,7 +65,7 @@ const EmployeeVoices = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Unedited, from the <span className="text-[#0276E2] italic">people</span> who stayed.
+              An honest pitch <span className="text-[#0276E2] italic">from the founder.</span>
             </h2>
           </div>
 
@@ -73,14 +73,14 @@ const EmployeeVoices = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            We didn't write these. We just asked three long-tenured teammates one question — "why
-            are you still here?"
+            We have no employees yet — so instead of fake testimonials, here is what the founder,
+            your first week, and the tradeoffs actually look like.
           </p>
         </div>
 
-        {/* Voice cards */}
+        {/* Founder + expectation cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {voices.map((v, i) => (
+          {cards.map((v, i) => (
             <article
               key={v.name}
               className={`relative border-2 border-black bg-white p-6 sm:p-8 transition-colors hover:bg-black hover:text-white group ${
@@ -97,16 +97,17 @@ const EmployeeVoices = () => {
                 &ldquo;
               </span>
 
-              <div className="flex items-center gap-1 mb-5">
-                {[...Array(5)].map((_, si) => (
-                  <svg key={si} className="w-4 h-4 text-[#0276E2]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
-                  </svg>
-                ))}
+              <div className="mb-5">
+                <span
+                  className="inline-flex items-center px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
+                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                >
+                  {v.role}
+                </span>
               </div>
 
               <p
-                className="relative text-[18px] sm:text-[20px] leading-[1.45] font-medium italic min-h-[160px]"
+                className="relative text-[17px] sm:text-[19px] leading-[1.5] font-medium italic min-h-[160px]"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 &ldquo;{v.quote}&rdquo;
@@ -129,7 +130,7 @@ const EmployeeVoices = () => {
                     {v.name}
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-black/50 group-hover:text-white/60 transition-colors">
-                    {v.role}
+                    Tech Career IT Solutions LLP
                   </p>
                 </div>
               </div>
@@ -137,7 +138,7 @@ const EmployeeVoices = () => {
           ))}
         </div>
 
-        {/* Rating strip */}
+        {/* Commitment strip */}
         <div className="mt-14 lg:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-5 bg-[#0276E2] text-white p-6 sm:p-8 relative">
             <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white"></span>
@@ -147,30 +148,31 @@ const EmployeeVoices = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — The Numbers
+              — What We Commit To
             </p>
             <h3
               className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.1] tracking-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Good places to work keep <span className="text-black italic">good</span> people.
+              Small team. <span className="text-black italic">Clear</span> terms.
             </h3>
             <p className="mt-5 text-[14px] leading-[1.7] text-white/85 max-w-[420px]">
-              We didn't optimise for hype — we optimised for a team that stays. The numbers below
-              reflect that choice.
+              We won't pretend to be bigger than we are. What we can promise: a fair offer in
+              writing, direct access to the founder, and a clean exit policy if it ever turns out
+              not to be a fit.
             </p>
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 border-2 border-black">
-            {perks.map((p, i) => (
+            {stats.map((p, i) => (
               <div
                 key={p.v}
                 className={`py-8 px-6 ${
-                  i !== perks.length - 1 ? 'sm:border-r-2 border-black' : ''
+                  i !== stats.length - 1 ? 'sm:border-r-2 border-black' : ''
                 } ${i < 2 ? 'border-b-2 sm:border-b-0 border-black' : ''}`}
               >
                 <p
-                  className="text-4xl sm:text-5xl font-extrabold text-black leading-none"
+                  className="text-3xl sm:text-4xl font-extrabold text-black leading-none"
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
                   {p.k}

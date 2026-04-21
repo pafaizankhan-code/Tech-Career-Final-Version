@@ -10,9 +10,9 @@ const contactJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   '@id': `${SITE.baseUrl}/contact`,
-  name: 'Contact Tech Career IT Solutions',
+  name: 'Contact Tech Career IT Solutions LLP',
   description:
-    'Reach Australia\u2019s best IT company. Reply within 4 business hours. Offices in Sydney, Melbourne.',
+    'Talk to Tech Career IT Solutions LLP — a founder-led web and digital marketing studio at iHub, Ahmedabad. Reply within 24 hours on email and WhatsApp.',
   url: `${SITE.baseUrl}/contact`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -23,18 +23,18 @@ const contactJsonLd = {
     telephone: SITE.phone,
     email: SITE.email,
     contactType: 'customer service',
-    areaServed: 'AU',
-    availableLanguage: ['English'],
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Hindi', 'Gujarati'],
   },
 }
 
 const Contact = () => (
   <>
     <Seo
-      title="Contact Us — Tech Career IT Solutions | Sydney, Melbourne"
-      description="Get in touch with Australia's top IT company. 4-hour reply SLA. Email, phone, WhatsApp, or book a 30-minute discovery call — we read every message."
-      keywords="contact IT company Australia, IT consultancy Sydney contact, software development Melbourne contact, Australian IT quote, book IT discovery call, IT support Australia"
-      canonical="https://techcareerit.com.au/contact"
+      title="Contact Us — Tech Career IT Solutions LLP | iHub, Ahmedabad"
+      description="Get in touch with a founder-led studio in Ahmedabad. Reply within 24 hours on email or WhatsApp. Free discovery call for every new project — no obligation, no sales pitch."
+      keywords="contact web developer ahmedabad, digital marketing agency ahmedabad contact, ihub ahmedabad studio, web design quote ahmedabad, free discovery call india, tech career it solutions llp contact"
+      canonical="https://tech-career-final-version.vercel.app/contact"
       jsonLd={contactJsonLd}
     />
     <ContactHero />

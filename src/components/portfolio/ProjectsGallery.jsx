@@ -2,28 +2,28 @@ import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
 const allProjects = [
-  { id: 1, year: '2025', tag: 'web', category: 'Web Platform', title: 'Nexora Analytics', desc: 'Enterprise SaaS dashboard for 40K+ users.', accent: 'blue', span: 'lg:col-span-2', stack: 'Next.js · AWS' },
-  { id: 2, year: '2025', tag: 'mobile', category: 'Mobile App', title: 'Finlytic Banking', desc: 'Award-winning neo-banking iOS + Android.', accent: 'black', stack: 'Swift · Kotlin' },
-  { id: 3, year: '2024', tag: 'cloud', category: 'Cloud & DevOps', title: 'Orbital Logistics', desc: '7-region Kubernetes migration, zero downtime.', accent: 'blue', stack: 'K8s · Terraform' },
-  { id: 4, year: '2024', tag: 'ai', category: 'AI / ML', title: 'Sentio Intelligence', desc: 'LLM copilot trained on proprietary docs.', accent: 'black', stack: 'LangChain · Pinecone' },
-  { id: 5, year: '2024', tag: 'web', category: 'E-Commerce', title: 'Linea Commerce', desc: 'Headless storefront with 3× conversion lift.', accent: 'blue', stack: 'Next.js · Shopify' },
-  { id: 6, year: '2023', tag: 'security', category: 'Cybersecurity', title: 'Aegis Healthcare', desc: 'SOC 2 + ISO 27001 certified in a single quarter.', accent: 'black', span: 'lg:col-span-2', stack: 'SOC 2 · ISO 27001' },
-  { id: 7, year: '2023', tag: 'web', category: 'SaaS Platform', title: 'Plexa HR', desc: 'Modern HRIS for 200K+ employees.', accent: 'blue', stack: 'React · Postgres' },
-  { id: 8, year: '2023', tag: 'mobile', category: 'Mobile App', title: 'Quantum Fitness', desc: 'Wellness app with 1.2M active installs.', accent: 'black', stack: 'Flutter · Firebase' },
-  { id: 9, year: '2022', tag: 'ai', category: 'AI / ML', title: 'Lumen Vision', desc: 'Computer vision for retail shelf analytics.', accent: 'blue', stack: 'PyTorch · TensorFlow' },
-  { id: 10, year: '2022', tag: 'cloud', category: 'Cloud & DevOps', title: 'Strata Media', desc: 'Petabyte-scale media pipeline on GCP.', accent: 'black', stack: 'GCP · BigQuery' },
+  { id: 1, year: '2–3 wk', tag: 'web', category: 'Business Website', title: 'Brand Website', desc: '5–10 page responsive site with CMS, forms and analytics.', accent: 'blue', span: 'lg:col-span-2', stack: 'Next.js · WordPress' },
+  { id: 2, year: '2–4 wk', tag: 'ecom', category: 'E-commerce', title: 'Shopify Store', desc: 'Catalogue, payments, shipping and checkout — ready to sell.', accent: 'black', stack: 'Shopify · Razorpay' },
+  { id: 3, year: '4–8 wk', tag: 'mobile', category: 'Mobile App', title: 'iOS + Android App', desc: 'Cross-platform app with push, auth and payments.', accent: 'blue', stack: 'React Native · Flutter' },
+  { id: 4, year: '4–6 wk', tag: 'crm', category: 'Custom CRM', title: 'Sales CRM', desc: 'Leads, pipelines, reports and team roles — tailored to your flow.', accent: 'black', stack: 'React · Node.js' },
+  { id: 5, year: '3–6 wk', tag: 'ecom', category: 'E-commerce', title: 'Custom Storefront', desc: 'WooCommerce or headless store with Razorpay / Stripe.', accent: 'blue', stack: 'WooCommerce · Next.js' },
+  { id: 6, year: '4–8 wk', tag: 'crm', category: 'HRMS', title: 'HR Management System', desc: 'Attendance, payroll, leave and onboarding in one portal.', accent: 'black', span: 'lg:col-span-2', stack: 'React · PostgreSQL' },
+  { id: 7, year: '3–5 wk', tag: 'web', category: 'SaaS Landing', title: 'SaaS Marketing Site', desc: 'High-converting landing pages with SEO and analytics built in.', accent: 'blue', stack: 'Next.js · Tailwind' },
+  { id: 8, year: 'Monthly', tag: 'marketing', category: 'Digital Marketing', title: 'SEO + Google Ads', desc: 'Technical SEO, Google Ads and monthly reporting retainer.', accent: 'black', stack: 'SEO · Google Ads' },
+  { id: 9, year: 'Monthly', tag: 'marketing', category: 'Social Media', title: 'Meta Ads + Social', desc: 'Instagram, Facebook ads and organic content for brand growth.', accent: 'blue', stack: 'Meta Ads · Content' },
+  { id: 10, year: '2–3 wk', tag: 'web', category: 'Design', title: 'UI / UX Design', desc: 'Figma wireframes, prototypes and handover-ready design system.', accent: 'black', stack: 'Figma · Prototyping' },
 ]
 
 const filters = [
-  { label: 'All Work', value: 'all' },
-  { label: 'Web', value: 'web' },
+  { label: 'All Capabilities', value: 'all' },
+  { label: 'Websites', value: 'web' },
+  { label: 'E-commerce', value: 'ecom' },
   { label: 'Mobile', value: 'mobile' },
-  { label: 'Cloud', value: 'cloud' },
-  { label: 'AI / ML', value: 'ai' },
-  { label: 'Security', value: 'security' },
+  { label: 'CRM / HRMS', value: 'crm' },
+  { label: 'Marketing', value: 'marketing' },
 ]
 
-const years = ['All Years', '2025', '2024', '2023', '2022']
+const years = ['All Timelines', '2–3 wk', '2–4 wk', '3–5 wk', '4–8 wk', 'Monthly']
 
 // Simple preview based on accent + category
 const Visual = ({ project }) => {
@@ -88,7 +88,7 @@ const ProjectsGallery = () => {
             >
               <span className="w-10 h-px bg-[#0276E2]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                The Archive
+                The Capability Grid
               </span>
             </div>
 
@@ -96,8 +96,8 @@ const ProjectsGallery = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Ten years of{' '}
-              <span className="text-[#0276E2] italic">shipped</span> craft.
+              Every build we ship, with{' '}
+              <span className="text-[#0276E2] italic">honest</span> timelines.
             </h2>
           </div>
 
@@ -105,7 +105,7 @@ const ProjectsGallery = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Filter by practice, vertical, or vintage. Click any card to read how it was built and how it lives today.
+            Filter by capability or timeline. Every card below is a real format we can build for you — click to request a quote.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const ProjectsGallery = () => {
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/50 mr-2 hidden sm:inline">
-              Year →
+              Timeline →
             </span>
             {years.map((y) => (
               <button
@@ -231,27 +231,28 @@ const ProjectsGallery = () => {
           </div>
         )}
 
-        {/* Load more strip */}
+        {/* Bottom strip */}
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 border-t-2 border-black">
           <p
             className="text-[13px] text-black/60"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            Viewing 10 of 250+ shipped projects.{' '}
+            Don't see your exact need?{' '}
             <Link to="/contact" className="text-[#0276E2] font-bold underline">
-              Request access to the private archive →
+              Tell us about your project — we'll scope it for free →
             </Link>
           </p>
 
-          <button
+          <Link
+            to="/contact"
             className="group inline-flex items-center gap-3 h-12 px-6 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            Load More Projects
+            Request a Custom Quote
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

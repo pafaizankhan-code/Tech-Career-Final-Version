@@ -4,32 +4,22 @@ const offices = [
   {
     id: 'ahmedabad',
     city: 'Ahmedabad',
-    role: 'Global Headquarters',
-    address: '4th Floor, Aarush Plaza,\nSG Highway, Bodakdev\nAhmedabad · 380054',
-    phone: '+91 98765 43210',
-    email: 'hq@techcareerit.com',
-    hours: 'Mon — Sat · 09:00 – 21:00',
+    role: 'Studio Headquarters',
+    address: 'iHub, University Area,\nAhmedabad, Gujarat\n380015 · India',
+    phone: '+91 70966 08771',
+    email: 'inquiry.techcareer@gmail.com',
+    hours: 'Mon — Sat · 10:00 – 20:00 IST',
     coords: '23.0225° N · 72.5714° E',
   },
   {
-    id: 'bengaluru',
-    city: 'Bengaluru',
-    role: 'Engineering Studio',
-    address: 'WeWork Prestige Atlanta,\nKoramangala 3rd Block\nBengaluru · 560034',
-    phone: '+91 80123 45678',
-    email: 'blr@techcareerit.com',
-    hours: 'Mon — Fri · 09:30 – 20:30',
-    coords: '12.9352° N · 77.6245° E',
-  },
-  {
-    id: 'dubai',
-    city: 'Dubai',
-    role: 'Middle East Desk',
-    address: 'The H Hotel Tower,\nSheikh Zayed Road\nDubai · UAE',
-    phone: '+971 4 123 4567',
-    email: 'mena@techcareerit.com',
-    hours: 'Sun — Thu · 09:00 – 18:00',
-    coords: '25.2048° N · 55.2708° E',
+    id: 'remote',
+    city: 'Remote',
+    role: 'Pan-India Delivery',
+    address: 'We work with clients across India\non email, WhatsApp & Google Meet\nNo office visit required',
+    phone: '+91 70966 08771',
+    email: 'inquiry.techcareer@gmail.com',
+    hours: 'Mon — Sat · IST hours',
+    coords: 'Pan-India · Remote-First',
   },
 ]
 
@@ -114,7 +104,7 @@ const Offices = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Three cities. <span className="text-[#0276E2] italic">One</span> studio.
+              One studio. <span className="text-[#0276E2] italic">All</span> of India.
             </h2>
           </div>
 
@@ -122,14 +112,14 @@ const Offices = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Drop in for coffee, a whiteboard session, or a working lunch. No appointments required
-            from 10:00 to 17:00 on weekdays.
+            Drop in at iHub for a chai and a whiteboard session if you are near Ahmedabad —
+            or work with us remotely from anywhere in India. Both work equally well.
           </p>
         </div>
 
         {/* City tabs */}
         <div
-          className="grid grid-cols-3 border-2 border-black mb-8"
+          className="grid grid-cols-2 border-2 border-black mb-8"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
           {offices.map((o, i) => {

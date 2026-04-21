@@ -35,40 +35,40 @@ const OurStory = () => {
 
             <div className="mt-8 space-y-6 text-[15px] sm:text-[16px] leading-[1.8] text-black/75 max-w-[640px]">
               <p>
-                In 2013, two engineers rented a two-desk office in Ahmedabad with one idea — that
-                software should be built the way a carpenter builds a cabinet: measured, labeled,
-                and finished on all six sides.
+                Tech Career IT Solutions LLP was founded in 2025, out of a simple frustration —
+                that small and mid-sized Indian businesses kept paying for websites and software
+                that looked fine in a demo but fell apart two months after handover.
               </p>
               <p>
-                Twelve years later we are still that workshop at heart — only bigger. Our team of
-                senior architects, designers, and engineers has shipped platforms for
-                <span className="text-black font-semibold"> fintech unicorns, Fortune 500 logistics</span>,
-                and <span className="text-black font-semibold">award-winning healthcare</span> clients across
-                14 countries.
+                So we set up a small, <span className="text-black font-semibold">founder-led studio at iHub, Ahmedabad</span> — focused on
+                the work we love doing: clean websites, reliable e-commerce stores, custom CRM and
+                HRMS tools, mobile apps, and the <span className="text-black font-semibold">digital marketing</span> that
+                actually brings traffic in.
               </p>
               <p>
-                We still resist the things that rot software — shortcut thinking, silent decisions,
-                untested assumptions. And we still finish on all six sides.
+                We are new as a company. But we are not new to the craft — which is why our first
+                clients get something most agencies stop offering after year three: direct access,
+                honest estimates, and a team that finishes what it quotes.
               </p>
             </div>
 
             {/* Signature */}
             <div className="mt-10 pt-8 border-t-2 border-black flex items-center gap-5">
               <span className="w-14 h-14 bg-[#0276E2] text-white flex items-center justify-center text-[14px] font-extrabold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                KP
+                FP
               </span>
               <div>
                 <p
                   className="text-[15px] font-extrabold text-black"
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
-                  Karan Patel
+                  Faizan Pathan
                 </p>
                 <p
                   className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/60"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  Founder & Managing Partner
+                  Founder · Tech Career IT Solutions LLP
                 </p>
               </div>
             </div>
@@ -90,8 +90,8 @@ const OurStory = () => {
                 className="relative text-2xl lg:text-[30px] font-medium leading-[1.35]"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                We do not measure ourselves by what we ship. We measure ourselves by what still
-                works a year after we ship it.
+                We would rather have ten happy first clients than a hundred half-finished ones.
+                Every project right now is a flagship — because right now, every project is ours.
               </p>
 
               <div className="mt-8 pt-6 border-t border-white/20 flex items-center justify-between">
@@ -112,8 +112,8 @@ const OurStory = () => {
             {/* Stats beneath quote */}
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
-                { k: '98%', v: 'Client Retention' },
-                { k: '24 / 7', v: 'Support SLA' },
+                { k: '1:1', v: 'Founder Access' },
+                { k: '< 24h', v: 'Reply Time' },
               ].map((s) => (
                 <div key={s.v} className="border-2 border-black p-5 bg-white relative">
                   <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>

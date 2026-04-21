@@ -5,8 +5,8 @@ const services = [
   {
     no: '01',
     title: 'Web Development',
-    desc: 'Lightning-fast websites, SaaS platforms, and enterprise portals built with modern frameworks and headless architectures.',
-    tags: ['React', 'Next.js', 'Node.js', 'Headless CMS'],
+    desc: 'Fast, SEO-friendly websites and web apps — from business sites and landing pages to custom portals built with modern frameworks.',
+    tags: ['React', 'Next.js', 'Node.js', 'WordPress'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <rect x="3" y="4" width="18" height="14" rx="1" />
@@ -16,21 +16,20 @@ const services = [
   },
   {
     no: '02',
-    title: 'Mobile Applications',
-    desc: 'Native and cross-platform mobile experiences engineered for iOS and Android with pixel-perfect UI and seamless APIs.',
-    tags: ['iOS', 'Android', 'React Native', 'Flutter'],
+    title: 'E-commerce Stores',
+    desc: 'Online stores that convert — Shopify builds and custom e-commerce with secure payments, stock management and smooth checkout.',
+    tags: ['Shopify', 'WooCommerce', 'Razorpay', 'Stripe'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <rect x="6" y="2" width="12" height="20" rx="2" />
-        <path strokeLinecap="round" d="M10 18h4M12 5.5h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.6 3M7 13h10l3-8H5.4M7 13l-1.4 5h13M8 21a1 1 0 100-2 1 1 0 000 2zm9 0a1 1 0 100-2 1 1 0 000 2z" />
       </svg>
     ),
   },
   {
     no: '03',
-    title: 'Custom Software',
-    desc: 'Tailored business applications, CRMs, ERPs, and internal tools that automate workflows and scale with your team.',
-    tags: ['ERP', 'CRM', 'SaaS', 'Automation'],
+    title: 'Custom CRM & HRMS',
+    desc: 'Tailored business software — CRM, HRMS, admin dashboards and internal tools that replace spreadsheets and scale with your team.',
+    tags: ['CRM', 'HRMS', 'Dashboards', 'Automation'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
@@ -39,36 +38,36 @@ const services = [
   },
   {
     no: '04',
-    title: 'Cloud & DevOps',
-    desc: 'Cloud-native architecture, CI/CD pipelines, and container orchestration for resilient, auto-scaling infrastructure.',
-    tags: ['AWS', 'Azure', 'Docker', 'Kubernetes'],
+    title: 'Mobile Applications',
+    desc: 'Cross-platform iOS and Android apps with a shared codebase — clean UI, secure APIs and Play Store / App Store ready.',
+    tags: ['React Native', 'Flutter', 'iOS', 'Android'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7 18a4 4 0 01-.88-7.9 5 5 0 019.9-1.06A4.5 4.5 0 1118 18H7z" />
+        <rect x="6" y="2" width="12" height="20" rx="2" />
+        <path strokeLinecap="round" d="M10 18h4M12 5.5h.01" />
       </svg>
     ),
   },
   {
     no: '05',
-    title: 'AI / ML Solutions',
-    desc: 'Predictive models, intelligent automation, and LLM-powered assistants integrated into your products and processes.',
-    tags: ['LLM', 'NLP', 'Vision', 'Forecasting'],
+    title: 'UI / UX Design',
+    desc: 'Wireframes, prototypes and design systems crafted in Figma — built around real user flows, not just pretty screens.',
+    tags: ['Figma', 'Wireframes', 'Prototypes', 'Design System'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <circle cx="12" cy="12" r="3" />
-        <path strokeLinecap="round" d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l7.586 7.586" />
+        <circle cx="11" cy="11" r="2" />
       </svg>
     ),
   },
   {
     no: '06',
-    title: 'Cybersecurity',
-    desc: 'End-to-end security audits, SOC operations, penetration testing, and compliance for ISO 27001 and SOC 2.',
-    tags: ['Audit', 'SOC', 'Pentest', 'Compliance'],
+    title: 'Digital Marketing',
+    desc: 'SEO, Google Ads, Meta Ads and organic social — measurable campaigns that bring your website the traffic and leads it deserves.',
+    tags: ['SEO', 'Google Ads', 'Meta Ads', 'Social'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 8-8M21 7V3h-4" />
       </svg>
     ),
   },
@@ -112,16 +111,16 @@ const OurServices = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Built to Solve.{' '}
-              <span className="text-[#0276E2] italic">Engineered</span> to Scale.
+              Everything you need to get{' '}
+              <span className="text-[#0276E2] italic">online</span> and grow.
             </h2>
 
             <p
               className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              From idea to deployment, we partner with you across the entire digital lifecycle —
-              delivering software that is reliable, measurable, and built for the decade ahead.
+              From your first website to custom business software and full digital marketing —
+              one founder-led team in Ahmedabad, one transparent quote, one clear timeline.
             </p>
           </div>
 
