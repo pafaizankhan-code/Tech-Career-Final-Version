@@ -30,8 +30,8 @@ const FeaturedCase = () => {
               className="inline-flex items-center gap-3 mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Capability Spotlight
               </span>
             </div>
@@ -40,12 +40,12 @@ const FeaturedCase = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               A business website, <br />
-              <span className="text-[#0276E2] italic">done properly.</span>
+              <span className="text-[#097CF4] italic">done properly.</span>
             </h2>
           </div>
 
           <span
-            className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em] self-start sm:self-auto"
+            className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#097CF4] text-white text-[10px] font-bold uppercase tracking-[0.25em] self-start sm:self-auto"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             <span className="w-1.5 h-1.5 bg-white"></span>
@@ -54,12 +54,12 @@ const FeaturedCase = () => {
         </div>
 
         {/* Dashboard / website preview mockup */}
-        <div className="relative border-2 border-black bg-[#0276E2] aspect-[16/9] lg:aspect-[21/9] overflow-hidden mb-10">
+        <div className="relative border-2 border-black bg-[#097CF4] aspect-[16/9] lg:aspect-[21/9] overflow-hidden mb-10">
           <div className="absolute inset-8 lg:inset-12 bg-white border-2 border-black">
             <div className="flex items-center gap-1.5 px-4 py-3 border-b-2 border-black">
               <span className="w-3 h-3 rounded-full bg-black/30"></span>
               <span className="w-3 h-3 rounded-full bg-black/30"></span>
-              <span className="w-3 h-3 rounded-full bg-[#0276E2]"></span>
+              <span className="w-3 h-3 rounded-full bg-[#097CF4]"></span>
               <span className="ml-4 text-[11px] font-bold tracking-[0.15em] text-black/50 uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 yourbrand.in / home
               </span>
@@ -68,16 +68,16 @@ const FeaturedCase = () => {
               <div className="col-span-3 space-y-2 bg-black/[0.03] p-3">
                 <div className="h-3 w-2/3 bg-black"></div>
                 {[...Array(6)].map((_, i) => (
-                  <div key={i} className={`h-2 ${i === 1 ? 'bg-[#0276E2]' : 'bg-black/30'} ${i === 1 ? 'w-4/5' : 'w-3/4'}`}></div>
+                  <div key={i} className={`h-2 ${i === 1 ? 'bg-[#097CF4]' : 'bg-black/30'} ${i === 1 ? 'w-4/5' : 'w-3/4'}`}></div>
                 ))}
-                <div className="h-8 bg-[#0276E2] mt-4"></div>
+                <div className="h-8 bg-[#097CF4] mt-4"></div>
               </div>
               <div className="col-span-6 space-y-3">
                 <div className="grid grid-cols-3 gap-2">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="border-2 border-black p-2">
                       <div className="h-2 w-1/2 bg-black mb-1"></div>
-                      <div className="h-4 w-2/3 bg-[#0276E2]"></div>
+                      <div className="h-4 w-2/3 bg-[#097CF4]"></div>
                     </div>
                   ))}
                 </div>
@@ -85,7 +85,7 @@ const FeaturedCase = () => {
                   {[40, 70, 55, 80, 35, 90, 60, 72, 65, 88, 50, 95].map((h, i) => (
                     <span
                       key={i}
-                      className={`flex-1 ${i === 5 || i === 11 ? 'bg-[#0276E2]' : 'bg-black/70'}`}
+                      className={`flex-1 ${i === 5 || i === 11 ? 'bg-[#097CF4]' : 'bg-black/70'}`}
                       style={{ height: `${h}%` }}
                     ></span>
                   ))}
@@ -108,10 +108,10 @@ const FeaturedCase = () => {
                 </div>
                 <div className="border-2 border-black p-2 space-y-1">
                   <div className="h-2 bg-black/50"></div>
-                  <div className="h-2 bg-[#0276E2] w-2/3"></div>
+                  <div className="h-2 bg-[#097CF4] w-2/3"></div>
                 </div>
                 <div className="h-8 border-2 border-black flex items-center justify-center">
-                  <span className="w-3 h-3 bg-[#0276E2]"></span>
+                  <span className="w-3 h-3 bg-[#097CF4]"></span>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ const FeaturedCase = () => {
               title: 'A website you will keep for years.',
               body:
                 'A modern, SEO-friendly business website — 5 to 10 pages — built in Next.js or WordPress, fully responsive, with a simple CMS so your team can update content without calling us every time.',
-              accent: 'bg-[#0276E2]',
+              accent: 'bg-[#097CF4]',
             },
             {
               label: 'How We Do It',
@@ -145,16 +145,16 @@ const FeaturedCase = () => {
               title: 'Code, credentials, and confidence.',
               body:
                 'A live website on your domain, your hosting and analytics set up, admin access in your name, a handover walkthrough, and 30 days of free bug fixes after launch.',
-              accent: 'bg-[#0276E2]',
+              accent: 'bg-[#097CF4]',
             },
           ].map((b, i) => (
             <article key={b.label} className="relative border-2 border-black bg-white p-6 lg:p-8">
-              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <div className="flex items-start justify-between mb-5">
                 <span
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — {b.label}
@@ -193,7 +193,7 @@ const FeaturedCase = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {m.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] font-bold uppercase tracking-[0.25em] text-black"
@@ -209,10 +209,10 @@ const FeaturedCase = () => {
         {/* Founder note + engagement card */}
         <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-8 relative bg-black text-white p-6 sm:p-8 lg:p-10">
-            <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-            <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+            <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+            <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
             <span
-              className="absolute top-4 right-8 text-[120px] leading-none font-black text-[#0276E2]/20 select-none pointer-events-none"
+              className="absolute top-4 right-8 text-[120px] leading-none font-black text-[#097CF4]/20 select-none pointer-events-none"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               &ldquo;
@@ -229,7 +229,7 @@ const FeaturedCase = () => {
 
             <div className="mt-8 pt-6 border-t border-white/20 flex items-center gap-4">
               <span
-                className="w-12 h-12 bg-[#0276E2] flex items-center justify-center text-[14px] font-extrabold"
+                className="w-12 h-12 bg-[#097CF4] flex items-center justify-center text-[14px] font-extrabold"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 FP
@@ -244,7 +244,7 @@ const FeaturedCase = () => {
           <div className="lg:col-span-4 border-2 border-black p-6 sm:p-8 flex flex-col justify-between">
             <div>
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Typical Engagement
@@ -269,7 +269,7 @@ const FeaturedCase = () => {
 
             <Link
               to="/contact"
-              className="group mt-6 inline-flex items-center justify-between gap-2 h-12 px-4 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors"
+              className="group mt-6 inline-flex items-center justify-between gap-2 h-12 px-4 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#097CF4] transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Get a Quote

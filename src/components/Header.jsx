@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
+import logoImg from '../assets/logo.jpg'
 
 const categoryIcons = {
   dev: (
@@ -152,12 +153,12 @@ const products = [
 const ProductVisual = ({ type }) => {
   if (type === 'lms') {
     return (
-      <div className="relative w-full h-full bg-[#0276E2] overflow-hidden">
+      <div className="relative w-full h-full bg-[#097CF4] overflow-hidden">
         <div className="absolute inset-4 bg-white border-2 border-black flex flex-col">
           <div className="flex items-center gap-1 px-3 py-2 border-b-2 border-black">
             <span className="w-2 h-2 rounded-full bg-black/30"></span>
             <span className="w-2 h-2 rounded-full bg-black/30"></span>
-            <span className="w-2 h-2 rounded-full bg-[#0276E2]"></span>
+            <span className="w-2 h-2 rounded-full bg-[#097CF4]"></span>
             <span className="ml-2 text-[8px] font-bold tracking-widest text-black/50 uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               learningcraft.io
             </span>
@@ -165,7 +166,7 @@ const ProductVisual = ({ type }) => {
           <div className="flex-1 p-3 grid grid-cols-4 gap-2 min-h-0">
             <div className="col-span-1 bg-black/[0.04] p-2 space-y-1.5">
               <div className="h-1.5 w-3/4 bg-black"></div>
-              <div className="h-1 w-4/5 bg-[#0276E2]"></div>
+              <div className="h-1 w-4/5 bg-[#097CF4]"></div>
               <div className="h-1 w-3/5 bg-black/30"></div>
               <div className="h-1 w-4/5 bg-black/30"></div>
               <div className="h-1 w-2/3 bg-black/30"></div>
@@ -175,16 +176,16 @@ const ProductVisual = ({ type }) => {
               <div className="grid grid-cols-3 gap-1.5">
                 {[0, 1, 2].map((i) => (
                   <div key={i} className="border-2 border-black p-1.5 bg-white">
-                    <div className={`h-5 ${i === 1 ? 'bg-[#0276E2]' : 'bg-black/80'} mb-1`}></div>
+                    <div className={`h-5 ${i === 1 ? 'bg-[#097CF4]' : 'bg-black/80'} mb-1`}></div>
                     <div className="h-1 w-2/3 bg-black/60"></div>
-                    <div className="h-1 w-1/2 bg-[#0276E2] mt-1"></div>
+                    <div className="h-1 w-1/2 bg-[#097CF4] mt-1"></div>
                   </div>
                 ))}
               </div>
               <div className="border-2 border-black p-2">
                 <div className="h-1 w-1/3 bg-black/60 mb-1.5"></div>
                 <div className="h-2 bg-black/10 relative">
-                  <div className="absolute left-0 top-0 h-full bg-[#0276E2]" style={{ width: '68%' }}></div>
+                  <div className="absolute left-0 top-0 h-full bg-[#097CF4]" style={{ width: '68%' }}></div>
                 </div>
               </div>
             </div>
@@ -200,7 +201,7 @@ const ProductVisual = ({ type }) => {
         <div className="absolute inset-4 bg-white border-2 border-white flex flex-col">
           <div className="flex items-center justify-between px-3 py-2 border-b-2 border-black">
             <div className="flex items-center gap-1.5">
-              <span className="w-4 h-4 bg-[#0276E2] flex items-center justify-center">
+              <span className="w-4 h-4 bg-[#097CF4] flex items-center justify-center">
                 <svg className="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                   <path strokeLinecap="round" d="M12 6v12M6 12h12" />
                 </svg>
@@ -209,7 +210,7 @@ const ProductVisual = ({ type }) => {
                 Medcare
               </span>
             </div>
-            <span className="text-[7px] font-bold tracking-widest text-[#0276E2] uppercase">Live</span>
+            <span className="text-[7px] font-bold tracking-widest text-[#097CF4] uppercase">Live</span>
           </div>
           <div className="flex-1 p-3 grid grid-cols-3 gap-2 min-h-0">
             <div className="space-y-2">
@@ -218,7 +219,7 @@ const ProductVisual = ({ type }) => {
                   <div className="text-[7px] font-bold tracking-widest text-black/50 uppercase mb-0.5" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     {l}
                   </div>
-                  <div className={`text-[11px] font-black ${i === 0 ? 'text-[#0276E2]' : 'text-black'}`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <div className={`text-[11px] font-black ${i === 0 ? 'text-[#097CF4]' : 'text-black'}`} style={{ fontFamily: 'Playfair Display, serif' }}>
                     {[412, 87, '₹2.1L'][i]}
                   </div>
                 </div>
@@ -232,7 +233,7 @@ const ProductVisual = ({ type }) => {
                 <div className="space-y-1 flex-1">
                   {[0, 1, 2, 3].map((i) => (
                     <div key={i} className="flex items-center gap-1.5">
-                      <span className={`w-3 h-3 ${i === 0 ? 'bg-[#0276E2]' : i === 1 ? 'bg-black' : 'bg-black/40'}`}></span>
+                      <span className={`w-3 h-3 ${i === 0 ? 'bg-[#097CF4]' : i === 1 ? 'bg-black' : 'bg-black/40'}`}></span>
                       <span className="flex-1 h-1 bg-black/30"></span>
                       <span className="h-1 w-6 bg-black/60"></span>
                     </div>
@@ -248,25 +249,25 @@ const ProductVisual = ({ type }) => {
 
   if (type === 'grocery') {
     return (
-      <div className="relative w-full h-full bg-[#0276E2] overflow-hidden">
+      <div className="relative w-full h-full bg-[#097CF4] overflow-hidden">
         <div className="absolute inset-4 bg-white border-2 border-black flex flex-col">
           <div className="flex items-center justify-between px-3 py-2 border-b-2 border-black">
             <span className="text-[9px] font-black tracking-widest text-black uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              GROCIFY<span className="text-[#0276E2]">.</span>
+              GROCIFY<span className="text-[#097CF4]">.</span>
             </span>
             <div className="flex gap-1">
-              <span className="h-3 w-6 bg-[#0276E2]"></span>
+              <span className="h-3 w-6 bg-[#097CF4]"></span>
               <span className="h-3 w-6 bg-black"></span>
             </div>
           </div>
           <div className="flex-1 p-3 grid grid-cols-4 gap-1.5 min-h-0">
             {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
               <div key={i} className="border-2 border-black p-1 bg-white">
-                <div className={`h-6 ${i % 3 === 0 ? 'bg-[#0276E2]/20' : i % 3 === 1 ? 'bg-black/10' : 'bg-[#0276E2]/10'} border border-black/20`}></div>
+                <div className={`h-6 ${i % 3 === 0 ? 'bg-[#097CF4]/20' : i % 3 === 1 ? 'bg-black/10' : 'bg-[#097CF4]/10'} border border-black/20`}></div>
                 <div className="mt-0.5 h-1 w-3/4 bg-black/60"></div>
                 <div className="mt-0.5 flex items-center justify-between">
                   <span className="h-1 w-3 bg-black"></span>
-                  <span className="h-2 w-3 bg-[#0276E2]"></span>
+                  <span className="h-2 w-3 bg-[#097CF4]"></span>
                 </div>
               </div>
             ))}
@@ -275,21 +276,20 @@ const ProductVisual = ({ type }) => {
             <span className="text-[7px] font-bold tracking-widest text-black/60 uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Cart · 4 items
             </span>
-            <span className="h-2.5 w-10 bg-[#0276E2]"></span>
+            <span className="h-2.5 w-10 bg-[#097CF4]"></span>
           </div>
         </div>
       </div>
     )
   }
 
-  return <div className="w-full h-full bg-[#0276E2]"></div>
+  return <div className="w-full h-full bg-[#097CF4]"></div>
 }
 
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services', mega: serviceCategories, megaType: 'services' },
-  { label: 'Products', to: '/portfolio', mega: products, megaType: 'products' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Careers', to: '/careers' },
   { label: 'Contact', to: '/contact' },
@@ -455,13 +455,24 @@ const Header = () => {
     return (
       <>
         {text.slice(0, i)}
-        <span className="bg-[#0276E2]/15 text-[#0276E2] font-bold">{text.slice(i, i + q.length)}</span>
+        <span className="bg-[#097CF4]/15 text-[#097CF4] font-bold">{text.slice(i, i + q.length)}</span>
         {text.slice(i + q.length)}
       </>
     )
   }
 
   return (
+    <>
+    {/* Mega-menu backdrop — dims the page but stays BELOW the header */}
+    <div
+      className={`hidden lg:block fixed left-0 right-0 bottom-0 z-40 bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 ${
+        activeMegaLink ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+      style={{ top: '130px' }}
+      onClick={() => setMegaOpen(false)}
+      aria-hidden="true"
+    />
+
     <header className="sticky top-0 z-50 w-full" style={{ fontFamily: 'Inter, sans-serif' }}>
       {/* Top utility bar */}
       <div className="hidden md:block bg-black text-white">
@@ -469,8 +480,8 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <span className="relative flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
               </span>
               <span className="font-semibold">Open for First Projects · 2026</span>
             </span>
@@ -482,16 +493,16 @@ const Header = () => {
             </span>
           </div>
           <div className="flex items-center gap-5">
-            <a href="mailto:inquiry.techcareer@gmail.com" className="hover:text-[#0276E2] transition-colors hidden lg:inline">
+            <a href="mailto:inquiry.techcareer@gmail.com" className="hover:text-[#097CF4] transition-colors hidden lg:inline">
               inquiry.techcareer@gmail.com
             </a>
             <span className="hidden lg:inline w-px h-3 bg-white/20"></span>
-            <a href="tel:+917096608771" className="hover:text-[#0276E2] transition-colors">
+            <a href="tel:+917096608771" className="hover:text-[#097CF4] transition-colors">
               +91 70966 08771
             </a>
             <span className="w-px h-3 bg-white/20"></span>
             <div className="flex items-center gap-4 text-[10px]">
-              <a href="https://www.instagram.com/techcareer.llp" className="hover:text-[#0276E2] transition-colors">
+              <a href="https://www.instagram.com/techcareer.llp" className="hover:text-[#097CF4] transition-colors">
                 IG
               </a>
             </div>
@@ -507,43 +518,21 @@ const Header = () => {
             : 'border-b border-black/5'
         }`}
       >
-        <span className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-        <span className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#0276E2]"></span>
+       
 
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[76px] lg:h-[92px]">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 sm:gap-4 shrink-0 group" onClick={() => setMegaOpen(false)}>
-            <div className="relative">
-              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-black flex items-center justify-center relative overflow-hidden transition-colors duration-300 group-hover:bg-[#0276E2]">
-                <span
-                  className="text-white font-black text-xl lg:text-[22px] tracking-tighter relative z-10"
-                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                >
-                  TC
-                </span>
-                <span className="absolute top-0 left-0 w-full h-[3px] bg-[#0276E2] group-hover:bg-black transition-colors duration-300"></span>
-                <span className="absolute bottom-0 right-0 w-[3px] h-full bg-[#0276E2] group-hover:bg-black transition-colors duration-300"></span>
-              </div>
-              <span className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-[#0276E2]"></span>
-            </div>
-
-            <div className="leading-none">
-              <h1
-                className="text-black text-[16px] sm:text-lg lg:text-[22px] font-extrabold tracking-tight leading-none"
-                style={{ fontFamily: 'Playfair Display, serif' }}
-              >
-                Tech <span className="text-[#0276E2] italic">Career</span>
-              </h1>
-              <div className="flex items-center gap-1.5 mt-1.5">
-                <span className="h-px w-5 sm:w-7 bg-[#0276E2]"></span>
-                <p
-                  className="text-[8px] sm:text-[9px] lg:text-[10px] text-black/60 font-semibold tracking-[0.3em] uppercase whitespace-nowrap"
-                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                >
-                  IT Solutions LLP
-                </p>
-              </div>
-            </div>
+        <div className="max-w-[1440px] mx-auto px-3 lg:px-10 flex items-center justify-between h-[76px] lg:h-[92px]">
+          {/* Logo — official brand image */}
+          <Link
+            to="/"
+            className="flex items-center shrink-0 group"
+            onClick={() => setMegaOpen(false)}
+            aria-label="Tech Career IT Solution LLP · Home"
+          >
+            <img
+              src={logoImg}
+              alt="Tech Career IT Solution LLP"
+              className="h-11 lg:h-[60px] w-auto object-contain transition-transform duration-500 "
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -566,7 +555,7 @@ const Header = () => {
                   }}
                   className={({ isActive }) =>
                     `group relative flex items-center gap-1.5 px-3 xl:px-4 h-[92px] text-[12px] font-semibold uppercase tracking-[0.18em] transition-colors cursor-pointer ${
-                      isActive || megaOpen === link.label ? 'text-[#0276E2]' : 'text-black hover:text-[#0276E2]'
+                      isActive || megaOpen === link.label ? 'text-[#097CF4]' : 'text-black hover:text-[#097CF4]'
                     }`
                   }
                 >
@@ -587,7 +576,7 @@ const Header = () => {
                         </svg>
                       )}
                       <span
-                        className={`absolute left-3 xl:left-4 right-3 xl:right-4 bottom-0 h-[3px] bg-[#0276E2] transition-all duration-500 origin-left ${
+                        className={`absolute left-3 xl:left-4 right-3 xl:right-4 bottom-0 h-[3px] bg-[#097CF4] transition-all duration-500 origin-left ${
                           isActive || megaOpen === link.label ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                         }`}
                       ></span>
@@ -603,7 +592,7 @@ const Header = () => {
             <button
               onClick={() => setSearchOpen(true)}
               aria-label="Search"
-              className="inline-flex w-11 h-11 lg:w-12 lg:h-12 items-center justify-center text-black hover:text-[#0276E2] border border-black/10 hover:border-[#0276E2] transition-colors"
+              className="inline-flex w-11 h-11 lg:w-12 lg:h-12 items-center justify-center text-black hover:text-[#097CF4] border border-black/10 hover:border-[#097CF4] transition-colors"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="11" cy="11" r="7" />
@@ -613,13 +602,13 @@ const Header = () => {
 
             <Link
               to="/contact"
-              className="hidden md:inline-flex items-center gap-3 h-11 lg:h-12 pl-5 lg:pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors duration-300 group"
+              className="hidden md:inline-flex items-center gap-3 h-11 lg:h-12 pl-5 lg:pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors duration-300 group"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Start a Project
-              <span className="w-8 h-8 lg:w-9 lg:h-9 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
+              <span className="w-8 h-8 lg:w-9 lg:h-9 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
                 <svg
-                  className="w-3.5 h-3.5 text-white group-hover:text-[#0276E2] transition-colors"
+                  className="w-3.5 h-3.5 text-white group-hover:text-[#097CF4] transition-colors"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -665,40 +654,56 @@ const Header = () => {
 
         <div className="relative h-[2px] bg-black/10">
           <div
-            className="absolute left-0 top-0 h-full bg-[#0276E2] transition-[width] duration-150"
+            className="absolute left-0 top-0 h-full bg-[#097CF4] transition-[width] duration-150"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
 
-        {/* Full-width MEGA MENU */}
+        {/* Full-width MEGA MENU — redesigned, lighter, premium */}
         <div
-          className={`hidden lg:block absolute left-0 right-0 top-full z-20 bg-white border-t-2 border-black shadow-[0_25px_60px_-20px_rgba(0,0,0,0.35)] transition-all duration-300 origin-top ${
+          className={`hidden lg:block absolute left-0 right-0 top-full z-20 bg-white border-t border-black/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.18)] transition-all duration-300 origin-top ${
             activeMegaLink
               ? 'opacity-100 translate-y-0 pointer-events-auto'
               : 'opacity-0 -translate-y-2 pointer-events-none'
           }`}
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
+          {/* Thin accent bar on top */}
+          <span className="block h-[2px] bg-gradient-to-r from-[#097CF4] via-black to-[#097CF4]"></span>
+
           {/* ── SERVICES MEGA MENU ─────────────────────────── */}
           {activeMegaLink && activeMegaLink.megaType === 'services' && (
-            <div className="w-full">
-              <div className="grid grid-cols-12 gap-0">
-                {/* LEFT — category tabs */}
-                <aside className="col-span-3 bg-white text-black border-r-2 border-black">
-                  <div className="px-6 py-5 border-b border-black/10">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                      — Our Services
-                    </p>
-                    <h3
-                      className="mt-1 text-[20px] lg:text-[22px] font-extrabold leading-tight text-black"
-                      style={{ fontFamily: 'Playfair Display, serif' }}
-                    >
-                      What would you <br />
-                      like to <span className="italic text-[#0276E2]">build?</span>
-                    </h3>
+            <div className="relative bg-white">
+              {/* Subtle dot background */}
+              <div
+                className="absolute inset-0 pointer-events-none opacity-[0.04]"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(circle, rgba(0,0,0,0.5) 1px, transparent 1px)',
+                  backgroundSize: '24px 24px',
+                }}
+              ></div>
+
+              <div className="relative max-w-[1440px] mx-auto grid grid-cols-12 gap-0">
+                {/* LEFT — practice list */}
+                <aside className="col-span-3 py-8 pl-10 pr-4 border-r border-black/10">
+                  <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#097CF4]/10 text-[#097CF4] text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
+                    <span className="relative flex w-1.5 h-1.5">
+                      <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-60"></span>
+                      <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-[#097CF4]"></span>
+                    </span>
+                    Explore Services
                   </div>
 
-                  <ul className="py-2">
+                  <h3
+                    className="text-[24px] font-extrabold leading-[1.1] text-black mb-6"
+                    style={{ fontFamily: 'Playfair Display, serif' }}
+                  >
+                    What would you <br />
+                    like to <span className="italic text-[#097CF4]">build?</span>
+                  </h3>
+
+                  <ul className="space-y-1">
                     {activeMegaLink.mega.map((cat, ci) => {
                       const isActive = megaCategory === ci
                       return (
@@ -707,32 +712,35 @@ const Header = () => {
                             type="button"
                             onMouseEnter={() => setMegaCategory(ci)}
                             onClick={() => setMegaCategory(ci)}
-                            className={`group w-full text-left flex items-center gap-3 px-5 py-3.5 transition-colors border-l-[3px] cursor-pointer ${
+                            className={`group w-full text-left flex items-center gap-3 pl-3 pr-2 py-3 rounded-[2px] transition-all cursor-pointer relative ${
                               isActive
-                                ? 'bg-[#0276E2]/[0.08] border-[#0276E2] text-[#0276E2]'
-                                : 'border-transparent text-black/75 hover:bg-black/[0.04] hover:text-black'
+                                ? 'bg-[#097CF4]/[0.06] text-[#097CF4]'
+                                : 'text-black/75 hover:bg-black/[0.03] hover:text-black'
                             }`}
                           >
+                            {isActive && (
+                              <span className="absolute left-0 top-2 bottom-2 w-[3px] bg-[#097CF4]"></span>
+                            )}
                             <span
-                              className={`w-9 h-9 flex items-center justify-center border-2 shrink-0 transition-colors ${
+                              className={`w-9 h-9 flex items-center justify-center shrink-0 transition-colors rounded-[2px] ${
                                 isActive
-                                  ? 'bg-[#0276E2] border-[#0276E2] text-white'
-                                  : 'border-black/30 text-black/70 group-hover:border-[#0276E2] group-hover:text-[#0276E2]'
+                                  ? 'bg-[#097CF4] text-white'
+                                  : 'bg-black/[0.04] text-black/60 group-hover:bg-[#097CF4]/10 group-hover:text-[#097CF4]'
                               }`}
                             >
                               <div className="w-4 h-4">{cat.icon}</div>
                             </span>
                             <div className="flex-1 min-w-0">
-                              <p className="text-[12px] font-extrabold uppercase tracking-[0.15em]">
+                              <p className="text-[13px] font-bold leading-tight">
                                 {cat.group}
                               </p>
-                              <p className={`text-[10px] mt-0.5 truncate ${isActive ? 'text-[#0276E2]/70' : 'text-black/45'}`}>
+                              <p className={`text-[10px] mt-0.5 font-medium truncate ${isActive ? 'text-[#097CF4]/70' : 'text-black/40'}`}>
                                 {cat.items.length} offering{cat.items.length > 1 ? 's' : ''}
                               </p>
                             </div>
                             <svg
-                              className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                                isActive ? 'text-[#0276E2] translate-x-0' : 'text-black/30 -translate-x-1 group-hover:translate-x-0'
+                              className={`w-3.5 h-3.5 shrink-0 transition-all ${
+                                isActive ? 'text-[#097CF4] opacity-100' : 'text-black/30 opacity-0 group-hover:opacity-100'
                               }`}
                               viewBox="0 0 24 24"
                               fill="none"
@@ -747,121 +755,172 @@ const Header = () => {
                     })}
                   </ul>
 
-                  <div className="mt-2 px-5 py-5 border-t border-black/10">
-                    <Link
-                      to="/services"
-                      className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#0276E2] hover:gap-3 transition-all"
-                    >
-                      View All Services
-                      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
+                  <Link
+                    to="/services"
+                    className="group mt-8 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-black hover:text-[#097CF4] transition-colors pl-3"
+                  >
+                    View All Services
+                    <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </aside>
 
-                {/* RIGHT — items */}
-                <div className="col-span-9 bg-white">
-                  <div className="px-8 py-5 border-b-2 border-black flex items-center justify-between">
+                {/* MIDDLE — service cards */}
+                <div className="col-span-6 py-8 px-8">
+                  <div className="mb-6 flex items-end justify-between gap-6">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                        — {activeMegaLink.mega[megaCategory].group}
+                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-1.5">
+                        {activeMegaLink.mega[megaCategory].group}
                       </p>
-                      <p
-                        className="mt-1 text-[15px] font-semibold text-black leading-snug max-w-[540px]"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
+                      <h4
+                        className="text-[22px] font-extrabold leading-tight text-black"
+                        style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {activeMegaLink.mega[megaCategory].blurb}
-                      </p>
+                      </h4>
                     </div>
-                    <span className="px-3 py-1.5 border-2 border-black text-[10px] font-bold uppercase tracking-[0.25em] text-black">
+                    <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
                       0{megaCategory + 1} / 0{activeMegaLink.mega.length}
                     </span>
                   </div>
 
-                  <ul className="grid grid-cols-1 sm:grid-cols-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {activeMegaLink.mega[megaCategory].items.map((it, ii) => (
-                      <li
+                      <Link
                         key={it.title}
-                        className={`${ii !== activeMegaLink.mega[megaCategory].items.length - 1 ? 'sm:border-r border-black/10' : ''}`}
+                        to={it.slug ? `/services/${it.slug}` : '/services'}
+                        className="group/item relative p-5 bg-white border border-black/10 hover:border-[#097CF4] hover:shadow-[0_12px_30px_-10px_rgba(2,118,226,0.25)] transition-all duration-300"
                       >
-                        <Link
-                          to={it.slug ? `/services/${it.slug}` : '/services'}
-                          className="group/item block h-full p-6 lg:p-7 bg-white hover:bg-black hover:text-white transition-colors duration-300"
-                        >
-                          <div className="flex items-center justify-between mb-5">
-                            <span className="w-10 h-10 flex items-center justify-center border-2 border-black text-black group-hover/item:bg-[#0276E2] group-hover/item:border-[#0276E2] group-hover/item:text-white transition-colors">
-                              <span className="text-[11px] font-extrabold">0{ii + 1}</span>
-                            </span>
-                            <svg
-                              className="w-4 h-4 text-black/30 -translate-x-1 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0 group-hover/item:text-[#0276E2] transition-all"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2.5"
+                        <div className="flex items-start gap-3">
+                          <span className="w-10 h-10 flex items-center justify-center bg-black/[0.04] text-black/70 group-hover/item:bg-[#097CF4] group-hover/item:text-white transition-colors shrink-0">
+                            <div className="w-5 h-5">{activeMegaLink.mega[megaCategory].icon}</div>
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <h5
+                              className="text-[15px] font-extrabold leading-tight text-black group-hover/item:text-[#097CF4] transition-colors"
+                              style={{ fontFamily: 'Playfair Display, serif' }}
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
-                            </svg>
+                              {it.title}
+                            </h5>
+                            <p
+                              className="mt-1.5 text-[12px] leading-[1.55] text-black/55"
+                              style={{ fontFamily: 'Inter, sans-serif' }}
+                            >
+                              {it.desc}
+                            </p>
                           </div>
-                          <h4
-                            className="text-[18px] lg:text-[20px] font-extrabold leading-tight tracking-tight"
-                            style={{ fontFamily: 'Playfair Display, serif' }}
-                          >
-                            {it.title}
-                          </h4>
-                          <span className="block h-[2px] bg-[#0276E2] mt-3 mb-3 w-8 group-hover/item:w-16 transition-all duration-300"></span>
-                          <p
-                            className="text-[12px] leading-[1.6] text-black/60 group-hover/item:text-white/70 transition-colors"
-                            style={{ fontFamily: 'Inter, sans-serif' }}
-                          >
-                            {it.desc}
-                          </p>
-                        </Link>
-                      </li>
+                        </div>
+                        <span className="absolute bottom-4 right-4 w-6 h-6 flex items-center justify-center text-black/30 group-hover/item:text-[#097CF4] transition-all opacity-0 group-hover/item:opacity-100">
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+                          </svg>
+                        </span>
+                      </Link>
                     ))}
-                  </ul>
-
-                  {/* Footer CTA strip */}
-                  <div className="border-t-2 border-black bg-[#0276E2] text-white px-8 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                    <span className="text-[11px] uppercase tracking-[0.25em] font-semibold flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-white"></span>
-                      New studio · Founder-led · Ahmedabad
-                    </span>
-                    <Link
-                      to="/contact"
-                      className="group/cta inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] hover:gap-3 transition-all"
-                    >
-                      Start a Project
-                      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
-                      </svg>
-                    </Link>
                   </div>
                 </div>
+
+                {/* RIGHT — spotlight / CTA */}
+                <aside className="col-span-3 relative bg-gradient-to-br from-black via-black to-[#0a1a2e] text-white py-8 px-8 overflow-hidden">
+                  {/* Decorative accent */}
+                  <span className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#097CF4]/20 blur-3xl pointer-events-none"></span>
+                  <span className="absolute -bottom-12 -left-12 w-40 h-40 rounded-full bg-[#097CF4]/10 blur-3xl pointer-events-none"></span>
+
+                  <div className="relative">
+                    <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#097CF4]/15 text-[#097CF4] text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
+                      — Founder-Led
+                    </div>
+
+                    <h4
+                      className="text-[26px] font-extrabold leading-[1.1] mb-3"
+                      style={{ fontFamily: 'Playfair Display, serif' }}
+                    >
+                      Not sure which <span className="italic text-[#097CF4]">service</span> fits?
+                    </h4>
+
+                    <p className="text-[13px] leading-[1.65] text-white/70 mb-6">
+                      Tell us the problem — one of the founders will scope the right thing on a free 30-minute call. No sales pressure, just an honest quote.
+                    </p>
+
+                    <Link
+                      to="/contact"
+                      className="group/cta w-full inline-flex items-center justify-between gap-3 h-12 pl-4 pr-2 bg-[#097CF4] text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#097CF4] transition-colors"
+                    >
+                      Book a Free Call
+                      <span className="w-9 h-9 bg-white group-hover/cta:bg-[#097CF4] flex items-center justify-center transition-colors">
+                        <svg
+                          className="w-3.5 h-3.5 text-[#097CF4] group-hover/cta:text-white"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+                        </svg>
+                      </span>
+                    </Link>
+
+                    <div className="mt-6 pt-6 border-t border-white/10 space-y-3 text-[11px]">
+                      <a
+                        href="mailto:inquiry.techcareer@gmail.com"
+                        className="flex items-center gap-3 text-white/80 hover:text-[#097CF4] transition-colors break-all"
+                      >
+                        <span className="w-8 h-8 flex items-center justify-center bg-white/5 shrink-0">
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" />
+                          </svg>
+                        </span>
+                        <span className="font-semibold text-[11px]">inquiry.techcareer@gmail.com</span>
+                      </a>
+                      <a
+                        href="tel:+917096608771"
+                        className="flex items-center gap-3 text-white/80 hover:text-[#097CF4] transition-colors"
+                      >
+                        <span className="w-8 h-8 flex items-center justify-center bg-white/5 shrink-0">
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.9 1.37l.9 2.69a2 2 0 01-.45 2L8.5 10.5a11 11 0 005 5l1.44-1.13a2 2 0 012-.45l2.69.9A2 2 0 0121 16.72V19a2 2 0 01-2 2A16 16 0 013 5z" />
+                          </svg>
+                        </span>
+                        <span className="font-semibold text-[12px]">+91 70966 08771</span>
+                      </a>
+                    </div>
+                  </div>
+                </aside>
               </div>
             </div>
           )}
 
           {/* ── PRODUCTS MEGA MENU ─────────────────────────── */}
           {activeMegaLink && activeMegaLink.megaType === 'products' && (
-            <div className="w-full">
-              <div className="grid grid-cols-12 gap-0">
+            <div className="relative bg-white">
+              {/* Subtle grid background */}
+              <div
+                className="absolute inset-0 pointer-events-none opacity-[0.035]"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)',
+                  backgroundSize: '48px 48px',
+                }}
+              ></div>
+
+              <div className="relative max-w-[1440px] mx-auto grid grid-cols-12 gap-0">
                 {/* LEFT — product tabs */}
-                <aside className="col-span-3 bg-white text-black border-r-2 border-black">
-                  <div className="px-6 py-5 border-b border-black/10">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
-                      — Our Products
-                    </p>
-                    <h3
-                      className="mt-1 text-[20px] lg:text-[22px] font-extrabold leading-tight text-black"
-                      style={{ fontFamily: 'Playfair Display, serif' }}
-                    >
-                      Software we have <br />
-                      <span className="italic text-[#0276E2]">already built.</span>
-                    </h3>
+                <aside className="col-span-4 py-8 pl-10 pr-6 border-r border-black/10">
+                  <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#097CF4]/10 text-[#097CF4] text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
+                    <span className="w-1.5 h-1.5 bg-[#097CF4]"></span>
+                    Our Products
                   </div>
 
-                  <ul className="py-2">
+                  <h3
+                    className="text-[24px] font-extrabold leading-[1.1] text-black mb-6"
+                    style={{ fontFamily: 'Playfair Display, serif' }}
+                  >
+                    Software we <br />
+                    have <span className="italic text-[#097CF4]">already built.</span>
+                  </h3>
+
+                  <ul className="space-y-3">
                     {products.map((p, pi) => {
                       const isActive = activeProduct === pi
                       return (
@@ -870,35 +929,45 @@ const Header = () => {
                             type="button"
                             onMouseEnter={() => setActiveProduct(pi)}
                             onClick={() => setActiveProduct(pi)}
-                            className={`group w-full text-left flex items-center gap-3 px-5 py-3.5 transition-colors border-l-[3px] cursor-pointer ${
+                            className={`group w-full text-left flex items-center gap-4 p-3 transition-all cursor-pointer border relative ${
                               isActive
-                                ? 'bg-[#0276E2]/[0.08] border-[#0276E2] text-[#0276E2]'
-                                : 'border-transparent text-black/75 hover:bg-black/[0.04] hover:text-black'
+                                ? 'border-[#097CF4] bg-[#097CF4]/[0.04] shadow-[0_8px_24px_-12px_rgba(2,118,226,0.35)]'
+                                : 'border-black/10 bg-white hover:border-black/30'
                             }`}
                           >
                             <span
-                              className={`w-9 h-9 flex items-center justify-center font-extrabold text-[11px] border-2 shrink-0 transition-colors ${
+                              className={`w-12 h-12 flex items-center justify-center font-black text-[14px] shrink-0 transition-colors ${
                                 isActive
-                                  ? 'bg-[#0276E2] border-[#0276E2] text-white'
-                                  : 'border-black/30 text-black/70 group-hover:border-[#0276E2] group-hover:text-[#0276E2]'
+                                  ? 'bg-[#097CF4] text-white'
+                                  : 'bg-black text-white group-hover:bg-[#097CF4]'
                               }`}
+                              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                             >
                               0{pi + 1}
                             </span>
                             <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 flex-wrap mb-1">
+                                <span className={`text-[9px] font-bold uppercase tracking-[0.2em] ${isActive ? 'text-[#097CF4]' : 'text-black/45'}`}>
+                                  {p.category}
+                                </span>
+                                <span className="text-[9px] font-medium text-black/35">·</span>
+                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/40">
+                                  {p.period}
+                                </span>
+                              </div>
                               <p
-                                className="text-[14px] font-extrabold leading-tight truncate"
+                                className={`text-[17px] font-extrabold leading-tight truncate ${isActive ? 'text-[#097CF4]' : 'text-black'}`}
                                 style={{ fontFamily: 'Playfair Display, serif' }}
                               >
                                 {p.name}
                               </p>
-                              <p className={`text-[10px] mt-0.5 truncate uppercase tracking-[0.15em] ${isActive ? 'text-[#0276E2]/70' : 'text-black/45'}`}>
-                                {p.category}
+                              <p className="text-[11px] text-black/55 mt-0.5 truncate">
+                                {p.tagline}
                               </p>
                             </div>
                             <svg
-                              className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                                isActive ? 'text-[#0276E2] translate-x-0' : 'text-black/30 -translate-x-1 group-hover:translate-x-0'
+                              className={`w-4 h-4 shrink-0 transition-transform ${
+                                isActive ? 'text-[#097CF4] translate-x-0' : 'text-black/25 -translate-x-1 group-hover:translate-x-0'
                               }`}
                               viewBox="0 0 24 24"
                               fill="none"
@@ -913,131 +982,153 @@ const Header = () => {
                     })}
                   </ul>
 
-                  <div className="mt-2 px-5 py-5 border-t border-black/10">
-                    <Link
-                      to="/portfolio"
-                      className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#0276E2] hover:gap-3 transition-all"
-                    >
-                      View Full Portfolio
-                      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
+                  <Link
+                    to="/portfolio"
+                    className="group mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-black hover:text-[#097CF4] transition-colors"
+                  >
+                    View Full Portfolio
+                    <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </aside>
 
-                {/* RIGHT — product detail + visual */}
-                <div className="col-span-9 bg-white">
+                {/* RIGHT — product detail */}
+                <div className="col-span-8 bg-white">
                   {(() => {
                     const p = products[activeProduct]
                     return (
-                      <>
-                        <div className="px-8 py-5 border-b-2 border-black flex items-start justify-between gap-4">
-                          <div className="min-w-0">
-                            <div className="flex items-center gap-3 flex-wrap">
-                              <span className="px-2.5 py-1 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em]">
-                                {p.category}
-                              </span>
-                              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/60">
-                                {p.period}
-                              </span>
+                      <div className="animate-[fadeIn_0.3s_ease-out]">
+                        {/* Top hero strip */}
+                        <div className="px-10 pt-8 pb-6 border-b border-black/10">
+                          <div className="flex items-start justify-between gap-6">
+                            <div className="min-w-0 flex-1">
+                              <div className="flex items-center gap-2 flex-wrap mb-3">
+                                <span className="px-2.5 py-1 bg-[#097CF4] text-white text-[10px] font-bold uppercase tracking-[0.25em]">
+                                  {p.category}
+                                </span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/50">
+                                  {p.period}
+                                </span>
+                                <span className="inline-flex items-center gap-1.5 px-2 py-1 bg-green-50 text-green-700 text-[9px] font-bold uppercase tracking-[0.2em]">
+                                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                                  Live
+                                </span>
+                              </div>
+                              <h3
+                                className="text-[34px] font-extrabold text-black leading-[1.05] tracking-tight"
+                                style={{ fontFamily: 'Playfair Display, serif' }}
+                              >
+                                {p.name}
+                                <span className="text-[#097CF4]">.</span>
+                              </h3>
+                              <p
+                                className="mt-1 text-[14px] font-semibold text-[#097CF4] uppercase tracking-[0.15em]"
+                                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                              >
+                                {p.tagline}
+                              </p>
                             </div>
-                            <h3
-                              className="mt-2 text-[28px] lg:text-[34px] font-extrabold text-black leading-tight tracking-tight"
-                              style={{ fontFamily: 'Playfair Display, serif' }}
-                            >
-                              {p.name}
-                            </h3>
-                            <p
-                              className="mt-1 text-[13px] font-semibold text-[#0276E2] uppercase tracking-[0.15em]"
-                              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                            >
-                              {p.tagline}
-                            </p>
+                            <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.25em] text-black/40">
+                              0{activeProduct + 1} / 0{products.length}
+                            </span>
                           </div>
-                          <span className="px-3 py-1.5 border-2 border-black text-[10px] font-bold uppercase tracking-[0.25em] text-black shrink-0">
-                            0{activeProduct + 1} / 0{products.length}
-                          </span>
                         </div>
 
+                        {/* Content + visual */}
                         <div className="grid grid-cols-12 gap-0">
                           {/* Content */}
-                          <div className="col-span-7 px-8 py-6 border-r border-black/10">
+                          <div className="col-span-7 px-10 py-7 border-r border-black/10">
                             <p
-                              className="text-[13px] lg:text-[14px] leading-[1.7] text-black/75 mb-6"
+                              className="text-[13px] leading-[1.7] text-black/70 mb-6"
                               style={{ fontFamily: 'Inter, sans-serif' }}
                             >
                               {p.description}
                             </p>
 
-                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3">
-                              — Technologies Used
-                            </p>
-                            <div className="flex flex-wrap gap-1.5 mb-6">
-                              {p.technologies.map((t) => (
-                                <span
-                                  key={t}
-                                  className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.15em] border border-black/20 text-black/80"
-                                >
-                                  {t}
-                                </span>
-                              ))}
+                            <div className="mb-6">
+                              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2.5">
+                                — Tech Stack
+                              </p>
+                              <div className="flex flex-wrap gap-1.5">
+                                {p.technologies.map((t) => (
+                                  <span
+                                    key={t}
+                                    className="px-2.5 py-1 bg-black/[0.04] text-[10px] font-bold uppercase tracking-[0.15em] text-black/75"
+                                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                                  >
+                                    {t}
+                                  </span>
+                                ))}
+                              </div>
                             </div>
 
-                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3">
-                              — Key Features
-                            </p>
-                            <ul className="space-y-2 mb-6">
-                              {p.features.map((f) => (
-                                <li
-                                  key={f}
-                                  className="flex items-center gap-2.5 text-[12px] font-semibold text-black"
-                                >
-                                  <span className="w-4 h-4 bg-[#0276E2] flex items-center justify-center shrink-0">
-                                    <svg className="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                  </span>
-                                  {f}
-                                </li>
-                              ))}
-                            </ul>
+                            <div className="mb-6">
+                              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2.5">
+                                — Key Features
+                              </p>
+                              <ul className="space-y-2">
+                                {p.features.map((f) => (
+                                  <li
+                                    key={f}
+                                    className="flex items-start gap-2.5 text-[12px] font-semibold text-black/80"
+                                  >
+                                    <span className="w-4 h-4 bg-[#097CF4]/10 text-[#097CF4] flex items-center justify-center shrink-0 mt-0.5">
+                                      <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                      </svg>
+                                    </span>
+                                    {f}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
 
                             <div className="flex items-center gap-3">
                               <Link
                                 to="/portfolio"
-                                className="group/cta inline-flex items-center gap-2 h-10 px-4 bg-black text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                                className="group/cta inline-flex items-center gap-2 h-11 pl-4 pr-2 bg-black text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
                               >
                                 View Details
-                                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
-                                </svg>
+                                <span className="w-8 h-8 bg-[#097CF4] group-hover/cta:bg-white flex items-center justify-center transition-colors">
+                                  <svg className="w-3 h-3 text-white group-hover/cta:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+                                  </svg>
+                                </span>
                               </Link>
                               <Link
                                 to="/contact"
-                                className="inline-flex items-center gap-2 h-10 px-4 border-2 border-black text-black text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors"
+                                className="inline-flex items-center gap-2 h-11 px-4 border border-black/20 text-black text-[11px] font-bold uppercase tracking-[0.2em] hover:border-black hover:bg-black hover:text-white transition-colors"
                               >
-                                Request a Demo
+                                Request Demo
                               </Link>
                             </div>
                           </div>
 
                           {/* Visual preview */}
-                          <div className="col-span-5 relative aspect-[4/3] lg:aspect-auto lg:min-h-[380px] border-l border-black/10">
+                          <div className="col-span-5 relative bg-gradient-to-br from-[#0a1a2e] to-black min-h-[360px]">
                             <ProductVisual type={p.preview} />
-                            <span className="pointer-events-none absolute top-3 left-3 w-2.5 h-2.5 border-t-2 border-l-2 border-white z-10"></span>
-                            <span className="pointer-events-none absolute top-3 right-3 w-2.5 h-2.5 border-t-2 border-r-2 border-white z-10"></span>
-                            <span className="pointer-events-none absolute bottom-3 left-3 w-2.5 h-2.5 border-b-2 border-l-2 border-white z-10"></span>
-                            <span className="pointer-events-none absolute bottom-3 right-3 w-2.5 h-2.5 border-b-2 border-r-2 border-white z-10"></span>
+                            {/* Subtle corner markers */}
+                            <span className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-white/40 z-10"></span>
+                            <span className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-white/40 z-10"></span>
+                            <span className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-white/40 z-10"></span>
+                            <span className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-white/40 z-10"></span>
                           </div>
                         </div>
-                      </>
+                      </div>
                     )
                   })()}
                 </div>
               </div>
             </div>
           )}
+
+          <style>{`
+            @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(4px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+          `}</style>
         </div>
       </div>
 
@@ -1060,7 +1151,7 @@ const Header = () => {
                     TC
                   </span>
                 </div>
-                <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#0276E2]"></span>
+                <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#097CF4]"></span>
               </div>
               <p
                 className="text-[11px] font-bold uppercase tracking-[0.25em] text-black"
@@ -1073,7 +1164,7 @@ const Header = () => {
             <button
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
-              className="inline-flex items-center gap-2 h-10 px-3 bg-black text-white hover:bg-[#0276E2] transition-colors"
+              className="inline-flex items-center gap-2 h-10 px-3 bg-black text-white hover:bg-[#097CF4] transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -1087,7 +1178,7 @@ const Header = () => {
 
           <div className="px-6 pt-8 pb-6 border-b border-black/10">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Navigation
@@ -1096,7 +1187,7 @@ const Header = () => {
               className="text-3xl font-extrabold text-black"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Where would you like to <span className="text-[#0276E2] italic">go</span>?
+              Where would you like to <span className="text-[#097CF4] italic">go</span>?
             </h3>
           </div>
 
@@ -1139,7 +1230,7 @@ const Header = () => {
                       end={link.to === '/'}
                       className={({ isActive }) =>
                         `flex-1 text-[26px] sm:text-[32px] font-extrabold tracking-tight ${
-                          isActive ? 'text-[#0276E2] italic' : 'text-black'
+                          isActive ? 'text-[#097CF4] italic' : 'text-black'
                         }`
                       }
                       style={{ fontFamily: 'Playfair Display, serif' }}
@@ -1153,7 +1244,7 @@ const Header = () => {
                         aria-label={`Toggle ${link.label} sub-menu`}
                         className={`w-10 h-10 flex items-center justify-center border transition-colors ${
                           isExpanded
-                            ? 'border-[#0276E2] bg-[#0276E2] text-white'
+                            ? 'border-[#097CF4] bg-[#097CF4] text-white'
                             : 'border-black text-black'
                         }`}
                       >
@@ -1176,7 +1267,7 @@ const Header = () => {
                         className={({ isActive }) =>
                           `w-10 h-10 flex items-center justify-center border transition-colors ${
                             isActive
-                              ? 'border-[#0276E2] bg-[#0276E2] text-white'
+                              ? 'border-[#097CF4] bg-[#097CF4] text-white'
                               : 'border-black text-black'
                           }`
                         }
@@ -1204,9 +1295,9 @@ const Header = () => {
                       <div className="pb-6 space-y-5">
                         {link.megaType === 'services' &&
                           link.mega.map((col) => (
-                            <div key={col.group} className="pl-3 border-l-2 border-[#0276E2]">
+                            <div key={col.group} className="pl-3 border-l-2 border-[#097CF4]">
                               <p
-                                className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#0276E2] mb-3"
+                                className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#097CF4] mb-3"
                                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                               >
                                 {col.group}
@@ -1220,7 +1311,7 @@ const Header = () => {
                                     >
                                       <div>
                                         <p
-                                          className="text-[15px] font-bold text-black group-hover/mi:text-[#0276E2] transition-colors"
+                                          className="text-[15px] font-bold text-black group-hover/mi:text-[#097CF4] transition-colors"
                                           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                                         >
                                           {it.title}
@@ -1228,7 +1319,7 @@ const Header = () => {
                                         <p className="text-[12px] text-black/55 mt-0.5">{it.desc}</p>
                                       </div>
                                       <svg
-                                        className="w-4 h-4 shrink-0 mt-1 text-black/40 group-hover/mi:text-[#0276E2] transition-colors"
+                                        className="w-4 h-4 shrink-0 mt-1 text-black/40 group-hover/mi:text-[#097CF4] transition-colors"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
@@ -1243,57 +1334,7 @@ const Header = () => {
                             </div>
                           ))}
 
-                        {link.megaType === 'products' &&
-                          link.mega.map((p, pi) => (
-                            <div key={p.key} className="pl-3 border-l-2 border-[#0276E2]">
-                              <div className="flex items-center gap-2 mb-2 flex-wrap">
-                                <span className="px-2 py-0.5 bg-[#0276E2] text-white text-[9px] font-bold uppercase tracking-[0.2em]">
-                                  {p.category}
-                                </span>
-                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-black/50">
-                                  {p.period}
-                                </span>
-                              </div>
-                              <Link
-                                to="/portfolio"
-                                className="block group/mi"
-                              >
-                                <p
-                                  className="text-[20px] font-extrabold text-black group-hover/mi:text-[#0276E2] transition-colors"
-                                  style={{ fontFamily: 'Playfair Display, serif' }}
-                                >
-                                  {p.name}
-                                </p>
-                                <p className="text-[12px] font-semibold text-[#0276E2] uppercase tracking-[0.15em] mt-0.5">
-                                  {p.tagline}
-                                </p>
-                                <p className="text-[12px] text-black/60 mt-2 leading-[1.6]">
-                                  {p.description}
-                                </p>
-                                <div className="mt-3 flex flex-wrap gap-1.5">
-                                  {p.technologies.slice(0, 4).map((t) => (
-                                    <span
-                                      key={t}
-                                      className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.15em] border border-black/20 text-black/70"
-                                    >
-                                      {t}
-                                    </span>
-                                  ))}
-                                </div>
-                              </Link>
-                            </div>
-                          ))}
-
-                        <Link
-                          to={link.megaType === 'products' ? '/portfolio' : '/services'}
-                          className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#0276E2] hover:gap-3 transition-all"
-                          style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                        >
-                          {link.megaType === 'products' ? 'View Full Portfolio' : 'View All Services'}
-                          <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </Link>
+                     
                       </div>
                     </div>
                   )}
@@ -1305,7 +1346,7 @@ const Header = () => {
           <div className="px-6 py-8 bg-black text-white">
             <Link
               to="/contact"
-              className="w-full inline-flex items-center justify-between gap-3 h-14 px-5 bg-[#0276E2] text-white text-[12px] font-bold uppercase tracking-[0.2em] mb-6"
+              className="w-full inline-flex items-center justify-between gap-3 h-14 px-5 bg-[#097CF4] text-white text-[12px] font-bold uppercase tracking-[0.2em] mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Start a Project
@@ -1317,13 +1358,13 @@ const Header = () => {
             <div className="grid grid-cols-1 gap-4 text-[11px]">
               <div>
                 <p className="text-white/50 uppercase tracking-[0.2em] text-[10px] mb-2">Email</p>
-                <a href="mailto:inquiry.techcareer@gmail.com" className="font-bold hover:text-[#0276E2] break-all">
+                <a href="mailto:inquiry.techcareer@gmail.com" className="font-bold hover:text-[#097CF4] break-all">
                   inquiry.techcareer@gmail.com
                 </a>
               </div>
               <div>
                 <p className="text-white/50 uppercase tracking-[0.2em] text-[10px] mb-2">Phone / WhatsApp</p>
-                <a href="tel:+917096608771" className="font-bold hover:text-[#0276E2]">
+                <a href="tel:+917096608771" className="font-bold hover:text-[#097CF4]">
                   +91 70966 08771
                 </a>
               </div>
@@ -1333,7 +1374,7 @@ const Header = () => {
               <span className="text-white/50">Follow:</span>
               <a
                 href="https://www.instagram.com/techcareer.llp"
-                className="hover:text-[#0276E2] font-bold"
+                className="hover:text-[#097CF4] font-bold"
               >
                 Instagram
               </a>
@@ -1358,10 +1399,10 @@ const Header = () => {
             searchOpen ? 'translate-y-0' : '-translate-y-6'
           }`}
         >
-          <span className="absolute top-0 left-0 right-0 h-[3px] bg-[#0276E2]"></span>
+          <span className="absolute top-0 left-0 right-0 h-[3px] bg-[#097CF4]"></span>
 
           <form onSubmit={handleSubmit} className="flex items-center gap-3 px-5 sm:px-6 py-4 border-b border-black/10">
-            <svg className="w-5 h-5 text-[#0276E2] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-5 h-5 text-[#097CF4] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="7" />
               <path strokeLinecap="round" d="m20 20-3.5-3.5" />
             </svg>
@@ -1382,7 +1423,7 @@ const Header = () => {
               <button
                 type="button"
                 onClick={() => setQuery('')}
-                className="text-[11px] font-bold uppercase tracking-[0.2em] text-black/50 hover:text-[#0276E2]"
+                className="text-[11px] font-bold uppercase tracking-[0.2em] text-black/50 hover:text-[#097CF4]"
               >
                 Clear
               </button>
@@ -1390,7 +1431,7 @@ const Header = () => {
             <button
               type="button"
               onClick={() => setSearchOpen(false)}
-              className="hidden sm:inline-flex items-center gap-1 px-2 py-1 border border-black/10 text-[10px] font-bold uppercase tracking-[0.15em] text-black/60 hover:text-[#0276E2] hover:border-[#0276E2] transition-colors"
+              className="hidden sm:inline-flex items-center gap-1 px-2 py-1 border border-black/10 text-[10px] font-bold uppercase tracking-[0.15em] text-black/60 hover:text-[#097CF4] hover:border-[#097CF4] transition-colors"
             >
               Esc
             </button>
@@ -1413,7 +1454,7 @@ const Header = () => {
                         setQuery(p)
                         searchInputRef.current?.focus()
                       }}
-                      className="px-3 py-2 text-[12px] font-semibold border border-black/10 text-black hover:border-[#0276E2] hover:text-[#0276E2] transition-colors"
+                      className="px-3 py-2 text-[12px] font-semibold border border-black/10 text-black hover:border-[#097CF4] hover:text-[#097CF4] transition-colors"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       {p}
@@ -1435,7 +1476,7 @@ const Header = () => {
                         key={r.title}
                         to={r.to}
                         onClick={() => setSearchOpen(false)}
-                        className="flex items-center justify-between px-3 py-2.5 border border-black/10 hover:border-[#0276E2] hover:text-[#0276E2] transition-colors text-[13px] font-semibold text-black"
+                        className="flex items-center justify-between px-3 py-2.5 border border-black/10 hover:border-[#097CF4] hover:text-[#097CF4] transition-colors text-[13px] font-semibold text-black"
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
                         {r.title}
@@ -1457,13 +1498,13 @@ const Header = () => {
                       onClick={() => setSearchOpen(false)}
                       onMouseEnter={() => setActiveIdx(idx)}
                       className={`flex items-center justify-between gap-3 px-5 sm:px-6 py-3 transition-colors ${
-                        idx === activeIdx ? 'bg-[#0276E2]/5' : 'hover:bg-black/[0.03]'
+                        idx === activeIdx ? 'bg-[#097CF4]/5' : 'hover:bg-black/[0.03]'
                       }`}
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <span
                           className={`w-8 h-8 flex items-center justify-center shrink-0 ${
-                            idx === activeIdx ? 'bg-[#0276E2] text-white' : 'bg-black/5 text-black/60'
+                            idx === activeIdx ? 'bg-[#097CF4] text-white' : 'bg-black/5 text-black/60'
                           } transition-colors`}
                         >
                           <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -1484,7 +1525,7 @@ const Header = () => {
                       </div>
                       <svg
                         className={`w-4 h-4 shrink-0 transition-colors ${
-                          idx === activeIdx ? 'text-[#0276E2]' : 'text-black/30'
+                          idx === activeIdx ? 'text-[#097CF4]' : 'text-black/30'
                         }`}
                         viewBox="0 0 24 24"
                         fill="none"
@@ -1507,7 +1548,7 @@ const Header = () => {
                 <Link
                   to="/contact"
                   onClick={() => setSearchOpen(false)}
-                  className="inline-flex items-center gap-2 mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#0276E2]"
+                  className="inline-flex items-center gap-2 mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#097CF4]"
                 >
                   Request a Custom Service
                   <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -1537,6 +1578,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   )
 }
 

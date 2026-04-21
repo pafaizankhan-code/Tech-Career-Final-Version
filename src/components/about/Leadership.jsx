@@ -52,8 +52,8 @@ const Leadership = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Leadership
               </span>
             </div>
@@ -63,7 +63,7 @@ const Leadership = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               The team you will{' '}
-              <span className="text-[#0276E2] italic">actually</span> work with.
+              <span className="text-[#097CF4] italic">actually</span> work with.
             </h2>
           </div>
 
@@ -81,12 +81,12 @@ const Leadership = () => {
               key={l.name}
               className="group relative border-2 border-black bg-white transition-all duration-500 hover:-translate-y-1"
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2] z-10"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2] z-10"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4] z-10"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4] z-10"></span>
 
               {/* Avatar block */}
               <div className={`relative aspect-[4/3] flex items-center justify-center ${
-                l.accent === 'blue' ? 'bg-[#0276E2]' : 'bg-black'
+                l.accent === 'blue' ? 'bg-[#097CF4]' : 'bg-black'
               }`}>
                 <div
                   className="absolute inset-0 opacity-[0.15]"
@@ -126,7 +126,7 @@ const Leadership = () => {
                 )}
                 {l.isOpen && (
                   <span
-                    className="absolute top-4 right-4 px-2.5 py-1 bg-[#0276E2] border-2 border-white text-white text-[10px] font-bold uppercase tracking-[0.25em]"
+                    className="absolute top-4 right-4 px-2.5 py-1 bg-[#097CF4] border-2 border-white text-white text-[10px] font-bold uppercase tracking-[0.25em]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     Hiring
@@ -137,7 +137,7 @@ const Leadership = () => {
               {/* Content */}
               <div className="p-6 border-t-2 border-black">
                 <p
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — {l.role}
@@ -168,12 +168,12 @@ const Leadership = () => {
 
         {/* Join us strip */}
         <div className="mt-14 lg:mt-16 border-2 border-black p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10 relative">
-          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#0276E2]"></span>
+          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#097CF4]"></span>
           <span className="absolute -bottom-3 -right-3 w-6 h-6 border-2 border-black bg-white"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Early Team

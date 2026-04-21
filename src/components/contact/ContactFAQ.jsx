@@ -61,8 +61,8 @@ const ContactFAQ = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Frequently Asked
               </span>
             </div>
@@ -71,7 +71,7 @@ const ContactFAQ = () => {
               className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Common <span className="text-[#0276E2] italic">questions,</span> clearly answered.
+              Common <span className="text-[#097CF4] italic">questions,</span> clearly answered.
             </h2>
 
             <p className="mt-6 text-[14px] leading-[1.7] text-black/65 max-w-[380px]">
@@ -80,11 +80,11 @@ const ContactFAQ = () => {
 
             {/* Contact card */}
             <div className="mt-8 border-2 border-black p-6 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Didn't Find Your Answer?
@@ -93,11 +93,11 @@ const ContactFAQ = () => {
                 className="text-[18px] font-extrabold text-black leading-tight mb-4"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                We love the uncommon <span className="italic text-[#0276E2]">ones.</span>
+                We love the uncommon <span className="italic text-[#097CF4]">ones.</span>
               </p>
               <Link
                 to="#contact-form"
-                className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-black hover:text-[#0276E2] transition-colors"
+                className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-black hover:text-[#097CF4] transition-colors"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 Ask a Custom Question
@@ -122,7 +122,7 @@ const ContactFAQ = () => {
                     >
                       <span
                         className={`shrink-0 text-[11px] font-bold uppercase tracking-[0.3em] pt-1.5 transition-colors ${
-                          isOpen ? 'text-[#0276E2]' : 'text-black/40 group-hover:text-[#0276E2]'
+                          isOpen ? 'text-[#097CF4]' : 'text-black/40 group-hover:text-[#097CF4]'
                         }`}
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
@@ -130,7 +130,7 @@ const ContactFAQ = () => {
                       </span>
                       <span
                         className={`flex-1 text-xl sm:text-2xl lg:text-[28px] font-extrabold leading-[1.25] tracking-tight transition-colors ${
-                          isOpen ? 'text-[#0276E2]' : 'text-black group-hover:text-[#0276E2]'
+                          isOpen ? 'text-[#097CF4]' : 'text-black group-hover:text-[#097CF4]'
                         }`}
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
@@ -139,7 +139,7 @@ const ContactFAQ = () => {
                       <span
                         className={`shrink-0 w-10 h-10 flex items-center justify-center border-2 transition-colors ${
                           isOpen
-                            ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                            ? 'bg-[#097CF4] border-[#097CF4] text-white'
                             : 'border-black text-black group-hover:bg-black group-hover:text-white'
                         }`}
                       >
@@ -161,7 +161,7 @@ const ContactFAQ = () => {
                       }`}
                     >
                       <div className="pl-0 sm:pl-14 pb-8 pr-16">
-                        <div className="border-l-2 border-[#0276E2] pl-5">
+                        <div className="border-l-2 border-[#097CF4] pl-5">
                           <p className="text-[14px] sm:text-[15px] leading-[1.75] text-black/70">
                             {f.a}
                           </p>

@@ -82,8 +82,8 @@ const CoreValues = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Core Values
               </span>
             </div>
@@ -92,7 +92,7 @@ const CoreValues = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Six <span className="text-[#0276E2] italic">principles</span> that hire, fire, and guide us.
+              Six <span className="text-[#097CF4] italic">principles</span> that hire, fire, and guide us.
             </h2>
           </div>
 
@@ -110,15 +110,15 @@ const CoreValues = () => {
               key={v.no}
               className="group relative p-8 lg:p-10 border-r border-b border-black/10 bg-white hover:bg-black hover:text-white transition-colors duration-500"
             >
-              <span className="pointer-events-none absolute top-3 left-3 w-2.5 h-2.5 border-t-2 border-l-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
-              <span className="pointer-events-none absolute bottom-3 right-3 w-2.5 h-2.5 border-b-2 border-r-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
+              <span className="pointer-events-none absolute top-3 left-3 w-2.5 h-2.5 border-t-2 border-l-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
+              <span className="pointer-events-none absolute bottom-3 right-3 w-2.5 h-2.5 border-b-2 border-r-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
 
               <div className="flex items-start justify-between mb-8">
-                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center border-2 border-black group-hover:border-[#0276E2] group-hover:bg-[#0276E2] transition-colors">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center border-2 border-black group-hover:border-[#097CF4] group-hover:bg-[#097CF4] transition-colors">
                   <div className="w-7 h-7">{v.icon}</div>
                 </div>
                 <span
-                  className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#0276E2] transition-colors"
+                  className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — {v.no}
@@ -132,7 +132,7 @@ const CoreValues = () => {
                 {v.title}
               </h3>
 
-              <span className="block h-[2px] bg-[#0276E2] mt-4 mb-5 w-10 group-hover:w-20 transition-all duration-500"></span>
+              <span className="block h-[2px] bg-[#097CF4] mt-4 mb-5 w-10 group-hover:w-20 transition-all duration-500"></span>
 
               <p className="text-[14px] leading-[1.7] text-black/65 group-hover:text-white/70 transition-colors">
                 {v.desc}

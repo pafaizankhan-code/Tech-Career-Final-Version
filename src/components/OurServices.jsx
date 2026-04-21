@@ -74,7 +74,7 @@ const services = [
 ]
 
 const OurServices = () => {
-  const [hovered, setHovered] = useState(null)
+  const [hovered, setHovered] = useState(0)
 
   return (
     <section
@@ -100,11 +100,11 @@ const OurServices = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Our Services
               </span>
-              <span className="w-10 h-px bg-[#0276E2]"></span>
+              <span className="w-10 h-px bg-[#097CF4]"></span>
             </div>
 
             <h2
@@ -112,7 +112,7 @@ const OurServices = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Everything you need to get{' '}
-              <span className="text-[#0276E2] italic">online</span> and grow.
+              <span className="text-[#097CF4] italic">online</span> and grow.
             </h2>
 
             <p
@@ -144,7 +144,7 @@ const OurServices = () => {
               <article
                 key={s.no}
                 onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
+                onFocus={() => setHovered(i)}
                 className={`group relative p-8 lg:p-10 border-r border-b border-black/10 transition-colors duration-500 ${
                   isHovered ? 'bg-black text-white' : 'bg-white text-black'
                 }`}
@@ -152,12 +152,12 @@ const OurServices = () => {
                 {/* Corner blueprint markers */}
                 <span
                   className={`pointer-events-none absolute top-3 left-3 w-2.5 h-2.5 border-t-2 border-l-2 transition-colors duration-500 ${
-                    isHovered ? 'border-[#0276E2]' : 'border-black/20'
+                    isHovered ? 'border-[#097CF4]' : 'border-black/20'
                   }`}
                 ></span>
                 <span
                   className={`pointer-events-none absolute bottom-3 right-3 w-2.5 h-2.5 border-b-2 border-r-2 transition-colors duration-500 ${
-                    isHovered ? 'border-[#0276E2]' : 'border-black/20'
+                    isHovered ? 'border-[#097CF4]' : 'border-black/20'
                   }`}
                 ></span>
 
@@ -166,8 +166,8 @@ const OurServices = () => {
                   <div
                     className={`w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center border-2 transition-colors duration-500 ${
                       isHovered
-                        ? 'border-[#0276E2] bg-[#0276E2] text-white'
-                        : 'border-black text-black group-hover:bg-[#0276E2]'
+                        ? 'border-[#097CF4] bg-[#097CF4] text-white'
+                        : 'border-black text-black group-hover:bg-[#097CF4]'
                     }`}
                   >
                     <div className="w-7 h-7 lg:w-8 lg:h-8">{s.icon}</div>
@@ -175,7 +175,7 @@ const OurServices = () => {
 
                   <span
                     className={`text-[11px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${
-                      isHovered ? 'text-[#0276E2]' : 'text-black/30'
+                      isHovered ? 'text-[#097CF4]' : 'text-black/30'
                     }`}
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
@@ -193,7 +193,7 @@ const OurServices = () => {
 
                 {/* Accent underline */}
                 <span
-                  className={`block h-[2px] bg-[#0276E2] mt-4 mb-5 transition-all duration-500 ${
+                  className={`block h-[2px] bg-[#097CF4] mt-4 mb-5 transition-all duration-500 ${
                     isHovered ? 'w-20' : 'w-10'
                   }`}
                 ></span>
@@ -237,7 +237,7 @@ const OurServices = () => {
                   </span>
                   <span
                     className={`w-9 h-9 flex items-center justify-center transition-colors duration-500 ${
-                      isHovered ? 'bg-[#0276E2] text-white' : 'bg-black text-white group-hover:bg-[#0276E2]'
+                      isHovered ? 'bg-[#097CF4] text-white' : 'bg-black text-white group-hover:bg-[#097CF4]'
                     }`}
                   >
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -252,12 +252,12 @@ const OurServices = () => {
 
         {/* Bottom CTA bar */}
         <div className="mt-16 lg:mt-20 relative border-2 border-black p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
-          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#0276E2]"></span>
+          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#097CF4]"></span>
           <span className="absolute -bottom-3 -right-3 w-6 h-6 border-2 border-black bg-white"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Don't see what you need?
@@ -266,19 +266,19 @@ const OurServices = () => {
               className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-black leading-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Every great product starts with a <span className="italic text-[#0276E2]">conversation</span>.
+              Every great product starts with a <span className="italic text-[#097CF4]">conversation</span>.
             </h4>
           </div>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors duration-300 shrink-0"
+            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors duration-300 shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Let's Talk
-            <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
+            <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
               <svg
-                className="w-4 h-4 text-white group-hover:text-[#0276E2]"
+                className="w-4 h-4 text-white group-hover:text-[#097CF4]"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

@@ -108,10 +108,9 @@ const Industries = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#0276E2]"></span>
+      
+      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4]"></span>
+      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4]"></span>
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12 lg:mb-16">
@@ -120,8 +119,8 @@ const Industries = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Industries Served
               </span>
             </div>
@@ -131,7 +130,7 @@ const Industries = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Eight spaces{' '}
-              <span className="text-[#0276E2] italic">we love</span> to build for.
+              <span className="text-[#097CF4] italic">we love</span> to build for.
             </h2>
           </div>
 
@@ -147,13 +146,13 @@ const Industries = () => {
           {industries.map((ind) => (
             <article
               key={ind.no}
-              className="group relative p-6 lg:p-7 border-r border-b border-white/15 transition-colors hover:bg-[#0276E2]"
+              className="group relative p-6 lg:p-7 border-r border-b border-white/15 transition-colors hover:bg-[#097CF4]"
             >
               <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-white/30 group-hover:border-white transition-colors"></span>
               <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-white/30 group-hover:border-white transition-colors"></span>
 
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 border-2 border-white/40 flex items-center justify-center group-hover:border-white group-hover:bg-white group-hover:text-[#0276E2] transition-colors">
+                <div className="w-12 h-12 border-2 border-white/40 flex items-center justify-center group-hover:border-white group-hover:bg-white group-hover:text-[#097CF4] transition-colors">
                   <div className="w-6 h-6">{ind.icon}</div>
                 </div>
                 <span
@@ -172,7 +171,7 @@ const Industries = () => {
               </h3>
 
               <p
-                className="mt-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#0276E2] group-hover:text-white transition-colors"
+                className="mt-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#097CF4] group-hover:text-white transition-colors"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 {ind.count}
@@ -191,7 +190,7 @@ const Industries = () => {
                 >
                   {ind.clients.map((c) => (
                     <li key={c} className="flex items-center gap-2 font-semibold">
-                      <span className="w-1 h-1 bg-[#0276E2] group-hover:bg-white transition-colors"></span>
+                      <span className="w-1 h-1 bg-[#097CF4] group-hover:bg-white transition-colors"></span>
                       {c}
                     </li>
                   ))}

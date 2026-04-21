@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import footerLogoImg from '../assets/logofotter.png'
 
 const columns = [
   {
@@ -67,9 +68,9 @@ const Footer = () => {
 
       {/* Top accent strip */}
       <div className="relative h-[4px] flex">
-        <div className="flex-1 bg-[#0276E2]"></div>
+        <div className="flex-1 bg-[#097CF4]"></div>
         <div className="w-32 bg-white"></div>
-        <div className="flex-1 bg-[#0276E2]"></div>
+        <div className="flex-1 bg-[#097CF4]"></div>
       </div>
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-8">
@@ -81,8 +82,8 @@ const Footer = () => {
                 className="inline-flex items-center gap-3 mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-8 h-px bg-[#0276E2]"></span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-8 h-px bg-[#097CF4]"></span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   Tech Career IT Solutions LLP
                 </span>
               </div>
@@ -91,19 +92,19 @@ const Footer = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 Let's engineer the next <br className="hidden sm:block" />
-                <span className="text-[#0276E2] italic">chapter</span> together.
+                <span className="text-[#097CF4] italic">chapter</span> together.
               </h3>
             </div>
 
             <Link
               to="/contact"
-              className="group self-start lg:self-end inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#0276E2] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#0276E2] transition-colors shrink-0"
+              className="group self-start lg:self-end inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#097CF4] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#097CF4] transition-colors shrink-0"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Start a Project
-              <span className="w-10 h-10 bg-white group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
+              <span className="w-10 h-10 bg-white group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
                 <svg
-                  className="w-4 h-4 text-[#0276E2] group-hover:text-white"
+                  className="w-4 h-4 text-[#097CF4] group-hover:text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -120,34 +121,16 @@ const Footer = () => {
         <div className="py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-white flex items-center justify-center relative overflow-hidden">
-                  <span
-                    className="text-black font-black text-xl tracking-tighter relative z-10"
-                    style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                  >
-                    TC
-                  </span>
-                  <span className="absolute top-0 left-0 w-full h-[3px] bg-[#0276E2]"></span>
-                  <span className="absolute bottom-0 right-0 w-[3px] h-full bg-[#0276E2]"></span>
-                </div>
-                <span className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-[#0276E2]"></span>
-              </div>
-              <div className="leading-none">
-                <h1
-                  className="text-white text-[18px] font-extrabold tracking-tight leading-none"
-                  style={{ fontFamily: 'Playfair Display, serif' }}
-                >
-                  Tech <span className="text-[#0276E2] italic">Career</span>
-                </h1>
-                <p
-                  className="text-[9px] text-white/60 font-semibold tracking-[0.3em] uppercase mt-1.5"
-                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-                >
-                  IT Solutions LLP
-                </p>
-              </div>
+            <Link
+              to="/"
+              className="inline-flex items-center shrink-0 group"
+              aria-label="Tech Career IT Solution LLP · Home"
+            >
+              <img
+                src={footerLogoImg}
+                alt="Tech Career IT Solution LLP"
+                className="h-24 lg:h-[72px] w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              />
             </Link>
 
             <p className="mt-6 text-[14px] leading-[1.7] text-white/65 max-w-[360px]">
@@ -163,7 +146,7 @@ const Footer = () => {
               ].map((o) => (
                 <div key={o.city}>
                   <p
-                    className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#0276E2]"
+                    className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#097CF4]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     — {o.city}
@@ -179,7 +162,7 @@ const Footer = () => {
             {columns.map((col) => (
               <nav key={col.title}>
                 <p
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-5"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   {col.title}
@@ -189,10 +172,10 @@ const Footer = () => {
                     <li key={l.label}>
                       <Link
                         to={l.to}
-                        className="group inline-flex items-center gap-2 text-[13px] text-white/75 hover:text-[#0276E2] transition-colors"
+                        className="group inline-flex items-center gap-2 text-[13px] text-white/75 hover:text-[#097CF4] transition-colors"
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
-                        <span className="w-0 h-px bg-[#0276E2] group-hover:w-3 transition-all"></span>
+                        <span className="w-0 h-px bg-[#097CF4] group-hover:w-3 transition-all"></span>
                         {l.label}
                       </Link>
                     </li>
@@ -205,7 +188,7 @@ const Footer = () => {
           {/* Newsletter */}
           <div className="lg:col-span-3">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-5"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Newsletter
@@ -230,12 +213,12 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="flex-1 min-w-0 h-12 px-4 bg-white/5 border-2 border-white/20 text-white placeholder:text-white/40 text-[13px] focus:border-[#0276E2] outline-none transition-colors"
+                className="flex-1 min-w-0 h-12 px-4 bg-white/5 border-2 border-white/20 text-white placeholder:text-white/40 text-[13px] focus:border-[#097CF4] outline-none transition-colors"
               />
               <button
                 type="submit"
                 aria-label="Subscribe"
-                className="shrink-0 w-12 h-12 bg-[#0276E2] text-white flex items-center justify-center hover:bg-white hover:text-[#0276E2] transition-colors"
+                className="shrink-0 w-12 h-12 bg-[#097CF4] text-white flex items-center justify-center hover:bg-white hover:text-[#097CF4] transition-colors"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -281,7 +264,7 @@ const Footer = () => {
                   key={s.label}
                   href="#"
                   aria-label={s.label}
-                  className="w-9 h-9 border border-white/20 flex items-center justify-center text-[10px] font-bold hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
+                  className="w-9 h-9 border border-white/20 flex items-center justify-center text-[10px] font-bold hover:bg-[#097CF4] hover:border-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   {s.short.toUpperCase()}
@@ -293,8 +276,8 @@ const Footer = () => {
           <div className="flex items-center gap-3 text-[11px] text-white/50">
             <span className="flex items-center gap-2">
               <span className="relative flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
               </span>
               All Systems Operational
             </span>
@@ -311,13 +294,13 @@ const Footer = () => {
             className="text-[60px] sm:text-[110px] md:text-[160px] lg:text-[200px] font-black leading-none tracking-[-0.04em] text-white/[0.06] whitespace-nowrap"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            TECH <span className="italic text-[#0276E2]/30">CAREER.</span>
+            TECH <span className="italic text-[#097CF4]/30">CAREER.</span>
           </p>
         </div>
       </div>
 
       {/* Copyright bar */}
-      <div className="relative bg-[#0276E2] text-white">
+      <div className="relative bg-[#097CF4] text-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.2em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
           <p className="font-semibold">
             © {year} Tech Career IT Solutions LLP — All rights reserved.

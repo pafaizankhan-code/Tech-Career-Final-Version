@@ -109,8 +109,8 @@ const OpenPositions = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Open Positions
               </span>
             </div>
@@ -120,7 +120,7 @@ const OpenPositions = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               A handful of{' '}
-              <span className="text-[#0276E2] italic">founding</span> seats.
+              <span className="text-[#097CF4] italic">founding</span> seats.
             </h2>
 
             <p className="mt-4 text-[14px] leading-[1.7] text-black/65 max-w-[520px]">
@@ -140,7 +140,7 @@ const OpenPositions = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search roles…"
-              className="w-full h-12 pl-11 pr-4 border-2 border-black bg-white text-[13px] font-medium text-black placeholder:text-black/40 focus:border-[#0276E2] outline-none transition-colors"
+              className="w-full h-12 pl-11 pr-4 border-2 border-black bg-white text-[13px] font-medium text-black placeholder:text-black/40 focus:border-[#097CF4] outline-none transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             />
           </div>
@@ -167,7 +167,7 @@ const OpenPositions = () => {
               >
                 {d}
                 {d !== 'All Teams' && (
-                  <span className={`text-[9px] ${dept === d ? 'text-[#0276E2]' : 'text-black/40'}`}>
+                  <span className={`text-[9px] ${dept === d ? 'text-[#097CF4]' : 'text-black/40'}`}>
                     {deptCounts[d] || 0}
                   </span>
                 )}
@@ -186,8 +186,8 @@ const OpenPositions = () => {
                   onClick={() => setLoc(l)}
                   className={`px-3 h-8 text-[10px] font-bold uppercase tracking-[0.2em] border transition-colors ${
                     loc === l
-                      ? 'bg-[#0276E2] text-white border-[#0276E2]'
-                      : 'bg-white text-black border-black/15 hover:border-[#0276E2] hover:text-[#0276E2]'
+                      ? 'bg-[#097CF4] text-white border-[#097CF4]'
+                      : 'bg-white text-black border-black/15 hover:border-[#097CF4] hover:text-[#097CF4]'
                   }`}
                 >
                   {l}
@@ -205,8 +205,8 @@ const OpenPositions = () => {
                   onClick={() => setType(t)}
                   className={`px-3 h-8 text-[10px] font-bold uppercase tracking-[0.2em] border transition-colors ${
                     type === t
-                      ? 'bg-[#0276E2] text-white border-[#0276E2]'
-                      : 'bg-white text-black border-black/15 hover:border-[#0276E2] hover:text-[#0276E2]'
+                      ? 'bg-[#097CF4] text-white border-[#097CF4]'
+                      : 'bg-white text-black border-black/15 hover:border-[#097CF4] hover:text-[#097CF4]'
                   }`}
                 >
                   {t}
@@ -234,7 +234,7 @@ const OpenPositions = () => {
                     <div className="col-span-12 sm:col-span-5">
                       <div className="flex items-center gap-2 flex-wrap mb-2">
                         <span
-                          className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                          className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                         >
                           {j.dept}
@@ -244,7 +244,7 @@ const OpenPositions = () => {
                             key={b}
                             className={`px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] ${
                               b === 'Featured'
-                                ? 'bg-[#0276E2] text-white'
+                                ? 'bg-[#097CF4] text-white'
                                 : 'border border-black/15 text-black/70'
                             }`}
                             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
@@ -254,7 +254,7 @@ const OpenPositions = () => {
                         ))}
                       </div>
                       <h3
-                        className="text-xl sm:text-2xl lg:text-[28px] font-extrabold text-black leading-tight group-hover:text-[#0276E2] transition-colors"
+                        className="text-xl sm:text-2xl lg:text-[28px] font-extrabold text-black leading-tight group-hover:text-[#097CF4] transition-colors"
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {j.title}
@@ -273,7 +273,7 @@ const OpenPositions = () => {
                         className="text-[13px] font-bold text-black"
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
-                        {j.location} {j.remote && <span className="text-[#0276E2]">· Remote-OK</span>}
+                        {j.location} {j.remote && <span className="text-[#097CF4]">· Remote-OK</span>}
                       </p>
                     </div>
 
@@ -309,7 +309,7 @@ const OpenPositions = () => {
 
                     {/* Arrow */}
                     <div className="col-span-3 sm:col-span-1 flex justify-end">
-                      <span className="w-11 h-11 flex items-center justify-center border-2 border-black text-black group-hover:bg-[#0276E2] group-hover:border-[#0276E2] group-hover:text-white transition-colors">
+                      <span className="w-11 h-11 flex items-center justify-center border-2 border-black text-black group-hover:bg-[#097CF4] group-hover:border-[#097CF4] group-hover:text-white transition-colors">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                         </svg>
@@ -327,7 +327,7 @@ const OpenPositions = () => {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               No roles match your filters right now. Try widening the search — or{' '}
-              <a href="#general" className="text-[#0276E2] font-bold underline">
+              <a href="#general" className="text-[#097CF4] font-bold underline">
                 send us a general application →
               </a>
             </p>
@@ -339,12 +339,12 @@ const OpenPositions = () => {
           id="general"
           className="mt-14 lg:mt-20 relative border-2 border-black p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10"
         >
-          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#0276E2]"></span>
+          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#097CF4]"></span>
           <span className="absolute -bottom-3 -right-3 w-6 h-6 border-2 border-black bg-white"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Don't see your role?
@@ -359,12 +359,12 @@ const OpenPositions = () => {
 
           <a
             href="mailto:inquiry.techcareer@gmail.com?subject=General%20Application"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors shrink-0"
+            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Send a General Application
-            <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-              <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+              <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
               </svg>
             </span>

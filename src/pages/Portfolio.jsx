@@ -24,7 +24,7 @@ const portfolioJsonLd = {
 const Portfolio = () => (
   <>
     <Seo
-      title="What We Build — Capability Showcase | Tech Career IT Solutions LLP"
+      title="What We Build - Capability Showcase | Tech Career IT Solutions LLP"
       description="A transparent capability showcase from a new Ahmedabad studio — the websites, e-commerce stores, custom CRM / HRMS and mobile apps we can ship for you, with realistic timelines and pricing."
       keywords="web development portfolio ahmedabad, shopify developer portfolio india, custom crm hrms portfolio, mobile app developer gujarat, ecommerce agency showcase, tech career it solutions work"
       canonical="https://tech-career-final-version.vercel.app/portfolio"

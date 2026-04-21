@@ -58,9 +58,9 @@ export const services = [
     stack: ['Next.js', 'React', 'WordPress', 'Node.js', 'Tailwind', 'Vercel'],
     deliverables: ['Written Scope', 'Figma Designs', 'Live Website', 'Analytics Setup', '30-day Support'],
     pricing: [
-      { tier: 'Landing Page', price: '₹30,000+', duration: '1–2 weeks', features: ['1–3 pages', 'Responsive design', 'Contact form', 'Basic SEO', '30-day support'] },
-      { tier: 'Business Website', price: '₹75,000+', duration: '2–4 weeks', features: ['5–10 pages', 'CMS / WordPress', 'Contact + lead forms', 'SEO baseline', 'Analytics setup'], featured: true },
-      { tier: 'Custom Web App', price: '₹2 L+', duration: '4–10 weeks', features: ['Custom features', 'User login & roles', 'Admin panel', 'API integrations', 'CI / hosting setup'] },
+      { tier: 'Landing Page', price: '₹8,000+', duration: '5–7 days', features: ['1–3 pages', 'Responsive design', 'Contact form', 'Basic SEO', '15-day support'] },
+      { tier: 'Business Website', price: '₹20,000+', duration: '2–3 weeks', features: ['5–10 pages', 'WordPress / CMS', 'Contact + lead forms', 'SEO baseline', 'Analytics + 30-day support'], featured: true },
+      { tier: 'Custom Web App', price: '₹60,000+', duration: '4–8 weeks', features: ['Custom features', 'User login & roles', 'Admin panel', 'API integrations', 'Hosting setup'] },
     ],
     faqs: [
       { q: 'Will my website work on mobile?', a: 'Yes — every build is mobile-first and tested on iPhone and Android before going live.' },
@@ -87,9 +87,9 @@ export const services = [
     stack: ['Shopify', 'WooCommerce', 'Next.js', 'Razorpay', 'Stripe', 'Meta Pixel'],
     deliverables: ['Product Catalogue', 'Payment Setup', 'Checkout & Shipping', 'Admin Training', 'Launch Kit'],
     pricing: [
-      { tier: 'Shopify Starter', price: '₹60,000+', duration: '2–3 weeks', features: ['Shopify theme setup', 'Up to 50 products', 'Razorpay / Stripe', 'Shipping zones', 'Owner training'] },
-      { tier: 'Custom Store', price: '₹2 L+', duration: '4–6 weeks', features: ['Custom theme / build', 'Unlimited products', 'Payments + COD', 'Wishlist / coupons', 'SEO + speed tuning'], featured: true },
-      { tier: 'Full D2C Brand', price: '₹5 L+', duration: '6–10 weeks', features: ['Custom storefront', 'Subscription / bundles', 'ERP integrations', 'Analytics & reports', 'Launch campaign'] },
+      { tier: 'Shopify Starter', price: '₹15,000+', duration: '1–2 weeks', features: ['Shopify theme setup', 'Up to 50 products', 'Razorpay / Stripe', 'Shipping zones', 'Owner training'] },
+      { tier: 'Custom Store', price: '₹50,000+', duration: '3–5 weeks', features: ['Custom theme / build', 'Unlimited products', 'Payments + COD', 'Wishlist / coupons', 'SEO + speed tuning'], featured: true },
+      { tier: 'Full D2C Brand', price: '₹1.5 L+', duration: '6–10 weeks', features: ['Custom storefront', 'Subscription / bundles', 'ERP integrations', 'Analytics & reports', 'Launch campaign'] },
     ],
     faqs: [
       { q: 'Shopify or custom WooCommerce — which is right for me?', a: 'Shopify if you want to launch fast with minimal maintenance. Custom if you need specific flows, custom checkouts or want to own every pixel.' },
@@ -116,9 +116,9 @@ export const services = [
     stack: ['React Native', 'Flutter', 'Node.js', 'Firebase', 'Razorpay', 'Expo'],
     deliverables: ['Wireframes', 'Signed Builds', 'Backend APIs', 'Store Submission', '30-day Support'],
     pricing: [
-      { tier: 'MVP App', price: '₹2 L+', duration: '4–6 weeks', features: ['Single platform', '4–6 core screens', 'Push notifications', 'Store submission', '30-day support'] },
-      { tier: 'iOS + Android', price: '₹4 L+', duration: '6–10 weeks', features: ['Cross-platform', 'Auth + payments', 'Offline basics', 'Admin panel', 'Analytics'], featured: true },
-      { tier: 'Full Product', price: '₹8 L+', duration: '10–14 weeks', features: ['Complex flows', 'Chat / video / AI', 'Deep links', 'Analytics & A/B', 'Support retainer'] },
+      { tier: 'MVP App', price: '₹50,000+', duration: '4–6 weeks', features: ['Single platform', '4–6 core screens', 'Push notifications', 'Store submission', '30-day support'] },
+      { tier: 'iOS + Android', price: '₹1.5 L+', duration: '6–10 weeks', features: ['Cross-platform', 'Auth + payments', 'Offline basics', 'Admin panel', 'Analytics'], featured: true },
+      { tier: 'Full Product', price: '₹3 L+', duration: '10–14 weeks', features: ['Complex flows', 'Chat / video / AI', 'Deep links', 'Analytics & A/B', 'Support retainer'] },
     ],
     faqs: [
       { q: 'Native or cross-platform?', a: 'We lead with React Native or Flutter. Native Swift / Kotlin only when hardware features or heavy performance demand it.' },
@@ -147,9 +147,9 @@ export const services = [
     stack: ['React', 'Node.js', 'PostgreSQL', 'Tailwind', 'AWS', 'WhatsApp API'],
     deliverables: ['Workflow Audit', 'Wireframes', 'Working CRM', 'User Training', 'Admin Docs'],
     pricing: [
-      { tier: 'Workflow Tool', price: '₹1.5 L+', duration: '3–5 weeks', features: ['2–3 workflows', 'User roles', 'CSV import / export', 'Audit log', '30-day support'] },
-      { tier: 'Custom CRM', price: '₹4 L+', duration: '6–10 weeks', features: ['Leads + pipeline', 'Contacts + tasks', 'Reports + dashboards', 'Role permissions', 'Training'], featured: true },
-      { tier: 'Full Platform', price: '₹8 L+', duration: '10–16 weeks', features: ['Multiple modules', 'Integrations', 'Mobile-ready', 'Dedicated squad', 'Quarterly reviews'] },
+      { tier: 'Workflow Tool', price: '₹35,000+', duration: '3–5 weeks', features: ['2–3 workflows', 'User roles', 'CSV import / export', 'Audit log', '30-day support'] },
+      { tier: 'Custom CRM', price: '₹1 L+', duration: '6–10 weeks', features: ['Leads + pipeline', 'Contacts + tasks', 'Reports + dashboards', 'Role permissions', 'Training'], featured: true },
+      { tier: 'Full Platform', price: '₹2.5 L+', duration: '10–16 weeks', features: ['Multiple modules', 'Integrations', 'Mobile-ready', 'Dedicated squad', 'Quarterly reviews'] },
     ],
     faqs: [
       { q: 'Is this like Zoho or Salesforce?', a: 'Tailored to you. If Zoho fits your flow, use Zoho — we build custom only when the off-the-shelf tools bend too hard around your business.' },
@@ -176,8 +176,8 @@ export const services = [
     stack: ['React', 'Node.js', 'PostgreSQL', 'Tailwind', 'AWS', 'Razorpay Payouts'],
     deliverables: ['HR Audit', 'Wireframes', 'Working HRMS', 'Admin Training', 'User Docs'],
     pricing: [
-      { tier: 'Lite HRMS', price: '₹2 L+', duration: '4–6 weeks', features: ['Attendance + leave', 'Employee records', 'Admin dashboard', 'CSV exports', 'Training'] },
-      { tier: 'Full HRMS', price: '₹5 L+', duration: '8–12 weeks', features: ['Payroll module', 'Approval flows', 'Document vault', 'Mobile-ready', 'Role permissions'], featured: true },
+      { tier: 'Lite HRMS', price: '₹60,000+', duration: '4–6 weeks', features: ['Attendance + leave', 'Employee records', 'Admin dashboard', 'CSV exports', 'Training'] },
+      { tier: 'Full HRMS', price: '₹1.75 L+', duration: '8–12 weeks', features: ['Payroll module', 'Approval flows', 'Document vault', 'Mobile-ready', 'Role permissions'], featured: true },
       { tier: 'Enterprise', price: 'Custom', duration: '12+ weeks', features: ['Multi-office', 'SSO integration', 'Custom modules', 'Onsite training', 'Dedicated support'] },
     ],
     faqs: [
@@ -207,9 +207,9 @@ export const services = [
     stack: ['Figma', 'FigJam', 'Framer', 'Principle', 'Whimsical'],
     deliverables: ['Wireframes', 'Hi-Fi UI', 'Clickable Prototype', 'Design System', 'Handover Doc'],
     pricing: [
-      { tier: 'Design Sprint', price: '₹50,000+', duration: '2–3 weeks', features: ['Up to 10 screens', 'Wireframes + UI', 'One revision round', 'Figma handoff', 'Mobile-responsive'] },
-      { tier: 'Full Product Design', price: '₹1.5 L+', duration: '4–6 weeks', features: ['20+ screens', 'Design system', 'Clickable prototype', 'Engineer handoff', 'Two revision rounds'], featured: true },
-      { tier: 'Design Partner', price: 'Custom', duration: 'Ongoing', features: ['Embedded designer', 'Weekly design crits', 'System maintenance', 'User research', 'Retainer pricing'] },
+      { tier: 'Design Sprint', price: '₹15,000+', duration: '1–2 weeks', features: ['Up to 10 screens', 'Wireframes + UI', 'One revision round', 'Figma handoff', 'Mobile-responsive'] },
+      { tier: 'Full Product Design', price: '₹50,000+', duration: '3–5 weeks', features: ['20+ screens', 'Design system starter', 'Clickable prototype', 'Engineer handoff', 'Two revision rounds'], featured: true },
+      { tier: 'Design Partner', price: '₹25,000/mo', duration: 'Ongoing', features: ['Embedded designer', 'Weekly design crits', 'System maintenance', 'User research', 'Retainer pricing'] },
     ],
     faqs: [
       { q: 'Do you design mobile and web together?', a: 'Yes — a shared design system means your web and mobile app stay consistent without doubling the design time.' },
@@ -236,9 +236,9 @@ export const services = [
     stack: ['Figma', 'Illustrator', 'Photoshop', 'Canva'],
     deliverables: ['Logo System', 'Colour + Typography', 'Brand Guidelines PDF', 'Template Pack', 'All Source Files'],
     pricing: [
-      { tier: 'Logo Only', price: '₹15,000+', duration: '1 week', features: ['3 logo concepts', '2 revision rounds', 'Colour + font pair', 'All file formats', 'Commercial rights'] },
-      { tier: 'Full Identity', price: '₹40,000+', duration: '2–3 weeks', features: ['Logo system', 'Brand guidelines', 'Templates pack', 'Social post kit', 'Revisions included'], featured: true },
-      { tier: 'Brand + Website', price: '₹1 L+', duration: '3–5 weeks', features: ['Full identity', '5-page website', 'Launch kit', 'Social graphics', 'Handover'] },
+      { tier: 'Logo Only', price: '₹4,000+', duration: '5–7 days', features: ['3 logo concepts', '2 revision rounds', 'Colour + font pair', 'All file formats', 'Commercial rights'] },
+      { tier: 'Full Identity', price: '₹12,000+', duration: '1–2 weeks', features: ['Logo system', 'Brand guidelines', 'Templates pack', 'Social post kit', 'Revisions included'], featured: true },
+      { tier: 'Brand + Website', price: '₹35,000+', duration: '3–4 weeks', features: ['Full identity', '5-page website', 'Launch kit', 'Social graphics', 'Handover'] },
     ],
     faqs: [
       { q: 'Do I own the logo and source files?', a: 'Yes — full commercial rights transfer to you, plus source files (AI, SVG, PSD) included in every package.' },
@@ -267,9 +267,9 @@ export const services = [
     stack: ['Google Search Console', 'GA4', 'Ahrefs', 'SEMrush', 'Screaming Frog'],
     deliverables: ['Technical Audit', 'Keyword Strategy', 'Content Calendar', 'Monthly Reports', 'On-Page Fixes'],
     pricing: [
-      { tier: 'SEO Audit', price: '₹25,000+', duration: '1–2 weeks', features: ['Full tech audit', 'Keyword research', '90-day roadmap', 'Analytics check', 'Final presentation'] },
-      { tier: 'Monthly SEO', price: '₹25,000/mo', duration: 'Ongoing (3 mo min)', features: ['Ongoing fixes', 'Content plan', 'Link outreach', 'Monthly report', 'Strategy call'], featured: true },
-      { tier: 'Full Growth', price: '₹60,000/mo', duration: 'Ongoing', features: ['SEO + content writing', 'Landing page A/B', 'PR + link building', 'Attribution modelling', 'Dedicated lead'] },
+      { tier: 'SEO Audit', price: '₹7,500+', duration: '1 week', features: ['Full tech audit', 'Keyword research', '90-day roadmap', 'Analytics check', 'Final presentation'] },
+      { tier: 'Monthly SEO', price: '₹10,000/mo', duration: 'Ongoing (3 mo min)', features: ['Ongoing fixes', 'Content plan', 'Link outreach', 'Monthly report', 'Strategy call'], featured: true },
+      { tier: 'Full Growth', price: '₹25,000/mo', duration: 'Ongoing', features: ['SEO + content writing', 'Landing page A/B', 'PR + link building', 'Attribution modelling', 'Dedicated lead'] },
     ],
     faqs: [
       { q: 'How long until I see ranking movement?', a: 'Technical fixes usually move rankings in 4–8 weeks. Content-driven growth compounds over 3–6 months — SEO is slow, honest work.' },
@@ -296,9 +296,9 @@ export const services = [
     stack: ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'GA4', 'Meta Pixel', 'Looker Studio'],
     deliverables: ['Strategy Doc', 'Campaign Builds', 'Creative Kit', 'Tracking Setup', 'Weekly + Monthly Reports'],
     pricing: [
-      { tier: 'Launch Sprint', price: '₹30,000+', duration: '3–4 weeks', features: ['1–2 channels', 'Audience + creative', 'Tracking setup', 'Launch + optimise', 'Final handover'] },
-      { tier: 'Monthly Retainer', price: '₹20,000/mo', duration: 'Ongoing', features: ['Up to 2 channels', 'Weekly optimisation', 'Creative rotation', 'Monthly reports', 'Ad budget separate'], featured: true },
-      { tier: 'Full Service', price: '₹60,000/mo', duration: 'Ongoing', features: ['All major channels', 'In-house creative', 'Landing page CRO', 'Attribution modelling', 'Dedicated lead'] },
+      { tier: 'Launch Sprint', price: '₹10,000+', duration: '2–3 weeks', features: ['1–2 channels', 'Audience + creative', 'Tracking setup', 'Launch + optimise', 'Final handover'] },
+      { tier: 'Monthly Retainer', price: '₹8,000/mo', duration: 'Ongoing', features: ['Up to 2 channels', 'Weekly optimisation', 'Creative rotation', 'Monthly reports', 'Ad budget separate'], featured: true },
+      { tier: 'Full Service', price: '₹20,000/mo', duration: 'Ongoing', features: ['All major channels', 'In-house creative', 'Landing page CRO', 'Attribution modelling', 'Dedicated lead'] },
     ],
     faqs: [
       { q: 'What is a realistic starting ad budget?', a: 'Most small Indian businesses start with ₹15k–₹40k / month in ad spend. Below that, SEO or organic social is usually a better bet.' },
@@ -325,9 +325,9 @@ export const services = [
     stack: ['Instagram', 'Facebook', 'LinkedIn', 'Canva', 'Figma', 'Meta Business Suite'],
     deliverables: ['Content Calendar', 'Post Designs', 'Reel Scripts', 'Community Replies', 'Monthly Report'],
     pricing: [
-      { tier: 'Starter Social', price: '₹15,000/mo', duration: 'Ongoing', features: ['12 posts / month', '4 reels scripts', '1 platform', 'Community replies', 'Monthly report'] },
-      { tier: 'Growth Social', price: '₹30,000/mo', duration: 'Ongoing', features: ['20 posts / month', '8 reels scripts', '2 platforms', 'DM handling', 'Strategy call'], featured: true },
-      { tier: 'Full Brand Social', price: '₹60,000/mo', duration: 'Ongoing', features: ['All major platforms', 'Video shoots', 'Influencer outreach', 'Paid boosting', 'Dedicated manager'] },
+      { tier: 'Starter Social', price: '₹5,000/mo', duration: 'Ongoing', features: ['12 posts / month', '4 reels scripts', '1 platform', 'Community replies', 'Monthly report'] },
+      { tier: 'Growth Social', price: '₹12,000/mo', duration: 'Ongoing', features: ['20 posts / month', '8 reels scripts', '2 platforms', 'DM handling', 'Strategy call'], featured: true },
+      { tier: 'Full Brand Social', price: '₹25,000/mo', duration: 'Ongoing', features: ['All major platforms', 'Video shoots', 'Influencer outreach', 'Paid boosting', 'Dedicated manager'] },
     ],
     faqs: [
       { q: 'Do you shoot the content or do I?', a: 'Starter + Growth plans assume you send us raw photos / clips from your phone. Full Brand Social includes a monthly shoot day.' },
@@ -356,16 +356,16 @@ export const services = [
     stack: ['WhatsApp', 'GitHub', 'Google Analytics', 'UptimeRobot', 'Linear'],
     deliverables: ['Monthly Change Log', 'Backup & Security Check', 'Uptime Reports', 'Priority WhatsApp Support'],
     pricing: [
-      { tier: 'Essentials', price: '₹8,000/mo', duration: 'Ongoing', features: ['~4 hrs / month', 'Bug fixes', 'Plugin updates', 'Basic backups', 'WhatsApp support'] },
-      { tier: 'Care Plus', price: '₹20,000/mo', duration: 'Ongoing', features: ['~10 hrs / month', 'Small features', 'Content updates', 'Monthly report', 'Priority turnaround'], featured: true },
-      { tier: 'Full Partner', price: '₹40,000/mo', duration: 'Ongoing', features: ['~20 hrs / month', 'Feature roadmap', 'SEO + marketing hours', 'Monthly strategy call', 'Dedicated engineer'] },
+      { tier: 'Essentials', price: '₹3,000/mo', duration: 'Ongoing', features: ['~4 hrs / month', 'Bug fixes', 'Plugin updates', 'Basic backups', 'WhatsApp support'] },
+      { tier: 'Care Plus', price: '₹8,000/mo', duration: 'Ongoing', features: ['~10 hrs / month', 'Small features', 'Content updates', 'Monthly report', 'Priority turnaround'], featured: true },
+      { tier: 'Full Partner', price: '₹18,000/mo', duration: 'Ongoing', features: ['~20 hrs / month', 'Feature roadmap', 'SEO + marketing hours', 'Monthly strategy call', 'Dedicated engineer'] },
     ],
     faqs: [
       { q: 'Do I have to take a retainer?', a: 'No — the 30-day post-launch window is always free. Retainers are optional and many clients start one after the free window ends.' },
       { q: 'What if I do not use all the hours?', a: 'Up to 50% of unused hours roll over to the next month once, so you are not losing money on quiet months.' },
       { q: 'Can I cancel anytime?', a: 'Yes — 30-day notice, no questions. Your code, hosting and accounts are always yours.' },
     ],
-    caseStudy: { title: 'Post-Launch Care', metric: 'From ₹8,000 / month', slug: 'sample' },
+    caseStudy: { title: 'Post-Launch Care', metric: 'From ₹3,000 / month', slug: 'sample' },
   },
 ]
 

@@ -80,7 +80,7 @@ const projects = [
 ]
 
 const Preview = ({ type }) => {
-  const base = 'relative w-full h-full overflow-hidden bg-[#0276E2]'
+  const base = 'relative w-full h-full overflow-hidden bg-[#097CF4]'
 
   if (type === 'dashboard') {
     return (
@@ -89,7 +89,7 @@ const Preview = ({ type }) => {
           <div className="flex items-center gap-1 px-4 py-3 border-b-2 border-black">
             <span className="w-2.5 h-2.5 rounded-full bg-black/30"></span>
             <span className="w-2.5 h-2.5 rounded-full bg-black/30"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-[#0276E2]"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#097CF4]"></span>
           </div>
           <div className="p-4 lg:p-5 grid grid-cols-3 gap-3">
             <div className="col-span-2 space-y-2.5">
@@ -98,7 +98,7 @@ const Preview = ({ type }) => {
                 {[40, 70, 55, 80, 35, 90, 60, 72].map((h, i) => (
                   <span
                     key={i}
-                    className={`flex-1 ${i === 3 ? 'bg-[#0276E2]' : 'bg-black/70'}`}
+                    className={`flex-1 ${i === 3 ? 'bg-[#097CF4]' : 'bg-black/70'}`}
                     style={{ height: `${h}%` }}
                   ></span>
                 ))}
@@ -108,7 +108,7 @@ const Preview = ({ type }) => {
                   <span className="h-1.5 w-2/3 bg-black"></span>
                 </div>
                 <div className="h-10 border border-black/15 flex items-center justify-center">
-                  <span className="h-1.5 w-2/3 bg-[#0276E2]"></span>
+                  <span className="h-1.5 w-2/3 bg-[#097CF4]"></span>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ const Preview = ({ type }) => {
               <div className="h-2 bg-black/40 w-4/5"></div>
               <div className="h-2 bg-black/40 w-3/5"></div>
               <div className="h-2 bg-black/40 w-2/3"></div>
-              <div className="h-7 bg-[#0276E2] mt-2"></div>
+              <div className="h-7 bg-[#097CF4] mt-2"></div>
             </div>
           </div>
         </div>
@@ -134,14 +134,14 @@ const Preview = ({ type }) => {
             <div className="h-1.5 w-1/3 bg-black mt-2.5 mx-auto rounded-full"></div>
             <div className="px-4 pt-4 space-y-3">
               <div className="h-2.5 bg-black w-2/3"></div>
-              <div className="h-14 bg-[#0276E2] flex flex-col items-center justify-center">
+              <div className="h-14 bg-[#097CF4] flex flex-col items-center justify-center">
                 <span className="text-[9px] text-white/70 uppercase tracking-widest">Balance</span>
                 <span className="text-white text-[14px] font-extrabold">₹ 4,82,310</span>
               </div>
               <div className="space-y-2">
                 {[0, 1, 2, 3].map((i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <span className={`w-4 h-4 ${i % 2 ? 'bg-[#0276E2]' : 'bg-black'}`}></span>
+                    <span className={`w-4 h-4 ${i % 2 ? 'bg-[#097CF4]' : 'bg-black'}`}></span>
                     <span className="flex-1 h-1.5 bg-black/30"></span>
                     <span className="h-1.5 w-8 bg-black/60"></span>
                   </div>
@@ -162,17 +162,17 @@ const Preview = ({ type }) => {
             <span className="h-2 w-16 bg-black"></span>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-10 bg-black/50"></span>
-              <span className="w-5 h-5 bg-[#0276E2]"></span>
+              <span className="w-5 h-5 bg-[#097CF4]"></span>
             </div>
           </div>
           <div className="p-4 grid grid-cols-3 gap-3">
             {[0, 1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="border border-black/15 p-2">
-                <div className={`h-10 ${i % 2 ? 'bg-[#0276E2]/20' : 'bg-black/10'}`}></div>
+                <div className={`h-10 ${i % 2 ? 'bg-[#097CF4]/20' : 'bg-black/10'}`}></div>
                 <div className="mt-2 h-1.5 bg-black/60 w-3/4"></div>
                 <div className="mt-1.5 flex items-center justify-between">
                   <span className="h-1.5 w-6 bg-black"></span>
-                  <span className="h-4 w-6 bg-[#0276E2]"></span>
+                  <span className="h-4 w-6 bg-[#097CF4]"></span>
                 </div>
               </div>
             ))}
@@ -189,18 +189,18 @@ const Preview = ({ type }) => {
           <div className="col-span-1 bg-black p-3 space-y-2">
             <span className="block h-1.5 w-4/5 bg-white/60"></span>
             <span className="block h-1.5 w-3/5 bg-white/40"></span>
-            <span className="block h-1.5 w-4/5 bg-[#0276E2]"></span>
+            <span className="block h-1.5 w-4/5 bg-[#097CF4]"></span>
             <span className="block h-1.5 w-2/3 bg-white/30"></span>
             <span className="block h-1.5 w-3/4 bg-white/30"></span>
           </div>
           <div className="col-span-3 p-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="h-2 w-24 bg-black"></span>
-              <span className="h-6 w-16 bg-[#0276E2]"></span>
+              <span className="h-6 w-16 bg-[#097CF4]"></span>
             </div>
             {[0, 1, 2, 3].map((i) => (
               <div key={i} className="flex items-center gap-3 border border-black/10 p-2">
-                <span className={`w-6 h-6 ${i % 2 ? 'bg-[#0276E2]' : 'bg-black'}`}></span>
+                <span className={`w-6 h-6 ${i % 2 ? 'bg-[#097CF4]' : 'bg-black'}`}></span>
                 <div className="flex-1">
                   <span className="block h-1.5 w-2/3 bg-black/70"></span>
                   <span className="block h-1 w-1/3 bg-black/30 mt-1"></span>
@@ -221,28 +221,28 @@ const Preview = ({ type }) => {
           <div className="bg-white border-2 border-black p-3">
             <div className="flex items-center justify-between mb-2">
               <span className="text-[10px] font-bold uppercase tracking-widest text-black">SEO Ranking</span>
-              <span className="text-[10px] font-bold text-[#0276E2]">↑ 32%</span>
+              <span className="text-[10px] font-bold text-[#097CF4]">↑ 32%</span>
             </div>
             <div className="h-12 border border-black/15 flex items-end gap-1 p-1">
               {[20, 28, 36, 30, 48, 55, 70, 85].map((h, i) => (
                 <span
                   key={i}
-                  className={`flex-1 ${i === 7 ? 'bg-[#0276E2]' : 'bg-black/60'}`}
+                  className={`flex-1 ${i === 7 ? 'bg-[#097CF4]' : 'bg-black/60'}`}
                   style={{ height: `${h}%` }}
                 ></span>
               ))}
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-black text-white p-3 border-2 border-[#0276E2]">
+            <div className="bg-black text-white p-3 border-2 border-[#097CF4]">
               <span className="block text-[9px] uppercase tracking-widest text-white/60">Ad Spend</span>
               <span className="block text-[15px] font-extrabold mt-1">₹ 48k</span>
-              <span className="block text-[9px] text-[#0276E2] mt-1">3.2× ROAS</span>
+              <span className="block text-[9px] text-[#097CF4] mt-1">3.2× ROAS</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
               <span className="block text-[9px] uppercase tracking-widest text-black/60">Clicks</span>
               <span className="block text-[15px] font-extrabold mt-1 text-black">12,480</span>
-              <span className="block text-[9px] text-[#0276E2] mt-1">CTR 4.1%</span>
+              <span className="block text-[9px] text-[#097CF4] mt-1">CTR 4.1%</span>
             </div>
           </div>
         </div>
@@ -281,8 +281,8 @@ const OurWork = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 What We Build
               </span>
             </div>
@@ -292,7 +292,7 @@ const OurWork = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               A studio ready to ship{' '}
-              <span className="text-[#0276E2] italic">your</span> first product.
+              <span className="text-[#097CF4] italic">your</span> first product.
             </h2>
 
             <p
@@ -325,7 +325,7 @@ const OurWork = () => {
             </span>
             <button
               onClick={() => setActive((i) => (i + 1) % projects.length)}
-              className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
+              className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#097CF4] hover:border-[#097CF4] transition-colors"
               aria-label="Next capability"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -353,7 +353,7 @@ const OurWork = () => {
                     <div className="flex items-stretch">
                       <div
                         className={`shrink-0 w-14 sm:w-16 flex items-center justify-center border-r-2 transition-colors ${
-                          isActive ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'border-black text-black/50'
+                          isActive ? 'bg-[#097CF4] border-[#097CF4] text-white' : 'border-black text-black/50'
                         }`}
                       >
                         <span
@@ -368,7 +368,7 @@ const OurWork = () => {
                         <div className="min-w-0">
                           <p
                             className={`text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em] ${
-                              isActive ? 'text-[#0276E2]' : 'text-black/50'
+                              isActive ? 'text-[#097CF4]' : 'text-black/50'
                             }`}
                             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                           >
@@ -383,7 +383,7 @@ const OurWork = () => {
                         </div>
                         <svg
                           className={`w-4 h-4 shrink-0 transition-transform ${
-                            isActive ? 'text-[#0276E2] translate-x-0' : 'text-black/30 -translate-x-1 group-hover:translate-x-0'
+                            isActive ? 'text-[#097CF4] translate-x-0' : 'text-black/30 -translate-x-1 group-hover:translate-x-0'
                           }`}
                           viewBox="0 0 24 24"
                           fill="none"
@@ -426,7 +426,7 @@ const OurWork = () => {
 
                 <div className="absolute top-4 right-4 z-10">
                   <span
-                    className="px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
+                    className="px-3 py-1.5 bg-[#097CF4] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     Capability {project.no}
@@ -439,7 +439,7 @@ const OurWork = () => {
 
               <div className="p-6 sm:p-8 lg:p-10">
                 <p
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — Capability · {project.client}
@@ -467,7 +467,7 @@ const OurWork = () => {
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {m.k}
-                        <span className="text-[#0276E2]">.</span>
+                        <span className="text-[#097CF4]">.</span>
                       </p>
                       <p
                         className="mt-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-black/60"
@@ -494,13 +494,13 @@ const OurWork = () => {
 
                   <Link
                     to="/contact"
-                    className="group inline-flex items-center gap-3 h-12 pl-5 pr-2 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors shrink-0"
+                    className="group inline-flex items-center gap-3 h-12 pl-5 pr-2 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#097CF4] transition-colors shrink-0"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     Get a Quote
-                    <span className="w-9 h-9 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
+                    <span className="w-9 h-9 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
                       <svg
-                        className="w-3.5 h-3.5 text-white group-hover:text-[#0276E2]"
+                        className="w-3.5 h-3.5 text-white group-hover:text-[#097CF4]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -521,7 +521,7 @@ const OurWork = () => {
                   key={i}
                   onClick={() => setActive(i)}
                   className={`h-1 flex-1 transition-colors ${
-                    i === active ? 'bg-[#0276E2]' : i < active ? 'bg-black' : 'bg-black/15'
+                    i === active ? 'bg-[#097CF4]' : i < active ? 'bg-black' : 'bg-black/15'
                   }`}
                   aria-label={`Capability ${i + 1}`}
                 ></button>
@@ -533,7 +533,7 @@ const OurWork = () => {
         {/* Bottom strip — honest CTA */}
         <div className="mt-16 lg:mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t-2 border-black">
           <div className="flex items-center gap-4">
-            <span className="w-12 h-12 bg-[#0276E2] flex items-center justify-center">
+            <span className="w-12 h-12 bg-[#097CF4] flex items-center justify-center">
               <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>

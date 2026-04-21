@@ -12,10 +12,9 @@ const MissionVision = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#0276E2]"></span>
+      
+      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4]"></span>
+      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4]"></span>
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="text-center max-w-[720px] mx-auto mb-14 lg:mb-20">
@@ -23,18 +22,18 @@ const MissionVision = () => {
             className="inline-flex items-center gap-3 mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <span className="w-10 h-px bg-[#0276E2]"></span>
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+            <span className="w-10 h-px bg-[#097CF4]"></span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
               Mission & Vision
             </span>
-            <span className="w-10 h-px bg-[#0276E2]"></span>
+            <span className="w-10 h-px bg-[#097CF4]"></span>
           </div>
 
           <h2
             className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold leading-[1.05] tracking-[-0.02em]"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            The <span className="text-[#0276E2] italic">why</span> behind everything we ship.
+            The <span className="text-[#097CF4] italic">why</span> behind everything we ship.
           </h2>
         </div>
 
@@ -51,7 +50,7 @@ const MissionVision = () => {
                 'Honest estimates, honest timelines',
               ],
               bg: 'bg-white text-black',
-              accent: 'bg-[#0276E2]',
+              accent: 'bg-[#097CF4]',
             },
             {
               kind: 'Vision',
@@ -63,7 +62,7 @@ const MissionVision = () => {
                 'Every project treated as flagship',
                 'Long-term partnerships over volume',
               ],
-              bg: 'bg-[#0276E2] text-white',
+              bg: 'bg-[#097CF4] text-white',
               accent: 'bg-black',
             },
           ].map((card) => (
@@ -74,7 +73,7 @@ const MissionVision = () => {
               <div className="flex items-start justify-between mb-8">
                 <span
                   className={`inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.3em] ${
-                    card.kind === 'Mission' ? 'text-[#0276E2]' : 'text-white'
+                    card.kind === 'Mission' ? 'text-[#097CF4]' : 'text-white'
                   }`}
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
@@ -124,8 +123,8 @@ const MissionVision = () => {
               </ul>
 
               {/* Corner markers */}
-              <span className={`pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 ${card.kind === 'Mission' ? 'border-[#0276E2]' : 'border-white'}`}></span>
-              <span className={`pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 ${card.kind === 'Mission' ? 'border-[#0276E2]' : 'border-white'}`}></span>
+              <span className={`pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 ${card.kind === 'Mission' ? 'border-[#097CF4]' : 'border-white'}`}></span>
+              <span className={`pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 ${card.kind === 'Mission' ? 'border-[#097CF4]' : 'border-white'}`}></span>
             </article>
           ))}
         </div>

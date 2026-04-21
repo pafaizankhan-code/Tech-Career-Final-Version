@@ -25,15 +25,14 @@ const CareerHero = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+      
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <nav
           className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          <Link to="/" className="hover:text-[#0276E2]">Home</Link>
+          <Link to="/" className="hover:text-[#097CF4]">Home</Link>
           <span>/</span>
           <span className="text-black font-semibold">Careers</span>
         </nav>
@@ -45,10 +44,10 @@ const CareerHero = () => {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               <span className="relative flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
               </span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Hiring · Early Team
               </span>
             </div>
@@ -58,7 +57,7 @@ const CareerHero = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Help build a<br />
-              <span className="text-[#0276E2] italic">new studio</span>
+              <span className="text-[#097CF4] italic">new studio</span>
               <br />
               from day one.
             </h1>
@@ -75,11 +74,11 @@ const CareerHero = () => {
             >
               <a
                 href="#open-positions"
-                className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
               >
                 See Open Roles
-                <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-                  <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
@@ -99,18 +98,18 @@ const CareerHero = () => {
 
           {/* Featured role card */}
           <div className="lg:col-span-4">
-            <div className="relative bg-black text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#0276E2]">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+            <div className="relative bg-black text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#097CF4]">
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <div className="flex items-center justify-between mb-4">
                 <span
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — Featured Role
                 </span>
-                <span className="px-2 py-1 bg-[#0276E2] text-white text-[9px] font-bold uppercase tracking-[0.25em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                <span className="px-2 py-1 bg-[#097CF4] text-white text-[9px] font-bold uppercase tracking-[0.25em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                   New
                 </span>
               </div>
@@ -141,7 +140,7 @@ const CareerHero = () => {
 
               <a
                 href="#open-positions"
-                className="group mt-6 w-full inline-flex items-center justify-between gap-3 h-12 px-4 bg-[#0276E2] text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-[#0276E2] transition-colors"
+                className="group mt-6 w-full inline-flex items-center justify-between gap-3 h-12 px-4 bg-[#097CF4] text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-[#097CF4] transition-colors"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 Apply Now
@@ -169,7 +168,7 @@ const CareerHero = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {s.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-black/60"

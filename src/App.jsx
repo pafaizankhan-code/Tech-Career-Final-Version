@@ -9,11 +9,13 @@ import ServiceDetail from './pages/ServiceDetail'
 import Portfolio from './pages/Portfolio'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 const App = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
+      <ScrollToTop/>
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />

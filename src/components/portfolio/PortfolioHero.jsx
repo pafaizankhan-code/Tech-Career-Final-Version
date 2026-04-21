@@ -25,15 +25,14 @@ const PortfolioHero = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+      
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <nav
           className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          <Link to="/" className="hover:text-[#0276E2]">Home</Link>
+          <Link to="/" className="hover:text-[#097CF4]">Home</Link>
           <span>/</span>
           <span className="text-black font-semibold">Portfolio</span>
         </nav>
@@ -44,8 +43,8 @@ const PortfolioHero = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Capability Showcase · 2025
               </span>
             </div>
@@ -54,7 +53,7 @@ const PortfolioHero = () => {
               className="text-5xl sm:text-6xl lg:text-[96px] xl:text-[108px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              What we can <span className="text-[#0276E2] italic">build.</span>
+              What we can <span className="text-[#097CF4] italic">build.</span>
               <br />
               Starting with yours.
             </h1>
@@ -67,7 +66,7 @@ const PortfolioHero = () => {
           </div>
 
           <div className="lg:col-span-4">
-            <div className="relative bg-[#0276E2] text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#000]">
+            <div className="relative bg-[#097CF4] text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#000]">
               <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white"></span>
               <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-white"></span>
 
@@ -124,7 +123,7 @@ const PortfolioHero = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {s.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-black/60"

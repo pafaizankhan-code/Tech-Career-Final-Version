@@ -31,7 +31,7 @@ const contactJsonLd = {
 const Contact = () => (
   <>
     <Seo
-      title="Contact Us — Tech Career IT Solutions LLP | iHub, Ahmedabad"
+      title="Contact Us - Tech Career IT Solutions LLP | iHub, Ahmedabad"
       description="Get in touch with a founder-led studio in Ahmedabad. Reply within 24 hours on email or WhatsApp. Free discovery call for every new project — no obligation, no sales pitch."
       keywords="contact web developer ahmedabad, digital marketing agency ahmedabad contact, ihub ahmedabad studio, web design quote ahmedabad, free discovery call india, tech career it solutions llp contact"
       canonical="https://tech-career-final-version.vercel.app/contact"

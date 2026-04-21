@@ -89,10 +89,9 @@ const HiringProcess = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#0276E2]"></span>
+      
+      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4]"></span>
+      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4]"></span>
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="max-w-[860px] mx-auto text-center mb-14 lg:mb-20">
@@ -100,11 +99,11 @@ const HiringProcess = () => {
             className="inline-flex items-center gap-3 mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <span className="w-10 h-px bg-[#0276E2]"></span>
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+            <span className="w-10 h-px bg-[#097CF4]"></span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
               Hiring Process
             </span>
-            <span className="w-10 h-px bg-[#0276E2]"></span>
+            <span className="w-10 h-px bg-[#097CF4]"></span>
           </div>
 
           <h2
@@ -112,7 +111,7 @@ const HiringProcess = () => {
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Five steps.{' '}
-            <span className="text-[#0276E2] italic">Fourteen</span> days. No games.
+            <span className="text-[#097CF4] italic">Fourteen</span> days. No games.
           </h2>
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[620px] mx-auto">
@@ -137,7 +136,7 @@ const HiringProcess = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {p.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white/60"
@@ -152,7 +151,7 @@ const HiringProcess = () => {
         {/* Desktop timeline */}
         <div className="hidden lg:block relative">
           <div className="absolute top-[38px] left-0 right-0 h-px bg-white/20"></div>
-          <div className="absolute top-[38px] left-0 h-px bg-[#0276E2]" style={{ width: '60%' }}></div>
+          <div className="absolute top-[38px] left-0 h-px bg-[#097CF4]" style={{ width: '60%' }}></div>
 
           <div className="grid grid-cols-5 gap-5">
             {stages.map((s, i) => (
@@ -161,26 +160,26 @@ const HiringProcess = () => {
                   <div className="relative">
                     <span
                       className={`relative z-10 w-20 h-20 border-2 flex items-center justify-center transition-colors ${
-                        i < 3 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-black border-white text-white'
+                        i < 3 ? 'bg-[#097CF4] border-[#097CF4] text-white' : 'bg-black border-white text-white'
                       }`}
                     >
                       <div className="w-8 h-8">{s.icon}</div>
                     </span>
                     <span
                       className={`absolute left-1/2 -translate-x-1/2 -bottom-[14px] w-3 h-3 border-2 ${
-                        i < 3 ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-black border-white'
+                        i < 3 ? 'bg-[#097CF4] border-[#097CF4]' : 'bg-black border-white'
                       }`}
                     ></span>
                   </div>
                 </div>
 
-                <div className="border-2 border-white/20 bg-black p-5 relative transition-colors group-hover:border-[#0276E2]">
-                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                <div className="border-2 border-white/20 bg-black p-5 relative transition-colors group-hover:border-[#097CF4]">
+                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <div className="flex items-center justify-between mb-3">
                     <span
-                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       — {s.no}
@@ -221,19 +220,19 @@ const HiringProcess = () => {
               <div key={s.no} className="relative pl-16">
                 <span
                   className={`absolute left-0 top-0 w-12 h-12 border-2 flex items-center justify-center transition-colors ${
-                    i === 0 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-black border-white text-white'
+                    i === 0 ? 'bg-[#097CF4] border-[#097CF4] text-white' : 'bg-black border-white text-white'
                   }`}
                 >
                   <div className="w-5 h-5">{s.icon}</div>
                 </span>
 
                 <div className="border-2 border-white/20 bg-black p-5 relative">
-                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <div className="flex items-center justify-between mb-2">
                     <span
-                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       — {s.no} · {s.label}

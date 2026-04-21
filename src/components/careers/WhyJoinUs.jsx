@@ -123,8 +123,8 @@ const WhyJoinUs = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Why Work Here
               </span>
             </div>
@@ -133,7 +133,7 @@ const WhyJoinUs = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              A small studio, with <span className="text-[#0276E2] italic">real</span> upside.
+              A small studio, with <span className="text-[#097CF4] italic">real</span> upside.
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[640px]">
@@ -146,11 +146,11 @@ const WhyJoinUs = () => {
           {/* Right: manifest card */}
           <div className="lg:col-span-5">
             <div className="bg-black text-white p-6 lg:p-7 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-5"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — The Team Manifest
@@ -159,7 +159,7 @@ const WhyJoinUs = () => {
               <ul className="space-y-3" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 {manifest.map((m, i) => (
                   <li key={m} className="flex items-start gap-3 text-[13px] lg:text-[14px] font-semibold">
-                    <span className="text-[10px] tracking-[0.2em] text-[#0276E2] pt-1 shrink-0">
+                    <span className="text-[10px] tracking-[0.2em] text-[#097CF4] pt-1 shrink-0">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span>{m}</span>
@@ -177,22 +177,22 @@ const WhyJoinUs = () => {
               key={b.no}
               className="group relative p-6 lg:p-7 border-r border-b border-black/10 bg-white hover:bg-black hover:text-white transition-colors duration-500"
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
 
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center border-2 border-black group-hover:border-[#0276E2] group-hover:bg-[#0276E2] transition-colors">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center border-2 border-black group-hover:border-[#097CF4] group-hover:bg-[#097CF4] transition-colors">
                   <div className="w-6 h-6">{b.icon}</div>
                 </div>
                 <div className="text-right">
                   <span
-                    className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#0276E2] transition-colors block"
+                    className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors block"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     — {b.no}
                   </span>
                   <span
-                    className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#0276E2] block mt-1"
+                    className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#097CF4] block mt-1"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     {b.tag}
@@ -207,7 +207,7 @@ const WhyJoinUs = () => {
                 {b.title}
               </h3>
 
-              <span className="block h-[2px] bg-[#0276E2] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
+              <span className="block h-[2px] bg-[#097CF4] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
 
               <p className="text-[12px] leading-[1.65] text-black/65 group-hover:text-white/70 transition-colors">
                 {b.desc}

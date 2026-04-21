@@ -27,7 +27,7 @@ const aboutJsonLd = {
 const About = () => (
   <>
     <Seo
-      title="About Us — Founder-Led Web & Marketing Studio in Ahmedabad"
+      title="About Us - Founder-Led Web & Marketing Studio in Ahmedabad"
       description="Tech Career IT Solutions LLP is a new founder-led studio based at iHub, Ahmedabad — building websites, e-commerce stores, custom CRM / HRMS, mobile apps and digital marketing for growing teams."
       keywords="about tech career it solutions llp, web development studio ahmedabad, new digital agency india, founder led software studio, ecommerce agency gujarat, ihub ahmedabad startup"
       canonical="https://tech-career-final-version.vercel.app/about"

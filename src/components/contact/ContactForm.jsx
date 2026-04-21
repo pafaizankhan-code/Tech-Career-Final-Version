@@ -8,7 +8,7 @@ const inquiryTypes = [
 ]
 
 const services = ['Website', 'E-commerce', 'Mobile App', 'CRM / HRMS', 'UI / UX', 'Digital Marketing', 'Other']
-const budgets = ['< ₹50 K', '₹50 K – ₹2 L', '₹2 L – ₹10 L', '₹10 L +', 'Undecided']
+const budgets = ['< ₹10 K', '₹10 K – ₹50 K', '₹50 K – ₹2 L', '₹2 L +', 'Undecided']
 const timelines = ['ASAP', 'Within 1 month', '1 – 3 months', 'Exploring']
 
 const ContactForm = () => {
@@ -27,7 +27,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact-form"
-      className="relative bg-[#0276E2] text-white py-20 lg:py-28 overflow-hidden"
+      className="relative bg-[#097CF4] text-white py-20 lg:py-28 overflow-hidden"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
       <div
@@ -102,11 +102,11 @@ const ContactForm = () => {
               className="relative bg-white text-black p-6 sm:p-8 lg:p-10 shadow-[12px_12px_0_0_rgba(0,0,0,1)]"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <div className="flex items-center justify-between mb-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   — What brings you here?
                 </p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40">
@@ -129,7 +129,7 @@ const ContactForm = () => {
                         i < 2 ? 'border-b-2 lg:border-b-0 border-black' : ''
                       } ${i % 2 === 1 ? 'border-l-2 lg:border-l-0 border-black' : ''}`}
                     >
-                      <p className={`text-[12px] font-extrabold uppercase tracking-[0.15em] ${active ? 'text-[#0276E2]' : 'text-[#0276E2]'}`}>
+                      <p className={`text-[12px] font-extrabold uppercase tracking-[0.15em] ${active ? 'text-[#097CF4]' : 'text-[#097CF4]'}`}>
                         {t.label}
                       </p>
                       <p className={`text-[11px] mt-1 leading-snug ${active ? 'text-white/70' : 'text-black/55'}`}>
@@ -150,7 +150,7 @@ const ContactForm = () => {
                     type="text"
                     required
                     placeholder="Your Full Name"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
                 <label className="block">
@@ -161,7 +161,7 @@ const ContactForm = () => {
                     type="email"
                     required
                     placeholder="you@company.com"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
               </div>
@@ -175,7 +175,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     placeholder="Your Company / Brand"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
                 <label className="block">
@@ -185,7 +185,7 @@ const ContactForm = () => {
                   <input
                     type="tel"
                     placeholder="+91 70966 08771"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
               </div>
@@ -228,7 +228,7 @@ const ContactForm = () => {
                             onClick={() => setBudget(b)}
                             className={`h-11 border-2 text-[11px] font-bold uppercase tracking-[0.15em] transition-colors ${
                               budget === b
-                                ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                                ? 'bg-[#097CF4] border-[#097CF4] text-white'
                                 : 'bg-white border-black/30 text-black hover:border-black'
                             }`}
                           >
@@ -249,7 +249,7 @@ const ContactForm = () => {
                             onClick={() => setTimeline(t)}
                             className={`h-11 border-2 text-[11px] font-bold uppercase tracking-[0.15em] transition-colors ${
                               timeline === t
-                                ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                                ? 'bg-[#097CF4] border-[#097CF4] text-white'
                                 : 'bg-white border-black/30 text-black hover:border-black'
                             }`}
                           >
@@ -271,13 +271,13 @@ const ContactForm = () => {
                   rows="5"
                   required
                   placeholder="Tell us about your project, your team, and what a great outcome looks like for you."
-                  className="mt-2 w-full px-4 py-3 border-2 border-black bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors resize-none"
+                  className="mt-2 w-full px-4 py-3 border-2 border-black bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors resize-none"
                 ></textarea>
               </label>
 
               {/* Attachment + consent */}
               <div className="mt-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <label className="inline-flex items-center gap-2 h-11 px-4 border-2 border-dashed border-black/30 text-[11px] font-bold uppercase tracking-[0.2em] text-black/70 hover:border-[#0276E2] hover:text-[#0276E2] transition-colors cursor-pointer">
+                <label className="inline-flex items-center gap-2 h-11 px-4 border-2 border-dashed border-black/30 text-[11px] font-bold uppercase tracking-[0.2em] text-black/70 hover:border-[#097CF4] hover:text-[#097CF4] transition-colors cursor-pointer">
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
                   </svg>
@@ -286,9 +286,9 @@ const ContactForm = () => {
                 </label>
 
                 <label className="flex items-start gap-3 text-[11px] text-black/60 max-w-[360px]">
-                  <input type="checkbox" required defaultChecked className="mt-1 accent-[#0276E2] w-4 h-4" />
+                  <input type="checkbox" required defaultChecked className="mt-1 accent-[#097CF4] w-4 h-4" />
                   <span>
-                    I agree to the <span className="text-[#0276E2] underline font-semibold">Privacy Policy</span> and consent to be contacted.
+                    I agree to the <span className="text-[#097CF4] underline font-semibold">Privacy Policy</span> and consent to be contacted.
                   </span>
                 </label>
               </div>
@@ -301,11 +301,11 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="group w-full sm:w-auto inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                  className="group w-full sm:w-auto inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
                 >
                   Send Message
-                  <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-                    <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+                    <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                     </svg>
                   </span>
@@ -318,8 +318,8 @@ const ContactForm = () => {
                   submitted ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="flex items-center gap-3 p-4 bg-[#0276E2] text-white">
-                  <span className="w-8 h-8 bg-white text-[#0276E2] flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 p-4 bg-[#097CF4] text-white">
+                  <span className="w-8 h-8 bg-white text-[#097CF4] flex items-center justify-center shrink-0">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>

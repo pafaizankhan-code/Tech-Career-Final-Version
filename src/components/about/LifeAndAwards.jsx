@@ -49,8 +49,8 @@ const LifeAndAwards = () => {
                 className="inline-flex items-center gap-3 mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-10 h-px bg-[#0276E2]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-10 h-px bg-[#097CF4]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   How We Work
                 </span>
               </div>
@@ -60,7 +60,7 @@ const LifeAndAwards = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 A studio that takes{' '}
-                <span className="text-[#0276E2] italic">clients</span> seriously.
+                <span className="text-[#097CF4] italic">clients</span> seriously.
               </h2>
             </div>
 
@@ -76,7 +76,7 @@ const LifeAndAwards = () => {
             {howWeWork.map((p) => (
               <div
                 key={p.label}
-                className="group relative p-6 lg:p-8 border-r border-b border-black/10 bg-white hover:bg-[#0276E2] hover:text-white transition-colors duration-500"
+                className="group relative p-6 lg:p-8 border-r border-b border-black/10 bg-white hover:bg-[#097CF4] hover:text-white transition-colors duration-500"
               >
                 <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/15 group-hover:border-white transition-colors"></span>
                 <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/15 group-hover:border-white transition-colors"></span>
@@ -107,8 +107,8 @@ const LifeAndAwards = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Our Commitments
               </span>
             </div>
@@ -118,7 +118,7 @@ const LifeAndAwards = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               What every client gets,{' '}
-              <span className="text-[#0276E2] italic">in writing.</span>
+              <span className="text-[#097CF4] italic">in writing.</span>
             </h2>
 
             <div className="mt-8 border-t-2 border-black">
@@ -133,7 +133,7 @@ const LifeAndAwards = () => {
                       style={{ fontFamily: 'Playfair Display, serif' }}
                     >
                       {a.year}
-                      <span className="text-[#0276E2]">.</span>
+                      <span className="text-[#097CF4]">.</span>
                     </span>
                   </div>
                   <div className="col-span-6 sm:col-span-7">
@@ -161,11 +161,11 @@ const LifeAndAwards = () => {
           {/* Founder's note column */}
           <div className="lg:col-span-5">
             <div className="bg-black text-white p-6 sm:p-8 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-6"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — A Note from the Founder
@@ -185,7 +185,7 @@ const LifeAndAwards = () => {
 
               <div className="mt-6 pt-5 border-t border-white/20 flex items-center gap-3">
                 <span
-                  className="w-10 h-10 bg-[#0276E2] text-white flex items-center justify-center text-[11px] font-extrabold"
+                  className="w-10 h-10 bg-[#097CF4] text-white flex items-center justify-center text-[11px] font-extrabold"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   FP
@@ -209,10 +209,10 @@ const LifeAndAwards = () => {
 
             {/* Tools & stack */}
             <div className="mt-6 border-2 border-black p-5 relative">
-              <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-4"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Tools We Work With

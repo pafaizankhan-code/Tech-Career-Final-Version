@@ -44,15 +44,14 @@ const Services = () => (
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+      
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <nav
           className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          <Link to="/" className="hover:text-[#0276E2]">Home</Link>
+          <Link to="/" className="hover:text-[#097CF4]">Home</Link>
           <span>/</span>
           <span className="text-black font-semibold">Services</span>
         </nav>
@@ -63,8 +62,8 @@ const Services = () => (
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Services · 5 Practices · {services.length} Offerings
               </span>
             </div>
@@ -74,7 +73,7 @@ const Services = () => (
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Everything you need,{' '}
-              <span className="text-[#0276E2] italic">one</span> honest studio.
+              <span className="text-[#097CF4] italic">one</span> honest studio.
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
@@ -85,12 +84,12 @@ const Services = () => (
           </div>
 
           <div className="lg:col-span-4">
-            <div className="relative bg-black text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#0276E2]">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+            <div className="relative bg-black text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#097CF4]">
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Jump to Practice
@@ -100,7 +99,7 @@ const Services = () => (
                   <li key={c.key}>
                     <a
                       href={`#${c.key}`}
-                      className="group flex items-center justify-between py-2 border-b border-white/10 last:border-0 hover:text-[#0276E2] transition-colors"
+                      className="group flex items-center justify-between py-2 border-b border-white/10 last:border-0 hover:text-[#097CF4] transition-colors"
                     >
                       <span className="text-[13px] font-bold uppercase tracking-[0.2em]">
                         {c.label}
@@ -136,7 +135,7 @@ const Services = () => (
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {s.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-black/60"
@@ -177,8 +176,8 @@ const Services = () => (
                   className="inline-flex items-center gap-3 mb-6"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  <span className="w-10 h-px bg-[#0276E2]"></span>
-                  <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                  <span className="w-10 h-px bg-[#097CF4]"></span>
+                  <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                     Practice · 0{ci + 1} / 0{categories.length}
                   </span>
                 </div>
@@ -188,7 +187,7 @@ const Services = () => (
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
                   {cat.label.split(' ').slice(0, -1).join(' ')}{' '}
-                  <span className="text-[#0276E2] italic">
+                  <span className="text-[#097CF4] italic">
                     {cat.label.split(' ').slice(-1).join('')}
                   </span>
                 </h2>
@@ -210,25 +209,25 @@ const Services = () => (
                   to={`/services/${s.slug}`}
                   className={`group relative p-6 lg:p-8 border-r border-b transition-colors duration-500 ${
                     isDark
-                      ? 'border-white/15 bg-black hover:bg-[#0276E2]'
+                      ? 'border-white/15 bg-black hover:bg-[#097CF4]'
                       : 'border-black/10 bg-white hover:bg-black hover:text-white'
                   }`}
                 >
-                  <span className={`pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 ${isDark ? 'border-white/30 group-hover:border-white' : 'border-black/20 group-hover:border-[#0276E2]'} transition-colors`}></span>
-                  <span className={`pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 ${isDark ? 'border-white/30 group-hover:border-white' : 'border-black/20 group-hover:border-[#0276E2]'} transition-colors`}></span>
+                  <span className={`pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 ${isDark ? 'border-white/30 group-hover:border-white' : 'border-black/20 group-hover:border-[#097CF4]'} transition-colors`}></span>
+                  <span className={`pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 ${isDark ? 'border-white/30 group-hover:border-white' : 'border-black/20 group-hover:border-[#097CF4]'} transition-colors`}></span>
 
                   <div className="flex items-start justify-between mb-8">
                     <span
                       className={`inline-flex items-center justify-center w-12 h-12 font-extrabold text-[14px] ${
                         isDark
-                          ? 'bg-[#0276E2] text-white group-hover:bg-white group-hover:text-[#0276E2]'
-                          : 'bg-black text-white group-hover:bg-[#0276E2]'
+                          ? 'bg-[#097CF4] text-white group-hover:bg-white group-hover:text-[#097CF4]'
+                          : 'bg-black text-white group-hover:bg-[#097CF4]'
                       } transition-colors`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       0{i + 1}
                     </span>
-                    <svg className={`w-4 h-4 ${isDark ? 'text-white/40' : 'text-black/30'} group-hover:text-[#0276E2] group-hover:translate-x-0 -translate-x-1 transition-all`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg className={`w-4 h-4 ${isDark ? 'text-white/40' : 'text-black/30'} group-hover:text-[#097CF4] group-hover:translate-x-0 -translate-x-1 transition-all`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                     </svg>
                   </div>
@@ -240,7 +239,7 @@ const Services = () => (
                     {s.title}
                   </h3>
 
-                  <span className="block h-[2px] bg-[#0276E2] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
+                  <span className="block h-[2px] bg-[#097CF4] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
 
                   <p className={`text-[13px] leading-[1.65] ${isDark ? 'text-white/60 group-hover:text-white/85' : 'text-black/65 group-hover:text-white/70'} transition-colors`}>
                     {s.short}
@@ -248,7 +247,7 @@ const Services = () => (
 
                   <div className={`mt-5 pt-4 border-t flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.25em] ${isDark ? 'border-white/15 group-hover:border-white/30' : 'border-black/10 group-hover:border-white/20'} transition-colors`} style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     <span>{s.metric.k} · {s.metric.v}</span>
-                    <span className={`${isDark ? 'text-[#0276E2] group-hover:text-white' : ''} transition-colors`}>
+                    <span className={`${isDark ? 'text-[#097CF4] group-hover:text-white' : ''} transition-colors`}>
                       View →
                     </span>
                   </div>
@@ -264,12 +263,12 @@ const Services = () => (
     <section className="relative bg-white py-20 lg:py-28 overflow-hidden border-t border-black/10">
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="relative border-2 border-black p-6 sm:p-8 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
-          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#0276E2]"></span>
+          <span className="absolute -top-3 -left-3 w-6 h-6 bg-[#097CF4]"></span>
           <span className="absolute -bottom-3 -right-3 w-6 h-6 border-2 border-black bg-white"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Not sure which service fits?
@@ -278,18 +277,18 @@ const Services = () => (
               className="text-2xl sm:text-3xl lg:text-[38px] font-extrabold text-black leading-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Tell us the problem. We'll tell you the <span className="italic text-[#0276E2]">service.</span>
+              Tell us the problem. We'll tell you the <span className="italic text-[#097CF4]">service.</span>
             </h4>
           </div>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors shrink-0"
+            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Book a Free Discovery Call
-            <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-              <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+              <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
               </svg>
             </span>

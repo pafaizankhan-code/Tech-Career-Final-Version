@@ -29,11 +29,11 @@ const Milestones = () => {
             className="inline-flex items-center gap-3 mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <span className="w-10 h-px bg-[#0276E2]"></span>
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+            <span className="w-10 h-px bg-[#097CF4]"></span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
               Milestones
             </span>
-            <span className="w-10 h-px bg-[#0276E2]"></span>
+            <span className="w-10 h-px bg-[#097CF4]"></span>
           </div>
 
           <h2
@@ -41,7 +41,7 @@ const Milestones = () => {
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Chapter one,{' '}
-            <span className="text-[#0276E2] italic">written honestly.</span>
+            <span className="text-[#097CF4] italic">written honestly.</span>
           </h2>
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[620px] mx-auto">
@@ -52,7 +52,7 @@ const Milestones = () => {
         {/* Desktop horizontal rail */}
         <div className="hidden lg:block relative">
           <div className="absolute top-[38px] left-0 right-0 h-px bg-black/15"></div>
-          <div className="absolute top-[38px] left-0 h-px bg-[#0276E2]" style={{ width: '42%' }}></div>
+          <div className="absolute top-[38px] left-0 h-px bg-[#097CF4]" style={{ width: '42%' }}></div>
 
           <div className="grid grid-cols-6 gap-5">
             {milestones.map((m, i) => (
@@ -60,28 +60,28 @@ const Milestones = () => {
                 <div className="flex justify-center mb-8">
                   <div className="relative">
                     <span className={`relative z-10 w-20 h-20 flex items-center justify-center border-2 font-extrabold text-[15px] ${
-                      i < 3 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-white border-black text-black'
+                      i < 3 ? 'bg-[#097CF4] border-[#097CF4] text-white' : 'bg-white border-black text-black'
                     }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       {m.year}
                     </span>
                     <span className={`absolute left-1/2 -translate-x-1/2 -bottom-[14px] w-3 h-3 border-2 ${
-                      i < 3 ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-white border-black'
+                      i < 3 ? 'bg-[#097CF4] border-[#097CF4]' : 'bg-white border-black'
                     }`}></span>
                   </div>
                 </div>
 
-                <div className="border-2 border-black bg-white p-5 relative transition-colors group-hover:border-[#0276E2]">
-                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                <div className="border-2 border-black bg-white p-5 relative transition-colors group-hover:border-[#097CF4]">
+                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <p
                     className="text-[32px] font-extrabold text-black leading-none"
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     {m.metric}
-                    <span className="text-[#0276E2]">.</span>
+                    <span className="text-[#097CF4]">.</span>
                   </p>
                   <p
                     className="mt-1 text-[9px] font-bold uppercase tracking-[0.25em] text-black/50"
@@ -111,7 +111,7 @@ const Milestones = () => {
             {milestones.map((m, i) => (
               <div key={m.year} className="relative pl-16">
                 <span className={`absolute left-0 top-0 w-12 h-12 flex items-center justify-center border-2 text-[12px] font-extrabold ${
-                  i === 0 ? 'bg-[#0276E2] border-[#0276E2] text-white' : 'bg-white border-black text-black'
+                  i === 0 ? 'bg-[#097CF4] border-[#097CF4] text-white' : 'bg-white border-black text-black'
                 }`}
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
@@ -119,8 +119,8 @@ const Milestones = () => {
                 </span>
 
                 <div className="border-2 border-black bg-white p-5 relative">
-                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <div className="flex items-baseline justify-between mb-2">
                     <h3
@@ -134,7 +134,7 @@ const Milestones = () => {
                       style={{ fontFamily: 'Playfair Display, serif' }}
                     >
                       {m.metric}
-                      <span className="text-[#0276E2]">.</span>
+                      <span className="text-[#097CF4]">.</span>
                     </p>
                   </div>
                   <p className="text-[13px] leading-[1.6] text-black/60">{m.desc}</p>

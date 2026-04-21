@@ -97,18 +97,18 @@ const OurProcess = () => {
             className="inline-flex items-center gap-3 mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <span className="w-10 h-px bg-[#0276E2]"></span>
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+            <span className="w-10 h-px bg-[#097CF4]"></span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
               Our Process
             </span>
-            <span className="w-10 h-px bg-[#0276E2]"></span>
+            <span className="w-10 h-px bg-[#097CF4]"></span>
           </div>
 
           <h2
             className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            A <span className="text-[#0276E2] italic">disciplined</span> path
+            A <span className="text-[#097CF4] italic">disciplined</span> path
             <br className="hidden sm:block" /> from idea to impact.
           </h2>
 
@@ -126,7 +126,7 @@ const OurProcess = () => {
           {/* Rail */}
           <div className="absolute left-0 right-0 top-[76px] h-px bg-black/15"></div>
           <div
-            className="absolute left-0 top-[76px] h-px bg-[#0276E2]"
+            className="absolute left-0 top-[76px] h-px bg-[#097CF4]"
             style={{ width: '50%' }}
           ></div>
 
@@ -139,7 +139,7 @@ const OurProcess = () => {
                     <span
                       className={`relative z-10 flex items-center justify-center w-20 h-20 border-2 transition-colors ${
                         i < 2
-                          ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                          ? 'bg-[#097CF4] border-[#097CF4] text-white'
                           : 'bg-white border-black text-black group-hover:bg-black group-hover:text-white'
                       }`}
                     >
@@ -148,20 +148,20 @@ const OurProcess = () => {
                     {/* Node dot on rail */}
                     <span
                       className={`absolute left-1/2 -translate-x-1/2 -bottom-[14px] w-3 h-3 border-2 ${
-                        i < 2 ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-white border-black'
+                        i < 2 ? 'bg-[#097CF4] border-[#097CF4]' : 'bg-white border-black'
                       }`}
                     ></span>
                   </div>
                 </div>
 
                 {/* Card */}
-                <div className="border-2 border-black bg-white p-6 relative transition-colors group-hover:border-[#0276E2]">
-                  <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                <div className="border-2 border-black bg-white p-6 relative transition-colors group-hover:border-[#097CF4]">
+                  <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <div className="flex items-center justify-between mb-3">
                     <span
-                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       — {s.no}
@@ -197,7 +197,7 @@ const OurProcess = () => {
                         className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-black/70"
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
-                        <svg className="w-3 h-3 text-[#0276E2] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <svg className="w-3 h-3 text-[#097CF4] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                         {d}
@@ -222,7 +222,7 @@ const OurProcess = () => {
                 <div
                   className={`absolute left-0 top-0 w-12 h-12 border-2 flex items-center justify-center transition-colors ${
                     i === 0
-                      ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                      ? 'bg-[#097CF4] border-[#097CF4] text-white'
                       : 'bg-white border-black text-black'
                   }`}
                 >
@@ -230,12 +230,12 @@ const OurProcess = () => {
                 </div>
 
                 <div className="border-2 border-black bg-white p-5 sm:p-6 relative">
-                  <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                  <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <div className="flex items-center justify-between mb-2">
                     <span
-                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       — {s.no} · {s.phase}
@@ -265,7 +265,7 @@ const OurProcess = () => {
                         className="inline-flex items-center gap-1.5 px-2.5 py-1 border border-black/15 text-[10px] font-bold uppercase tracking-[0.15em] text-black/70"
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                       >
-                        <svg className="w-2.5 h-2.5 text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <svg className="w-2.5 h-2.5 text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                         {d}
@@ -280,12 +280,12 @@ const OurProcess = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 lg:mt-20 flex flex-col sm:flex-row items-center justify-between gap-6 bg-black text-white p-8 lg:p-10 relative">
-          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Ready When You Are
@@ -295,19 +295,19 @@ const OurProcess = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Your first sprint can start in{' '}
-              <span className="italic text-[#0276E2]">7 days.</span>
+              <span className="italic text-[#097CF4]">7 days.</span>
             </h4>
           </div>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#0276E2] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#0276E2] transition-colors shrink-0"
+            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#097CF4] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#097CF4] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Book a Discovery Call
-            <span className="w-10 h-10 bg-white group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
+            <span className="w-10 h-10 bg-white group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
               <svg
-                className="w-4 h-4 text-[#0276E2] group-hover:text-white"
+                className="w-4 h-4 text-[#097CF4] group-hover:text-white"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

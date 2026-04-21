@@ -68,8 +68,8 @@ const Testimonials = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Honest FAQ
               </span>
             </div>
@@ -79,7 +79,7 @@ const Testimonials = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Real questions.{' '}
-              <span className="text-[#0276E2] italic">Honest</span> answers.
+              <span className="text-[#097CF4] italic">Honest</span> answers.
             </h2>
           </div>
 
@@ -103,7 +103,7 @@ const Testimonials = () => {
             </span>
             <button
               onClick={() => setActive((i) => (i + 1) % faqs.length)}
-              className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
+              className="w-12 h-12 border-2 border-black bg-black text-white flex items-center justify-center hover:bg-[#097CF4] hover:border-[#097CF4] transition-colors"
               aria-label="Next question"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -120,13 +120,13 @@ const Testimonials = () => {
             key={t.id}
             className="relative lg:col-span-8 border-2 border-black bg-white p-8 sm:p-10 lg:p-14 animate-[fadeUp_0.4s_ease_both]"
           >
-            <span className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-            <span className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#0276E2]"></span>
-            <span className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#0276E2]"></span>
-            <span className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+            <span className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+            <span className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#097CF4]"></span>
+            <span className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#097CF4]"></span>
+            <span className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
             <span
-              className="absolute top-6 right-8 lg:top-10 lg:right-12 text-[120px] lg:text-[180px] leading-none font-black text-[#0276E2]/10 select-none pointer-events-none"
+              className="absolute top-6 right-8 lg:top-10 lg:right-12 text-[120px] lg:text-[180px] leading-none font-black text-[#097CF4]/10 select-none pointer-events-none"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               ?
@@ -134,7 +134,7 @@ const Testimonials = () => {
 
             <div className="flex items-center gap-3 mb-6">
               <span
-                className="px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.3em]"
+                className="px-3 py-1.5 bg-[#097CF4] text-white text-[10px] font-bold uppercase tracking-[0.3em]"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 {t.tag}
@@ -162,7 +162,7 @@ const Testimonials = () => {
               <div className="flex items-center gap-4">
                 <span
                   className={`w-14 h-14 flex items-center justify-center text-white text-[13px] font-extrabold border-2 ${
-                    t.accent === 'blue' ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-black border-black'
+                    t.accent === 'blue' ? 'bg-[#097CF4] border-[#097CF4]' : 'bg-black border-black'
                   }`}
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
@@ -177,7 +177,7 @@ const Testimonials = () => {
                   </p>
                   <p className="text-[11px] text-black/60 mt-0.5">
                     Tech Career IT Solutions LLP ·{' '}
-                    <span className="text-[#0276E2] font-semibold">Ahmedabad</span>
+                    <span className="text-[#097CF4] font-semibold">Ahmedabad</span>
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ const Testimonials = () => {
                     key={i}
                     onClick={() => setActive(i)}
                     className={`h-1.5 transition-all ${
-                      i === active ? 'w-8 bg-[#0276E2]' : 'w-3 bg-black/20 hover:bg-black/40'
+                      i === active ? 'w-8 bg-[#097CF4]' : 'w-3 bg-black/20 hover:bg-black/40'
                     }`}
                     aria-label={`View question ${i + 1}`}
                   ></button>
@@ -201,11 +201,11 @@ const Testimonials = () => {
           <aside className="lg:col-span-4 flex flex-col gap-6">
             {/* Availability card */}
             <div className="bg-black text-white p-6 sm:p-8 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Availability
@@ -217,13 +217,13 @@ const Testimonials = () => {
               >
                 Taking our
                 <br />
-                <span className="text-[#0276E2] italic">first</span> clients.
+                <span className="text-[#097CF4] italic">first</span> clients.
               </p>
 
               <div className="mt-5 flex items-center gap-2">
                 <span className="relative flex w-2 h-2">
-                  <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                  <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                  <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                  <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
                 </span>
                 <span
                   className="text-[11px] uppercase tracking-[0.25em] text-white/80 font-semibold"
@@ -245,7 +245,7 @@ const Testimonials = () => {
             {/* Other questions */}
             <div className="border-2 border-black bg-white p-6 flex-1 relative">
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-4"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Other Questions
@@ -257,13 +257,13 @@ const Testimonials = () => {
                     <button
                       onClick={() => setActive(i)}
                       className={`w-full text-left py-3 flex items-center gap-3 transition-colors ${
-                        i === active ? 'text-[#0276E2]' : 'text-black hover:text-[#0276E2]'
+                        i === active ? 'text-[#097CF4]' : 'text-black hover:text-[#097CF4]'
                       }`}
                     >
                       <span
                         className={`shrink-0 w-8 h-8 flex items-center justify-center text-[10px] font-extrabold border-2 ${
                           i === active
-                            ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                            ? 'bg-[#097CF4] border-[#097CF4] text-white'
                             : 'bg-white border-black text-black'
                         }`}
                         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
@@ -279,7 +279,7 @@ const Testimonials = () => {
                         </p>
                         <p className="text-[11px] text-black/50 truncate">{q.question}</p>
                       </div>
-                      {i === active && <span className="w-1.5 h-1.5 rounded-full bg-[#0276E2]"></span>}
+                      {i === active && <span className="w-1.5 h-1.5 rounded-full bg-[#097CF4]"></span>}
                     </button>
                   </li>
                 ))}
@@ -302,7 +302,7 @@ const Testimonials = () => {
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   {l}
-                  <span className="w-1.5 h-1.5 bg-[#0276E2] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#097CF4] rounded-full"></span>
                 </span>
               ))}
             </div>

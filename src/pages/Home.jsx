@@ -21,7 +21,7 @@ const Home = () => (
     <Preloader />
     <Banner />
     <OurServices />
-    <OurWork />
+    {/* <OurWork /> */}
     <WhyChooseUs />
     <OurProcess />
     <Testimonials />

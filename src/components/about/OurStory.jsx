@@ -20,8 +20,8 @@ const OurStory = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Our Story
               </span>
             </div>
@@ -30,7 +30,7 @@ const OurStory = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Built on <span className="text-[#0276E2] italic">craft</span>, not hype.
+              Built on <span className="text-[#097CF4] italic">craft</span>, not hype.
             </h2>
 
             <div className="mt-8 space-y-6 text-[15px] sm:text-[16px] leading-[1.8] text-black/75 max-w-[640px]">
@@ -54,7 +54,7 @@ const OurStory = () => {
 
             {/* Signature */}
             <div className="mt-10 pt-8 border-t-2 border-black flex items-center gap-5">
-              <span className="w-14 h-14 bg-[#0276E2] text-white flex items-center justify-center text-[14px] font-extrabold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+              <span className="w-14 h-14 bg-[#097CF4] text-white flex items-center justify-center text-[14px] font-extrabold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 FP
               </span>
               <div>
@@ -77,10 +77,10 @@ const OurStory = () => {
           {/* RIGHT — quote pull card */}
           <aside className="lg:col-span-5">
             <div className="relative bg-black text-white p-8 lg:p-10 mt-2">
-              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
               <span
-                className="absolute top-4 right-6 text-[140px] lg:text-[180px] leading-none font-black text-[#0276E2]/20 pointer-events-none select-none"
+                className="absolute top-4 right-6 text-[140px] lg:text-[180px] leading-none font-black text-[#097CF4]/20 pointer-events-none select-none"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 &ldquo;
@@ -96,14 +96,14 @@ const OurStory = () => {
 
               <div className="mt-8 pt-6 border-t border-white/20 flex items-center justify-between">
                 <span
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2]"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — House Rule #1
                 </span>
                 <span className="flex gap-1">
                   {[...Array(3)].map((_, i) => (
-                    <span key={i} className="w-1.5 h-1.5 bg-[#0276E2]"></span>
+                    <span key={i} className="w-1.5 h-1.5 bg-[#097CF4]"></span>
                   ))}
                 </span>
               </div>
@@ -116,13 +116,13 @@ const OurStory = () => {
                 { k: '< 24h', v: 'Reply Time' },
               ].map((s) => (
                 <div key={s.v} className="border-2 border-black p-5 bg-white relative">
-                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
+                  <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
                   <p
                     className="text-3xl font-extrabold text-black leading-none"
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     {s.k}
-                    <span className="text-[#0276E2]">.</span>
+                    <span className="text-[#097CF4]">.</span>
                   </p>
                   <p
                     className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-black/60"

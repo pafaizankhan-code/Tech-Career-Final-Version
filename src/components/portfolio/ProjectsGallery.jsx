@@ -29,7 +29,7 @@ const years = ['All Timelines', '2–3 wk', '2–4 wk', '3–5 wk', '4–8 wk', 
 const Visual = ({ project }) => {
   const isBlue = project.accent === 'blue'
   return (
-    <div className={`relative w-full h-full ${isBlue ? 'bg-[#0276E2]' : 'bg-black'} overflow-hidden`}>
+    <div className={`relative w-full h-full ${isBlue ? 'bg-[#097CF4]' : 'bg-black'} overflow-hidden`}>
       <div
         className="absolute inset-0 opacity-[0.15]"
         style={{
@@ -47,8 +47,8 @@ const Visual = ({ project }) => {
         </span>
       </div>
       {/* Floating elements */}
-      <span className={`absolute top-6 right-6 w-8 h-8 ${isBlue ? 'bg-black' : 'bg-[#0276E2]'}`}></span>
-      <span className={`absolute bottom-6 left-6 w-4 h-4 border-2 ${isBlue ? 'border-black' : 'border-[#0276E2]'}`}></span>
+      <span className={`absolute top-6 right-6 w-8 h-8 ${isBlue ? 'bg-black' : 'bg-[#097CF4]'}`}></span>
+      <span className={`absolute bottom-6 left-6 w-4 h-4 border-2 ${isBlue ? 'border-black' : 'border-[#097CF4]'}`}></span>
     </div>
   )
 }
@@ -86,8 +86,8 @@ const ProjectsGallery = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 The Capability Grid
               </span>
             </div>
@@ -97,7 +97,7 @@ const ProjectsGallery = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Every build we ship, with{' '}
-              <span className="text-[#0276E2] italic">honest</span> timelines.
+              <span className="text-[#097CF4] italic">honest</span> timelines.
             </h2>
           </div>
 
@@ -146,8 +146,8 @@ const ProjectsGallery = () => {
                 onClick={() => setYear(y)}
                 className={`px-3 sm:px-4 h-8 text-[10px] font-bold uppercase tracking-[0.2em] border transition-colors ${
                   year === y
-                    ? 'bg-[#0276E2] text-white border-[#0276E2]'
-                    : 'bg-white text-black border-black/15 hover:border-[#0276E2] hover:text-[#0276E2]'
+                    ? 'bg-[#097CF4] text-white border-[#097CF4]'
+                    : 'bg-white text-black border-black/15 hover:border-[#097CF4] hover:text-[#097CF4]'
                 }`}
               >
                 {y}
@@ -165,8 +165,8 @@ const ProjectsGallery = () => {
                 key={p.id}
                 className={`group relative border-2 border-black bg-white transition-all duration-500 hover:-translate-y-1 ${p.span || ''}`}
               >
-                <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2] z-10"></span>
-                <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2] z-10"></span>
+                <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4] z-10"></span>
+                <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4] z-10"></span>
 
                 <div className={`relative ${p.span ? 'aspect-[16/9]' : 'aspect-[4/3]'} border-b-2 border-black`}>
                   <Visual project={p} />
@@ -200,7 +200,7 @@ const ProjectsGallery = () => {
 
                 <div className="p-6 lg:p-7">
                   <h3
-                    className="text-[22px] lg:text-[26px] font-extrabold text-black leading-tight tracking-tight group-hover:text-[#0276E2] transition-colors"
+                    className="text-[22px] lg:text-[26px] font-extrabold text-black leading-tight tracking-tight group-hover:text-[#097CF4] transition-colors"
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     {p.title}
@@ -209,7 +209,7 @@ const ProjectsGallery = () => {
 
                   <div className="mt-5 pt-4 border-t border-black/10 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.25em] text-black/50" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                     <span>{p.stack}</span>
-                    <span className="flex items-center gap-1 text-black group-hover:text-[#0276E2] transition-colors">
+                    <span className="flex items-center gap-1 text-black group-hover:text-[#097CF4] transition-colors">
                       View
                       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -238,14 +238,14 @@ const ProjectsGallery = () => {
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Don't see your exact need?{' '}
-            <Link to="/contact" className="text-[#0276E2] font-bold underline">
+            <Link to="/contact" className="text-[#097CF4] font-bold underline">
               Tell us about your project — we'll scope it for free →
             </Link>
           </p>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-12 px-6 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] transition-colors"
+            className="group inline-flex items-center gap-3 h-12 px-6 bg-black text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#097CF4] transition-colors"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Request a Custom Quote

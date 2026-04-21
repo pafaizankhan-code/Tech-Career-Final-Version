@@ -55,8 +55,8 @@ const EmployeeVoices = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 A Note on Culture
               </span>
             </div>
@@ -65,7 +65,7 @@ const EmployeeVoices = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              An honest pitch <span className="text-[#0276E2] italic">from the founder.</span>
+              An honest pitch <span className="text-[#097CF4] italic">from the founder.</span>
             </h2>
           </div>
 
@@ -87,11 +87,11 @@ const EmployeeVoices = () => {
                 i === 1 ? 'md:translate-y-0 lg:-translate-y-6' : ''
               }`}
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <span
-                className="absolute top-4 right-6 text-[100px] leading-none font-black text-[#0276E2]/15 group-hover:text-[#0276E2]/30 pointer-events-none select-none transition-colors"
+                className="absolute top-4 right-6 text-[100px] leading-none font-black text-[#097CF4]/15 group-hover:text-[#097CF4]/30 pointer-events-none select-none transition-colors"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 &ldquo;
@@ -99,7 +99,7 @@ const EmployeeVoices = () => {
 
               <div className="mb-5">
                 <span
-                  className="inline-flex items-center px-3 py-1.5 bg-[#0276E2] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
+                  className="inline-flex items-center px-3 py-1.5 bg-[#097CF4] text-white text-[10px] font-bold uppercase tracking-[0.25em]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   {v.role}
@@ -116,7 +116,7 @@ const EmployeeVoices = () => {
               <div className="mt-8 pt-5 border-t-2 border-black group-hover:border-white/30 transition-colors flex items-center gap-3">
                 <span
                   className={`w-12 h-12 flex items-center justify-center text-white text-[13px] font-extrabold border-2 ${
-                    v.accent === 'blue' ? 'bg-[#0276E2] border-[#0276E2]' : 'bg-black border-black group-hover:bg-white group-hover:text-black'
+                    v.accent === 'blue' ? 'bg-[#097CF4] border-[#097CF4]' : 'bg-black border-black group-hover:bg-white group-hover:text-black'
                   }`}
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
@@ -140,7 +140,7 @@ const EmployeeVoices = () => {
 
         {/* Commitment strip */}
         <div className="mt-14 lg:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-5 bg-[#0276E2] text-white p-6 sm:p-8 relative">
+          <div className="lg:col-span-5 bg-[#097CF4] text-white p-6 sm:p-8 relative">
             <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white"></span>
             <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-white"></span>
 
@@ -176,7 +176,7 @@ const EmployeeVoices = () => {
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
                   {p.k}
-                  <span className="text-[#0276E2]">.</span>
+                  <span className="text-[#097CF4]">.</span>
                 </p>
                 <p
                   className="mt-3 text-[11px] font-bold uppercase tracking-[0.25em] text-black"

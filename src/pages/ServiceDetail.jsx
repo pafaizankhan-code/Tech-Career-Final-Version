@@ -104,19 +104,19 @@ const ServiceDetail = () => {
           }}
         ></div>
 
-        <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-        <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+        <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#097CF4]"></span>
+        <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#097CF4]"></span>
 
         <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
           <nav
             className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <Link to="/" className="hover:text-[#0276E2]">Home</Link>
+            <Link to="/" className="hover:text-[#097CF4]">Home</Link>
             <span>/</span>
-            <Link to="/services" className="hover:text-[#0276E2]">Services</Link>
+            <Link to="/services" className="hover:text-[#097CF4]">Services</Link>
             <span>/</span>
-            <span className="text-[#0276E2] font-semibold truncate">{service.title}</span>
+            <span className="text-[#097CF4] font-semibold truncate">{service.title}</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end">
@@ -125,8 +125,8 @@ const ServiceDetail = () => {
                 className="inline-flex items-center gap-3 mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-10 h-px bg-[#0276E2]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-10 h-px bg-[#097CF4]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   {category?.label} · Service
                 </span>
               </div>
@@ -136,7 +136,7 @@ const ServiceDetail = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {service.title.split(' ').slice(0, -1).join(' ')}{' '}
-                <span className="text-[#0276E2] italic">{service.title.split(' ').slice(-1).join('')}</span>
+                <span className="text-[#097CF4] italic">{service.title.split(' ').slice(-1).join('')}</span>
               </h1>
 
               <p
@@ -156,11 +156,11 @@ const ServiceDetail = () => {
               >
                 <a
                   href="#pricing"
-                  className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                  className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
                 >
                   See Pricing
-                  <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-                    <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+                    <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
@@ -179,7 +179,7 @@ const ServiceDetail = () => {
 
             {/* Hero metric card */}
             <div className="lg:col-span-4">
-              <div className="relative bg-[#0276E2] text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#000]">
+              <div className="relative bg-[#097CF4] text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#000]">
                 <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white"></span>
                 <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-white"></span>
 
@@ -240,8 +240,8 @@ const ServiceDetail = () => {
                 className="inline-flex items-center gap-3 mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-10 h-px bg-[#0276E2]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-10 h-px bg-[#097CF4]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   What You Get
                 </span>
               </div>
@@ -250,7 +250,7 @@ const ServiceDetail = () => {
                 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Four <span className="text-[#0276E2] italic">capabilities</span>, one service.
+                Four <span className="text-[#097CF4] italic">capabilities</span>, one service.
               </h2>
             </div>
           </div>
@@ -261,11 +261,11 @@ const ServiceDetail = () => {
                 key={f.title}
                 className="group relative p-6 lg:p-7 border-r border-b border-black/10 bg-white hover:bg-black hover:text-white transition-colors duration-500"
               >
-                <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
-                <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
+                <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
+                <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
 
                 <span
-                  className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#0276E2] transition-colors"
+                  className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — 0{i + 1}
@@ -278,7 +278,7 @@ const ServiceDetail = () => {
                   {f.title}
                 </h3>
 
-                <span className="block h-[2px] bg-[#0276E2] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
+                <span className="block h-[2px] bg-[#097CF4] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
 
                 <p className="text-[13px] leading-[1.65] text-black/65 group-hover:text-white/70 transition-colors">
                   {f.desc}
@@ -290,11 +290,11 @@ const ServiceDetail = () => {
           {/* Deliverables + Stack strip */}
           <div className="mt-14 lg:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
             <div className="lg:col-span-7 border-2 border-black p-6 sm:p-8 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-5"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — What's in Every Engagement
@@ -303,7 +303,7 @@ const ServiceDetail = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 {service.deliverables.map((d) => (
                   <li key={d} className="flex items-center gap-3 text-[13px] font-semibold text-black">
-                    <span className="w-6 h-6 bg-[#0276E2] text-white flex items-center justify-center shrink-0">
+                    <span className="w-6 h-6 bg-[#097CF4] text-white flex items-center justify-center shrink-0">
                       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
@@ -315,11 +315,11 @@ const ServiceDetail = () => {
             </div>
 
             <div className="lg:col-span-5 bg-black text-white p-6 sm:p-8 relative">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-5"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Our Stack
@@ -359,8 +359,8 @@ const ServiceDetail = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 How We Deliver
               </span>
             </div>
@@ -369,7 +369,7 @@ const ServiceDetail = () => {
               className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Five phases. <span className="text-[#0276E2] italic">No surprises.</span>
+              Five phases. <span className="text-[#097CF4] italic">No surprises.</span>
             </h2>
           </div>
 
@@ -379,13 +379,13 @@ const ServiceDetail = () => {
                 key={p.no}
                 className="relative border-2 border-black bg-white p-5 lg:p-6"
               >
-                <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#0276E2]"></span>
-                <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#0276E2]"></span>
+                <span className="pointer-events-none absolute top-1.5 left-1.5 w-2 h-2 border-t-2 border-l-2 border-[#097CF4]"></span>
+                <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-2 h-2 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className={`inline-flex items-center justify-center w-10 h-10 font-extrabold text-[13px] ${
-                      i < 2 ? 'bg-[#0276E2] text-white' : 'bg-black text-white'
+                      i < 2 ? 'bg-[#097CF4] text-white' : 'bg-black text-white'
                     }`}
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
@@ -400,7 +400,7 @@ const ServiceDetail = () => {
                 </div>
 
                 <p
-                  className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#0276E2] mb-2"
+                  className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#097CF4] mb-2"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   {p.phase}
@@ -428,10 +428,10 @@ const ServiceDetail = () => {
           }}
         ></div>
 
-        <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-        <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
-        <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#0276E2]"></span>
-        <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#0276E2]"></span>
+        <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#097CF4]"></span>
+        <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#097CF4]"></span>
+        <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4]"></span>
+        <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4]"></span>
 
         <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
           <div className="max-w-[720px] mb-12 lg:mb-16">
@@ -439,8 +439,8 @@ const ServiceDetail = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Pricing
               </span>
             </div>
@@ -449,7 +449,7 @@ const ServiceDetail = () => {
               className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Transparent. <span className="text-[#0276E2] italic">Scoped.</span> Signed.
+              Transparent. <span className="text-[#097CF4] italic">Scoped.</span> Signed.
             </h2>
 
             <p className="mt-5 text-[15px] text-white/70 leading-relaxed max-w-[560px]">
@@ -466,13 +466,13 @@ const ServiceDetail = () => {
                   key={p.tier}
                   className={`relative border-2 transition-transform ${
                     featured
-                      ? 'bg-white text-black border-[#0276E2] lg:-translate-y-4 shadow-[10px_10px_0_0_#0276E2]'
+                      ? 'bg-white text-black border-[#097CF4] lg:-translate-y-4 shadow-[10px_10px_0_0_#097CF4]'
                       : 'bg-black text-white border-white/30'
                   }`}
                 >
                   {featured && (
                     <span
-                      className="absolute -top-3 left-6 px-2.5 py-1 bg-[#0276E2] text-white text-[9px] font-bold uppercase tracking-[0.25em]"
+                      className="absolute -top-3 left-6 px-2.5 py-1 bg-[#097CF4] text-white text-[9px] font-bold uppercase tracking-[0.25em]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       Most Popular
@@ -482,7 +482,7 @@ const ServiceDetail = () => {
                   <div className="p-6 sm:p-8">
                     <p
                       className={`text-[10px] font-bold uppercase tracking-[0.3em] mb-3 ${
-                        featured ? 'text-[#0276E2]' : 'text-[#0276E2]'
+                        featured ? 'text-[#097CF4]' : 'text-[#097CF4]'
                       }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
@@ -519,7 +519,7 @@ const ServiceDetail = () => {
                         >
                           <span
                             className={`w-5 h-5 flex items-center justify-center shrink-0 mt-0.5 ${
-                              featured ? 'bg-[#0276E2] text-white' : 'bg-white text-black'
+                              featured ? 'bg-[#097CF4] text-white' : 'bg-white text-black'
                             }`}
                           >
                             <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
@@ -535,8 +535,8 @@ const ServiceDetail = () => {
                       to="/contact"
                       className={`group mt-6 w-full inline-flex items-center justify-between gap-3 h-12 px-4 text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${
                         featured
-                          ? 'bg-black text-white hover:bg-[#0276E2]'
-                          : 'bg-[#0276E2] text-white hover:bg-white hover:text-[#0276E2]'
+                          ? 'bg-black text-white hover:bg-[#097CF4]'
+                          : 'bg-[#097CF4] text-white hover:bg-white hover:text-[#097CF4]'
                       }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
@@ -571,8 +571,8 @@ const ServiceDetail = () => {
                 className="inline-flex items-center gap-3 mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-10 h-px bg-[#0276E2]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-10 h-px bg-[#097CF4]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   FAQ
                 </span>
               </div>
@@ -580,11 +580,11 @@ const ServiceDetail = () => {
                 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Common <span className="text-[#0276E2] italic">questions.</span>
+                Common <span className="text-[#097CF4] italic">questions.</span>
               </h2>
               <p className="mt-5 text-[14px] text-black/65 leading-relaxed">
                 The ones we hear most. Didn't find yours?{' '}
-                <Link to="/contact" className="text-[#0276E2] font-bold underline">
+                <Link to="/contact" className="text-[#097CF4] font-bold underline">
                   Ask us directly →
                 </Link>
               </p>
@@ -603,7 +603,7 @@ const ServiceDetail = () => {
                       >
                         <span
                           className={`shrink-0 text-[11px] font-bold uppercase tracking-[0.3em] pt-1.5 transition-colors ${
-                            isOpen ? 'text-[#0276E2]' : 'text-black/40 group-hover:text-[#0276E2]'
+                            isOpen ? 'text-[#097CF4]' : 'text-black/40 group-hover:text-[#097CF4]'
                           }`}
                           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                         >
@@ -611,7 +611,7 @@ const ServiceDetail = () => {
                         </span>
                         <span
                           className={`flex-1 text-xl sm:text-2xl lg:text-[26px] font-extrabold leading-[1.25] tracking-tight transition-colors ${
-                            isOpen ? 'text-[#0276E2]' : 'text-black group-hover:text-[#0276E2]'
+                            isOpen ? 'text-[#097CF4]' : 'text-black group-hover:text-[#097CF4]'
                           }`}
                           style={{ fontFamily: 'Playfair Display, serif' }}
                         >
@@ -620,7 +620,7 @@ const ServiceDetail = () => {
                         <span
                           className={`shrink-0 w-10 h-10 flex items-center justify-center border-2 transition-colors ${
                             isOpen
-                              ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                              ? 'bg-[#097CF4] border-[#097CF4] text-white'
                               : 'border-black text-black group-hover:bg-black group-hover:text-white'
                           }`}
                         >
@@ -641,7 +641,7 @@ const ServiceDetail = () => {
                         }`}
                       >
                         <div className="pl-0 sm:pl-12 pb-8 pr-16">
-                          <div className="border-l-2 border-[#0276E2] pl-5">
+                          <div className="border-l-2 border-[#097CF4] pl-5">
                             <p className="text-[14px] sm:text-[15px] leading-[1.75] text-black/70">
                               {f.a}
                             </p>
@@ -666,8 +666,8 @@ const ServiceDetail = () => {
                 className="inline-flex items-center gap-3 mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                <span className="w-10 h-px bg-[#0276E2]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <span className="w-10 h-px bg-[#097CF4]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   Related Services
                 </span>
               </div>
@@ -675,7 +675,7 @@ const ServiceDetail = () => {
                 className="text-3xl sm:text-4xl lg:text-[48px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Often <span className="text-[#0276E2] italic">paired</span> with this.
+                Often <span className="text-[#097CF4] italic">paired</span> with this.
               </h2>
             </div>
 
@@ -700,11 +700,11 @@ const ServiceDetail = () => {
                   to={`/services/${r.slug}`}
                   className="group relative border-2 border-black bg-white p-6 lg:p-7 hover:bg-black hover:text-white transition-colors duration-500"
                 >
-                  <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-                  <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+                  <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+                  <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
                   <p
-                    className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                    className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
                     — {cat?.label}
@@ -715,7 +715,7 @@ const ServiceDetail = () => {
                   >
                     {r.title}
                   </h3>
-                  <span className="block h-[2px] bg-[#0276E2] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
+                  <span className="block h-[2px] bg-[#097CF4] mt-3 mb-4 w-8 group-hover:w-16 transition-all duration-500"></span>
                   <p className="text-[13px] leading-[1.65] text-black/65 group-hover:text-white/70 transition-colors">
                     {r.short}
                   </p>
@@ -727,7 +727,7 @@ const ServiceDetail = () => {
                     >
                       Learn More
                     </span>
-                    <span className="w-9 h-9 bg-black text-white group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
+                    <span className="w-9 h-9 bg-black text-white group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
                       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                       </svg>
@@ -741,7 +741,7 @@ const ServiceDetail = () => {
           {sibling.length > 0 && (
             <div className="mt-14 pt-8 border-t-2 border-black">
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-4"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — More in {category?.label}

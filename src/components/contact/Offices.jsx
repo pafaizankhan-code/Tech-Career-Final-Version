@@ -24,7 +24,7 @@ const offices = [
 ]
 
 const MapVisual = ({ active }) => (
-  <div className={`relative w-full h-full overflow-hidden ${active === 'ahmedabad' ? 'bg-[#0276E2]' : active === 'bengaluru' ? 'bg-black' : 'bg-[#0276E2]'} transition-colors duration-500`}>
+  <div className={`relative w-full h-full overflow-hidden ${active === 'ahmedabad' ? 'bg-[#097CF4]' : active === 'bengaluru' ? 'bg-black' : 'bg-[#097CF4]'} transition-colors duration-500`}>
     {/* Grid lines */}
     <div
       className="absolute inset-0 opacity-30"
@@ -94,8 +94,8 @@ const Offices = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Our Offices
               </span>
             </div>
@@ -104,7 +104,7 @@ const Offices = () => {
               className="text-4xl sm:text-5xl lg:text-[60px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              One studio. <span className="text-[#0276E2] italic">All</span> of India.
+              One studio. <span className="text-[#097CF4] italic">All</span> of India.
             </h2>
           </div>
 
@@ -134,7 +134,7 @@ const Offices = () => {
               >
                 <p
                   className={`text-[10px] font-bold uppercase tracking-[0.3em] mb-2 ${
-                    isActive ? 'text-[#0276E2]' : 'text-[#0276E2]'
+                    isActive ? 'text-[#097CF4]' : 'text-[#097CF4]'
                   }`}
                 >
                   {o.role}
@@ -161,7 +161,7 @@ const Offices = () => {
 
             {/* Floating chip with city name */}
             <div className="absolute top-6 left-6 bg-white border-2 border-black px-4 py-2">
-              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#0276E2]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#097CF4]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 — Visiting
               </p>
               <p className="text-[16px] font-extrabold text-black" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -173,7 +173,7 @@ const Offices = () => {
           {/* Details */}
           <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — {current.role}
@@ -183,7 +183,7 @@ const Offices = () => {
               className="text-3xl lg:text-[40px] font-extrabold text-black leading-tight tracking-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              {current.city} <span className="text-[#0276E2] italic">Studio</span>
+              {current.city} <span className="text-[#097CF4] italic">Studio</span>
             </h3>
 
             <dl
@@ -201,7 +201,7 @@ const Offices = () => {
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-black/50 mb-2">Phone</dt>
                   <dd>
-                    <a href={`tel:${current.phone.replace(/\s/g, '')}`} className="font-bold text-black hover:text-[#0276E2] transition-colors">
+                    <a href={`tel:${current.phone.replace(/\s/g, '')}`} className="font-bold text-black hover:text-[#097CF4] transition-colors">
                       {current.phone}
                     </a>
                   </dd>
@@ -209,7 +209,7 @@ const Offices = () => {
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-black/50 mb-2">Email</dt>
                   <dd>
-                    <a href={`mailto:${current.email}`} className="font-bold text-black hover:text-[#0276E2] transition-colors break-all">
+                    <a href={`mailto:${current.email}`} className="font-bold text-black hover:text-[#097CF4] transition-colors break-all">
                       {current.email}
                     </a>
                   </dd>
@@ -220,8 +220,8 @@ const Offices = () => {
                 <dt className="text-[10px] uppercase tracking-[0.25em] text-black/50 mb-2">Hours</dt>
                 <dd className="font-semibold text-black flex items-center gap-2">
                   <span className="relative flex w-2 h-2">
-                    <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                    <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                    <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                    <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
                   </span>
                   {current.hours}
                 </dd>
@@ -230,12 +230,12 @@ const Offices = () => {
 
             <a
               href="#"
-              className="group mt-6 inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-[#0276E2] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-black transition-colors"
+              className="group mt-6 inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-[#097CF4] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-black transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Get Directions
-              <span className="w-10 h-10 bg-white group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
-                <svg className="w-4 h-4 text-[#0276E2] group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <span className="w-10 h-10 bg-white group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
+                <svg className="w-4 h-4 text-[#097CF4] group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                 </svg>
               </span>

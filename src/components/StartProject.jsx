@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const budgets = ['< ₹50 K', '₹50 K – ₹2 L', '₹2 L – ₹10 L', '₹10 L +']
+const budgets = ['< ₹10 K', '₹10 K – ₹50 K', '₹50 K – ₹2 L', '₹2 L +']
 const services = ['Website', 'E-commerce', 'Mobile App', 'CRM / HRMS', 'UI / UX', 'Digital Marketing']
 
 const StartProject = () => {
-  const [budget, setBudget] = useState('₹50 K – ₹2 L')
+  const [budget, setBudget] = useState('₹10 K – ₹50 K')
   const [service, setService] = useState('Website')
 
   return (
     <section
       id="start"
-      className="relative bg-[#0276E2] text-white py-20 lg:py-28 overflow-hidden"
+      className="relative bg-[#097CF4] text-white py-20 lg:py-28 overflow-hidden"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
       {/* Background pattern */}
@@ -149,11 +149,11 @@ const StartProject = () => {
               className="relative bg-white text-black p-6 sm:p-8 lg:p-10 shadow-[12px_12px_0_0_rgba(0,0,0,1)]"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <div className="flex items-center justify-between mb-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                   — Project Brief
                 </p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40">
@@ -170,7 +170,7 @@ const StartProject = () => {
                   <input
                     type="text"
                     placeholder="Your Full Name"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
                 <label className="block">
@@ -180,7 +180,7 @@ const StartProject = () => {
                   <input
                     type="email"
                     placeholder="you@company.com"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
               </div>
@@ -194,7 +194,7 @@ const StartProject = () => {
                   <input
                     type="text"
                     placeholder="Your Company / Brand"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
                 <label className="block">
@@ -204,7 +204,7 @@ const StartProject = () => {
                   <input
                     type="tel"
                     placeholder="+91 70966 08771"
-                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors"
+                    className="mt-2 w-full h-12 px-4 border-2 border-black/80 bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors"
                   />
                 </label>
               </div>
@@ -245,7 +245,7 @@ const StartProject = () => {
                       onClick={() => setBudget(b)}
                       className={`h-11 border-2 text-[11px] font-bold uppercase tracking-[0.15em] transition-colors ${
                         budget === b
-                          ? 'bg-[#0276E2] border-[#0276E2] text-white'
+                          ? 'bg-[#097CF4] border-[#097CF4] text-white'
                           : 'bg-white border-black/30 text-black hover:border-black'
                       }`}
                     >
@@ -263,29 +263,29 @@ const StartProject = () => {
                 <textarea
                   rows="4"
                   placeholder="What are you building, who is it for, and what does success look like?"
-                  className="mt-2 w-full px-4 py-3 border-2 border-black/80 bg-white text-[14px] focus:border-[#0276E2] outline-none transition-colors resize-none"
+                  className="mt-2 w-full px-4 py-3 border-2 border-black/80 bg-white text-[14px] focus:border-[#097CF4] outline-none transition-colors resize-none"
                 ></textarea>
               </label>
 
               {/* Consent + submit */}
               <div className="mt-6 pt-6 border-t-2 border-black flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <label className="flex items-start gap-3 text-[11px] text-black/60 max-w-[320px]">
-                  <input type="checkbox" defaultChecked className="mt-1 accent-[#0276E2] w-4 h-4" />
+                  <input type="checkbox" defaultChecked className="mt-1 accent-[#097CF4] w-4 h-4" />
                   <span>
                     I agree to the{' '}
-                    <span className="text-[#0276E2] underline font-semibold">Privacy Policy</span>{' '}
+                    <span className="text-[#097CF4] underline font-semibold">Privacy Policy</span>{' '}
                     and consent to be contacted.
                   </span>
                 </label>
 
                 <button
                   type="submit"
-                  className="group w-full sm:w-auto inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                  className="group w-full sm:w-auto inline-flex items-center justify-between gap-3 h-14 pl-5 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
                 >
                   Send Project Brief
-                  <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
+                  <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
                     <svg
-                      className="w-4 h-4 text-white group-hover:text-[#0276E2]"
+                      className="w-4 h-4 text-white group-hover:text-[#097CF4]"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"

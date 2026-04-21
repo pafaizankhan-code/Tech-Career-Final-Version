@@ -44,15 +44,14 @@ const ContactHero = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+      
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <nav
           className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          <Link to="/" className="hover:text-[#0276E2]">Home</Link>
+          <Link to="/" className="hover:text-[#097CF4]">Home</Link>
           <span>/</span>
           <span className="text-black font-semibold">Contact</span>
         </nav>
@@ -64,10 +63,10 @@ const ContactHero = () => {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               <span className="relative flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-[#0276E2] animate-ping opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#0276E2]"></span>
+                <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
+                <span className="relative inline-flex rounded-full w-2 h-2 bg-[#097CF4]"></span>
               </span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Now Open · IST {time} · Replying Live
               </span>
             </div>
@@ -76,7 +75,7 @@ const ContactHero = () => {
               className="text-5xl sm:text-6xl lg:text-[96px] xl:text-[108px] font-extrabold text-black leading-[0.95] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Say <span className="text-[#0276E2] italic">hello.</span>
+              Say <span className="text-[#097CF4] italic">hello.</span>
               <br />
               We'll reply like
               <br />
@@ -95,11 +94,11 @@ const ContactHero = () => {
             >
               <a
                 href="#contact-form"
-                className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#0276E2] transition-colors"
+                className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors"
               >
                 Send a Message
-                <span className="w-10 h-10 bg-[#0276E2] group-hover:bg-white flex items-center justify-center transition-colors">
-                  <svg className="w-4 h-4 text-white group-hover:text-[#0276E2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4 text-white group-hover:text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
@@ -119,7 +118,7 @@ const ContactHero = () => {
 
           {/* Side credential card */}
           <div className="lg:col-span-4">
-            <div className="relative bg-[#0276E2] text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#000]">
+            <div className="relative bg-[#097CF4] text-white p-6 lg:p-7 shadow-[10px_10px_0_0_#000]">
               <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-white"></span>
               <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-white"></span>
 
@@ -184,7 +183,7 @@ const ContactHero = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {s.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-black/60"

@@ -5,7 +5,7 @@ const PagePlaceholder = ({ title, subtitle }) => {
     <section className="min-h-[70vh] bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20 lg:py-28">
         <p
-          className="text-xs font-semibold tracking-[0.3em] uppercase text-[#0276E2] mb-4"
+          className="text-xs font-semibold tracking-[0.3em] uppercase text-[#097CF4] mb-4"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
           — {title} Page
@@ -16,7 +16,7 @@ const PagePlaceholder = ({ title, subtitle }) => {
         >
           {subtitle}
         </h2>
-        <div className="mt-8 h-1 w-24 bg-[#0276E2]"></div>
+        <div className="mt-8 h-1 w-24 bg-[#097CF4]"></div>
       </div>
     </section>
   )

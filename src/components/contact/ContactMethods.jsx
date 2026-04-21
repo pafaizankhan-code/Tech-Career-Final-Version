@@ -79,8 +79,8 @@ const ContactMethods = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Ways to Reach Us
               </span>
             </div>
@@ -89,7 +89,7 @@ const ContactMethods = () => {
               className="text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-black leading-[1.05] tracking-[-0.02em]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Four doors. <span className="text-[#0276E2] italic">Always</span> open.
+              Four doors. <span className="text-[#097CF4] italic">Always</span> open.
             </h2>
           </div>
 
@@ -108,15 +108,15 @@ const ContactMethods = () => {
               href={c.href}
               className="group relative p-6 lg:p-8 border-r border-b border-black/10 bg-white hover:bg-black hover:text-white transition-colors duration-500"
             >
-              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#0276E2] transition-colors"></span>
+              <span className="pointer-events-none absolute top-2 left-2 w-2 h-2 border-t-2 border-l-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b-2 border-r-2 border-black/20 group-hover:border-[#097CF4] transition-colors"></span>
 
               <div className="flex items-start justify-between mb-8">
-                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center border-2 border-black group-hover:border-[#0276E2] group-hover:bg-[#0276E2] transition-colors">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center border-2 border-black group-hover:border-[#097CF4] group-hover:bg-[#097CF4] transition-colors">
                   <div className="w-7 h-7">{c.icon}</div>
                 </div>
                 <span
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#0276E2] transition-colors"
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   — {c.no}
@@ -131,7 +131,7 @@ const ContactMethods = () => {
               </h3>
 
               <p
-                className="mt-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#0276E2]"
+                className="mt-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#097CF4]"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 {c.sub}
@@ -148,7 +148,7 @@ const ContactMethods = () => {
                 >
                   {c.cta}
                 </span>
-                <span className="w-9 h-9 flex items-center justify-center bg-black text-white group-hover:bg-[#0276E2] transition-colors">
+                <span className="w-9 h-9 flex items-center justify-center bg-black text-white group-hover:bg-[#097CF4] transition-colors">
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
                   </svg>

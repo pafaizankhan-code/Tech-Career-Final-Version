@@ -49,11 +49,11 @@ const ClientsShowcase = () => {
             className="inline-flex items-center gap-3 mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <span className="w-10 h-px bg-[#0276E2]"></span>
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+            <span className="w-10 h-px bg-[#097CF4]"></span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
               Who We're Built For
             </span>
-            <span className="w-10 h-px bg-[#0276E2]"></span>
+            <span className="w-10 h-px bg-[#097CF4]"></span>
           </div>
 
           <h2
@@ -61,7 +61,7 @@ const ClientsShowcase = () => {
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Your logo could{' '}
-            <span className="text-[#0276E2] italic">live here</span> first.
+            <span className="text-[#097CF4] italic">live here</span> first.
           </h2>
 
           <p
@@ -83,8 +83,8 @@ const ClientsShowcase = () => {
                 i === 2 || i === 9 ? 'bg-black/[0.02]' : ''
               }`}
             >
-              <span className="pointer-events-none absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t-2 border-l-2 border-black/15 group-hover:border-[#0276E2] transition-colors"></span>
-              <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b-2 border-r-2 border-black/15 group-hover:border-[#0276E2] transition-colors"></span>
+              <span className="pointer-events-none absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t-2 border-l-2 border-black/15 group-hover:border-[#097CF4] transition-colors"></span>
+              <span className="pointer-events-none absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b-2 border-r-2 border-black/15 group-hover:border-[#097CF4] transition-colors"></span>
 
               <span
                 className="text-[11px] sm:text-[12px] lg:text-[13px] font-black tracking-[0.25em] text-black/80 group-hover:text-white transition-colors text-center px-2"
@@ -98,13 +98,13 @@ const ClientsShowcase = () => {
 
         {/* Focus strip */}
         <div className="mt-14 lg:mt-16 border-2 border-black p-6 sm:p-8 lg:p-10 relative">
-          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
             <div className="shrink-0">
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Our Focus
@@ -113,7 +113,7 @@ const ClientsShowcase = () => {
                 className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-black leading-tight"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                A small studio with <span className="text-[#0276E2] italic">clear</span> priorities.
+                A small studio with <span className="text-[#097CF4] italic">clear</span> priorities.
               </h3>
             </div>
 
@@ -130,7 +130,7 @@ const ClientsShowcase = () => {
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     {r.k}
-                    <span className="text-[#0276E2]">.</span>
+                    <span className="text-[#097CF4]">.</span>
                   </p>
                   <p
                     className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-black/60"
@@ -146,12 +146,12 @@ const ClientsShowcase = () => {
 
         {/* CTA strip */}
         <div className="mt-12 relative bg-black text-white p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#0276E2]"></span>
-          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#0276E2]"></span>
+          <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
+          <span className="pointer-events-none absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[#097CF4]"></span>
 
           <div className="flex-1">
             <p
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-2"
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               — Ready to be our first?
@@ -160,18 +160,18 @@ const ClientsShowcase = () => {
               className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold leading-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Launch-client slots open · <span className="italic text-[#0276E2]">5 only.</span>
+              Launch-client slots open · <span className="italic text-[#097CF4]">5 only.</span>
             </h4>
           </div>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#0276E2] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#0276E2] transition-colors shrink-0"
+            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-[#097CF4] text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-[#097CF4] transition-colors shrink-0"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             Apply for a Slot
-            <span className="w-10 h-10 bg-white group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
-              <svg className="w-4 h-4 text-[#0276E2] group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <span className="w-10 h-10 bg-white group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
+              <svg className="w-4 h-4 text-[#097CF4] group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
               </svg>
             </span>

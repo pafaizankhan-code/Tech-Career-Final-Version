@@ -25,8 +25,7 @@ const AboutHero = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
+      
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         {/* Breadcrumb */}
@@ -34,7 +33,7 @@ const AboutHero = () => {
           className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-black/50 mb-10"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          <Link to="/" className="hover:text-[#0276E2]">
+          <Link to="/" className="hover:text-[#097CF4]">
             Home
           </Link>
           <span>/</span>
@@ -47,8 +46,8 @@ const AboutHero = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 About Tech Career IT Solutions LLP
               </span>
             </div>
@@ -59,7 +58,7 @@ const AboutHero = () => {
             >
               A new studio
               <br />
-              <span className="text-[#0276E2] italic">built on trust.</span>
+              <span className="text-[#097CF4] italic">built on trust.</span>
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
@@ -72,12 +71,12 @@ const AboutHero = () => {
 
           {/* Quick facts card */}
           <div className="lg:col-span-4">
-            <div className="relative bg-black text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#0276E2]">
-              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#0276E2]"></span>
-              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#0276E2]"></span>
+            <div className="relative bg-black text-white p-6 lg:p-8 shadow-[10px_10px_0_0_#097CF4]">
+              <span className="pointer-events-none absolute top-2 left-2 w-2.5 h-2.5 border-t-2 border-l-2 border-[#097CF4]"></span>
+              <span className="pointer-events-none absolute bottom-2 right-2 w-2.5 h-2.5 border-b-2 border-r-2 border-[#097CF4]"></span>
 
               <p
-                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#0276E2] mb-3"
+                className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
                 — Company At-a-Glance
@@ -127,7 +126,7 @@ const AboutHero = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 {s.k}
-                <span className="text-[#0276E2]">.</span>
+                <span className="text-[#097CF4]">.</span>
               </p>
               <p
                 className="mt-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-black/60"

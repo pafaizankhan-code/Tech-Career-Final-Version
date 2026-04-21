@@ -90,10 +90,9 @@ const WhyChooseUs = () => {
         }}
       ></div>
 
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#0276E2]"></span>
-      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#0276E2]"></span>
+      
+      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4]"></span>
+      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4]"></span>
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
@@ -103,8 +102,8 @@ const WhyChooseUs = () => {
               className="inline-flex items-center gap-3 mb-6"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              <span className="w-10 h-px bg-[#0276E2]"></span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#0276E2]">
+              <span className="w-10 h-px bg-[#097CF4]"></span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
                 Why Choose Us
               </span>
             </div>
@@ -114,7 +113,7 @@ const WhyChooseUs = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Six reasons to pick a{' '}
-              <span className="text-[#0276E2] italic">fresh</span> studio.
+              <span className="text-[#097CF4] italic">fresh</span> studio.
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[460px]">
@@ -137,7 +136,7 @@ const WhyChooseUs = () => {
                       style={{ fontFamily: 'Playfair Display, serif' }}
                     >
                       {p.k}
-                      <span className="text-[#0276E2]">.</span>
+                      <span className="text-[#097CF4]">.</span>
                     </dt>
                     <dd
                       className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white/50"
@@ -152,7 +151,7 @@ const WhyChooseUs = () => {
 
             <Link
               to="/about"
-              className="group mt-8 inline-flex items-center gap-3 h-12 px-6 border-2 border-white text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#0276E2] hover:border-[#0276E2] transition-colors"
+              className="group mt-8 inline-flex items-center gap-3 h-12 px-6 border-2 border-white text-white text-[11px] font-bold uppercase tracking-[0.25em] hover:bg-[#097CF4] hover:border-[#097CF4] transition-colors"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               Learn About Us
@@ -173,7 +172,7 @@ const WhyChooseUs = () => {
                   {/* Number */}
                   <div className="col-span-2 sm:col-span-1">
                     <span
-                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/40 group-hover:text-[#0276E2] transition-colors"
+                      className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/40 group-hover:text-[#097CF4] transition-colors"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
                       {r.no}
@@ -182,7 +181,7 @@ const WhyChooseUs = () => {
 
                   {/* Icon */}
                   <div className="col-span-10 sm:col-span-2">
-                    <div className="w-12 h-12 border-2 border-white/30 group-hover:border-[#0276E2] group-hover:bg-[#0276E2] flex items-center justify-center transition-colors">
+                    <div className="w-12 h-12 border-2 border-white/30 group-hover:border-[#097CF4] group-hover:bg-[#097CF4] flex items-center justify-center transition-colors">
                       <div className="w-6 h-6">{r.icon}</div>
                     </div>
                   </div>
@@ -191,7 +190,7 @@ const WhyChooseUs = () => {
                   <div className="col-span-12 sm:col-span-9 flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="flex-1">
                       <h3
-                        className="text-xl sm:text-[22px] lg:text-[26px] font-extrabold leading-[1.2] group-hover:text-[#0276E2] transition-colors"
+                        className="text-xl sm:text-[22px] lg:text-[26px] font-extrabold leading-[1.2] group-hover:text-[#097CF4] transition-colors"
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {r.title}
@@ -200,7 +199,7 @@ const WhyChooseUs = () => {
                         {r.desc}
                       </p>
                     </div>
-                    <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-white/20 text-white/50 group-hover:text-[#0276E2] group-hover:border-[#0276E2] transition-colors">
+                    <span className="shrink-0 w-10 h-10 flex items-center justify-center border border-white/20 text-white/50 group-hover:text-[#097CF4] group-hover:border-[#097CF4] transition-colors">
                       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
