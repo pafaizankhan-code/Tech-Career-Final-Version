@@ -1,5 +1,24 @@
 import React, { useState } from 'react'
 
+export const homeFaqs = [
+  {
+    q: 'You are a new studio — why should I trust you with my project?',
+    a: 'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+  },
+  {
+    q: 'How long will it take to build my website, app or CRM?',
+    a: 'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope — and if we ever slip, we tell you before the deadline, not after.',
+  },
+  {
+    q: 'How do you price projects? Any hidden costs?',
+    a: 'We quote a fixed price based on a written scope before any work starts — with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre — if scope grows mid-project, we quote the delta upfront.',
+  },
+  {
+    q: 'Where are you based? Can we meet in person?',
+    a: 'We are based at iHub, University Area, Ahmedabad, Gujarat — 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
+  },
+]
+
 const faqs = [
   {
     id: 1,

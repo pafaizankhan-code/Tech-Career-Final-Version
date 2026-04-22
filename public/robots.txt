@@ -5,5 +5,5 @@ Allow: /
 Disallow: /assets/raw/
 Disallow: /*.json$
 
-Sitemap: https://techcareer.site/sitemap.xml
-Host: https://techcareer.site
+Sitemap: https://www.techcareer.site/sitemap.xml
+Host: https://www.techcareer.site

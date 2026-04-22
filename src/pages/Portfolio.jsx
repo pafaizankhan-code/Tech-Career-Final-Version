@@ -26,7 +26,7 @@ const Portfolio = () => (
     <Seo
       title="Our Portfolio | Website, E-commerce, CRM & Mobile App Projects by an Ahmedabad Studio"
       description="See what Tech Career IT Solutions builds — custom websites, Shopify & WooCommerce stores, CRM/HRMS platforms and mobile apps shipped for Indian businesses from our Ahmedabad studio."
-      canonical="https://techcareer.site/portfolio"
+      canonical="https://www.techcareer.site/portfolio"
       jsonLd={portfolioJsonLd}
     />
     <PortfolioHero />

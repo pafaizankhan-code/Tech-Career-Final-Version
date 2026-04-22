@@ -28,7 +28,7 @@ const sections = [
     body: (
       <>
         <p>
-          By accessing <a href="https://techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>{' '}
+          By accessing <a href="https://www.techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>{' '}
           or engaging <strong>Tech Career IT Solutions LLP</strong> ("Tech Career", "we", "us")
           for any service, you agree to be bound by these Terms of Service. If you do not agree,
           please do not use the website or our services.
@@ -188,7 +188,7 @@ const sections = [
         <p>
           We may update these Terms to reflect new services, legal requirements or operational
           improvements. The latest version will always be at{' '}
-          <a href="https://techcareer.site/terms" className="text-[#097CF4] font-semibold hover:underline">
+          <a href="https://www.techcareer.site/terms" className="text-[#097CF4] font-semibold hover:underline">
             techcareer.site/terms
           </a>{' '}
           with the "Last Updated" date. Continued use of the website or services after changes
@@ -222,7 +222,7 @@ const Terms = () => (
     <Seo
       title="Terms of Service | Tech Career IT Solutions — Ahmedabad"
       description="Read the Terms of Service governing use of techcareer.site and engagements with Tech Career IT Solutions — an Ahmedabad web development and digital marketing studio."
-      canonical="https://techcareer.site/terms"
+      canonical="https://www.techcareer.site/terms"
       ogType="article"
       jsonLd={termsJsonLd}
     />

@@ -33,7 +33,7 @@ const Contact = () => (
     <Seo
       title="Contact Us | Web Development & Digital Marketing Agency in Ahmedabad"
       description="Contact Tech Career IT Solutions in Ahmedabad for custom websites, e-commerce, CRM/HRMS, mobile apps and digital marketing. Reply within 24 hours on email & WhatsApp — free discovery call, no obligation."
-      canonical="https://techcareer.site/contact"
+      canonical="https://www.techcareer.site/contact"
       jsonLd={contactJsonLd}
     />
     <ContactHero />

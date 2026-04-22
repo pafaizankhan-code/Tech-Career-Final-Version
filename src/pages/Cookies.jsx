@@ -42,7 +42,7 @@ const sections = [
     body: (
       <>
         <p>
-          <a href="https://techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>{' '}
+          <a href="https://www.techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>{' '}
           uses a minimal set of cookies to keep the site fast, secure and measurable. We never
           use cookies to track you across unrelated websites or for profile-based ad targeting.
         </p>
@@ -161,7 +161,7 @@ const Cookies = () => (
     <Seo
       title="Cookies Policy | Tech Career IT Solutions — Ahmedabad"
       description="Understand how techcareer.site uses cookies and similar technologies, what each type does, and how to manage or disable them in your browser."
-      canonical="https://techcareer.site/cookies"
+      canonical="https://www.techcareer.site/cookies"
       ogType="article"
       jsonLd={cookiesJsonLd}
     />

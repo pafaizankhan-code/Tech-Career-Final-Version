@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { categories, services, getServicesByCategory } from '../data/services'
-import Seo, { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
+import Seo, { buildBreadcrumbJsonLd, buildItemListJsonLd, SITE } from '../components/Seo'
 import StartProject from '../components/StartProject'
 
 const servicesJsonLd = {
@@ -20,16 +20,35 @@ const servicesJsonLd = {
     name: s.title,
     url: `${SITE.baseUrl}/services/${s.slug}`,
     description: s.short,
+    provider: { '@id': `${SITE.baseUrl}/#organization` },
   })),
 }
+
+// ItemList — lets Google render a carousel / ordered list of services.
+const servicesItemListJsonLd = buildItemListJsonLd({
+  name: 'Services offered by Tech Career IT Solutions',
+  description:
+    'Web development, e-commerce, CRM/HRMS, mobile apps, UI/UX design and digital marketing services.',
+  url: `${SITE.baseUrl}/services`,
+  items: services.map((s) => ({
+    name: s.title,
+    description: s.short,
+    url: `${SITE.baseUrl}/services/${s.slug}`,
+  })),
+})
 
 const Services = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
     <Seo
       title="Our Services | Web Development, E-commerce, CRM/HRMS, Mobile Apps & Digital Marketing in Ahmedabad"
       description="Explore Tech Career IT Solutions' services — custom web development, Shopify & WooCommerce stores, CRM/HRMS software, mobile apps, UI/UX design and SEO-driven digital marketing from our Ahmedabad studio."
-      canonical="https://techcareer.site/services"
+      canonical="https://www.techcareer.site/services"
       jsonLd={servicesJsonLd}
+    />
+    {/* Secondary ItemList JSON-LD for service carousels */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesItemListJsonLd) }}
     />
     {/* ─── HERO ──────────────────────────────────────── */}
     <section className="relative bg-white pt-20 lg:pt-28 pb-16 lg:pb-20 overflow-hidden">
