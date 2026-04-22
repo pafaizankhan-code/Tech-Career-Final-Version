@@ -28,10 +28,9 @@ const careersJsonLd = {
 const Careers = () => (
   <>
     <Seo
-      title="Careers - Help Build a New Ahmedabad Studio"
-      description="Join a new, founder-led web and digital marketing studio in Ahmedabad. Open roles for full-stack developers, designers and interns — with real ownership and the chance to shape the studio from day one."
-      keywords="developer jobs ahmedabad, react developer jobs gujarat, web designer jobs ahmedabad, internship ahmedabad it, startup jobs ahmedabad, digital marketing jobs gujarat"
-      canonical="https://tech-career-final-version.vercel.app/careers"
+      title="Careers | Web Development, Design & Digital Marketing Jobs in Ahmedabad"
+      description="Join Tech Career IT Solutions — a founder-led Ahmedabad studio hiring full-stack developers, UI/UX designers, digital marketers and interns. Real ownership, honest work, and room to grow from day one."
+      canonical="https://techcareer.site/careers"
       ogType="article"
       jsonLd={careersJsonLd}
     />

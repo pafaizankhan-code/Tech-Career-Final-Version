@@ -129,7 +129,7 @@ const Footer = () => {
               <img
                 src={footerLogoImg}
                 alt="Tech Career IT Solution LLP"
-                className="h-24 lg:h-[72px] w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                className="h-16 lg:h-[90px]  w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </Link>
 
@@ -142,7 +142,6 @@ const Footer = () => {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
                 { city: 'Ahmedabad · HQ', address: '4th Floor, Aarush Plaza, SG Highway, 380015' },
-                { city: 'Bengaluru', address: 'WeWork Prestige, Cunningham Road, 560052' },
               ].map((o) => (
                 <div key={o.city}>
                   <p
@@ -306,10 +305,10 @@ const Footer = () => {
             © {year} Tech Career IT Solutions LLP — All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            <Link to="/" className="hover:underline">Privacy</Link>
-            <Link to="/" className="hover:underline">Terms</Link>
-            <Link to="/" className="hover:underline">Cookies</Link>
-            <Link to="/" className="hover:underline">Sitemap</Link>
+            <Link to="/privacy" className="hover:underline">Privacy</Link>
+            <Link to="/terms" className="hover:underline">Terms</Link>
+            <Link to="/cookies" className="hover:underline">Cookies</Link>
+            <a href="/sitemap.xml" className="hover:underline">Sitemap</a>
           </div>
         </div>
       </div>

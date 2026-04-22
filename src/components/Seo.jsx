@@ -6,10 +6,10 @@ export const SITE = {
   name: 'Tech Career IT Solutions',
   brand: 'Tech Career IT Solutions LLP',
   tagline: 'Web Development & Digital Marketing Agency in Ahmedabad',
-  baseUrl: 'https://tech-career-final-version.vercel.app',
-  defaultImage: 'https://tech-career-final-version.vercel.app/og-default.jpg',
+  baseUrl: 'https://techcareer.site',
+  defaultImage: 'https://techcareer.site/og-default.jpg',
   twitter: '@techcareerllp',
-  region: 'IN',
+  region: 'IN-GJ',
   locale: 'en_IN',
   phone: '+91 70966 08771',
   email: 'inquiry.techcareer@gmail.com',
@@ -19,7 +19,6 @@ export const SITE = {
 const Seo = ({
   title,
   description,
-  keywords,
   robots = 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
   canonical,
   ogType = 'website',
@@ -28,18 +27,18 @@ const Seo = ({
   noindex = false,
 }) => {
   const location = useLocation()
-  const path = location.pathname === '/' ? '' : location.pathname
+  const path = location.pathname === '/' ? '/' : location.pathname
+  // Canonical is self-referencing by default (current absolute URL), exactly like the Levox reference.
   const url = canonical || `${SITE.baseUrl}${path}`
   const image = ogImage || SITE.defaultImage
   const finalRobots = noindex ? 'noindex,nofollow' : robots
-  const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`
+  const fullTitle = title.includes(SITE.name) ? title : `${title} – ${SITE.name}`
 
   return (
     <>
       {/* Primary */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content={finalRobots} />
       <meta name="googlebot" content={finalRobots} />
       <meta name="author" content={SITE.brand} />
@@ -48,11 +47,12 @@ const Seo = ({
       {/* Geo / regional signals (India focus — Ahmedabad) */}
       <meta name="geo.region" content={SITE.region} />
       <meta name="geo.placename" content="Ahmedabad, Gujarat, India" />
+      <meta name="geo.position" content="23.0225;72.5714" />
       <meta name="ICBM" content="23.0225,72.5714" />
       <meta name="language" content="English" />
       <meta httpEquiv="content-language" content="en-IN" />
 
-      {/* Canonical */}
+      {/* Canonical — self-referencing */}
       <link rel="canonical" href={url} />
 
       {/* Open Graph */}

@@ -26,10 +26,9 @@ const servicesJsonLd = {
 const Services = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
     <Seo
-      title="Our Services — Web, E-commerce, CRM, Mobile & Digital Marketing"
-      description="Tech Career IT Solutions LLP offers honest, founder-led web development, e-commerce, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing services out of iHub, Ahmedabad."
-      keywords="web development services ahmedabad, shopify developer services india, custom crm hrms services, mobile app developer gujarat, ui ux design services ahmedabad, digital marketing agency services india"
-      canonical="https://tech-career-final-version.vercel.app/services"
+      title="Our Services | Web Development, E-commerce, CRM/HRMS, Mobile Apps & Digital Marketing in Ahmedabad"
+      description="Explore Tech Career IT Solutions' services — custom web development, Shopify & WooCommerce stores, CRM/HRMS software, mobile apps, UI/UX design and SEO-driven digital marketing from our Ahmedabad studio."
+      canonical="https://techcareer.site/services"
       jsonLd={servicesJsonLd}
     />
     {/* ─── HERO ──────────────────────────────────────── */}

@@ -24,10 +24,9 @@ const portfolioJsonLd = {
 const Portfolio = () => (
   <>
     <Seo
-      title="What We Build - Capability Showcase | Tech Career IT Solutions LLP"
-      description="A transparent capability showcase from a new Ahmedabad studio — the websites, e-commerce stores, custom CRM / HRMS and mobile apps we can ship for you, with realistic timelines and pricing."
-      keywords="web development portfolio ahmedabad, shopify developer portfolio india, custom crm hrms portfolio, mobile app developer gujarat, ecommerce agency showcase, tech career it solutions work"
-      canonical="https://tech-career-final-version.vercel.app/portfolio"
+      title="Our Portfolio | Website, E-commerce, CRM & Mobile App Projects by an Ahmedabad Studio"
+      description="See what Tech Career IT Solutions builds — custom websites, Shopify & WooCommerce stores, CRM/HRMS platforms and mobile apps shipped for Indian businesses from our Ahmedabad studio."
+      canonical="https://techcareer.site/portfolio"
       jsonLd={portfolioJsonLd}
     />
     <PortfolioHero />

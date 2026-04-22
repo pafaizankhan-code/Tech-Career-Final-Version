@@ -9,20 +9,12 @@ import {
 import Seo, { buildServiceJsonLd, buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import StartProject from '../components/StartProject'
 
-// Build per-service SEO title, description, and keywords from existing data.
+// Build per-service SEO title and description from existing data.
 const buildServiceSeo = (service, category) => {
-  const title = `${service.title} in Ahmedabad — ${service.tagline}`
-  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Built by Tech Career IT Solutions LLP, a founder-led studio at iHub, Ahmedabad.`
-  const keywords = [
-    `${service.title} Ahmedabad`,
-    `${service.title} India`,
-    `${service.title} Gujarat`,
-    `${service.title} services`,
-    `${service.title} agency`,
-    `${category?.label} Ahmedabad`,
-    ...service.stack.map((t) => `${t} developer India`),
-  ].join(', ')
-  return { title, description, keywords }
+  const categoryLabel = category?.label ? ` | ${category.label}` : ''
+  const title = `${service.title} in Ahmedabad${categoryLabel} — ${service.tagline}`
+  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Delivered by Tech Career IT Solutions, a founder-led web & digital marketing studio in Ahmedabad, India.`
+  return { title, description }
 }
 
 // FAQ JSON-LD so Google can build "People also ask" snippets.
@@ -80,7 +72,6 @@ const ServiceDetail = () => {
       <Seo
         title={seo.title}
         description={seo.description}
-        keywords={seo.keywords}
         canonical={`${SITE.baseUrl}/services/${service.slug}`}
         ogType="article"
         jsonLd={serviceJsonLd}

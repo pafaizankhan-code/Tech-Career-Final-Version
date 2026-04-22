@@ -12,10 +12,9 @@ import StartProject from '../components/StartProject'
 const Home = () => (
   <>
     <Seo
-      title="Web Development & Digital Marketing Agency in Ahmedabad"
-      description="Tech Career IT Solutions LLP — a founder-led studio in Ahmedabad building websites, e-commerce stores, custom CRM / HRMS, mobile apps and digital marketing campaigns. Transparent pricing. Open for new projects."
-      keywords="web development ahmedabad, digital marketing agency ahmedabad, ecommerce website ahmedabad, custom crm hrms india, shopify developer gujarat, react developer ahmedabad, mobile app development india, wordpress developer ahmedabad, tech career it solutions llp"
-      canonical="https://tech-career-final-version.vercel.app/"
+      title="Web Development & Digital Marketing Agency in Ahmedabad | Custom Websites, E-commerce & Branding"
+      description="Looking for a reliable web development agency in Ahmedabad? Tech Career IT Solutions delivers custom websites, e-commerce stores, UI/UX design, mobile apps & digital marketing to grow your business online."
+      canonical="https://techcareer.site/"
       jsonLd={organizationJsonLd}
     />
     <Preloader />

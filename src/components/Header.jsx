@@ -296,6 +296,7 @@ const navLinks = [
 ]
 
 const searchIndex = [
+  // ── Services ─────────────────────────────
   { title: 'Web Development', tag: 'Service', to: '/services/web-development' },
   { title: 'E-commerce Stores', tag: 'Service', to: '/services/ecommerce' },
   { title: 'Mobile App Development', tag: 'Service', to: '/services/mobile-apps' },
@@ -307,9 +308,24 @@ const searchIndex = [
   { title: 'Google & Meta Ads', tag: 'Service', to: '/services/paid-ads' },
   { title: 'Social Media Management', tag: 'Service', to: '/services/social-media' },
   { title: 'Post-Launch Care', tag: 'Service', to: '/services/care-retainer' },
+  // ── Business Categories (who we build for) ────
+  { title: 'Restaurants & Cafes', tag: 'Business', to: '/contact' },
+  { title: 'Retail & E-commerce', tag: 'Business', to: '/contact' },
+  { title: 'Healthcare & Clinics', tag: 'Business', to: '/contact' },
+  { title: 'Real Estate & Property', tag: 'Business', to: '/contact' },
+  { title: 'Education & Coaching', tag: 'Business', to: '/contact' },
+  { title: 'Fitness & Salons', tag: 'Business', to: '/contact' },
+  { title: 'Professional Services', tag: 'Business', to: '/contact' },
+  { title: 'Hotels & Hospitality', tag: 'Business', to: '/contact' },
+  { title: 'Manufacturing & Logistics', tag: 'Business', to: '/contact' },
+  { title: 'Startups & SaaS', tag: 'Business', to: '/contact' },
+  { title: 'Fashion & D2C Brands', tag: 'Business', to: '/contact' },
+  { title: 'Events & Weddings', tag: 'Business', to: '/contact' },
+  // ── Products ──────────────────────────────
   { title: 'Learning Craft', tag: 'Product', to: '/portfolio' },
   { title: 'Medcare Hospital', tag: 'Product', to: '/portfolio' },
   { title: 'GROCIFY', tag: 'Product', to: '/portfolio' },
+  // ── Pages ─────────────────────────────────
   { title: 'About Us', tag: 'Page', to: '/about' },
   { title: 'Our Portfolio', tag: 'Page', to: '/portfolio' },
   { title: 'Careers & Hiring', tag: 'Page', to: '/careers' },
@@ -319,10 +335,25 @@ const searchIndex = [
 const popularSearches = [
   'Website',
   'E-commerce',
-  'Mobile App',
+  'Restaurant Website',
+  'Clinic Website',
+  'Real Estate',
+  'Coaching Class',
   'Custom CRM',
-  'HRMS',
   'SEO',
+]
+
+const popularBusinessCategories = [
+  { label: 'Restaurants', to: '/contact' },
+  { label: 'Retail', to: '/contact' },
+  { label: 'Clinics', to: '/contact' },
+  { label: 'Real Estate', to: '/contact' },
+  { label: 'Coaching', to: '/contact' },
+  { label: 'Fitness', to: '/contact' },
+  { label: 'Salons', to: '/contact' },
+  { label: 'Hotels', to: '/contact' },
+  { label: 'Startups', to: '/contact' },
+  { label: 'Fashion', to: '/contact' },
 ]
 
 const Header = () => {
@@ -1462,6 +1493,33 @@ const Header = () => {
                   ))}
                 </div>
 
+                {/* Browse by Business Category */}
+                <p
+                  className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mt-6 mb-3 flex items-center gap-2"
+                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                >
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7l9-4 9 4M4 10v11h16V10M9 21v-7h6v7" />
+                  </svg>
+                  Browse by Business
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {popularBusinessCategories.map((c) => (
+                    <Link
+                      key={c.label}
+                      to={c.to}
+                      onClick={() => setSearchOpen(false)}
+                      className="inline-flex items-center gap-1.5 px-3 py-2 text-[12px] font-semibold bg-[#097CF4]/5 border border-[#097CF4]/20 text-[#097CF4] hover:bg-[#097CF4] hover:text-white hover:border-[#097CF4] transition-colors"
+                      style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+                    >
+                      {c.label}
+                      <svg className="w-2.5 h-2.5 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+
                 <p
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/50 mt-6 mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
@@ -1504,12 +1562,30 @@ const Header = () => {
                       <div className="flex items-center gap-3 min-w-0">
                         <span
                           className={`w-8 h-8 flex items-center justify-center shrink-0 ${
-                            idx === activeIdx ? 'bg-[#097CF4] text-white' : 'bg-black/5 text-black/60'
+                            idx === activeIdx
+                              ? 'bg-[#097CF4] text-white'
+                              : r.tag === 'Business'
+                              ? 'bg-[#097CF4]/10 text-[#097CF4]'
+                              : 'bg-black/5 text-black/60'
                           } transition-colors`}
                         >
-                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 22a10 10 0 110-20 10 10 0 010 20z" />
-                          </svg>
+                          {r.tag === 'Business' ? (
+                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6" />
+                            </svg>
+                          ) : r.tag === 'Service' ? (
+                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
+                            </svg>
+                          ) : r.tag === 'Product' ? (
+                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M20 7L12 3 4 7m16 0l-8 4m8-4v10l-8 4m0 0l-8-4V7m8 14V11" />
+                            </svg>
+                          ) : (
+                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 22a10 10 0 110-20 10 10 0 010 20z" />
+                            </svg>
+                          )}
                         </span>
                         <div className="min-w-0">
                           <p
@@ -1518,7 +1594,11 @@ const Header = () => {
                           >
                             {highlight(r.title)}
                           </p>
-                          <p className="text-[11px] text-black/50 uppercase tracking-[0.2em] mt-0.5">
+                          <p
+                            className={`text-[11px] uppercase tracking-[0.2em] mt-0.5 ${
+                              r.tag === 'Business' ? 'text-[#097CF4] font-semibold' : 'text-black/50'
+                            }`}
+                          >
                             {r.tag}
                           </p>
                         </div>

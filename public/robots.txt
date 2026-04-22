@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block common build/dev artifacts if ever deployed
+Disallow: /assets/raw/
+Disallow: /*.json$
+
+Sitemap: https://techcareer.site/sitemap.xml
+Host: https://techcareer.site
