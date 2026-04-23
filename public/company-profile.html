@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Profile · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── PRINT / PAGE SETUP ─── */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .page { page-break-after: always; box-shadow: none !important; margin: 0 !important; }
+      .page:last-child { page-break-after: auto; }
+    }
+
+    /* ─── RESET & BASE ─── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      background: #f3f4f6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      --blue: #097CF4;
+      --black: #111111;
+    }
+
+    /* ─── PAGE WRAPPER (mimics A4 in browser) ─── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 18mm 16mm;
+      margin: 24px auto;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+    }
+
+    /* ─── REUSABLE COMPONENTS ─── */
+    .corner-tl, .corner-tr, .corner-bl, .corner-br {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      pointer-events: none;
+    }
+    .corner-tl { top: 8mm; left: 8mm; border-top: 2px solid var(--blue); border-left: 2px solid var(--blue); }
+    .corner-tr { top: 8mm; right: 8mm; border-top: 2px solid var(--blue); border-right: 2px solid var(--blue); }
+    .corner-bl { bottom: 8mm; left: 8mm; border-bottom: 2px solid var(--blue); border-left: 2px solid var(--blue); }
+    .corner-br { bottom: 8mm; right: 8mm; border-bottom: 2px solid var(--blue); border-right: 2px solid var(--blue); }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8mm;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 10mm;
+    }
+    /* ─── BRAND WORDMARK (replaces logo image) ─── */
+    .brand-mark {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 3px;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7.5px;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+    /* Cover (dark background) variant */
+    .cover .brand-mark .name { color: white; font-size: 30px; }
+    .cover .brand-mark .sub { color: rgba(255,255,255,0.55); font-size: 8.5px; }
+    .page-header .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+    }
+
+    .page-footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 16mm;
+      right: 16mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.4);
+      padding-top: 6mm;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+    }
+    .section-label::before { content: ''; width: 28px; height: 1px; background: var(--blue); }
+
+    h1.display, h2.display, h3.display {
+      font-family: 'Playfair Display', serif;
+      color: var(--black);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    h1.display { font-size: 44px; font-weight: 800; }
+    h2.display { font-size: 32px; font-weight: 800; }
+    h3.display { font-size: 22px; font-weight: 800; }
+    .accent { color: var(--blue); font-style: italic; }
+
+    p.body {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px;
+      line-height: 1.65;
+      color: rgba(0,0,0,0.72);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      background: rgba(9,124,244,0.08);
+      color: var(--blue);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ─── COVER PAGE ─── */
+    .cover {
+      background: var(--black);
+      color: white;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .cover .corner-tl, .cover .corner-tr, .cover .corner-bl, .cover .corner-br {
+      border-color: var(--blue) !important;
+    }
+    .cover-inner {
+      padding: 18mm 16mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .cover-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .cover-glow.tl { top: -200px; left: -200px; }
+    .cover-glow.br { bottom: -200px; right: -200px; }
+
+    .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+    .cover-top .brand-mark .name { font-size: 34px; }
+    .cover-top .brand-mark .sub { font-size: 9px; }
+    .cover-top .meta {
+      text-align: right;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    .cover-center { position: relative; padding: 30mm 0; }
+    .cover-center .pill {
+      background: rgba(9,124,244,0.18);
+      color: var(--blue);
+      margin-bottom: 24px;
+    }
+    .cover-center h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 84px;
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: white;
+      margin-bottom: 18px;
+    }
+    .cover-center h1 .accent { color: var(--blue); font-style: italic; }
+    .cover-center p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.7);
+      max-width: 480px;
+    }
+
+    .cover-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      position: relative;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 20px;
+    }
+    .cover-bottom .stat-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .cover-bottom .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.01em;
+    }
+    .cover-bottom .stat-value .dot { color: var(--blue); }
+
+    /* ─── GRIDS & CARDS ─── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+
+    .card {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 14px;
+      background: white;
+      position: relative;
+    }
+    .card-blue {
+      border-color: var(--blue);
+      background: rgba(9,124,244,0.04);
+    }
+
+    .card .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.2em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .card .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.25;
+      margin-bottom: 5px;
+    }
+    .card .desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      line-height: 1.55;
+      color: rgba(0,0,0,0.65);
+    }
+
+    /* ─── PRICING TABLE ─── */
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 28% 18% 18% 36%;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      align-items: start;
+      page-break-inside: avoid;
+    }
+    .pricing-row.head {
+      border-bottom: 2px solid var(--black);
+      padding-bottom: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+    .pricing-row .service {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.25;
+    }
+    .pricing-row .service small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      font-weight: 400;
+      color: rgba(0,0,0,0.55);
+      margin-top: 2px;
+    }
+    .pricing-row .price {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .pricing-row .duration {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(0,0,0,0.65);
+      letter-spacing: 0.05em;
+    }
+    .pricing-row .features {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      color: rgba(0,0,0,0.6);
+      line-height: 1.5;
+    }
+
+    /* ─── PROCESS STEPS ─── */
+    .step-row {
+      display: grid;
+      grid-template-columns: 60px 1fr 110px;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      align-items: center;
+    }
+    .step-row .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .step-row .step-content h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 3px;
+    }
+    .step-row .step-content p {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      color: rgba(0,0,0,0.65);
+      line-height: 1.55;
+    }
+    .step-row .step-when {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+      text-align: right;
+    }
+
+    /* ─── CHIPS ─── */
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .chip {
+      display: inline-block;
+      padding: 4px 9px;
+      background: rgba(0,0,0,0.04);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.75);
+    }
+
+    /* ─── HIGHLIGHT BLOCK ─── */
+    .quote-block {
+      background: var(--black);
+      color: white;
+      padding: 24px 22px;
+      position: relative;
+      margin: 18px 0;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: 6px;
+      right: 18px;
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      line-height: 1;
+      color: rgba(9,124,244,0.25);
+    }
+    .quote-block p {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.45;
+      color: white;
+      margin-bottom: 16px;
+    }
+    .quote-block .signature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .quote-block .signature .badge {
+      width: 36px; height: 36px;
+      background: var(--blue);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .quote-block .signature .who {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      color: white;
+    }
+    .quote-block .signature .role {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ─── CONTACT BLOCK ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .contact-card {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 18px;
+    }
+    .contact-card .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .contact-card .value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+    }
+    .contact-card .value small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.6);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* ─── PRINT BUTTON (visible only on screen) ─── */
+    .print-bar {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+    }
+    .print-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+      transition: background 200ms;
+    }
+    .print-btn:hover { background: var(--blue); }
+    .print-btn.secondary { background: white; color: var(--black); border: 1px solid rgba(0,0,0,0.15); }
+    .print-btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+  </style>
+</head>
+<body>
+  <!-- Print button (hidden on print) -->
+  <div class="print-bar no-print">
+    <button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+    <button class="print-btn secondary" onclick="window.close()">Close</button>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 1 — COVER                                                  -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page cover">
+    <span class="corner-tl"></span>
+    <span class="corner-tr"></span>
+    <span class="corner-bl"></span>
+    <span class="corner-br"></span>
+
+    <div class="cover-glow tl"></div>
+    <div class="cover-glow br"></div>
+
+    <div class="cover-inner">
+      <!-- Top -->
+      <div class="cover-top">
+        <div class="brand-mark">
+          <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+          <span class="sub">IT Solutions LLP</span>
+        </div>
+        <div class="meta">
+          Company Profile<br />
+          Edition · 2025 / 26
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="cover-center">
+        <div class="pill">Built for every business type · Ahmedabad · 2025</div>
+        <h1>
+          Crafting<br />
+          <span class="accent">Digital</span> Excellence.
+        </h1>
+        <p>
+          A founder-led web development, e-commerce, custom CRM / HRMS, mobile app and
+          digital marketing studio based in Ahmedabad, India — built for ambitious
+          businesses across every category.
+        </p>
+      </div>
+
+      <!-- Bottom stats -->
+      <div class="cover-bottom">
+        <div>
+          <div class="stat-label">Founded</div>
+          <div class="stat-value">2025<span class="dot">.</span></div>
+        </div>
+        <div>
+          <div class="stat-label">HQ</div>
+          <div class="stat-value">iHub · Ahmedabad<span class="dot">.</span></div>
+        </div>
+        <div>
+          <div class="stat-label">Reply Time</div>
+          <div class="stat-value">&lt; 24 hours<span class="dot">.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 2 — ABOUT + MISSION + VISION                               -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">01 / About · Mission · Vision</span>
+    </div>
+
+    <div class="section-label">About the Studio</div>
+    <h2 class="display">Built on <span class="accent">craft</span>, not hype.</h2>
+    <p class="body" style="margin-top: 14px; max-width: 90%;">
+      Tech Career IT Solutions LLP was founded in 2025, out of a simple frustration —
+      that small and mid-sized Indian businesses kept paying for websites and software
+      that looked fine in a demo but fell apart two months after handover.
+    </p>
+    <p class="body" style="margin-top: 8px; max-width: 90%;">
+      So we set up a small, founder-led studio at iHub, Ahmedabad — focused on the work
+      we love doing: clean websites, reliable e-commerce stores, custom CRM and HRMS
+      tools, mobile apps, and the digital marketing that actually brings traffic in.
+      We are new as a company, but we are not new to the craft.
+    </p>
+
+    <div style="margin-top: 24px;">
+      <div class="section-label">Mission &amp; Vision</div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 8px;">
+      <div class="card card-blue">
+        <span class="num">— Mission</span>
+        <h3 class="display" style="font-size: 16px;">Make good software feel within reach.</h3>
+        <p class="body" style="margin-top: 8px; font-size: 10.5px;">
+          Give small and mid-sized Indian businesses the kind of websites, stores and
+          internal tools that usually only big-budget teams get — at a price and pace
+          that actually fits their business.
+        </p>
+      </div>
+      <div class="card card-blue">
+        <span class="num">— Vision</span>
+        <h3 class="display" style="font-size: 16px;">Grow slowly. Build things that last.</h3>
+        <p class="body" style="margin-top: 8px; font-size: 10.5px;">
+          Grow one happy client at a time — and become the studio that businesses in
+          Ahmedabad and across India recommend to the next business, without us ever
+          asking.
+        </p>
+      </div>
+    </div>
+
+    <!-- Founder note -->
+    <div class="quote-block">
+      <p>
+        We do not have ten years of case studies yet. What we have is a small team, a
+        clear focus, and the patience to earn every client the slow way — by doing the
+        work well.
+      </p>
+      <div class="signature">
+        <div class="badge">FP</div>
+        <div>
+          <div class="who">Faizan Pathan</div>
+          <div class="role">Founder · Tech Career IT Solutions LLP</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 02</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 3 — WHAT WE BUILD (services overview)                      -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">02 / What We Build</span>
+    </div>
+
+    <div class="section-label">Our Services</div>
+    <h2 class="display">Everything you need, <span class="accent">one</span> honest studio.</h2>
+ 
+
+    <div class="grid-2" style="margin-top: 22px;">
+      <div class="card">
+        <span class="num">01</span>
+        <div class="title">Web Development</div>
+        <div class="desc">Business websites, landing pages and custom web apps in Next.js, React or WordPress — SEO-friendly, mobile-first, easy to maintain.</div>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <div class="title">E-commerce Stores</div>
+        <div class="desc">Shopify and custom WooCommerce / headless stores with Razorpay, Stripe, COD, shipping zones and order tracking — ready to sell.</div>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <div class="title">Mobile Applications</div>
+        <div class="desc">iOS + Android apps in React Native or Flutter — auth, payments, push notifications, and a backend that scales with your users.</div>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <div class="title">Custom CRM &amp; Tools</div>
+        <div class="desc">Tailored CRM, dashboards and admin panels mapped to how your team actually works — not how a SaaS thinks you should.</div>
+      </div>
+      <div class="card">
+        <span class="num">05</span>
+        <div class="title">HRMS &amp; Admin Portals</div>
+        <div class="desc">Attendance, leave, payroll basics, employee records and approval flows — wrapped in a clean admin interface.</div>
+      </div>
+      <div class="card">
+        <span class="num">06</span>
+        <div class="title">UI / UX Design</div>
+        <div class="desc">Wireframes, clickable prototypes and design systems in Figma — built around real user flows, not just pretty screens.</div>
+      </div>
+      <div class="card">
+        <span class="num">07</span>
+        <div class="title">Brand &amp; Logo Design</div>
+        <div class="desc">Logo systems, colour, typography and brand guidelines — for new brands that need to look professional from day one.</div>
+      </div>
+      <div class="card">
+        <span class="num">08</span>
+        <div class="title">SEO &amp; Organic Growth</div>
+        <div class="desc">Technical SEO, keyword strategy and content planning — measurable monthly progress with reports in plain English.</div>
+      </div>
+      <div class="card">
+        <span class="num">09</span>
+        <div class="title">Google &amp; Meta Ads</div>
+        <div class="desc">Paid campaigns on Google, Meta and LinkedIn — proper tracking, weekly creative rotation, and honest cost-per-lead reporting.</div>
+      </div>
+      <div class="card">
+        <span class="num">10</span>
+        <div class="title">Social Media Management</div>
+        <div class="desc">Monthly content calendar, post + reels design and community replies for Instagram, Facebook and LinkedIn.</div>
+      </div>
+      <div class="card">
+        <span class="num">11</span>
+        <div class="title">Post-Launch Care</div>
+        <div class="desc">Optional monthly retainer for bug fixes, small features, content updates and SEO — month-to-month, no lock-in.</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 03</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 4 — PRICING TABLE                                          -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">03 / Pricing &amp; Engagement</span>
+    </div>
+
+    <div class="section-label">Startup-Friendly Pricing</div>
+    <h2 class="display">Honest quotes, <span class="accent">no surprises.</span></h2>
+    <p class="body" style="margin-top: 12px; max-width: 90%;">
+      Every project gets a written scope and a fixed quote before any work begins.
+      GST invoices included. Below are starting prices — final quotes vary with scope.
+    </p>
+
+    <div style="margin-top: 22px;">
+      <div class="pricing-row head">
+        <span>Service</span>
+        <span>From</span>
+        <span>Timeline</span>
+        <span>Includes</span>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Landing Page<small>Single-page or 1–3 pages</small></div>
+        <div class="price">₹8,000</div>
+        <div class="duration">5–7 days</div>
+        <div class="features">Responsive · Contact form · Basic SEO · 15-day support</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Business Website<small>Most popular</small></div>
+        <div class="price">₹20,000</div>
+        <div class="duration">2–3 weeks</div>
+        <div class="features">5–10 pages · WordPress / CMS · SEO baseline · Analytics · 30-day support</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Shopify Store<small>Quick e-commerce launch</small></div>
+        <div class="price">₹15,000</div>
+        <div class="duration">1–2 weeks</div>
+        <div class="features">Theme + 50 products · Razorpay / Stripe · Shipping zones · Training</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Custom E-commerce<small>WooCommerce / headless</small></div>
+        <div class="price">₹50,000</div>
+        <div class="duration">3–5 weeks</div>
+        <div class="features">Custom theme · Unlimited products · COD + payments · SEO + speed</div>
+      </div>
+
+     
+      <div class="pricing-row">
+        <div class="service">UI / UX Design Sprint<small>Up to 10 screens</small></div>
+        <div class="price">₹15,000</div>
+        <div class="duration">1–2 weeks</div>
+        <div class="features">Wireframes + UI · Figma handoff · 1 revision · Mobile-responsive</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Brand &amp; Logo Identity<small>Full brand pack</small></div>
+        <div class="price">₹12,000</div>
+        <div class="duration">1–2 weeks</div>
+        <div class="features">Logo system · Brand guidelines · Templates · Social kit</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Monthly SEO<small>Ongoing growth</small></div>
+        <div class="price">₹10,000/mo</div>
+        <div class="duration">3 months min</div>
+        <div class="features">Technical fixes · Content plan · Link outreach · Monthly report</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Google &amp; Meta Ads<small>Ad budget separate</small></div>
+        <div class="price">₹8,000/mo</div>
+        <div class="duration">Ongoing</div>
+        <div class="features">Up to 2 channels · Weekly optimisation · Creative rotation · Reports</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Social Media Management<small>Per platform basis</small></div>
+        <div class="price">₹5,000/mo</div>
+        <div class="duration">3 months min</div>
+        <div class="features">12 posts · 4 reels scripts · Community replies · Monthly report</div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="service">Post-Launch Care<small>Bug fixes + small changes</small></div>
+        <div class="price">₹3,000/mo</div>
+        <div class="duration">Month-to-month</div>
+        <div class="features">~4 hrs / month · Bug fixes · Plugin updates · WhatsApp support</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 04</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 5 — INDUSTRIES + PROCESS                                   -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">04 / Industries &amp; Process</span>
+    </div>
+
+    <div class="section-label">Industries We Build For</div>
+    <h2 class="display">Built for the business <span class="accent">you actually run.</span></h2>
+
+    <div class="grid-4" style="margin-top: 18px;">
+      <div class="card"><div class="title" style="font-size: 12px;">Restaurants &amp; Cafes</div><div class="desc" style="font-size: 9.5px;">Menus, online ordering, reservations.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Retail &amp; E-commerce</div><div class="desc" style="font-size: 9.5px;">Shopify and custom online stores.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Healthcare &amp; Clinics</div><div class="desc" style="font-size: 9.5px;">Appointments, patient portals.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Real Estate</div><div class="desc" style="font-size: 9.5px;">Listings, broker portals, CRM.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Education &amp; Coaching</div><div class="desc" style="font-size: 9.5px;">Course sites, LMS, enrolments.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Fitness &amp; Salons</div><div class="desc" style="font-size: 9.5px;">Class booking, memberships.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Professional Services</div><div class="desc" style="font-size: 9.5px;">CA, legal, consulting websites.</div></div>
+      <div class="card"><div class="title" style="font-size: 12px;">Hotels &amp; Hospitality</div><div class="desc" style="font-size: 9.5px;">Booking engines, room mgmt.</div></div>
+    </div>
+
+    <div style="margin-top: 28px;">
+      <div class="section-label">How We Work</div>
+      <h2 class="display" style="font-size: 26px;">Five focused steps. <span class="accent">No surprises.</span></h2>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <div class="step-row">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h4>Discovery</h4>
+          <p>Free 30-minute call, competitor teardown, and a written problem statement we both sign off on.</p>
+        </div>
+        <div class="step-when">Week 1<br /><span style="color: var(--blue)">Free Call</span></div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h4>Strategy &amp; Design</h4>
+          <p>Information architecture, UX flows and Figma designs — clickable prototypes you sign off before any code.</p>
+        </div>
+        <div class="step-when">Week 2–3<br /><span style="color: var(--blue)">Designs Locked</span></div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h4>Development</h4>
+          <p>Weekly demo on a staging link every Friday — code reviewed, tested and shipped behind feature flags.</p>
+        </div>
+        <div class="step-when">Week 4–8<br /><span style="color: var(--blue)">Weekly Demos</span></div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h4>Launch</h4>
+          <p>Deploy to your hosting, connect your domain, set up analytics and walk your team through every screen.</p>
+        </div>
+        <div class="step-when">Week 9<br /><span style="color: var(--blue)">Go Live</span></div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h4>Support &amp; Growth</h4>
+          <p>Free 30-day bug-fix window, then optional monthly retainer for fixes, small features and SEO.</p>
+        </div>
+        <div class="step-when">Ongoing<br /><span style="color: var(--blue)">Optional</span></div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 05</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 6 — TECH STACK + WHY US                                    -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">05 / Tech Stack &amp; Why Us</span>
+    </div>
+
+    <div class="section-label">Technologies We Work With</div>
+    <h2 class="display">A modern, <span class="accent">production-tested</span> stack.</h2>
+    <p class="body" style="margin-top: 12px; max-width: 90%;">
+      We pick the right tool for the job — not what is trendy, not what is old and
+      familiar. The boring choices, made well.
+    </p>
+
+    <div style="margin-top: 18px;">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(0,0,0,0.55); margin-bottom: 10px;">Frontend &amp; Web</div>
+      <div class="chip-row">
+        <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span>
+        <span class="chip">TypeScript</span><span class="chip">WordPress</span><span class="chip">Vite</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(0,0,0,0.55); margin-bottom: 10px;">Mobile</div>
+      <div class="chip-row">
+        <span class="chip">React Native</span><span class="chip">Flutter</span><span class="chip">Expo</span>
+        <span class="chip">Firebase</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(0,0,0,0.55); margin-bottom: 10px;">Backend &amp; Database</div>
+      <div class="chip-row">
+        <span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span>
+        <span class="chip">PostgreSQL</span><span class="chip">REST APIs</span><span class="chip">JWT</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(0,0,0,0.55); margin-bottom: 10px;">E-commerce &amp; Payments</div>
+      <div class="chip-row">
+        <span class="chip">Shopify</span><span class="chip">WooCommerce</span><span class="chip">Razorpay</span>
+        <span class="chip">Stripe</span><span class="chip">UPI / PhonePe</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 16px;">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(0,0,0,0.55); margin-bottom: 10px;">Design &amp; Marketing</div>
+      <div class="chip-row">
+        <span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Google Ads</span>
+        <span class="chip">Meta Ads</span><span class="chip">GA4</span><span class="chip">Search Console</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 26px;">
+      <div class="section-label">Why Choose Us</div>
+    </div>
+
+    <div class="grid-3" style="margin-top: 8px;">
+      <div class="card">
+        <div class="title">Founder-Led Attention</div>
+        <div class="desc">You talk directly to the people writing the code — no account managers, no handoffs.</div>
+      </div>
+      <div class="card">
+        <div class="title">Transparent Pricing</div>
+        <div class="desc">Fixed scope, fixed quote, GST invoice. No surprise invoices, no hidden scope.</div>
+      </div>
+      <div class="card">
+        <div class="title">Modern Tech Stack</div>
+        <div class="desc">React, Next.js, Node, Shopify — we pick what is right for the job, not what is old.</div>
+      </div>
+      <div class="card">
+        <div class="title">Launch-Client Pricing</div>
+        <div class="desc">First clients get launch-friendly pricing and a team that has everything to prove.</div>
+      </div>
+      <div class="card">
+        <div class="title">Ahmedabad-Based</div>
+        <div class="desc">iHub, University Area. Meet in person locally, or work remotely across India.</div>
+      </div>
+      <div class="card">
+        <div class="title">Post-Launch Support</div>
+        <div class="desc">30 days free bug fixes after launch + optional monthly retainer for ongoing care.</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 06</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 7 — CONTACT                                                -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">06 / Get in Touch</span>
+    </div>
+
+    <div class="section-label">Let's Talk</div>
+    <h2 class="display">Tell us what you're <span class="accent">building.</span></h2>
+    <p class="body" style="margin-top: 12px; max-width: 90%;">
+      Share a few details and one of the founders will personally reply within 24 hours
+      — with a realistic quote and timeline, not a sales pitch. NDA on request, free
+      discovery call, no obligation.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="label">— Email</div>
+        <div class="value">inquiry.techcareer@gmail.com<small>Founder replies within 24 hours · NDA on request</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Phone / WhatsApp</div>
+        <div class="value">+91 70966 08771<small>Mon — Sat · 10:00 — 20:00 IST</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Studio</div>
+        <div class="value">iHub, University Area<small>Ahmedabad, Gujarat · 380015 · India</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Online</div>
+        <div class="value">www.techcareer.site<small>Instagram · @techcareer.llp</small></div>
+      </div>
+    </div>
+
+    <!-- Promises -->
+    <div style="margin-top: 28px;">
+      <div class="section-label">Our Promises</div>
+    </div>
+
+    <div style="margin-top: 12px; border-top: 2px solid var(--black);">
+      <div class="step-row" style="grid-template-columns: 130px 1fr 110px;">
+        <div class="step-when" style="text-align: left; color: var(--blue);">Day 1</div>
+        <div class="step-content"><h4>Free Discovery Call</h4><p>30-minute kickoff with the founder.</p></div>
+        <div class="step-when">No Fee</div>
+      </div>
+      <div class="step-row" style="grid-template-columns: 130px 1fr 110px;">
+        <div class="step-when" style="text-align: left; color: var(--blue);">Week 1</div>
+        <div class="step-content"><h4>Written Scope &amp; Fixed Quote</h4><p>Locked before any dev work begins.</p></div>
+        <div class="step-when">Locked</div>
+      </div>
+      <div class="step-row" style="grid-template-columns: 130px 1fr 110px;">
+        <div class="step-when" style="text-align: left; color: var(--blue);">Weekly</div>
+        <div class="step-content"><h4>Friday Demo + Staging Link</h4><p>Clickable progress every week — no black-box work.</p></div>
+        <div class="step-when">Transparent</div>
+      </div>
+      <div class="step-row" style="grid-template-columns: 130px 1fr 110px;">
+        <div class="step-when" style="text-align: left; color: var(--blue);">Launch</div>
+        <div class="step-content"><h4>Handover Walkthrough</h4><p>You own the code, accounts, hosting and analytics.</p></div>
+        <div class="step-when">Included</div>
+      </div>
+      <div class="step-row" style="grid-template-columns: 130px 1fr 110px;">
+        <div class="step-when" style="text-align: left; color: var(--blue);">+30 Days</div>
+        <div class="step-content"><h4>Free Bug-Fix Window</h4><p>Anything we shipped, we fix — at zero cost.</p></div>
+        <div class="step-when">Zero Cost</div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div style="margin-top: 32px; text-align: center; padding: 20px 0;">
+      <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--black);">
+        Thank you for reading.
+      </div>
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--blue); margin-top: 8px;">
+        Tech Career IT Solutions LLP · Ahmedabad · 2025
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 07</span>
+    </div>
+  </section>
+
+</body>
+</html>

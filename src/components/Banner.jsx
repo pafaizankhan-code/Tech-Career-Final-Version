@@ -134,43 +134,44 @@ const Banner = () => {
       <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#097CF4] hidden md:block"></span>
       <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#097CF4] hidden md:block"></span>
 
-      <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10 pt-14 lg:pt-20 pb-12 lg:pb-14">
-        {/* Announcement chip */}
-        <div className="hidden md:flex items-center justify-center">
+      <div className="relative max-w-[1440px] mx-auto px-5 sm:px-6 lg:px-10 pt-12 sm:pt-14 lg:pt-20 pb-12 lg:pb-14">
+        {/* Announcement chip — left on mobile, centered on md+ */}
+        <div className="flex justify-start md:justify-center">
           <div
-            className="inline-flex items-center gap-2.5 pl-3 pr-4 h-9 border border-black/15 bg-white shadow-[0_4px_20px_-6px_rgba(0,0,0,0.1)]"
+            className="inline-flex items-center gap-2 pl-2.5 pr-3 md:pl-3 md:pr-4 h-8 md:h-9 border border-black/15 bg-white shadow-[0_4px_20px_-6px_rgba(0,0,0,0.1)]"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             <span className="relative flex w-1.5 h-1.5">
               <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-75"></span>
               <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-[#097CF4]"></span>
             </span>
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black">
-              Built for every business type
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.25em] md:tracking-[0.3em] text-black whitespace-nowrap">
+              <span className="md:hidden">Built for every business</span>
+              <span className="hidden md:inline">Built for every business type</span>
             </span>
-            <span className="w-px h-3 bg-black/15"></span>
-            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/50">
+            <span className="hidden md:inline w-px h-3 bg-black/15"></span>
+            <span className="hidden md:inline text-[10px] font-bold uppercase tracking-[0.25em] text-black/50">
               Ahmedabad · 2026
             </span>
           </div>
         </div>
 
-        {/* Giant headline */}
+        {/* Giant headline — left on mobile, centered on md+ */}
         <h1
-          className="mt-8 lg:mt-10 text-center font-extrabold text-black leading-[0.95] tracking-[-0.03em]"
+          className="mt-6 sm:mt-8 lg:mt-10 text-left md:text-center font-extrabold text-black leading-[0.95] tracking-[-0.03em]"
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
-          <span className="block text-[44px] sm:text-[64px] lg:text-[92px] xl:text-[112px]">
+          <span className="block text-[40px] sm:text-[64px] lg:text-[92px] xl:text-[112px]">
             A website for <span className="italic text-[#097CF4]">every</span>
           </span>
-          <span className="block text-[44px] sm:text-[64px] lg:text-[92px] xl:text-[112px]">
+          <span className="block text-[40px] sm:text-[64px] lg:text-[92px] xl:text-[112px]">
             kind of business.
           </span>
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle — left on mobile, centered on md+ */}
         <p
-          className="mt-7 lg:mt-9 max-w-[780px] mx-auto text-center text-[16px] sm:text-[18px] lg:text-[19px] leading-[1.6] text-black/65"
+          className="mt-5 sm:mt-7 lg:mt-9 max-w-[780px] md:mx-auto text-left md:text-center text-[14.5px] sm:text-[18px] lg:text-[19px] leading-[1.65] text-black/65"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           We build <span className="text-black font-semibold">websites, online stores, custom CRM &amp; HRMS and mobile apps</span> for
@@ -178,14 +179,14 @@ const Banner = () => {
           your category below.
         </p>
 
-        {/* CTAs */}
+        {/* CTAs — full-width stacked on mobile, inline on md+ */}
         <div
-          className="mt-9 flex flex-wrap items-center justify-center gap-4"
+          className="mt-7 sm:mt-9 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center sm:justify-center gap-3 sm:gap-4"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 h-14 pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors duration-300"
+            className="group inline-flex items-center justify-between sm:justify-start gap-3 h-14 pl-5 sm:pl-6 pr-2 bg-black text-white text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#097CF4] transition-colors duration-300"
           >
             Start a Project
             <span className="w-10 h-10 bg-[#097CF4] group-hover:bg-white flex items-center justify-center transition-colors">
@@ -197,7 +198,7 @@ const Banner = () => {
 
           <Link
             to="/services"
-            className="group inline-flex items-center gap-3 h-14 px-6 border-2 border-black text-black text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors duration-300"
+            className="group inline-flex items-center justify-between sm:justify-start gap-3 h-14 px-5 sm:px-6 border-2 border-black text-black text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-colors duration-300"
           >
             See What We Build
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -206,13 +207,13 @@ const Banner = () => {
           </Link>
         </div>
 
-        {/* Trust bar */}
-        <div className="mt-9 lg:mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        {/* Trust bar — left + stacked on mobile, inline + centered on md+ */}
+        <div className="mt-8 sm:mt-9 lg:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-start md:justify-center gap-y-2.5 sm:gap-y-3 sm:gap-x-6">
           <span
             className="inline-flex items-center gap-2 text-[12px] font-semibold text-black/70"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <svg className="w-3.5 h-3.5 text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-3.5 h-3.5 text-[#097CF4] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
               <circle cx="12" cy="9" r="2.5" />
             </svg>
@@ -223,7 +224,7 @@ const Banner = () => {
             className="inline-flex items-center gap-2 text-[12px] font-semibold text-black/70"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <svg className="w-3.5 h-3.5 text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-3.5 h-3.5 text-[#097CF4] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="9" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
             </svg>
@@ -232,10 +233,10 @@ const Banner = () => {
           <span className="w-px h-4 bg-black/15 hidden sm:inline"></span>
           <a
             href="mailto:inquiry.techcareer@gmail.com"
-            className="inline-flex items-center gap-2 text-[12px] font-semibold text-black/70 hover:text-[#097CF4] transition-colors"
+            className="inline-flex items-center gap-2 text-[12px] font-semibold text-black/70 hover:text-[#097CF4] transition-colors break-all sm:break-normal"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
-            <svg className="w-3.5 h-3.5 text-[#097CF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-3.5 h-3.5 text-[#097CF4] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" />
             </svg>
             inquiry.techcareer@gmail.com
