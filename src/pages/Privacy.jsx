@@ -8,9 +8,9 @@ const privacyJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/privacy`,
-  name: 'Privacy Policy — Tech Career IT Solutions',
+  name: 'Privacy Policy — Tech Career IT Solutions LLP',
   description:
-    'How Tech Career IT Solutions LLP collects, uses, stores and protects your personal information when you use techcareer.site and our services.',
+    'How Tech Career IT Solutions LLP LLP collects, uses, stores and protects your personal information when you use techcareer.site and our services.',
   url: `${SITE.baseUrl}/privacy`,
   dateModified: '2026-04-22',
   inLanguage: 'en-IN',
@@ -28,7 +28,7 @@ const sections = [
     body: (
       <>
         <p>
-          This Privacy Policy explains how <strong>Tech Career IT Solutions LLP</strong>
+          This Privacy Policy explains how <strong>Tech Career IT Solutions LLP LLP</strong>
           {' '}("Tech Career", "we", "us" or "our") handles personal information on the website
           {' '}<a href="https://www.techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>
           {' '}and any related services, proposals and engagements.
@@ -187,7 +187,7 @@ const sections = [
     body: (
       <>
         <p>
-          Tech Career IT Solutions LLP<br />
+          Tech Career IT Solutions LLP LLP<br />
           iHub, University Area, Ahmedabad, Gujarat 380015, India<br />
           Email:{' '}
           <a href="mailto:inquiry.techcareer@gmail.com" className="text-[#097CF4] font-semibold hover:underline">
@@ -204,8 +204,8 @@ const sections = [
 const Privacy = () => (
   <>
     <Seo
-      title="Privacy Policy | Tech Career IT Solutions — Ahmedabad"
-      description="Read the Tech Career IT Solutions privacy policy — how our Ahmedabad web & digital marketing studio collects, uses, stores and protects your personal data on techcareer.site."
+      title="Privacy Policy | Tech Career IT Solutions LLP — Ahmedabad"
+      description="Read the Tech Career IT Solutions LLP privacy policy — how our Ahmedabad web & digital marketing studio collects, uses, stores and protects your personal data on techcareer.site."
       canonical="https://www.techcareer.site/privacy"
       ogType="article"
       jsonLd={privacyJsonLd}

@@ -13,7 +13,7 @@ import StartProject from '../components/StartProject'
 const buildServiceSeo = (service, category) => {
   const categoryLabel = category?.label ? ` | ${category.label}` : ''
   const title = `${service.title} in Ahmedabad${categoryLabel} — ${service.tagline}`
-  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Delivered by Tech Career IT Solutions, a founder-led web & digital marketing studio in Ahmedabad, India.`
+  const description = `${service.intro.slice(0, 150).trim().replace(/[.,;]$/, '')}. Delivered by Tech Career IT Solutions LLP, a founder-led web & digital marketing studio in Ahmedabad, India.`
   return { title, description }
 }
 

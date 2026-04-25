@@ -14,7 +14,7 @@ export const jobs = [
     experience: '1 to 3 years building production web applications with React and Node.js.',
     salary: 'Market fair',
     description:
-      'Join Tech Career IT Solutions as a founding full-stack developer in Ahmedabad. Build production React / Next.js front-ends and Node.js back-ends for first clients, own features end-to-end, and shape the studio engineering culture.',
+      'Join Tech Career IT Solutions LLP as a founding full-stack developer in Ahmedabad. Build production React / Next.js front-ends and Node.js back-ends for first clients, own features end-to-end, and shape the studio engineering culture.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: ['Featured', 'Founding'],
@@ -32,7 +32,7 @@ export const jobs = [
     experience: '1 to 3 years shipping product UI in Figma with a design-system mindset.',
     salary: 'Market fair',
     description:
-      'Founding UI / UX designer role at Tech Career IT Solutions, Ahmedabad. Translate client briefs into wireframes, prototypes and polished UI in Figma, build small design systems, and collaborate directly with the founder on every engagement.',
+      'Founding UI / UX designer role at Tech Career IT Solutions LLP, Ahmedabad. Translate client briefs into wireframes, prototypes and polished UI in Figma, build small design systems, and collaborate directly with the founder on every engagement.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: ['Founding'],
@@ -50,7 +50,7 @@ export const jobs = [
     experience: '2 to 4 years running SEO, paid ads and content programs for SMBs or agencies.',
     salary: 'Market fair',
     description:
-      'Digital marketing lead role at Tech Career IT Solutions, Ahmedabad. Own SEO, paid ads and content for a small but growing roster of clients — technical enough to work with developers, analytical enough to report what actually moves.',
+      'Digital marketing lead role at Tech Career IT Solutions LLP, Ahmedabad. Own SEO, paid ads and content for a small but growing roster of clients — technical enough to work with developers, analytical enough to report what actually moves.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: [],
@@ -68,7 +68,7 @@ export const jobs = [
     experience: 'Final-year student or new grad comfortable with HTML, CSS, JavaScript and basic React.',
     salary: 'Paid stipend',
     description:
-      '3–6 month on-site web development internship at Tech Career IT Solutions, Ahmedabad. Work alongside the founding team on real client projects in React, Tailwind and WordPress, with a paid stipend and a clear full-time conversion track.',
+      '3–6 month on-site web development internship at Tech Career IT Solutions LLP, Ahmedabad. Work alongside the founding team on real client projects in React, Tailwind and WordPress, with a paid stipend and a clear full-time conversion track.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: ['3–6 months'],
@@ -86,7 +86,7 @@ export const jobs = [
     experience: 'Any background — we care about clear writing, curiosity and comfort with data.',
     salary: 'Paid stipend',
     description:
-      '3-month content and SEO internship at Tech Career IT Solutions. Research keywords, write case studies and support on-page SEO for the agency and its clients. Remote-friendly, paid stipend.',
+      '3-month content and SEO internship at Tech Career IT Solutions LLP. Research keywords, write case studies and support on-page SEO for the agency and its clients. Remote-friendly, paid stipend.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: ['3 months'],

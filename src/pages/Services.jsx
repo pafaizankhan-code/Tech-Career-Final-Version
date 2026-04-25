@@ -9,7 +9,7 @@ const servicesJsonLd = {
   '@type': 'CollectionPage',
   name: 'Web, E-commerce & Digital Marketing Services in Ahmedabad',
   description:
-    'A curated set of services from Tech Career IT Solutions LLP — web development, e-commerce stores, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing, delivered from our studio at iHub, Ahmedabad.',
+    'A curated set of services from Tech Career IT Solutions LLP LLP — web development, e-commerce stores, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing, delivered from our studio at iHub, Ahmedabad.',
   url: `${SITE.baseUrl}/services`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -26,7 +26,7 @@ const servicesJsonLd = {
 
 // ItemList — lets Google render a carousel / ordered list of services.
 const servicesItemListJsonLd = buildItemListJsonLd({
-  name: 'Services offered by Tech Career IT Solutions',
+  name: 'Services offered by Tech Career IT Solutions LLP',
   description:
     'Web development, e-commerce, CRM/HRMS, mobile apps, UI/UX design and digital marketing services.',
   url: `${SITE.baseUrl}/services`,
@@ -41,7 +41,7 @@ const Services = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
     <Seo
       title="Our Services | Web Development, E-commerce, CRM/HRMS, Mobile Apps & Digital Marketing in Ahmedabad"
-      description="Explore Tech Career IT Solutions' services — custom web development, Shopify & WooCommerce stores, CRM/HRMS software, mobile apps, UI/UX design and SEO-driven digital marketing from our Ahmedabad studio."
+      description="Explore Tech Career IT Solutions LLP' services — custom web development, Shopify & WooCommerce stores, CRM/HRMS software, mobile apps, UI/UX design and SEO-driven digital marketing from our Ahmedabad studio."
       canonical="https://www.techcareer.site/services"
       jsonLd={servicesJsonLd}
     />

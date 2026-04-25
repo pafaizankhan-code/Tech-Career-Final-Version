@@ -3,8 +3,8 @@ import { useLocation } from 'react-router-dom'
 
 // Site-wide constants. Update these if the domain/brand changes.
 export const SITE = {
-  name: 'Tech Career IT Solutions',
-  brand: 'Tech Career IT Solutions LLP',
+  name: 'Tech Career IT Solutions LLP',
+  brand: 'Tech Career IT Solutions LLP LLP',
   tagline: 'Web Development & Digital Marketing Agency in Ahmedabad',
   baseUrl: 'https://www.techcareer.site',
   defaultImage: 'https://www.techcareer.site/og-default.jpg',
@@ -102,7 +102,7 @@ export const organizationJsonLd = {
   },
   image: SITE.defaultImage,
   description:
-    'Tech Career IT Solutions LLP — a founder-led web development, e-commerce, custom CRM / HRMS, mobile app and digital marketing agency based in Ahmedabad, India.',
+    'Tech Career IT Solutions LLP LLP — a founder-led web development, e-commerce, custom CRM / HRMS, mobile app and digital marketing agency based in Ahmedabad, India.',
   slogan: 'Crafting Digital Excellence from Ahmedabad.',
   foundingDate: '2025',
   foundingLocation: {
@@ -206,7 +206,7 @@ export const organizationJsonLd = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Tech Career IT Solutions — Services',
+    name: 'Tech Career IT Solutions LLP — Services',
     itemListElement: [
       {
         '@type': 'OfferCatalog',
@@ -333,6 +333,41 @@ export const buildJobPostingJsonLd = (job) => ({
     },
   }),
 })
+
+// Primary site navigation — surfaced as SiteNavigationElement so Google
+// understands which links are the main menu (a strong sitelinks signal).
+export const PRIMARY_NAV = [
+  { name: 'Home', path: '/', description: 'Tech Career IT Solutions home page' },
+  { name: 'About', path: '/about', description: 'About our founder-led Ahmedabad studio' },
+  { name: 'Services', path: '/services', description: 'Web, e-commerce, CRM, mobile and marketing services' },
+  { name: 'Portfolio', path: '/portfolio', description: 'Capability showcase and project case studies' },
+  { name: 'Careers', path: '/careers', description: 'Open roles and internships in Ahmedabad' },
+  { name: 'Contact', path: '/contact', description: 'Get in touch — free discovery call' },
+]
+
+export const SECONDARY_NAV = [
+  { name: 'Web Development', path: '/services/web-development', description: 'Custom websites built for performance and SEO' },
+  { name: 'E-commerce', path: '/services/ecommerce', description: 'Shopify and WooCommerce stores that convert' },
+  { name: 'Mobile Apps', path: '/services/mobile-apps', description: 'Cross-platform mobile apps in React Native' },
+  { name: 'Custom CRM', path: '/services/custom-software', description: 'CRM and business software tailored to your team' },
+  { name: 'HRMS', path: '/services/hrms', description: 'Lightweight HR software for growing companies' },
+  { name: 'UI / UX Design', path: '/services/ui-ux-design', description: 'Wireframes, prototypes and design systems' },
+  { name: 'Brand Identity', path: '/services/brand-identity', description: 'Logos, brand systems and guidelines' },
+  { name: 'Digital Marketing', path: '/services/digital-marketing', description: 'SEO, content and paid acquisition' },
+]
+
+// SiteNavigationElement JSON-LD — explicit signal of primary site links.
+export const siteNavigationJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [...PRIMARY_NAV, ...SECONDARY_NAV].map((n, i) => ({
+    '@type': 'SiteNavigationElement',
+    '@id': `${SITE.baseUrl}${n.path}#nav`,
+    position: i + 1,
+    name: n.name,
+    description: n.description,
+    url: `${SITE.baseUrl}${n.path}`,
+  })),
+}
 
 // Build a Person JSON-LD entry (leadership, contributors, etc.).
 export const buildPersonJsonLd = (person) => ({

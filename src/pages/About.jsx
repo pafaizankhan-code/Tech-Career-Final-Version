@@ -13,10 +13,10 @@ import StartProject from '../components/StartProject'
 const aboutJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Tech Career IT Solutions LLP',
+  name: 'About Tech Career IT Solutions LLP LLP',
   url: `${SITE.baseUrl}/about`,
   description:
-    'Meet Tech Career IT Solutions LLP — a new, founder-led web development, e-commerce and digital marketing studio based in Ahmedabad, India. Our story, mission, values and team.',
+    'Meet Tech Career IT Solutions LLP LLP — a new, founder-led web development, e-commerce and digital marketing studio based in Ahmedabad, India. Our story, mission, values and team.',
   mainEntity: { '@id': `${SITE.baseUrl}/#organization` },
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -31,7 +31,7 @@ const leadershipJsonLd = [
     name: 'Faizan Pathan',
     jobTitle: 'Founder',
     description:
-      'Full-stack developer and founder of Tech Career IT Solutions LLP, based in Ahmedabad. Handles strategy, scoping, development and delivery across every engagement.',
+      'Full-stack developer and founder of Tech Career IT Solutions LLP LLP, based in Ahmedabad. Handles strategy, scoping, development and delivery across every engagement.',
     url: `${SITE.baseUrl}/about`,
     sameAs: ['https://www.instagram.com/techcareer.llp'],
   }),
@@ -49,7 +49,7 @@ const About = () => (
   <>
     <Seo
       title="About Us | Founder-Led Web Development & Digital Marketing Studio in Ahmedabad"
-      description="Meet Tech Career IT Solutions — a founder-led Ahmedabad studio building custom websites, e-commerce stores, CRM/HRMS, mobile apps and digital marketing with transparent pricing and honest timelines."
+      description="Meet Tech Career IT Solutions LLP — a founder-led Ahmedabad studio building custom websites, e-commerce stores, CRM/HRMS, mobile apps and digital marketing with transparent pricing and honest timelines."
       canonical="https://www.techcareer.site/about"
       ogType="article"
       jsonLd={aboutJsonLd}

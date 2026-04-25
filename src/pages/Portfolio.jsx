@@ -13,7 +13,7 @@ const portfolioJsonLd = {
   '@type': 'CollectionPage',
   name: 'What We Build · Capability Showcase',
   description:
-    'A capability showcase from Tech Career IT Solutions LLP — the websites, e-commerce stores, custom CRM / HRMS, mobile apps and marketing work we build for Indian businesses from our studio in Ahmedabad.',
+    'A capability showcase from Tech Career IT Solutions LLP LLP — the websites, e-commerce stores, custom CRM / HRMS, mobile apps and marketing work we build for Indian businesses from our studio in Ahmedabad.',
   url: `${SITE.baseUrl}/portfolio`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -25,7 +25,7 @@ const Portfolio = () => (
   <>
     <Seo
       title="Our Portfolio | Website, E-commerce, CRM & Mobile App Projects by an Ahmedabad Studio"
-      description="See what Tech Career IT Solutions builds — custom websites, Shopify & WooCommerce stores, CRM/HRMS platforms and mobile apps shipped for Indian businesses from our Ahmedabad studio."
+      description="See what Tech Career IT Solutions LLP builds — custom websites, Shopify & WooCommerce stores, CRM/HRMS platforms and mobile apps shipped for Indian businesses from our Ahmedabad studio."
       canonical="https://www.techcareer.site/portfolio"
       jsonLd={portfolioJsonLd}
     />

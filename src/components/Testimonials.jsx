@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export const homeFaqs = [
   {
     q: 'You are a new studio — why should I trust you with my project?',
-    a: 'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+    a: 'Fair question. Tech Career IT Solutions LLP LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
   },
   {
     q: 'How long will it take to build my website, app or CRM?',
@@ -25,7 +25,7 @@ const faqs = [
     tag: 'Trust',
     question: 'You are a new studio — why should I trust you with my project?',
     answer:
-      'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+      'Fair question. Tech Career IT Solutions LLP LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
     initials: 'Q1',
     accent: 'blue',
   },
@@ -195,7 +195,7 @@ const Testimonials = () => {
                     Answered by the founding team
                   </p>
                   <p className="text-[11px] text-black/60 mt-0.5">
-                    Tech Career IT Solutions LLP ·{' '}
+                    Tech Career IT Solutions LLP LLP ·{' '}
                     <span className="text-[#097CF4] font-semibold">Ahmedabad</span>
                   </p>
                 </div>

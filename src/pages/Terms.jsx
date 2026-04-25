@@ -8,9 +8,9 @@ const termsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/terms`,
-  name: 'Terms of Service — Tech Career IT Solutions',
+  name: 'Terms of Service — Tech Career IT Solutions LLP',
   description:
-    'The terms and conditions that govern use of techcareer.site and the web development, digital marketing and consulting services provided by Tech Career IT Solutions LLP.',
+    'The terms and conditions that govern use of techcareer.site and the web development, digital marketing and consulting services provided by Tech Career IT Solutions LLP LLP.',
   url: `${SITE.baseUrl}/terms`,
   dateModified: '2026-04-22',
   inLanguage: 'en-IN',
@@ -29,7 +29,7 @@ const sections = [
       <>
         <p>
           By accessing <a href="https://www.techcareer.site" className="text-[#097CF4] font-semibold hover:underline">techcareer.site</a>{' '}
-          or engaging <strong>Tech Career IT Solutions LLP</strong> ("Tech Career", "we", "us")
+          or engaging <strong>Tech Career IT Solutions LLP LLP</strong> ("Tech Career", "we", "us")
           for any service, you agree to be bound by these Terms of Service. If you do not agree,
           please do not use the website or our services.
         </p>
@@ -203,7 +203,7 @@ const sections = [
     body: (
       <>
         <p>
-          Tech Career IT Solutions LLP<br />
+          Tech Career IT Solutions LLP LLP<br />
           iHub, University Area, Ahmedabad, Gujarat 380015, India<br />
           Email:{' '}
           <a href="mailto:inquiry.techcareer@gmail.com" className="text-[#097CF4] font-semibold hover:underline">
@@ -220,8 +220,8 @@ const sections = [
 const Terms = () => (
   <>
     <Seo
-      title="Terms of Service | Tech Career IT Solutions — Ahmedabad"
-      description="Read the Terms of Service governing use of techcareer.site and engagements with Tech Career IT Solutions — an Ahmedabad web development and digital marketing studio."
+      title="Terms of Service | Tech Career IT Solutions LLP — Ahmedabad"
+      description="Read the Terms of Service governing use of techcareer.site and engagements with Tech Career IT Solutions LLP — an Ahmedabad web development and digital marketing studio."
       canonical="https://www.techcareer.site/terms"
       ogType="article"
       jsonLd={termsJsonLd}
@@ -230,7 +230,7 @@ const Terms = () => (
       breadcrumb="Terms of Service"
       eyebrow="Legal · Terms"
       title="Terms of Service"
-      intro="These Terms set the rules of engagement between Tech Career IT Solutions LLP and the businesses that hire us — written plainly so there are no surprises when the work begins."
+      intro="These Terms set the rules of engagement between Tech Career IT Solutions LLP LLP and the businesses that hire us — written plainly so there are no surprises when the work begins."
       lastUpdated={LAST_UPDATED}
       sections={sections}
     />

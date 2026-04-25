@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · Real Estate Websites · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #28378C;
+      --navy-deep: #1B2666;
+      --lime: #94C439;
+      --lime-deep: #6F9426;
+      --black: #111111;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8dce8;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1240px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--navy); font-style: italic; }
+    .page-head .info h1 .lime { color: var(--lime-deep); }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--navy); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--lime); color: var(--navy-deep); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--lime); color: var(--navy-deep); border-color: var(--lime); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--navy); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--lime); color: var(--navy-deep); }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      background: white;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* SIGNATURE: Blueprint grid background (architectural feel) */
+    .slide::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(40,55,140,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(40,55,140,0.06) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* SIGNATURE: Thick navy top bar + thick lime bottom bar — document feel */
+    .slide .top-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 38px;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 26px;
+      z-index: 5;
+    }
+    .slide .bot-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 8px;
+      background: var(--lime);
+      z-index: 5;
+    }
+    .slide .bot-bar::after {
+      content: '';
+      position: absolute;
+      top: -3px; left: 0; right: 0;
+      height: 3px;
+      background: var(--navy);
+    }
+
+    /* Top bar text */
+    .top-bar .stripe-l, .top-bar .stripe-r {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      color: white; letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .top-bar .stripe-r {
+      color: var(--lime);
+    }
+
+    /* Lime "folded corner" sticker — top-right (like a "FOR SALE" tag) */
+    .slide .corner-sticker {
+      position: absolute;
+      top: 56px; right: 36px;
+      background: var(--lime);
+      color: var(--navy-deep);
+      padding: 6px 12px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 900; letter-spacing: 0.32em;
+      text-transform: uppercase;
+      z-index: 4;
+    }
+    .slide .corner-sticker::after {
+      content: '';
+      position: absolute;
+      top: 0; right: -8px;
+      border-style: solid;
+      border-width: 0 0 28px 8px;
+      border-color: transparent transparent var(--lime-deep) transparent;
+    }
+
+    /* Plot number badge — left side (like a property reference) */
+    .slide .plot-no {
+      position: absolute;
+      top: 60px; left: 36px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.12em;
+      z-index: 4;
+    }
+    .slide .plot-no .dim {
+      color: rgba(0,0,0,0.4); font-weight: 500;
+    }
+
+    /* Body region */
+    .body {
+      position: absolute;
+      top: 110px; left: 60px; right: 60px; bottom: 80px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      gap: 16px;
+      z-index: 3;
+    }
+
+    /* SIGNATURE: Architectural icon frame (window/floor-plan look) */
+    .arch-icon {
+      width: 130px; height: 130px;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--navy);
+      background: white;
+      border: 2.5px solid var(--navy);
+    }
+    /* Lime corner triangle on the architectural frame */
+    .arch-icon::before {
+      content: '';
+      position: absolute;
+      top: -2px; right: -2px;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 0 22px 22px 0;
+      border-color: transparent var(--lime) transparent transparent;
+    }
+    /* Tiny corner marker bottom-left */
+    .arch-icon::after {
+      content: '';
+      position: absolute;
+      bottom: 8px; left: 8px;
+      width: 12px; height: 12px;
+      border-bottom: 2px solid var(--navy);
+      border-left: 2px solid var(--navy);
+    }
+    .arch-icon svg { width: 60px; height: 60px; }
+
+    /* Pre-label (formatted like address line) */
+    .pre-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .pre-label::before, .pre-label::after {
+      content: ''; width: 14px; height: 1.5px; background: var(--lime);
+    }
+
+    /* MASSIVE ONE-WORD HEADLINE */
+    .big-word {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 70px;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      line-height: 0.95;
+    }
+    .big-word .lime { color: var(--lime-deep); }
+    .big-word .dot { color: var(--lime); font-style: normal; }
+
+    /* Coordinate-style ornament under headline (architectural) */
+    .coord {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.15em;
+    }
+    .coord .ln {
+      width: 30px; height: 1px; background: var(--navy);
+    }
+    .coord .sq {
+      width: 7px; height: 7px; background: var(--lime);
+    }
+
+    .tag-line {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: rgba(0,0,0,0.65);
+      letter-spacing: 0.02em;
+      max-width: 380px;
+      line-height: 1.5;
+    }
+
+    /* Bottom strip — brand + page */
+    .s-bot {
+      position: absolute;
+      left: 60px; right: 60px;
+      bottom: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 4;
+    }
+    .ptag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px; font-weight: 700;
+      color: rgba(0,0,0,0.55); letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .ptag.lime { color: var(--lime-deep); }
+
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--navy); font-style: italic; }
+    .brand-mark .name .dot { color: var(--lime); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* ─── COVER (s1) ─── */
+    .s-cover .body { gap: 22px; }
+    .s-cover h2 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800; font-size: 50px;
+      letter-spacing: -0.025em; color: var(--navy);
+      line-height: 0.98;
+    }
+    .s-cover h2 .lime { color: var(--lime-deep); }
+    .s-cover .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: rgba(0,0,0,0.62); max-width: 380px;
+    }
+
+    /* ─── PRICE ─── */
+    .price-pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .price-big {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 130px;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+      line-height: 0.85;
+    }
+    .price-big .lime { color: var(--lime-deep); }
+    .price-tag {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 28px; color: var(--navy);
+    }
+    .price-tag .lime { color: var(--lime-deep); }
+
+    /* ─── CTA ─── */
+    .cta-block {
+      margin-top: 8px;
+      display: flex; flex-direction: column; gap: 6px;
+      width: 100%; max-width: 380px;
+    }
+    .cta-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      background: var(--navy); color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .cta-row.alt {
+      background: white;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .cta-row .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    .cta-row .val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .cta-row.alt .val { color: var(--navy); }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Real Estate <span class="accent">Websites</span><span class="lime">.</span></h1>
+      <p>7-Slide Carousel · 1080 × 1080 PNG · Blueprint Document Design</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (7 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 07 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'realestate-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cover" id="s1">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Est. 2025</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 01<span class="dim">/07</span></span>
+        <span class="corner-sticker">For Real Estate</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Building / property icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18M5 22V10l7-5 7 5v12M9 22V13h6v9M11 9h2"/>
+            </svg>
+          </div>
+
+          <span class="pre-label">— We Build</span>
+          <h2>Real Estate<br/><span class="lime">Websites</span>.</h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.04</span><span class="sq"></span><span class="ln"></span></div>
+          <p class="sub"></p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — LISTINGS                                             -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 07 · Listings</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'realestate-02-listings.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s2">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Feature 01</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 02<span class="dim">/07</span></span>
+        <span class="corner-sticker">No 1</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Filter / listings icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M6 12h12M10 19h4"/>
+              <circle cx="9" cy="5" r="1.5" fill="currentColor"/>
+              <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+              <circle cx="13" cy="19" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <span class="pre-label">— Feature</span>
+          <h2 class="big-word">Listings<span class="dot">.</span></h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.01</span><span class="sq"></span><span class="ln"></span></div>
+          <p class="tag-line">Filter by city, budget, BHK & type &mdash; instantly.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — GALLERY                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 07 · Gallery</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'realestate-03-gallery.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s3">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Feature 02</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 03<span class="dim">/07</span></span>
+        <span class="corner-sticker">No 2</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Photo gallery icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="14" rx="1" stroke-linejoin="round"/>
+              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 15l-5-5L5 17"/>
+            </svg>
+          </div>
+
+          <span class="pre-label">— Feature</span>
+          <h2 class="big-word">Gallery<span class="dot">.</span></h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.02</span><span class="sq"></span><span class="ln"></span></div>
+          <p class="tag-line">HD photos, virtual tours & 360° view of every property.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — MAP                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 07 · Map</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'realestate-04-map.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s4">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Feature 03</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 04<span class="dim">/07</span></span>
+        <span class="corner-sticker">No 3</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Map pin icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a8 8 0 018 8c0 5.5-8 13-8 13S4 15.5 4 10a8 8 0 018-8z"/>
+              <circle cx="12" cy="10" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <span class="pre-label">— Feature</span>
+          <h2 class="big-word">Map<span class="dot">.</span></h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.03</span><span class="sq"></span><span class="ln"></span></div>
+          <p class="tag-line">Live Google map with nearby schools, metro & landmarks.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — INQUIRY                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 07 · Inquiry</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'realestate-05-inquiry.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s5">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Feature 04</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 05<span class="dim">/07</span></span>
+        <span class="corner-sticker">No 4</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Form / inquiry icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="3" width="16" height="18" rx="1" stroke-linejoin="round"/>
+              <path stroke-linecap="round" d="M8 8h8M8 12h8M8 16h5"/>
+            </svg>
+          </div>
+
+          <span class="pre-label">— Feature</span>
+          <h2 class="big-word">Inquiry<span class="dot">.</span></h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.04</span><span class="sq"></span><span class="ln"></span></div>
+          <p class="tag-line">Direct inquiry form connected to your broker CRM.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — PRICE                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 07 · Price</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'realestate-06-price.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s6">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Best Deal</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 06<span class="dim">/07</span></span>
+        <span class="corner-sticker">Best Price</span>
+
+        <div class="body">
+          <span class="price-pre">— Starts From</span>
+          <div class="price-big">&#8377;20K<span class="lime">.</span></div>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.06</span><span class="sq"></span><span class="ln"></span></div>
+          <div class="price-tag"><em>Live in <span class="lime">10 days</span>.</em></div>
+          <p class="tag-line" style="margin-top: 6px;">Listings &middot; Map &middot; Gallery &middot; Inquiry &mdash; sab included.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 07 — CTA                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 07 / 07 · Get In Touch</span>
+        <button class="slide-dl" onclick="downloadSlide('s7', 'realestate-07-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s7">
+        <div class="top-bar">
+          <span class="stripe-l">Tech Career · IT Solutions LLP</span>
+          <span class="stripe-r">— Talk Today</span>
+        </div>
+        <div class="bot-bar"></div>
+
+        <span class="plot-no">PLOT <span class="dim">No.</span> 07<span class="dim">/07</span></span>
+        <span class="corner-sticker">Free Call</span>
+
+        <div class="body">
+          <div class="arch-icon">
+            <!-- Phone icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Call<span class="dot">.</span></h2>
+          <div class="coord"><span class="ln"></span><span class="sq"></span><span>x.07</span><span class="sq"></span><span class="ln"></span></div>
+
+          <div class="cta-block">
+            <div class="cta-row">
+              <span class="label">Phone</span>
+              <span class="val">+91 70966 08771</span>
+            </div>
+            <div class="cta-row alt">
+              <span class="label">Instagram</span>
+              <span class="val">@techcareer.llp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag lime">Save this ★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'realestate-01-cover.png' },
+        { id: 's2', name: 'realestate-02-listings.png' },
+        { id: 's3', name: 'realestate-03-gallery.png' },
+        { id: 's4', name: 'realestate-04-map.png' },
+        { id: 's5', name: 'realestate-05-inquiry.png' },
+        { id: 's6', name: 'realestate-06-price.png' },
+        { id: 's7', name: 'realestate-07-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

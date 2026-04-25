@@ -20,7 +20,7 @@ const commitments = [
 
 const founderNote = {
   signature: 'Faizan Pathan',
-  role: 'Founder · Tech Career IT Solutions LLP',
+  role: 'Founder · Tech Career IT Solutions LLP LLP',
   lines: [
     'We do not have ten years of case studies yet.',
     'What we have is a small team, a clear focus, and the patience to earn every client the slow way — by doing the work well.',

@@ -236,7 +236,7 @@ const FeaturedCase = () => {
               </span>
               <div>
                 <p className="font-bold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Faizan Pathan</p>
-                <p className="text-[11px] text-white/60 uppercase tracking-[0.2em]">Founder · Tech Career IT Solutions LLP</p>
+                <p className="text-[11px] text-white/60 uppercase tracking-[0.2em]">Founder · Tech Career IT Solutions LLP LLP</p>
               </div>
             </div>
           </div>

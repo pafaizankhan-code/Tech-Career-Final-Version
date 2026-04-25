@@ -130,7 +130,7 @@ const EmployeeVoices = () => {
                     {v.name}
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-black/50 group-hover:text-white/60 transition-colors">
-                    Tech Career IT Solutions LLP
+                    Tech Career IT Solutions LLP LLP
                   </p>
                 </div>
               </div>

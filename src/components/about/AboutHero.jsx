@@ -48,7 +48,7 @@ const AboutHero = () => {
             >
               <span className="w-10 h-px bg-[#097CF4]"></span>
               <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-                About Tech Career IT Solutions LLP
+                About Tech Career IT Solutions LLP LLP
               </span>
             </div>
 
@@ -62,7 +62,7 @@ const AboutHero = () => {
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              Tech Career IT Solutions LLP is a founder-led web development, e-commerce and digital
+              Tech Career IT Solutions LLP LLP is a founder-led web development, e-commerce and digital
               marketing studio based at iHub, Ahmedabad — building software and campaigns for
               growing Indian businesses with honest scopes, honest quotes and a team that answers
               its own phone.
@@ -85,7 +85,7 @@ const AboutHero = () => {
               <dl className="space-y-3 text-[13px]">
                 {[
                   ['Founded', '2025 · Ahmedabad, India'],
-                  ['Legal Entity', 'Tech Career IT Solutions LLP'],
+                  ['Legal Entity', 'Tech Career IT Solutions LLP LLP'],
                   ['Team', 'Founder-led · small team'],
                   ['Headquarters', 'iHub · Ahmedabad · 380015'],
                   ['Focus', 'Web · E-commerce · CRM · Marketing'],

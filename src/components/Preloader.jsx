@@ -1,61 +1,58 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
-// Module-level flag so the preloader shows once per hard reload,
-// not on every in-app navigation back to Home.
+// Module-level flag so the preloader shows once per hard reload
 let hasShownLoader = false
 
-const DURATION = 5000 // 5 seconds total
-const STEPS = 100
-const TICK = DURATION / STEPS // 50ms per integer step — perfectly smooth counting
-
-const services = ['Web Development', 'E-commerce', 'CRM & HRMS', 'Mobile Apps', 'Digital Marketing']
+const DURATION = 4000 // 4s — smoother & quicker than before
 
 const Preloader = () => {
   const [visible, setVisible] = useState(!hasShownLoader)
   const [progress, setProgress] = useState(0)
   const [fadeOut, setFadeOut] = useState(false)
-  const [serviceIndex, setServiceIndex] = useState(0)
+  const startTimeRef = useRef(null)
+  const rafRef = useRef(null)
 
   useEffect(() => {
     if (!visible) return
     hasShownLoader = true
     document.body.style.overflow = 'hidden'
 
-    // Every integer 0 → 100 is displayed for exactly TICK ms — smoothest possible count.
-    const progressTimer = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          clearInterval(progressTimer)
-          setTimeout(() => setFadeOut(true), 300)
-          setTimeout(() => {
-            setVisible(false)
-            document.body.style.overflow = ''
-          }, 1100)
-          return 100
-        }
-        return p + 1
-      })
-    }, TICK)
+    // requestAnimationFrame — buttery smooth, syncs to display refresh
+    const tick = (now) => {
+      if (startTimeRef.current === null) startTimeRef.current = now
+      const elapsed = now - startTimeRef.current
+      const pct = Math.min(100, (elapsed / DURATION) * 100)
+      setProgress(pct)
 
-    // Rotate the service ticker ~7 times across the 5s load (~700ms each).
-    const serviceTimer = setInterval(() => {
-      setServiceIndex((i) => (i + 1) % services.length)
-    }, 700)
+      if (pct < 100) {
+        rafRef.current = requestAnimationFrame(tick)
+      } else {
+        setTimeout(() => setFadeOut(true), 200)
+        setTimeout(() => {
+          setVisible(false)
+          document.body.style.overflow = ''
+        }, 1000)
+      }
+    }
+    rafRef.current = requestAnimationFrame(tick)
 
     return () => {
-      clearInterval(progressTimer)
-      clearInterval(serviceTimer)
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
       document.body.style.overflow = ''
     }
   }, [visible])
 
   if (!visible) return null
 
-  const displayProgress = progress
+  const intPct = Math.floor(progress)
+  const status =
+    progress < 30 ? 'Loading' :
+    progress < 65 ? 'Almost there' :
+    progress < 95 ? 'Finalising' : 'Ready'
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-white transition-opacity duration-800 ${
+      className={`fixed inset-0 z-[100] bg-white transition-opacity duration-700 ${
         fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       aria-hidden="true"
@@ -63,15 +60,15 @@ const Preloader = () => {
       aria-label="Loading"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
-      {/* Blueprint corner markers */}
-      <span className="pointer-events-none absolute top-6 left-6 w-4 h-4 border-t-2 border-l-2 border-[#097CF4] hidden sm:block"></span>
-      <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#097CF4] hidden sm:block"></span>
-      <span className="pointer-events-none absolute bottom-6 left-6 w-4 h-4 border-b-2 border-l-2 border-[#097CF4] hidden sm:block"></span>
-      <span className="pointer-events-none absolute bottom-6 right-6 w-4 h-4 border-b-2 border-r-2 border-[#097CF4] hidden sm:block"></span>
+      {/* Minimal corner markers — thin black */}
+      <span className="pointer-events-none absolute top-6 left-6 w-3 h-3 border-t border-l border-black hidden sm:block"></span>
+      <span className="pointer-events-none absolute top-6 right-6 w-3 h-3 border-t border-r border-black hidden sm:block"></span>
+      <span className="pointer-events-none absolute bottom-6 left-6 w-3 h-3 border-b border-l border-black hidden sm:block"></span>
+      <span className="pointer-events-none absolute bottom-6 right-6 w-3 h-3 border-b border-r border-black hidden sm:block"></span>
 
-      {/* Top brand signature */}
+      {/* Top brand strip */}
       <div
-        className="absolute top-0 left-0 right-0 px-6 sm:px-10 pt-5 sm:pt-6 flex items-center justify-between text-black/50 animate-[preloadFade_500ms_ease-out_both]"
+        className="absolute top-0 left-0 right-0 px-6 sm:px-10 pt-5 sm:pt-6 flex items-center justify-between text-black/50"
         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
       >
         <span className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em]">
@@ -79,111 +76,82 @@ const Preloader = () => {
             <span className="absolute inset-0 rounded-full bg-[#097CF4] animate-ping opacity-70"></span>
             <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-[#097CF4]"></span>
           </span>
-          Tech Career · IT Solution LLP
+          Tech Career · IT Solutions LLP
         </span>
         <span className="hidden sm:inline text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-black/30">
           Est. 2025 · Ahmedabad
         </span>
       </div>
 
-      {/* Centered stack — big counter + ticker */}
+      {/* Center stage — BRAND IS THE HERO */}
       <div className="relative h-full flex flex-col items-center justify-center px-6">
-        {/* Tiny label above counter */}
+        {/* Tiny label above wordmark */}
         <p
-          className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.5em] text-[#097CF4] mb-4 sm:mb-6 animate-[preloadFade_600ms_ease-out_both]"
+          className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.55em] text-black/35 mb-7 sm:mb-9 animate-[loaderFade_700ms_ease-out_both]"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          — Preparing
+          — Loading
         </p>
 
-        {/* Giant counter — the hero element */}
-        <div
-          className="relative leading-none animate-[preloadFade_700ms_100ms_ease-out_both]"
-          style={{ fontFamily: 'Playfair Display, serif' }}
-        >
-          <span
-            className="font-extrabold text-black tabular-nums tracking-[-0.05em]"
-            style={{ fontSize: 'clamp(120px, 28vw, 280px)' }}
-          >
-            {String(displayProgress).padStart(2, '0')}
-          </span>
-          <span
-            className="absolute top-2 font-black text-[#097CF4]"
-            style={{ fontSize: 'clamp(30px, 6vw, 60px)' }}
-          >
-            %
-          </span>
-        </div>
-
-        {/* Horizontal divider rule */}
-        <div className="mt-4 sm:mt-6 w-24 h-px bg-black/15 animate-[preloadFade_600ms_300ms_ease-out_both]"></div>
-
-        {/* Rotating service ticker */}
-        <div
-          className="mt-4 sm:mt-5 h-5 overflow-hidden text-center animate-[preloadFade_600ms_400ms_ease-out_both]"
-          style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-        >
-          <p
-            key={serviceIndex}
-            className="text-[11px] sm:text-[12px] font-bold tracking-[0.32em] uppercase text-black/70 animate-[preloadSlide_400ms_ease_both]"
-          >
-            {services[serviceIndex]}
-          </p>
-        </div>
-
-        {/* Brand wordmark below */}
+        {/* Massive brand wordmark — the hero */}
         <h1
-          className="mt-10 sm:mt-14 text-center font-extrabold text-black leading-[0.9] tracking-[-0.02em] animate-[preloadFade_700ms_500ms_ease-out_both]"
+          className="font-extrabold text-black leading-none tracking-[-0.04em] mb-8 sm:mb-10 animate-[loaderFade_700ms_150ms_ease-out_both]"
           style={{
             fontFamily: 'Playfair Display, serif',
-            fontSize: 'clamp(22px, 3vw, 32px)',
+            fontSize: 'clamp(56px, 11vw, 120px)',
           }}
         >
-          Tech <span className="text-[#097CF4] italic">Career</span>
+          Tech <span className="italic text-[#097CF4]">Career</span>
           <span className="text-[#097CF4]">.</span>
         </h1>
+
+        {/* Thin elegant progress line */}
+        <div className="relative animate-[loaderFade_600ms_300ms_ease-out_both]">
+          <div className="w-[260px] sm:w-[380px] h-px bg-black/10 relative overflow-hidden">
+            <div
+              className="absolute top-0 left-0 h-full bg-[#097CF4]"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+
+          {/* Tiny tick marks at the ends */}
+          <div className="absolute -top-1 left-0 w-1.5 h-1.5 bg-black/40"></div>
+          <div className="absolute -top-1 right-0 w-1.5 h-1.5 bg-black/40"></div>
+        </div>
+
+        {/* Tiny progress numbers — monospace feel */}
+        <div
+          className="mt-5 sm:mt-6 flex items-center gap-3 text-black/40 animate-[loaderFade_600ms_400ms_ease-out_both]"
+          style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+        >
+          <span className="text-[11px] font-bold tracking-[0.3em] tabular-nums text-black/70">
+            {String(intPct).padStart(3, '0')}
+          </span>
+          <span className="text-[11px] font-bold text-black/25">/</span>
+          <span className="text-[11px] font-bold tracking-[0.3em] tabular-nums">
+            100
+          </span>
+        </div>
       </div>
 
-      {/* Bottom status bar */}
+      {/* Bottom strip — version + dynamic status */}
       <div
-        className="absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-5 sm:pb-6 flex items-end justify-between text-black/55 animate-[preloadFade_700ms_650ms_ease-out_both]"
+        className="absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-5 sm:pb-6 flex items-end justify-between text-black/45"
         style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
       >
         <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em]">
-          {displayProgress < 30
-            ? 'Initialising'
-            : displayProgress < 65
-            ? 'Compiling assets'
-            : displayProgress < 95
-            ? 'Finalising'
-            : 'Ready'}
-        </span>
-        <span className="hidden sm:inline text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-black/35">
           v 1.0 · 2025
         </span>
-      </div>
-
-      {/* Full-width progress line at the very bottom edge */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-black/[0.06] overflow-hidden">
-        <div
-          className="h-full bg-[#097CF4] transition-[width] duration-100 ease-linear"
-          style={{ width: `${displayProgress}%` }}
-        ></div>
-        {/* Moving highlight */}
-        <div
-          className="absolute top-0 h-full w-10 bg-gradient-to-r from-transparent via-white/80 to-transparent transition-[left] duration-100 ease-linear"
-          style={{ left: `calc(${displayProgress}% - 40px)` }}
-        ></div>
+        <span className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em]">
+          <span className="w-1 h-1 rounded-full bg-[#097CF4]"></span>
+          {status}
+        </span>
       </div>
 
       <style>{`
-        @keyframes preloadFade {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes preloadSlide {
-          from { opacity: 0; transform: translateY(6px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes loaderFade {
+          from { opacity: 0; transform: translateY(8px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>

@@ -10,9 +10,9 @@ const contactJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   '@id': `${SITE.baseUrl}/contact`,
-  name: 'Contact Tech Career IT Solutions LLP',
+  name: 'Contact Tech Career IT Solutions LLP LLP',
   description:
-    'Talk to Tech Career IT Solutions LLP — a founder-led web and digital marketing studio at iHub, Ahmedabad. Reply within 24 hours on email and WhatsApp.',
+    'Talk to Tech Career IT Solutions LLP LLP — a founder-led web and digital marketing studio at iHub, Ahmedabad. Reply within 24 hours on email and WhatsApp.',
   url: `${SITE.baseUrl}/contact`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -32,7 +32,7 @@ const Contact = () => (
   <>
     <Seo
       title="Contact Us | Web Development & Digital Marketing Agency in Ahmedabad"
-      description="Contact Tech Career IT Solutions in Ahmedabad for custom websites, e-commerce, CRM/HRMS, mobile apps and digital marketing. Reply within 24 hours on email & WhatsApp — free discovery call, no obligation."
+      description="Contact Tech Career IT Solutions LLP in Ahmedabad for custom websites, e-commerce, CRM/HRMS, mobile apps and digital marketing. Reply within 24 hours on email & WhatsApp — free discovery call, no obligation."
       canonical="https://www.techcareer.site/contact"
       jsonLd={contactJsonLd}
     />

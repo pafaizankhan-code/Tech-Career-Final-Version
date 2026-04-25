@@ -8,7 +8,7 @@ const cookiesJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/cookies`,
-  name: 'Cookies Policy — Tech Career IT Solutions',
+  name: 'Cookies Policy — Tech Career IT Solutions LLP',
   description:
     'How techcareer.site uses cookies and similar technologies, what they are used for, and how you can control them in your browser.',
   url: `${SITE.baseUrl}/cookies`,
@@ -142,7 +142,7 @@ const sections = [
     body: (
       <>
         <p>
-          Tech Career IT Solutions LLP<br />
+          Tech Career IT Solutions LLP LLP<br />
           iHub, University Area, Ahmedabad, Gujarat 380015, India<br />
           Email:{' '}
           <a href="mailto:inquiry.techcareer@gmail.com" className="text-[#097CF4] font-semibold hover:underline">
@@ -159,7 +159,7 @@ const sections = [
 const Cookies = () => (
   <>
     <Seo
-      title="Cookies Policy | Tech Career IT Solutions — Ahmedabad"
+      title="Cookies Policy | Tech Career IT Solutions LLP — Ahmedabad"
       description="Understand how techcareer.site uses cookies and similar technologies, what each type does, and how to manage or disable them in your browser."
       canonical="https://www.techcareer.site/cookies"
       ogType="article"

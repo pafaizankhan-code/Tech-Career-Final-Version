@@ -35,7 +35,7 @@ const OurStory = () => {
 
             <div className="mt-8 space-y-6 text-[15px] sm:text-[16px] leading-[1.8] text-black/75 max-w-[640px]">
               <p>
-                Tech Career IT Solutions LLP was founded in 2025, out of a simple frustration —
+                Tech Career IT Solutions LLP LLP was founded in 2025, out of a simple frustration —
                 that small and mid-sized Indian businesses kept paying for websites and software
                 that looked fine in a demo but fell apart two months after handover.
               </p>
@@ -68,7 +68,7 @@ const OurStory = () => {
                   className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/60"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  Founder · Tech Career IT Solutions LLP
+                  Founder · Tech Career IT Solutions LLP LLP
                 </p>
               </div>
             </div>

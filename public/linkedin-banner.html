@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Banner · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #097CF4; --black: #0a0a0a; }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e5e7eb;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 40px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1640px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* Wrapper for the banner — scaled down for display */
+    .banner-wrap {
+      max-width: 1640px; margin: 0 auto;
+      background: white; padding: 28px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .banner-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+      margin-bottom: 14px;
+      display: flex; justify-content: space-between;
+    }
+    .banner-scroll {
+      overflow: auto;
+      background: #f3f4f6;
+      padding: 24px;
+      border: 1px dashed rgba(0,0,0,0.12);
+    }
+
+    /* ─── BANNER — 1584 × 396 (LinkedIn spec) ─── */
+    .banner {
+      width: 1584px; height: 396px;
+      background: var(--black);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Decorative glows */
+    .banner .glow-tr {
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.3) 0%, transparent 70%);
+      filter: blur(80px); pointer-events: none;
+    }
+    .banner .glow-bl {
+      position: absolute;
+      bottom: -220px; left: 300px;
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.18) 0%, transparent 70%);
+      filter: blur(90px); pointer-events: none;
+    }
+
+    /* Fine dot pattern */
+    .banner .dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: radial-gradient(ellipse at center right, black 50%, transparent 90%);
+      -webkit-mask-image: radial-gradient(ellipse at center right, black 50%, transparent 90%);
+      pointer-events: none;
+    }
+
+    /* Blueprint corner markers */
+    .banner .corner {
+      position: absolute; width: 22px; height: 22px; pointer-events: none;
+    }
+    .banner .c-tl { top: 32px; left: 32px; border-top: 2.5px solid var(--blue); border-left: 2.5px solid var(--blue); }
+    .banner .c-tr { top: 32px; right: 32px; border-top: 2.5px solid var(--blue); border-right: 2.5px solid var(--blue); }
+    .banner .c-bl { bottom: 32px; left: 32px; border-bottom: 2.5px solid var(--blue); border-left: 2.5px solid var(--blue); }
+    .banner .c-br { bottom: 32px; right: 32px; border-bottom: 2.5px solid var(--blue); border-right: 2.5px solid var(--blue); }
+
+    /* ─── TOP / BOTTOM meta strips ─── */
+    .banner .top-strip, .banner .bot-strip {
+      position: absolute;
+      left: 80px; right: 80px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .banner .top-strip { top: 42px; }
+    .banner .bot-strip { bottom: 42px; }
+
+    .banner .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .banner .ptag .live-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 10px rgba(9,124,244,0.8);
+    }
+    .banner .ptag.blue { color: var(--blue); }
+
+    /* ─── MAIN CONTENT GRID ─── */
+    /* 3 columns: brand(L)  |  services(M)  |  contact(R) */
+    /* BUT we keep main brand on middle-right so LinkedIn profile photo (bottom-left) doesn't overlap */
+    .banner .inner {
+      position: absolute;
+      top: 100px; left: 340px; right: 80px; bottom: 100px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1.05fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    /* ── COL 1 — Brand wordmark ── */
+    .brand {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .brand .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .brand .lbl::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--blue);
+    }
+    .brand .wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 70px; font-weight: 900;
+      letter-spacing: -0.03em; color: white;
+      line-height: 0.95;
+    }
+    .brand .wordmark .ital { color: var(--blue); font-style: italic; }
+    .brand .wordmark .dot { color: var(--blue); }
+    .brand .tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.35em;
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
+    }
+
+    /* ── COL 2 — Services ── */
+    .services { display: flex; flex-direction: column; gap: 10px; }
+    .services .sh {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 2px;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .services .sh::before {
+      content: ''; width: 18px; height: 1.5px; background: var(--blue);
+    }
+    .services .st {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 800;
+      letter-spacing: -0.02em; color: white; line-height: 1.05;
+      margin-bottom: 8px;
+    }
+    .services .st .ital { color: var(--blue); font-style: italic; }
+    .services .chip-grid {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .services .chip {
+      display: inline-block;
+      padding: 5px 11px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 700; color: white;
+      letter-spacing: 0.18em; text-transform: uppercase;
+    }
+    .services .chip.accent {
+      background: var(--blue); border-color: var(--blue); color: white;
+    }
+
+    /* ── COL 3 — Contact ── */
+    .contact { display: flex; flex-direction: column; gap: 8px; }
+    .contact .ch {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 4px;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .contact .ch::before {
+      content: ''; width: 18px; height: 1.5px; background: var(--blue);
+    }
+    .contact .c-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 3px 0;
+    }
+    .contact .c-row .ic {
+      flex: 0 0 auto;
+      width: 28px; height: 28px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .contact .c-row .ic svg { width: 14px; height: 14px; }
+    .contact .c-row .text {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .contact .c-row .ck {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7.5px; font-weight: 800; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+    .contact .c-row .cv {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 700; color: white;
+      letter-spacing: 0.01em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page head -->
+  <div class="page-head">
+    <div class="info">
+      <h1>LinkedIn <span class="accent">Banner</span>.</h1>
+      <p>1584 × 396 PNG · LinkedIn Cover Spec · Profile-Photo Safe Zone</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadBanner()">↓ Download Banner PNG</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <div class="banner-wrap">
+    <div class="banner-label">
+      <span>— Preview (scroll horizontally if needed) · 1584 × 396 native</span>
+      <span>Tech Career IT Solutions LLP</span>
+    </div>
+    <div class="banner-scroll">
+
+      <!-- ────── THE BANNER ────── -->
+      <div class="banner" id="banner">
+        <div class="glow-tr"></div>
+        <div class="glow-bl"></div>
+        <div class="dots"></div>
+
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="top-strip">
+          <span class="ptag"><span class="live-dot"></span> Est. 2025 · iHub · Ahmedabad, India</span>
+          <span class="ptag">Tech Career IT Solutions LLP</span>
+        </div>
+
+        <div class="inner">
+
+          <!-- Column 1: Brand -->
+          <div class="brand">
+            <span class="lbl">Founder-Led Studio</span>
+            <h1 class="wordmark">Tech <span class="ital">Career</span><span class="dot">.</span></h1>
+            <span class="tag">— IT Solutions LLP</span>
+          </div>
+
+          <!-- Column 2: Services -->
+          <div class="services">
+            <span class="sh">What We Build</span>
+            <h3 class="st">For every <span class="ital">kind</span> of business.</h3>
+            <div class="chip-grid">
+              <span class="chip accent">Websites</span>
+              <span class="chip">E-commerce</span>
+              <span class="chip">Mobile Apps</span>
+              <span class="chip">CRM · HRMS</span>
+              <span class="chip">UI / UX</span>
+              <span class="chip">SEO · Ads</span>
+            </div>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div class="contact">
+            <span class="ch">Let's Talk</span>
+            <div class="c-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </span>
+              <span class="text">
+                <span class="ck">WhatsApp / Call</span>
+                <span class="cv">+91 70966 08771</span>
+              </span>
+            </div>
+            <div class="c-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+                </svg>
+              </span>
+              <span class="text">
+                <span class="ck">Email</span>
+                <span class="cv">inquiry.techcareer@gmail.com</span>
+              </span>
+            </div>
+            <div class="c-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+                </svg>
+              </span>
+              <span class="text">
+                <span class="ck">Website · Instagram</span>
+                <span class="cv">techcareer.site · @techcareer.llp</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bot-strip">
+          <span class="ptag">— Ahmedabad · 380015 · India</span>
+          <span class="ptag blue">Reply within 24 hours</span>
+        </div>
+      </div>
+      <!-- ────── END BANNER ────── -->
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadBanner() {
+      await document.fonts.ready;
+      const el = document.getElementById('banner');
+      const canvas = await html2canvas(el, {
+        scale: 1,            // Native 1584 × 396 is already the LinkedIn spec
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-linkedin-banner.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

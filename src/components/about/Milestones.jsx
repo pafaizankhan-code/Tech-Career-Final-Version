@@ -1,7 +1,7 @@
 import React from 'react'
 
 const milestones = [
-  { year: '2025', title: 'LLP Registered', desc: 'Tech Career IT Solutions LLP is officially incorporated in Ahmedabad, Gujarat.', metric: 'Day', metricLabel: 'One' },
+  { year: '2025', title: 'LLP Registered', desc: 'Tech Career IT Solutions LLP LLP is officially incorporated in Ahmedabad, Gujarat.', metric: 'Day', metricLabel: 'One' },
   { year: '2025', title: 'iHub Studio', desc: 'Set up our first studio space at iHub, University Area — our home for building.', metric: '01', metricLabel: 'Office' },
   { year: '2026', title: 'Open for Projects', desc: 'Publicly open for first clients — launch-friendly pricing, founder-led delivery.', metric: 'Now', metricLabel: 'Booking' },
   { year: 'Next', title: 'First 5 Clients', desc: 'Partnering with a small, hand-picked set of first clients — every one a flagship.', metric: '05', metricLabel: 'Flagship Slots' },

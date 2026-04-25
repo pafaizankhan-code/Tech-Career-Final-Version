@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · Why Business Needs a Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #097CF4; --black: #111111; }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e5e7eb;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-head {
+      max-width: 1240px;
+      margin: 0 auto 32px;
+      background: white;
+      padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black);
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white;
+      color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap {
+      position: relative;
+    }
+    .slide-wrap .slide-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black);
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--blue); }
+
+    /* ─── SLIDE ─── */
+    .slide {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ─── SHARED COMPONENTS ─── */
+    .corner {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+    }
+    .c-tl { top: 42px; left: 42px; border-top: 2.5px solid var(--blue); border-left: 2.5px solid var(--blue); }
+    .c-tr { top: 42px; right: 42px; border-top: 2.5px solid var(--blue); border-right: 2.5px solid var(--blue); }
+    .c-bl { bottom: 42px; left: 42px; border-bottom: 2.5px solid var(--blue); border-left: 2.5px solid var(--blue); }
+    .c-br { bottom: 42px; right: 42px; border-bottom: 2.5px solid var(--blue); border-right: 2.5px solid var(--blue); }
+
+    .brand-mark {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 3px;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+
+    .slide-top {
+      position: absolute;
+      top: 58px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .slide-bottom {
+      position: absolute;
+      bottom: 58px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+    }
+
+    /* ─── SLIDE 01 — COVER ─── */
+    .s1 .body {
+      position: absolute;
+      inset: 0;
+      padding: 0 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+    .s1 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .s1 .label::before {
+      content: '';
+      width: 26px;
+      height: 1.5px;
+      background: var(--blue);
+    }
+    .s1 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .s1 h2 .accent { color: var(--blue); font-style: italic; }
+    .s1 .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+      color: rgba(0,0,0,0.65);
+      max-width: 380px;
+    }
+    .s1 .swipe {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    /* Decorative blob */
+    .s1::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.18) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    /* ─── SLIDES 02–04 — REASONS ─── */
+    .reason .body {
+      position: absolute;
+      inset: 0;
+      padding: 0 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+    .reason .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .reason .label::before {
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background: var(--blue);
+    }
+    .reason .stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 96px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 0.9;
+      margin-bottom: 4px;
+    }
+    .reason .stat .dot { color: var(--blue); }
+    .reason h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      line-height: 1.15;
+    }
+    .reason h3 .accent { color: var(--blue); font-style: italic; }
+    .reason .text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(0,0,0,0.65);
+      max-width: 400px;
+    }
+
+    /* ─── SLIDE 05 — CTA (BLACK) ─── */
+    .s5 {
+      background: var(--black);
+      color: white;
+    }
+    .s5 .corner { border-color: var(--blue) !important; }
+    .s5::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    .s5::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -150px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.18) 0%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .s5 .brand-mark .name { color: white; font-size: 22px; }
+    .s5 .brand-mark .sub { color: rgba(255,255,255,0.55); font-size: 8px; }
+    .s5 .page-tag { color: rgba(255,255,255,0.4); }
+
+    .s5 .body {
+      position: absolute;
+      inset: 0;
+      padding: 120px 70px 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .s5 .top-text { display: flex; flex-direction: column; gap: 14px; }
+    .s5 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .s5 .label::before {
+      content: '';
+      width: 26px;
+      height: 1.5px;
+      background: var(--blue);
+    }
+    .s5 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      color: white;
+      line-height: 1;
+    }
+    .s5 h2 .accent { color: var(--blue); font-style: italic; }
+    .s5 .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.7);
+      max-width: 380px;
+    }
+
+    .s5 .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .s5 .c-card .c-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 4px;
+    }
+    .s5 .c-card .c-val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.01em;
+    }
+    .s5 .c-card .c-val.small { font-size: 11px; }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Why Business Needs a <span class="accent">Website</span>.</h1>
+      <p>5-Slide Carousel · 1080 × 1080 PNG · Instagram-Ready</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (5 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— Slide 01 / 05 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'why-website-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s1" id="s1">
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="slide-top">
+          <span class="page-tag">01 / 05</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <span class="label">For Every Business</span>
+          <h2>Why your business needs a <span class="accent">website</span>.</h2>
+          <p class="sub">3 reasons every business owner should know — in 2026.</p>
+        </div>
+
+        <div class="slide-bottom">
+          <span class="page-tag">— Tech Career LLP</span>
+          <span class="swipe">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — REASON 1: 24/7                                       -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— Slide 02 / 05 · Reason 01</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'why-website-02-always-open.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide reason s2" id="s2">
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="slide-top">
+          <span class="page-tag">02 / 05</span>
+          <span class="page-tag" style="color: var(--blue);">— Reason 01</span>
+        </div>
+
+        <div class="body">
+          <span class="label">Always Open</span>
+          <div class="stat">24/7<span class="dot">.</span></div>
+          <h3>Your shop closes. Your <span class="accent">website</span> doesn't.</h3>
+          <p class="text">
+            While you sleep, eat or rest — your website still answers
+            questions, shows products and takes leads. A storefront
+            that never shuts.
+          </p>
+        </div>
+
+        <div class="slide-bottom">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="page-tag">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — REASON 2: TRUST                                      -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— Slide 03 / 05 · Reason 02</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'why-website-03-trust.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide reason s3" id="s3">
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="slide-top">
+          <span class="page-tag">03 / 05</span>
+          <span class="page-tag" style="color: var(--blue);">— Reason 02</span>
+        </div>
+
+        <div class="body">
+          <span class="label">Trust &amp; Credibility</span>
+          <div class="stat">75%<span class="dot">.</span></div>
+          <h3>Customers Google you <span class="accent">before</span> they call.</h3>
+          <p class="text">
+            Without a website, they assume you're not real — or not
+            serious. A clean, professional site builds instant trust
+            and silently sells you 24×7.
+          </p>
+        </div>
+
+        <div class="slide-bottom">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="page-tag">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — REASON 3: LEADS                                      -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— Slide 04 / 05 · Reason 03</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'why-website-04-leads.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide reason s4" id="s4">
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="slide-top">
+          <span class="page-tag">04 / 05</span>
+          <span class="page-tag" style="color: var(--blue);">— Reason 03</span>
+        </div>
+
+        <div class="body">
+          <span class="label">Lead Generation</span>
+          <div class="stat">10x<span class="dot">.</span></div>
+          <h3>Capture <span class="accent">leads</span> while you're busy.</h3>
+          <p class="text">
+            Contact forms, WhatsApp buttons, online quotes, instant
+            booking — your website turns visitors into paying
+            customers, automatically. No staff needed.
+          </p>
+        </div>
+
+        <div class="slide-bottom">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="page-tag">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — CTA (BLACK)                                          -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— Slide 05 / 05 · Call to Action</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'why-website-05-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s5" id="s5">
+        <span class="corner c-tl"></span>
+        <span class="corner c-tr"></span>
+        <span class="corner c-bl"></span>
+        <span class="corner c-br"></span>
+
+        <div class="slide-top">
+          <span class="page-tag">05 / 05</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="top-text">
+            <span class="label">Ready to Build?</span>
+            <h2>Build <span class="accent">yours</span> with us.</h2>
+            <p class="sub">
+              Websites for every kind of business — from
+              ₹8,000. Honest quotes. Real timelines. NDA on request.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="c-card">
+              <div class="c-label">— Phone / WhatsApp</div>
+              <div class="c-val">+91 70966 08771</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Email</div>
+              <div class="c-val small">inquiry.techcareer@gmail.com</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Website</div>
+              <div class="c-val">www.techcareer.site</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Instagram</div>
+              <div class="c-val">@techcareer.llp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      // Wait for fonts to load before capturing
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,            // 540 * 2 = 1080 px output
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'why-website-01-cover.png' },
+        { id: 's2', name: 'why-website-02-always-open.png' },
+        { id: 's3', name: 'why-website-03-trust.png' },
+        { id: 's4', name: 'why-website-04-leads.png' },
+        { id: 's5', name: 'why-website-05-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        // Small delay so the browser doesn't choke on rapid downloads
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

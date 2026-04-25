@@ -84,7 +84,7 @@ const Footer = () => {
               >
                 <span className="w-8 h-px bg-[#097CF4]"></span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-                  Tech Career IT Solutions LLP
+                  Tech Career IT Solutions LLP LLP
                 </span>
               </div>
               <h3
@@ -302,13 +302,13 @@ const Footer = () => {
       <div className="relative bg-[#097CF4] text-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.2em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
           <p className="font-semibold">
-            © {year} Tech Career IT Solutions LLP — All rights reserved.
+            © {year} Tech Career IT Solutions LLP LLP — All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <Link to="/privacy" className="hover:underline">Privacy</Link>
             <Link to="/terms" className="hover:underline">Terms</Link>
             <Link to="/cookies" className="hover:underline">Cookies</Link>
-            <a href="/sitemap.xml" className="hover:underline">Sitemap</a>
+            <Link to="/sitemap" className="hover:underline">Sitemap</Link>
           </div>
         </div>
       </div>

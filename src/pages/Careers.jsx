@@ -10,7 +10,7 @@ const careersJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/careers`,
-  name: 'Careers at Tech Career IT Solutions LLP',
+  name: 'Careers at Tech Career IT Solutions LLP LLP',
   description:
     'Help us build a new, founder-led web and digital marketing studio in Ahmedabad. A small team, interesting first clients, and real ownership from day one.',
   url: `${SITE.baseUrl}/careers`,
@@ -32,7 +32,7 @@ const Careers = () => (
   <>
     <Seo
       title="Careers | Web Development, Design & Digital Marketing Jobs in Ahmedabad"
-      description="Join Tech Career IT Solutions — a founder-led Ahmedabad studio hiring full-stack developers, UI/UX designers, digital marketers and interns. Real ownership, honest work, and room to grow from day one."
+      description="Join Tech Career IT Solutions LLP — a founder-led Ahmedabad studio hiring full-stack developers, UI/UX designers, digital marketers and interns. Real ownership, honest work, and room to grow from day one."
       canonical="https://www.techcareer.site/careers"
       ogType="article"
       jsonLd={careersJsonLd}
