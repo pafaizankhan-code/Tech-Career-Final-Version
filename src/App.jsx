@@ -13,6 +13,7 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Cookies from './pages/Cookies'
 import Sitemap from './pages/Sitemap'
+import BlogDetail from './pages/BlogDetail'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
         </Routes>
       </main>
       <Footer />

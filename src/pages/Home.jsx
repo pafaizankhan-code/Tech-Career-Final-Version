@@ -11,9 +11,12 @@ import Preloader from '../components/Preloader'
 import Banner from '../components/Banner'
 import OurServices from '../components/OurServices'
 import OurWork from '../components/OurWork'
+import MissionVision from '../components/MissionVision'
 import WhyChooseUs from '../components/WhyChooseUs'
 import OurProcess from '../components/OurProcess'
 import Testimonials, { homeFaqs } from '../components/Testimonials'
+import BlogSection from '../components/BlogSection'
+import TechStack from '../components/TechStack'
 import StartProject from '../components/StartProject'
 
 const homeFaqJsonLd = buildFaqPageJsonLd(homeFaqs, `${SITE.baseUrl}/`)
@@ -57,9 +60,12 @@ const Home = () => (
     <Banner />
     <OurServices />
     {/* <OurWork /> */}
+    {/* <MissionVision /> */}
     <WhyChooseUs />
+    <TechStack />
     <OurProcess />
     <Testimonials />
+    {/* <BlogSection /> */}
     <StartProject />
   </>
 )
