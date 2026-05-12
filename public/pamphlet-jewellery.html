@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · Jewellery Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ivory: #FAF6EC;
+      --paper: #FBF8F0;
+      --cream: #F2EAD3;
+      --gold: #B8860B;
+      --gold-deep: #7B5C0E;
+      --gold-light: #DCC58F;
+      --black: #1A1A1A;
+      --gray: #6B6356;
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d0bc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--gold-deep); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: var(--gold-light);
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--gold); color: white; }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--gold); color: white; border-color: var(--gold); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4 595 × 842 → 1190 × 1684 PNG       */
+    /* JEWELLERY — luxury hallmark certificate layout  */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* Subtle gold dot pattern */
+    .pamphlet::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(184,134,11,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* SIGNATURE: Gold ornamental diamond corners */
+    .pamphlet .orn-tl, .pamphlet .orn-tr, .pamphlet .orn-bl, .pamphlet .orn-br {
+      position: absolute;
+      width: 14px; height: 14px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      pointer-events: none;
+      z-index: 4;
+    }
+    .pamphlet .orn-tl { top: 26px; left: 26px; }
+    .pamphlet .orn-tr { top: 26px; right: 26px; }
+    .pamphlet .orn-bl { bottom: 26px; left: 26px; }
+    .pamphlet .orn-br { bottom: 26px; right: 26px; }
+    .pamphlet .orn-tl::after, .pamphlet .orn-tr::after,
+    .pamphlet .orn-bl::after, .pamphlet .orn-br::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      background: var(--paper);
+    }
+
+    /* ─── BAND 01: Top ornamental strip ─── */
+    .top-banner {
+      padding: 16px 60px 8px;
+      text-align: center;
+      flex: 0 0 auto;
+      position: relative; z-index: 2;
+    }
+    .top-banner .ornament {
+      display: inline-flex; align-items: center; gap: 14px;
+      color: var(--gold);
+    }
+    .top-banner .ornament .ln {
+      width: 80px; height: 1px; background: var(--gold);
+    }
+    .top-banner .ornament .di {
+      width: 7px; height: 7px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+    .top-banner .meta {
+      margin-top: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--gold-deep);
+    }
+
+    /* SIGNATURE: Triple gold rules */
+    .triple-rule {
+      padding: 0 60px;
+      flex: 0 0 auto;
+      position: relative; z-index: 2;
+    }
+    .triple-rule .l1 { height: 1px; background: var(--gold); }
+    .triple-rule .l2 { height: 2px; background: var(--gold); margin-top: 3px; }
+    .triple-rule .l3 { height: 1px; background: var(--gold); margin-top: 3px; }
+
+    /* ─── BAND 02: Brand line ─── */
+    .brand-band {
+      padding: 14px 60px 8px;
+      text-align: center;
+      flex: 0 0 auto;
+      position: relative; z-index: 2;
+    }
+    .brand-band .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 26px; letter-spacing: -0.02em;
+      color: var(--black);
+    }
+    .brand-band .brand .accent { color: var(--gold-deep); font-style: italic; }
+    .brand-band .brand .dot { color: var(--gold); }
+    .brand-band .division {
+      margin-top: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--gold-deep);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .brand-band .division::before, .brand-band .division::after {
+      content: '\25C6'; font-size: 6px; color: var(--gold);
+    }
+
+    /* ─── BAND 03: HERO with center medal ─── */
+    .hero {
+      padding: 18px 50px 20px;
+      flex: 0 0 auto;
+      text-align: center;
+      position: relative; z-index: 2;
+    }
+
+    /* SIGNATURE: Big circular gold medal/seal */
+    .medal {
+      width: 96px; height: 96px;
+      margin: 0 auto 16px;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .medal .ring-outer {
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold);
+    }
+    .medal .ring-inner {
+      position: absolute; inset: 6px;
+      border-radius: 50%;
+      border: 1px dashed var(--gold);
+      opacity: 0.5;
+    }
+    .medal .core {
+      position: absolute;
+      inset: 14px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      color: white;
+      box-shadow: 0 10px 22px -8px rgba(184,134,11,0.5);
+    }
+    .medal .core .top {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 6.5px; font-weight: 900; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.85);
+    }
+    .medal .core .mid {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 22px; line-height: 1;
+      color: white;
+      margin: 1px 0;
+    }
+    .medal .core .bot {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 6px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+    }
+
+    /* Eyebrow */
+    .hero .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--gold-deep);
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-bottom: 12px;
+    }
+    .hero .eyebrow::before, .hero .eyebrow::after {
+      content: ''; width: 22px; height: 1.5px; background: var(--gold);
+    }
+
+    /* Hero headline */
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 46px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 0.98;
+    }
+    .hero h1 .gold { color: var(--gold-deep); }
+    .hero h1 .dot { color: var(--gold); font-style: normal; }
+
+    /* Diamond ornament */
+    .diamond-orn {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin: 14px 0 10px;
+    }
+    .diamond-orn .ln { width: 36px; height: 1px; background: var(--gold); }
+    .diamond-orn .di {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+    .diamond-orn .di.hollow {
+      background: transparent;
+      border: 1px solid var(--gold);
+    }
+
+    .hero .lead {
+      margin-top: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: var(--gray);
+      max-width: 380px;
+      margin-left: auto; margin-right: auto;
+      line-height: 1.6;
+    }
+    .hero .lead .strong { color: var(--black); font-weight: 700; }
+    .hero .lead .gold { color: var(--gold-deep); font-weight: 700; }
+
+    /* ─── BAND 04: Atelier features (2x2) ─── */
+    .atelier {
+      padding: 16px 50px 16px;
+      flex: 0 0 auto;
+      position: relative; z-index: 2;
+      border-top: 1px solid rgba(184,134,11,0.3);
+      border-bottom: 1px solid rgba(184,134,11,0.3);
+    }
+    .atelier .head {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .atelier .head .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--gold-deep);
+      display: inline-flex; align-items: center; gap: 12px;
+    }
+    .atelier .head .lbl::before, .atelier .head .lbl::after {
+      content: '\25C6'; font-size: 7px; color: var(--gold);
+    }
+    .atelier .grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px 22px;
+    }
+    .atelier .item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 5px 0;
+    }
+    .atelier .item .di {
+      flex: 0 0 auto;
+      width: 14px; height: 14px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      margin-top: 4px;
+      position: relative;
+    }
+    .atelier .item .di::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      background: var(--paper);
+    }
+    .atelier .item .info .t {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 14px;
+      color: var(--black);
+      letter-spacing: -0.005em;
+      line-height: 1.1;
+    }
+    .atelier .item .info .t .ital {
+      font-style: italic; color: var(--gold-deep);
+    }
+    .atelier .item .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 500;
+      color: var(--gray);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* ─── BAND 05: Pricing (centered, hairline rules) ─── */
+    .pricing-band {
+      padding: 16px 50px 14px;
+      flex: 0 0 auto;
+      text-align: center;
+      position: relative; z-index: 2;
+    }
+    .pricing-band .row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .pricing-band .col {
+      text-align: center;
+    }
+    .pricing-band .col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--gold-deep);
+      margin-bottom: 4px;
+    }
+    .pricing-band .col .v {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 32px;
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: -0.025em;
+    }
+    .pricing-band .col .v .gold { color: var(--gold-deep); }
+    .pricing-band .col .sub {
+      margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 500;
+      color: var(--gray);
+      font-style: italic;
+    }
+    .pricing-band .divider {
+      width: 1px; height: 50px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    /* ─── BAND 06: CTA — Black with gold ─── */
+    .cta-band {
+      padding: 16px 50px 16px;
+      flex: 1 0 auto;
+      display: flex; flex-direction: column;
+      gap: 12px; justify-content: flex-end;
+      position: relative; z-index: 2;
+    }
+    .cta-band .msg {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--black);
+      text-align: center;
+      line-height: 1.2;
+    }
+    .cta-band .msg .gold { color: var(--gold-deep); }
+    .cta-band .cta-btn {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px;
+      padding: 14px 22px;
+      background: var(--black);
+      color: var(--gold-light);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 900; letter-spacing: 0.32em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 28px -10px rgba(0,0,0,0.4);
+    }
+    .cta-band .cta-btn .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      background: var(--gold);
+      color: white;
+      font-size: 14px; font-weight: 900;
+      border-radius: 50%;
+    }
+
+    /* ─── BAND 07: Bottom contact (BLACK with gold) ─── */
+    .bottom-strip {
+      background: var(--black);
+      color: var(--gold-light);
+      padding: 12px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      flex: 0 0 auto;
+      position: relative; z-index: 3;
+    }
+    /* Top gold rule on contact strip */
+    .bottom-strip::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+    }
+    .bottom-strip .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .bottom-strip .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(220,197,143,0.4);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+    }
+    .bottom-strip .item .ic svg { width: 11px; height: 11px; }
+    .bottom-strip .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .bottom-strip .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(220,197,143,0.55);
+    }
+    .bottom-strip .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Jewellery Website</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Ivory + Gold + Black · Hallmark Layout</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Diamond ornament corners -->
+      <span class="orn-tl"></span><span class="orn-tr"></span>
+      <span class="orn-bl"></span><span class="orn-br"></span>
+
+      <!-- Top ornamental banner -->
+      <div class="top-banner">
+        <div class="ornament">
+          <span class="ln"></span>
+          <span class="di"></span>
+          <span class="di"></span>
+          <span class="di"></span>
+          <span class="ln"></span>
+        </div>
+        <div class="meta">— Tech Career · IT Solutions LLP —</div>
+      </div>
+
+      <!-- Triple gold rules -->
+      <div class="triple-rule">
+        <div class="l1"></div>
+        <div class="l2"></div>
+        <div class="l3"></div>
+      </div>
+
+      <!-- Brand band -->
+      <div class="brand-band">
+        <div class="brand">
+          Tech <span class="accent">Career</span><span class="dot">.</span>
+        </div>
+        <div class="division">Jewellery Division · 2025</div>
+      </div>
+
+      <!-- Triple gold rules again -->
+      <div class="triple-rule">
+        <div class="l1"></div>
+        <div class="l2"></div>
+        <div class="l3"></div>
+      </div>
+
+      <!-- HERO with medal -->
+      <div class="hero">
+   
+        <span class="eyebrow">A Note for Jewellers</span>
+        <h1>Jewellery websites<br/>that <span class="gold">shine</span><br/>as bright as you<span class="dot">.</span></h1>
+
+        <div class="diamond-orn">
+          <span class="ln"></span>
+          <span class="di"></span>
+          <span class="di hollow"></span>
+          <span class="di"></span>
+          <span class="ln"></span>
+        </div>
+
+        <p class="lead">
+          From <span class="strong">single-store boutiques</span> to multi-city brands,
+          we craft online showrooms that present every piece with the
+          <span class="gold">elegance &amp; trust</span> jewellery deserves.
+        </p>
+      </div>
+
+      <!-- ATELIER FEATURES -->
+      <div class="atelier">
+        <div class="head">
+          <span class="lbl">— The Atelier Includes —</span>
+        </div>
+
+        <div class="grid">
+          <div class="item">
+            <span class="di"></span>
+            <div class="info">
+              <div class="t">Showcase <span class="ital">Gallery</span></div>
+              <div class="d">HD photos, 360&deg; spin, zoom, hallmark.</div>
+            </div>
+          </div>
+          <div class="item">
+            <span class="di"></span>
+            <div class="info">
+              <div class="t">Secure <span class="ital">Cart</span></div>
+              <div class="d">Razorpay, COD, UPI &mdash; high-value safe.</div>
+            </div>
+          </div>
+          <div class="item">
+            <span class="di"></span>
+            <div class="info">
+              <div class="t">Custom <span class="ital">Orders</span></div>
+              <div class="d">Bespoke form: design, gem, size, weight.</div>
+            </div>
+          </div>
+          <div class="item">
+            <span class="di"></span>
+            <div class="info">
+              <div class="t">Brand <span class="ital">Story</span></div>
+              <div class="d">Heritage, craftsmanship, certifications.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="pricing-band">
+        <div class="row">
+          <div class="col">
+            <div class="lbl">— Starts From</div>
+            <div class="v">&#8377;20K<span class="gold">.</span></div>
+            <div class="sub">honest fixed quote</div>
+          </div>
+          <div class="divider"></div>
+          <div class="col">
+            <div class="lbl">— Goes Live In</div>
+            <div class="v"><em>10 days</em></div>
+            <div class="sub">crafted &amp; ready</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Triple gold rules -->
+      <div class="triple-rule">
+        <div class="l1"></div>
+        <div class="l2"></div>
+        <div class="l3"></div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-band">
+        <p class="msg">Ready to take your collection <span class="gold">online</span>?</p>
+        <a class="cta-btn">
+          Request a Showcase
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Bottom contact strip (black with gold) -->
+      <div class="bottom-strip">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FBF8F0',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-jewellery.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

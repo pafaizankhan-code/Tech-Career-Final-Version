@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · Cafe & Restaurant Websites · Tech Career </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #097CF4;
+      --black: #111111;
+      --cream: #FAF6EE;
+      --cream-dark: #EFE8D7;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-head {
+      max-width: 1240px;
+      margin: 0 auto 32px;
+      background: white;
+      padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--blue); }
+
+    /* ─── SLIDE BASE — MENU CARD AESTHETIC ─── */
+    .slide {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Menu-card double horizontal rules (top + bottom) — signature element */
+    .slide .rule-top, .slide .rule-bot {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      height: 5px;
+      pointer-events: none;
+    }
+    .slide .rule-top {
+      top: 60px;
+      border-top: 1.5px solid var(--black);
+      border-bottom: 1.5px solid var(--black);
+    }
+    .slide .rule-bot {
+      bottom: 60px;
+      border-top: 1.5px solid var(--black);
+      border-bottom: 1.5px solid var(--black);
+    }
+
+    /* Top + bottom meta strips (sit on the rules) */
+    .s-top, .s-bot {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 28px;
+    }
+    .s-top { top: 38px; }
+    .s-bot { bottom: 38px; }
+
+    .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .ptag.blue { color: var(--blue); }
+
+    /* Brand wordmark */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* Circular stamp badge — signature element */
+    .stamp {
+      position: absolute;
+      top: 100px;
+      right: 70px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 1.5px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: rotate(-12deg);
+      background: var(--cream);
+    }
+    .stamp::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      border: 1px dashed var(--black);
+      opacity: 0.4;
+    }
+    .stamp .stamp-top {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 900; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--black);
+    }
+    .stamp .stamp-mid {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 18px; color: var(--blue);
+      line-height: 1;
+      margin: 2px 0;
+    }
+    .stamp .stamp-bot {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 6px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* Body region (between rules) */
+    .body {
+      position: absolute;
+      top: 100px;
+      left: 70px;
+      right: 70px;
+      bottom: 100px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── SLIDE 01 — COVER ─── */
+    .s1 .body {
+      justify-content: center;
+      gap: 14px;
+      padding-right: 100px; /* don't crash into stamp */
+    }
+    .s1 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .s1 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 900;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 0.98;
+    }
+    .s1 h2 .ital {
+      font-style: italic; font-weight: 800;
+      color: var(--blue);
+    }
+    .s1 .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(0,0,0,0.65); max-width: 340px;
+      margin-top: 6px;
+    }
+
+    /* ─── SLIDE 02 — THE PROBLEM ─── */
+    .s2 .body {
+      justify-content: center;
+      gap: 14px;
+    }
+    .s2 .ekg-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .s2 .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 110px; color: var(--blue);
+      line-height: 0.5;
+      margin-bottom: -10px;
+    }
+    .s2 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 800; font-style: italic;
+      letter-spacing: -0.02em; color: var(--black);
+      line-height: 1.15;
+      max-width: 380px;
+    }
+    .s2 .truths {
+      margin-top: 18px;
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+    .s2 .truth {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.2);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px; font-weight: 700; color: var(--black);
+    }
+    .s2 .truth::before {
+      content: '\d7'; /* × */
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .s2 .truth:last-child { border-bottom: 0; }
+
+    /* ─── SLIDE 03 — WHAT WE BUILD (4 cards) ─── */
+    .s3 .body { padding: 0; gap: 14px; }
+    .s3 .head {
+      padding: 0 100px 0 0;
+    }
+    .s3 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .s3 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black);
+      line-height: 1.05;
+    }
+    .s3 h2 .ital { font-style: italic; color: var(--blue); }
+    .s3 .grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .s3 .card {
+      padding: 12px 12px;
+      border: 1px solid var(--black);
+      background: var(--cream);
+    }
+    .s3 .card .num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px; font-weight: 800; color: var(--blue);
+      margin-bottom: 4px;
+    }
+    .s3 .card .ttl {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 800;
+      color: var(--black); line-height: 1.15;
+    }
+    .s3 .card .desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px; line-height: 1.4;
+      color: rgba(0,0,0,0.65);
+      margin-top: 4px;
+    }
+
+    /* ─── SLIDE 04 — PRICING ─── */
+    .s4 .body { justify-content: center; gap: 12px; }
+    .s4 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .s4 .price-line {
+      display: flex; align-items: baseline; gap: 12px;
+      margin-top: 4px;
+    }
+    .s4 .price-from {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .s4 .price-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 86px; font-weight: 900;
+      letter-spacing: -0.04em; color: var(--black);
+      line-height: 0.9;
+    }
+    .s4 .price-big .accent { color: var(--blue); font-style: italic; }
+    .s4 .delivery {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 18px; color: var(--black);
+      margin-top: 4px;
+    }
+    .s4 .menu-list {
+      margin-top: 14px;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .s4 .row {
+      display: flex; align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.2);
+    }
+    .s4 .row .l {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; color: var(--black);
+      letter-spacing: 0.05em;
+    }
+    .s4 .row .dots {
+      flex: 1;
+      border-bottom: 1.5px dotted rgba(0,0,0,0.3);
+      margin: 0 8px;
+      transform: translateY(-3px);
+    }
+    .s4 .row .r {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 13px; color: var(--blue);
+    }
+    .s4 .row:last-child { border-bottom: 0; }
+
+    /* ─── SLIDE 05 — PROCESS ─── */
+    .s5 .body { gap: 14px; padding-right: 100px; }
+    .s5 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .s5 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black);
+      line-height: 1.05;
+    }
+    .s5 h2 .ital { font-style: italic; color: var(--blue); }
+    .s5 .steps {
+      margin-top: 12px;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .s5 .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.25);
+      align-items: center;
+    }
+    .s5 .step:last-child { border-bottom: 0; }
+    .s5 .step .n {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 800;
+      font-size: 26px; color: var(--blue);
+      line-height: 1;
+    }
+    .s5 .step .info .t {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 800;
+      color: var(--black); line-height: 1.1;
+    }
+    .s5 .step .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; line-height: 1.45;
+      color: rgba(0,0,0,0.6);
+      margin-top: 2px;
+    }
+
+    /* ─── SLIDE 06 — CTA ─── */
+    .s6 .body { justify-content: center; gap: 14px; padding-right: 100px; }
+    .s6 .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .s6 h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 900;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 0.98;
+    }
+    .s6 h2 .ital { font-style: italic; color: var(--blue); }
+    .s6 .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(0,0,0,0.65); max-width: 360px;
+    }
+    .s6 .contact {
+      margin-top: 14px;
+      padding-top: 16px;
+      border-top: 1.5px solid var(--black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .s6 .ccard .cl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 3px;
+    }
+    .s6 .ccard .cv {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 700; color: var(--black);
+    }
+    .s6 .ccard .cv.small { font-size: 10.5px; }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Cafe &amp; Restaurant <span class="accent">Websites</span>.</h1>
+      <p>6-Slide Carousel · 1080 × 1080 PNG · Menu-Card Design</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (6 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 06 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'cafe-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s1" id="s1">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">For Cafes &amp; Restaurants</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="stamp">
+          <span class="stamp-top">For</span>
+          <span class="stamp-mid">Cafes</span>
+          <span class="stamp-bot">2025</span>
+        </div>
+
+        <div class="body">
+          <span class="label">— Specially Crafted For You</span>
+          <h2>Websites that<br/><span class="ital">fill your tables</span>.</h2>
+          <p class="sub">
+            Beautiful, fast, mobile-first restaurant sites with
+            digital menus, online ordering and table booking — all
+            ready to take orders from day one.
+          </p>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">01 / 06</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — THE PROBLEM                                          -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 06 · The Problem</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'cafe-02-problem.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s2" id="s2">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">Chapter One</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="body">
+          <span class="ekg-label">— The Problem</span>
+          <span class="quote-mark">&ldquo;</span>
+          <h2>Walk-ins alone are no longer enough.</h2>
+
+          <div class="truths">
+            <div class="truth">No Google = customers think you're closed</div>
+            <div class="truth">No menu online = lost orders to Zomato</div>
+            <div class="truth">No reservations = empty tables on weekends</div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">02 / 06</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — WHAT WE BUILD                                        -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 06 · What We Build</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'cafe-03-features.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s3" id="s3">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">Chapter Two</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="head">
+            <div class="label">— What's on the menu</div>
+            <h2>Everything your cafe<br/>needs <span class="ital">online</span>.</h2>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="num">01.</div>
+              <div class="ttl">QR Digital Menu</div>
+              <div class="desc">Scan-to-view menu, instant updates, no reprints.</div>
+            </div>
+            <div class="card">
+              <div class="num">02.</div>
+              <div class="ttl">Online Ordering</div>
+              <div class="desc">Razorpay + COD, takeaway &amp; delivery slots.</div>
+            </div>
+            <div class="card">
+              <div class="num">03.</div>
+              <div class="ttl">Table Reservations</div>
+              <div class="desc">Slot booking, capacity rules, SMS confirmations.</div>
+            </div>
+            <div class="card">
+              <div class="num">04.</div>
+              <div class="ttl">Reviews &amp; Gallery</div>
+              <div class="desc">Google reviews, Instagram feed, photo grid.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">03 / 06</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — PRICING                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 06 · Pricing</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'cafe-04-pricing.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s4" id="s4">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">Chapter Three</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="label">— Honest, Cafe-Friendly</div>
+          <div class="price-line">
+            <span class="price-from">From</span>
+          </div>
+          <div class="price-big">&#8377;15K<span class="accent">.</span></div>
+          <div class="delivery"><em>Live in 7&ndash;10 working days.</em></div>
+
+          <div class="menu-list">
+            <div class="row">
+              <span class="l">Mobile-First Website</span>
+              <span class="dots"></span>
+              <span class="r">Included</span>
+            </div>
+            <div class="row">
+              <span class="l">QR Digital Menu</span>
+              <span class="dots"></span>
+              <span class="r">Included</span>
+            </div>
+            <div class="row">
+              <span class="l">Razorpay Payments</span>
+              <span class="dots"></span>
+              <span class="r">Included</span>
+            </div>
+            <div class="row">
+              <span class="l">SEO + Google Setup</span>
+              <span class="dots"></span>
+              <span class="r">Included</span>
+            </div>
+            <div class="row">
+              <span class="l">30-Day Free Support</span>
+              <span class="dots"></span>
+              <span class="r">Included</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">04 / 06</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — PROCESS                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 06 · Process</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'cafe-05-process.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s5" id="s5">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">Chapter Four</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="label">— How it Works</div>
+          <h2>From idea to <span class="ital">live</span><br/>in four steps.</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="n">i.</div>
+              <div class="info">
+                <div class="t">Free Discovery Call</div>
+                <div class="d">30 mins. Tell us about your cafe, menu &amp; goals.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="n">ii.</div>
+              <div class="info">
+                <div class="t">Design Mockup</div>
+                <div class="d">Figma preview of every page in 2&ndash;3 days.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="n">iii.</div>
+              <div class="info">
+                <div class="t">Build &amp; Test</div>
+                <div class="d">Website built, menu uploaded, payments tested.</div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">05 / 06</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — CTA                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 06 · Get In Touch</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'cafe-06-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s6" id="s6">
+        <span class="rule-top"></span>
+        <span class="rule-bot"></span>
+        <div class="s-top">
+          <span class="ptag">Last Page</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub"></span>
+          </div>
+        </div>
+
+        <div class="stamp">
+          <span class="stamp-top">Talk</span>
+          <span class="stamp-mid">Today</span>
+          <span class="stamp-bot">free call</span>
+        </div>
+
+        <div class="body">
+          <span class="label">— Ready When You Are</span>
+          <h2>Let's build<br/><span class="ital">yours</span>.</h2>
+          <p class="sub">
+            Free 30-minute discovery call. NDA on request.
+            Founder reply within 24 hours.
+          </p>
+
+          <div class="contact">
+            <div class="ccard">
+              <div class="cl">— Phone / WhatsApp</div>
+              <div class="cv">+91 70966 08771</div>
+            </div>
+            <div class="ccard">
+              <div class="cl">— Email</div>
+              <div class="cv small">inquiry.techcareer@gmail.com</div>
+            </div>
+            <div class="ccard">
+              <div class="cl">— Website</div>
+              <div class="cv">techcareer.site</div>
+            </div>
+            <div class="ccard">
+              <div class="cl">— Instagram</div>
+              <div class="cv">@techcareer.llp</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">06 / 06</span>
+          <span class="ptag blue">Save this post ★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'cafe-01-cover.png' },
+        { id: 's2', name: 'cafe-02-problem.png' },
+        { id: 's3', name: 'cafe-03-features.png' },
+        { id: 's4', name: 'cafe-04-pricing.png' },
+        { id: 's5', name: 'cafe-05-process.png' },
+        { id: 's6', name: 'cafe-06-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

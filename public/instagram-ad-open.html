@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Ad · We Are Open · Take Your Project · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111111;
+      --blue: #097CF4;
+      --blue-deep: #0461C5;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 720px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── AD CONTAINER ─── */
+    .ad-wrap {
+      max-width: 720px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* THE AD — 540 × 540 → 1080 × 1080 PNG            */
+    /* Big circular OPEN stamp + asymmetric text       */
+    /* ═══════════════════════════════════════════════ */
+    .ad {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      background: white;
+      box-shadow: 0 25px 70px -20px rgba(0,0,0,0.35);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* SIGNATURE: Soft dot grid background */
+    .ad::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.13) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: radial-gradient(ellipse at top right, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at top right, black 30%, transparent 80%);
+      pointer-events: none;
+    }
+
+    /* Top bar */
+    .ad .top-bar {
+      position: absolute;
+      top: 40px; left: 50px; right: 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 5;
+    }
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .ad .top-bar .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45);
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* ─── SIGNATURE: BIG CIRCULAR "OPEN" STAMP — top-right floating ─── */
+    .ad .seal {
+      position: absolute;
+      top: 110px; right: 36px;
+      width: 200px; height: 200px;
+      z-index: 4;
+    }
+    .ad .seal .ring {
+      position: absolute; inset: 0;
+      animation: spin 18s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .ad .seal .ring svg { width: 100%; height: 100%; display: block; }
+
+    .ad .seal .core {
+      position: absolute;
+      inset: 26px;
+      background: var(--black);
+      border-radius: 50%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      color: white;
+      box-shadow: 0 16px 30px -10px rgba(0,0,0,0.4);
+    }
+    .ad .seal .core .open {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 50px;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--blue);
+    }
+    .ad .seal .core .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 900; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+    }
+    /* Tiny dot accent */
+    .ad .seal .core::before {
+      content: '';
+      position: absolute;
+      bottom: 22px;
+      width: 5px; height: 5px;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+
+    /* ─── LEFT TEXT BLOCK ─── */
+    .ad .left-text {
+      position: absolute;
+      top: 130px; left: 50px;
+      width: 280px;
+      z-index: 3;
+    }
+    .ad .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .ad .eyebrow::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--blue);
+    }
+    .ad h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 44px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .ad h2 em {
+      font-style: italic;
+      color: var(--blue);
+    }
+    .ad h2 .dot {
+      color: var(--blue); font-style: normal;
+    }
+
+    /* ─── DIVIDER + INFO ROW ─── */
+    .ad .info-row {
+      position: absolute;
+      bottom: 130px; left: 50px; right: 50px;
+      padding-top: 14px;
+      border-top: 1.5px solid var(--black);
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 14px;
+      z-index: 3;
+    }
+    .ad .info-row .info-cell {
+      flex: 1;
+    }
+    .ad .info-row .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+      margin-bottom: 5px;
+    }
+    .ad .info-row .val {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 18px; font-weight: 700;
+      color: var(--black); line-height: 1;
+    }
+    .ad .info-row .val .blue { color: var(--blue); }
+
+    /* ─── CTA + FOOTER ─── */
+    .ad .cta-row {
+      position: absolute;
+      bottom: 50px; left: 50px; right: 50px;
+      z-index: 3;
+    }
+    .ad .cta {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 22px;
+      background: var(--blue);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px; font-weight: 900; letter-spacing: 0.26em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 28px -10px rgba(9,124,244,0.55);
+    }
+    .ad .cta .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px;
+      background: white;
+      color: var(--blue);
+      font-size: 14px; font-weight: 900;
+    }
+
+    .ad .footer {
+      position: absolute;
+      bottom: 22px; left: 50px; right: 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45);
+      z-index: 3;
+    }
+    .ad .footer .blue { color: var(--blue); }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>We Are <span class="accent">Open</span>.</h1>
+      <p>Instagram Ad · 1080 × 1080 PNG · Stamp / Seal Design</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAd()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Ad -->
+  <div class="ad-wrap">
+    <div class="ad" id="ad">
+
+      <!-- Top bar -->
+      <div class="top-bar">
+        <div class="brand-mark">
+          <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+          <span class="sub">IT Solutions LLP</span>
+        </div>
+        <span class="meta">
+          Ahmedabad
+        </span>
+      </div>
+
+      <!-- BIG CIRCULAR OPEN STAMP (top-right) -->
+      <div class="seal">
+        <div class="ring">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <path id="circlePath" d="M 100,100 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"/>
+            </defs>
+            <text fill="#111111" font-family="Plus Jakarta Sans" font-size="11" font-weight="900" letter-spacing="3.5">
+              <textPath href="#circlePath" startOffset="0">TAKING NEW PROJECTS · STUDIO OPEN · 2025 · </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="core">
+          <span class="open">Open<span style="color: var(--blue); font-style: normal;">.</span></span>
+          <span class="label">est. 2025</span>
+        </div>
+      </div>
+
+      <!-- Left text block -->
+      <div class="left-text">
+        <span class="eyebrow">We're Accepting</span>
+        <h2>Take your<br/>project to<br/>the next<br/><em>level</em><span class="dot">.</span></h2>
+      </div>
+
+      <!-- Info row -->
+      <div class="info-row">
+        <div class="info-cell">
+          <div class="lbl">— Free Call</div>
+          <div class="val">30 min</div>
+        </div>
+        <div class="info-cell">
+          <div class="lbl">— Reply</div>
+          <div class="val"><span class="blue">&lt; 24 hrs</span></div>
+        </div>
+        <div class="info-cell">
+          <div class="lbl">— Start By</div>
+          <div class="val"><em>This Week</em></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-row">
+        <a class="cta">
+          DM Us To Start
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span>techcareer.site</span>
+        <span class="blue">·</span>
+        <span>+91 70966 08771</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadAd() {
+      await document.fonts.ready;
+      const el = document.getElementById('ad');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-instagram-ad-open.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

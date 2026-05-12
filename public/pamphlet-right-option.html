@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · We Are the Right Option · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0F0F0F;
+      --blue: #097CF4;
+      --paper: #FBFAF7;
+      --gray: #6B7280;
+      --rule: rgba(0,0,0,0.1);
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4 595 × 842 → 1190 × 1684 PNG       */
+    /* Q & A Magazine Spread Layout                     */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.3);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* ─── BAND 01: Top thin strip ─── */
+    .top-strip {
+      background: var(--black);
+      color: white;
+      padding: 9px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+      flex: 0 0 auto;
+    }
+    .top-strip .blue { color: var(--blue); }
+    .top-strip .left {
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .top-strip .left::before {
+      content: '\25B6'; color: var(--blue); font-size: 8px;
+    }
+
+    /* ─── BAND 02: Brand line ─── */
+    .brand-line {
+      padding: 14px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--rule);
+      flex: 0 0 auto;
+    }
+    .brand-line .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+    }
+    .brand-line .brand .accent { color: var(--blue); font-style: italic; }
+    .brand-line .brand .dot { color: var(--blue); }
+    .brand-line .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .brand-line .meta .blue { color: var(--blue); }
+
+    /* ─── BAND 03: Q & A Hero (signature) ─── */
+    .qa-block {
+      flex: 0 0 auto;
+      padding: 26px 36px 24px;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 20px;
+      position: relative;
+    }
+    .qa-block .marker {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 80px;
+      color: var(--blue);
+      line-height: 0.85;
+      text-align: center;
+      position: relative;
+    }
+    .qa-block .marker::after {
+      content: '';
+      position: absolute;
+      bottom: -8px; left: 50%;
+      width: 30px; height: 1.5px;
+      background: var(--blue);
+      transform: translateX(-50%);
+    }
+    .qa-block .text .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .qa-block .text h2 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .qa-block .text h2 em {
+      font-style: italic; color: var(--blue); font-weight: 800;
+    }
+
+    /* Q-block specific (italic question feel) */
+    .q-block { padding-bottom: 12px; }
+
+    /* Diamond divider between Q & A */
+    .qa-divider {
+      flex: 0 0 auto;
+      padding: 0 36px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px;
+    }
+    .qa-divider .ln { flex: 1; height: 1px; background: var(--rule); }
+    .qa-divider .di {
+      width: 8px; height: 8px;
+      background: var(--blue);
+      transform: rotate(45deg);
+    }
+
+    /* A-block (bold confident answer) */
+    .a-block {
+      padding-top: 12px;
+    }
+    .a-block .text h2 {
+      font-family: 'Playfair Display', serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 38px;
+      color: var(--black);
+      line-height: 0.98;
+    }
+    .a-block .text h2 .blue { color: var(--blue); font-style: italic; }
+    .a-block .text h2 .dot { color: var(--blue); font-style: normal; }
+    .a-block .text .lead {
+      margin-top: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: var(--gray);
+      line-height: 1.55;
+    }
+    .a-block .text .lead .strong {
+      color: var(--black); font-weight: 700;
+    }
+
+    /* ─── BAND 04: 4 Reasons (compact) ─── */
+    .reasons {
+      padding: 18px 36px 16px;
+      flex: 0 0 auto;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      background: rgba(9,124,244,0.025);
+    }
+    .reasons .head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .reasons .head .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .reasons .head .lbl::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--blue);
+    }
+    .reasons .head .right {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .reasons .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 22px;
+    }
+    .reasons .item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 4px 0;
+    }
+    .reasons .item .num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 800;
+      font-size: 18px;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .reasons .item .info .t {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 14px;
+      color: var(--black);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .reasons .item .info .t em {
+      font-style: italic; color: var(--blue);
+    }
+    .reasons .item .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px; font-weight: 500;
+      color: var(--gray);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* ─── BAND 05: Pricing ─── */
+    .pricing {
+      padding: 16px 36px 14px;
+      flex: 0 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--rule);
+    }
+    .pricing .col {
+      text-align: center;
+    }
+    .pricing .col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 4px;
+    }
+    .pricing .col .v {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .pricing .col .v .blue { color: var(--blue); }
+
+    /* ─── BAND 06: CTA ─── */
+    .cta-band {
+      padding: 22px 36px;
+      flex: 1 0 auto;
+      display: flex; flex-direction: column;
+      gap: 12px; justify-content: center;
+      text-align: center;
+    }
+    .cta-band .msg {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--black);
+      line-height: 1.2;
+    }
+    .cta-band .msg .blue { color: var(--blue); }
+    .cta-band .cta-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 12px;
+      padding: 14px 28px;
+      background: var(--black);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 900; letter-spacing: 0.28em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 28px -10px rgba(0,0,0,0.4);
+      align-self: center;
+    }
+    .cta-band .cta-btn .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      background: var(--blue);
+      color: white;
+      font-size: 14px; font-weight: 900;
+    }
+
+    /* ─── BAND 07: Bottom contact ─── */
+    .contact {
+      background: var(--black);
+      color: white;
+      padding: 12px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+    .contact .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .contact .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .contact .item .ic svg { width: 11px; height: 11px; }
+    .contact .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .contact .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .contact .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: white;
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page head -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Right Option</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Q&amp;A Magazine Spread</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top thin black strip -->
+      <div class="top-strip">
+        <span class="left">Tech Career · Conversation</span>
+        <span><span class="blue">Q &amp; A</span> · Issue 04 · 2025</span>
+      </div>
+
+      <!-- Brand line -->
+      <div class="brand-line">
+        <div class="brand">
+          Tech <span class="accent">Career</span><span class="dot">.</span>
+        </div>
+        <div class="meta">
+          <span class="blue">For Business Owners</span> &middot; A Short Conversation
+        </div>
+      </div>
+
+      <!-- Q BLOCK -->
+      <div class="qa-block q-block">
+        <div class="marker">Q<span style="font-style: normal; color: var(--black);">.</span></div>
+        <div class="text">
+          <div class="lbl">— The Question</div>
+          <h2>Thinking about<br/>taking your business<br/><em>online</em>?</h2>
+        </div>
+      </div>
+
+      <!-- Diamond divider -->
+      <div class="qa-divider">
+        <span class="ln"></span>
+        <span class="di"></span>
+        <span class="ln"></span>
+      </div>
+
+      <!-- A BLOCK -->
+      <div class="qa-block a-block">
+        <div class="marker">A<span style="font-style: normal; color: var(--black);">.</span></div>
+        <div class="text">
+          <div class="lbl">— The Answer</div>
+          <h2>We're the <span class="blue">right</span><br/>option<span class="dot">.</span></h2>
+          <p class="lead">
+            <span class="strong">Founder-led, transparent, and built for small businesses.</span>
+            We don't oversell, we don't overcharge, and we don't overpromise.
+            We simply build the website your business needs &mdash; on time, on budget,
+            and ready to grow with you.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 REASONS WHY -->
+      <div class="reasons">
+        <div class="head">
+          <span class="lbl">— 4 Reasons Why</span>
+          <span class="right">Here's the proof</span>
+        </div>
+
+        <div class="grid">
+          <div class="item">
+            <div class="num">i.</div>
+            <div class="info">
+              <div class="t">Honest <em>Pricing</em></div>
+              <div class="d">No hidden fees. Fixed quote. GST bill.</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="num">ii.</div>
+            <div class="info">
+              <div class="t">Real <em>Timelines</em></div>
+              <div class="d">Live in 7 days &mdash; not "soon" or "next month".</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="num">iii.</div>
+            <div class="info">
+              <div class="t">Founder <em>Access</em></div>
+              <div class="d">Talk directly to us &mdash; no agency layers.</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="num">iv.</div>
+            <div class="info">
+              <div class="t">After <em>Launch</em></div>
+              <div class="d">30 days free support. No retainer trap.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing 3-cell -->
+      <div class="pricing">
+        <div class="col">
+          <div class="lbl">— From</div>
+          <div class="v">&#8377;15K<span class="blue">.</span></div>
+        </div>
+        <div class="col">
+          <div class="lbl">— Live In</div>
+          <div class="v"><em><span class="blue">7</span> days</em></div>
+        </div>
+        <div class="col">
+          <div class="lbl">— Support</div>
+          <div class="v">30 <span class="blue">days</span></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-band">
+        <p class="msg">Stop thinking. <span class="blue">Start building.</span></p>
+        <a class="cta-btn">
+          DM Us Today
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FBFAF7',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-right-option.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visiting Card · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111111;
+      --blue: #097CF4;
+      --gray: #6B7280;
+      --light: #F9FAFB;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e5e7eb;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── CARDS GRID ─── */
+    .cards-wrap {
+      max-width: 1180px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 1100px) {
+      .cards-wrap { grid-template-columns: 1fr; }
+    }
+
+    .card-cell {
+      display: flex; flex-direction: column; gap: 12px;
+      align-items: center;
+    }
+    .card-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      width: 100%;
+      max-width: 525px;
+    }
+    .card-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .card-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .card-dl:hover { background: var(--blue); }
+
+    /* ═══════════════════════════════════════════════ */
+    /* CARD — 525 × 300  →  1050 × 600 PNG              */
+    /* User-friendly: clear hierarchy, big text         */
+    /* ═══════════════════════════════════════════════ */
+    .card {
+      width: 525px; height: 300px;
+      position: relative; overflow: hidden;
+      box-shadow: 0 16px 48px -10px rgba(0,0,0,0.15);
+      font-family: 'Inter', sans-serif;
+      background: white;
+    }
+
+    /* SIGNATURE: Single thin blue strip on the left edge */
+    .card .stripe {
+      position: absolute;
+      top: 0; bottom: 0; left: 0;
+      width: 8px;
+      background: var(--blue);
+      z-index: 4;
+    }
+
+    /* ─── FRONT — Brand identity ─── */
+    .card.front {
+      padding: 36px 38px 32px 50px;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Top: small label + location */
+    .card.front .top {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .card.front .top .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .card.front .top .lbl::before {
+      content: ''; width: 14px; height: 1.5px; background: var(--blue);
+    }
+    .card.front .top .loc {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
+      color: var(--gray);
+    }
+
+    /* Center: brand wordmark BIG */
+    .card.front .brand {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .card.front .brand .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 56px;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      line-height: 0.95;
+    }
+    .card.front .brand .name .accent {
+      color: var(--blue); font-style: italic;
+    }
+    .card.front .brand .name .dot { color: var(--blue); }
+    .card.front .brand .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700;
+      color: var(--gray);
+      letter-spacing: 0.04em;
+    }
+
+    /* Bottom: services as tags */
+    .card.front .services {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .card.front .service {
+      padding: 5px 11px;
+      background: var(--light);
+      border: 1px solid rgba(0,0,0,0.08);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 700;
+      color: var(--black);
+      letter-spacing: 0.04em;
+    }
+    .card.front .service.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+    }
+
+
+    /* ─── BACK — Contact card ─── */
+    .card.back {
+      padding: 28px 38px 28px 50px;
+      display: flex; flex-direction: column;
+    }
+
+    /* Top: name + role */
+    .card.back .header {
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 14px;
+    }
+    .card.back .role-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .card.back .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .card.back .name em {
+      font-style: italic; color: var(--blue);
+    }
+    .card.back .role {
+      margin-top: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 0.02em;
+    }
+
+    /* Middle: contact rows */
+    .card.back .contacts {
+      flex: 1;
+      display: flex; flex-direction: column;
+      gap: 7px;
+      justify-content: center;
+    }
+    .card.back .row {
+      display: flex; align-items: center; gap: 11px;
+    }
+    .card.back .row .ic {
+      flex: 0 0 auto;
+      width: 26px; height: 26px;
+      background: var(--light);
+      border: 1px solid rgba(0,0,0,0.07);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .card.back .row .ic svg { width: 13px; height: 13px; }
+    .card.back .row .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px; font-weight: 600;
+      color: var(--black);
+      letter-spacing: 0.005em;
+    }
+    .card.back .row .v.dim { color: var(--gray); font-weight: 500; }
+
+    /* Bottom: brand mini */
+    .card.back .footer {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(0,0,0,0.1);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .card.back .brand-mini {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 14px; letter-spacing: -0.02em;
+      color: var(--black);
+    }
+    .card.back .brand-mini .accent {
+      color: var(--blue); font-style: italic;
+    }
+    .card.back .brand-mini .dot { color: var(--blue); }
+    .card.back .est {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 700; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Visiting <span class="accent">Card</span>.</h1>
+      <p>Front + Back · 1050 × 600 PNG · 3.5" × 2" · Friendly &amp; Clear</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download Both</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Cards grid -->
+  <div class="cards-wrap">
+
+    <!-- ────── FRONT ────── -->
+    <div class="card-cell">
+      <div class="card-meta">
+        <span class="card-label">— Front Side</span>
+        <button class="card-dl" onclick="downloadCard('front', 'tech-career-card-front.png')">↓ Download Front</button>
+      </div>
+      <div class="card front" id="front">
+        <span class="stripe"></span>
+
+        <div class="top">
+          <span class="lbl">Founder-Led Studio</span>
+          <span class="loc">Ahmedabad, India</span>
+        </div>
+
+        <div class="brand">
+          <div class="name">Tech <span class="accent">Career</span><span class="dot">.</span></div>
+          <div class="sub">IT Solutions LLP · Est. 2025</div>
+        </div>
+
+        <div class="services">
+          <span class="service primary">Websites</span>
+          <span class="service">E-commerce</span>
+          <span class="service">Mobile Apps</span>
+          <span class="service">Marketing</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ────── BACK ────── -->
+    <div class="card-cell">
+      <div class="card-meta">
+        <span class="card-label">— Back Side</span>
+        <button class="card-dl" onclick="downloadCard('back', 'tech-career-card-back.png')">↓ Download Back</button>
+      </div>
+      <div class="card back" id="back">
+        <span class="stripe"></span>
+
+        <div class="header">
+          <div class="role-tag">Founder</div>
+          <h2 class="name">Faizan <em>Pathan</em></h2>
+          <div class="role">Director · Full-Stack Developer</div>
+        </div>
+
+        <div class="contacts">
+          <div class="row">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+          <div class="row">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+              </svg>
+            </span>
+            <span class="v dim">inquiry.techcareer@gmail.com</span>
+          </div>
+          <div class="row">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+              </svg>
+            </span>
+            <span class="v">www.techcareer.site</span>
+          </div>
+          <div class="row">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a8 8 0 018 8c0 5.5-8 13-8 13S4 15.5 4 10a8 8 0 018-8z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </span>
+            <span class="v dim">iHub · University Area · Ahmedabad 380015</span>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span class="brand-mini">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+          <span class="est">@techcareer.llp</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadCard(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      await downloadCard('front', 'tech-career-card-front.png');
+      await new Promise(r => setTimeout(r, 400));
+      await downloadCard('back', 'tech-career-card-back.png');
+    }
+  </script>
+
+</body>
+</html>

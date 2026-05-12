@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · Fashion Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #1A1A1A;
+      --brown: #6B4423;
+      --brown-deep: #3F2418;
+      --brown-soft: #C9B59C;
+      --paper: #FAF6EE;
+      --cream: #F5EFE5;
+      --gray: #6B5E4F;
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8cfbf;
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--brown); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--brown-deep); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--brown); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--brown); color: white; border-color: var(--brown); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4  595 × 842  →  1190 × 1684 PNG    */
+    /* Asymmetric: vertical brown band + content right */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* Subtle paper grain */
+    .pamphlet::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(107,68,35,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── BAND 01: Top strip ─── */
+    .top-strip {
+      background: var(--cream);
+      border-bottom: 1px solid var(--brown);
+      padding: 10px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--brown-deep);
+      position: relative; z-index: 2;
+    }
+    .top-strip .pulse {
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .top-strip .pulse::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--brown);
+      transform: rotate(45deg);
+    }
+    .top-strip .right { color: var(--brown); }
+
+    /* ─── MIDDLE: Asymmetric body ─── */
+    .body-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      position: relative; z-index: 2;
+    }
+
+    /* LEFT: Vertical brown band */
+    .left-band {
+      width: 110px;
+      background: var(--brown);
+      color: var(--paper);
+      padding: 24px 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between;
+      position: relative;
+    }
+    .left-band .top-mark {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 900; letter-spacing: 0.4em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Vertical rotated text in middle */
+    .left-band .v-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      color: var(--paper);
+      line-height: 1;
+    }
+    .left-band .v-text .soft { color: var(--brown-soft); font-style: normal; }
+
+    /* Hangtag icon at bottom of band */
+    .left-band .tag-icon {
+      position: relative;
+      width: 38px; height: 50px;
+      background: var(--paper);
+      color: var(--brown);
+      display: flex; align-items: center; justify-content: center;
+      clip-path: polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    }
+    .left-band .tag-icon::before {
+      content: '';
+      position: absolute;
+      top: -14px; left: 50%;
+      width: 1px; height: 14px;
+      background: var(--paper);
+      transform: translateX(-50%);
+    }
+    .left-band .tag-icon::after {
+      content: '';
+      position: absolute;
+      top: -19px; left: 50%;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      border: 1px solid var(--paper);
+      transform: translateX(-50%);
+    }
+    .left-band .tag-icon svg {
+      width: 22px; height: 22px;
+    }
+
+    /* RIGHT: Main content */
+    .right-content {
+      flex: 1;
+      padding: 28px 36px 24px;
+      display: flex; flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Brand line */
+    .brand-line {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(107,68,35,0.3);
+    }
+    .brand-line .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--black);
+    }
+    .brand-line .brand .accent { color: var(--brown); font-style: italic; }
+    .brand-line .brand .dot { color: var(--brown); }
+    .brand-line .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--brown);
+    }
+
+    /* Eyebrow */
+    .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--brown);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .eyebrow::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--brown);
+    }
+
+    /* Hero headline */
+    h1.hero {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 50px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 0.96;
+    }
+    h1.hero .brown { color: var(--brown); }
+    h1.hero .dot { color: var(--brown); font-style: normal; }
+
+    /* Body lead */
+    .lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px; font-weight: 500;
+      color: rgba(0,0,0,0.72);
+      line-height: 1.6;
+    }
+    .lead .strong { color: var(--black); font-weight: 700; }
+    .lead .brown { color: var(--brown-deep); font-weight: 700; }
+
+    /* Diamond ornament */
+    .ornament {
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .ornament .ln { width: 30px; height: 1px; background: var(--brown); }
+    .ornament .di {
+      width: 6px; height: 6px;
+      background: var(--brown);
+      transform: rotate(45deg);
+    }
+    .ornament .di.hollow {
+      background: transparent;
+      border: 1px solid var(--brown);
+    }
+
+    /* Features card */
+    .features-card {
+      background: white;
+      border: 1.5px solid var(--brown);
+      padding: 16px 18px;
+      position: relative;
+    }
+    .features-card .lbl {
+      position: absolute;
+      top: -8px; left: 14px;
+      background: var(--paper);
+      padding: 0 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 900; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--brown);
+    }
+    .features-card .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+    }
+    .feature {
+      display: flex; align-items: flex-start; gap: 9px;
+    }
+    .feature .num {
+      flex: 0 0 auto;
+      width: 18px; height: 18px;
+      background: var(--brown);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 800;
+      font-size: 10px;
+      transform: rotate(45deg);
+    }
+    .feature .num span {
+      transform: rotate(-45deg);
+    }
+    .feature .info .t {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 13px;
+      color: var(--black); letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .feature .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 500;
+      color: var(--gray);
+      line-height: 1.4;
+      margin-top: 1px;
+    }
+
+    /* Pricing row */
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-top: 1.5px solid var(--brown);
+      border-bottom: 1.5px solid var(--brown);
+    }
+    .pricing-row .col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--brown);
+      margin-bottom: 5px;
+    }
+    .pricing-row .col .v {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .pricing-row .col .v .brown { color: var(--brown-deep); }
+    .pricing-row .col .sub {
+      margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 600;
+      color: var(--gray);
+    }
+
+    /* CTA */
+    .cta-line {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 14px;
+    }
+    .cta-line .text {
+      flex: 1;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.15;
+    }
+    .cta-line .text .brown { color: var(--brown); }
+    .cta-btn {
+      flex: 0 0 auto;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 16px;
+      background: var(--brown-deep);
+      color: var(--paper);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 900; letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    /* ─── BOTTOM contact strip ─── */
+    .bottom-strip {
+      background: var(--brown-deep);
+      color: var(--paper);
+      padding: 14px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      position: relative; z-index: 2;
+    }
+    .bottom-strip .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .bottom-strip .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(245,239,229,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brown-soft);
+    }
+    .bottom-strip .item .ic svg { width: 11px; height: 11px; }
+    .bottom-strip .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .bottom-strip .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(245,239,229,0.5);
+    }
+    .bottom-strip .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: var(--paper);
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Fashion Website</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Cream + Brown · Asymmetric Layout</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top strip -->
+      <div class="top-strip">
+        <span class="pulse">Tech Career · IT Solutions LLP</span>
+        <span class="right">Fashion Studio · 2025</span>
+      </div>
+
+      <!-- Asymmetric body -->
+      <div class="body-wrap">
+
+        <!-- LEFT: vertical brown band -->
+        <div class="left-band">
+          <span class="top-mark">Edition 04</span>
+          <span class="v-text">For <span style="color: var(--brown-soft); font-style: normal;">/</span> Fashion <span style="color: var(--brown-soft); font-style: normal;">/</span> Brands</span>
+          <div class="tag-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6l4-3h2a2 2 0 004 0h2l4 3-3 4h-2v10a1 1 0 01-1 1H8a1 1 0 01-1-1V10H5L4 6z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- RIGHT: main content -->
+        <div class="right-content">
+
+          <!-- Brand line -->
+          <div class="brand-line">
+            <div class="brand">
+              Tech <span class="accent">Career</span><span class="dot">.</span>
+            </div>
+            <div class="meta">Web · Cart · Custom · SEO</div>
+          </div>
+
+          <!-- Eyebrow -->
+          <span class="eyebrow">A Note for Fashion Brands</span>
+
+          <!-- Hero -->
+          <h1 class="hero">Your fashion<br/>brand deserves<br/>a digital <span class="brown">stage</span><span class="dot">.</span></h1>
+
+          <!-- Ornament -->
+          <div class="ornament">
+            <span class="ln"></span><span class="di"></span><span class="di hollow"></span><span class="di"></span><span class="ln"></span>
+          </div>
+
+          <!-- Lead -->
+          <p class="lead">
+            <span class="strong">Boutique, label or fashion startup</span> &mdash; we build
+            online stores that show your collection beautifully and convert
+            scrollers into buyers. <span class="brown">Catalog, cart, sizes &amp; pan-India shipping</span>
+            &mdash; all built-in.
+          </p>
+
+          <!-- Features card -->
+          <div class="features-card">
+            <span class="lbl">— What you get</span>
+            <div class="feature-grid">
+              <div class="feature">
+                <span class="num"><span>1</span></span>
+                <div class="info">
+                  <div class="t">Product Catalog</div>
+                  <div class="d">HD photos, 360&deg; spin, colour swatches.</div>
+                </div>
+              </div>
+              <div class="feature">
+                <span class="num"><span>2</span></span>
+                <div class="info">
+                  <div class="t">Secure Cart</div>
+                  <div class="d">Razorpay, COD, UPI &mdash; all safe.</div>
+                </div>
+              </div>
+              <div class="feature">
+                <span class="num"><span>3</span></span>
+                <div class="info">
+                  <div class="t">Size Charts</div>
+                  <div class="d">Built-in &mdash; fewer returns, happy buyers.</div>
+                </div>
+              </div>
+              <div class="feature">
+                <span class="num"><span>4</span></span>
+                <div class="info">
+                  <div class="t">Pan-India Ship</div>
+                  <div class="d">Live tracking + auto SMS updates.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing row -->
+          <div class="pricing-row">
+            <div class="col">
+              <div class="lbl">— Starts From</div>
+              <div class="v">&#8377;15K<span class="brown">.</span></div>
+              <div class="sub">Honest fixed quote &middot; GST bill</div>
+            </div>
+            <div class="col">
+              <div class="lbl">— Goes Live In</div>
+              <div class="v"><em>10 days</em></div>
+              <div class="sub">Catalog, cart, payments &middot; ready</div>
+            </div>
+          </div>
+
+          <!-- CTA line -->
+          <div class="cta-line">
+            <p class="text">Ready to dress your<br/>brand <span class="brown">online</span>?</p>
+            <a class="cta-btn">DM Now &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom contact strip -->
+      <div class="bottom-strip">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FAF6EE',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-cloth.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · Your Business Deserves a Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0F0F0F;
+      --blue: #097CF4;
+      --paper: #FBFAF7;
+      --gray: #6B7280;
+      --rule: rgba(0,0,0,0.12);
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4 595 × 842 → 1190 × 1684 PNG       */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* ─── BAND 01: Top thin strip ─── */
+    .top-strip {
+      background: var(--black);
+      color: white;
+      padding: 9px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+    .top-strip .blue { color: var(--blue); }
+    .top-strip .pulse {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .top-strip .pulse::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--blue); border-radius: 50%;
+      box-shadow: 0 0 6px var(--blue);
+    }
+
+    /* ─── BAND 02: Brand masthead ─── */
+    .masthead {
+      padding: 16px 36px;
+      border-bottom: 1px solid var(--rule);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .masthead .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+    }
+    .masthead .brand .accent { color: var(--blue); font-style: italic; }
+    .masthead .brand .dot { color: var(--blue); }
+    .masthead .meta {
+      text-align: right;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gray);
+      line-height: 1.6;
+    }
+    .masthead .meta .blue { color: var(--blue); }
+
+    /* ─── BAND 03: Hero editorial headline ─── */
+    .hero {
+      padding: 32px 50px 26px;
+      flex: 0 0 auto;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .hero .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .hero .eyebrow::before {
+      content: ''; width: 26px; height: 1.5px; background: var(--blue);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 50px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 0.98;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--blue);
+    }
+    .hero h1 .dot {
+      color: var(--blue); font-style: normal;
+    }
+
+    /* ─── BAND 04: Body paragraphs (editorial) ─── */
+    .body-text {
+      padding: 24px 50px 22px;
+      flex: 1 0 auto;
+      position: relative;
+    }
+    .body-text .lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 500;
+      line-height: 1.65;
+      color: rgba(0,0,0,0.78);
+    }
+    .body-text .lead .strong {
+      color: var(--black); font-weight: 700;
+    }
+    .body-text .lead .blue {
+      color: var(--blue); font-weight: 700;
+    }
+    .body-text .para {
+      margin-top: 10px;
+    }
+
+    /* Drop cap on first paragraph */
+    .body-text .lead.first::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 56px;
+      line-height: 0.9;
+      float: left;
+      margin: 4px 10px 0 0;
+      color: var(--blue);
+    }
+
+    /* Inline divider */
+    .body-text .divider {
+      margin: 14px 0;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .body-text .divider .ln {
+      flex: 1; height: 1px; background: var(--rule);
+    }
+    .body-text .divider .di {
+      width: 6px; height: 6px;
+      background: var(--blue);
+      transform: rotate(45deg);
+    }
+
+    /* ─── BAND 05: Black quote callout ─── */
+    .callout {
+      background: var(--black);
+      color: white;
+      padding: 24px 50px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+    .callout::before {
+      content: '\201C';
+      position: absolute;
+      top: -10px; right: 30px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 100px;
+      color: var(--blue);
+      opacity: 0.35;
+      line-height: 1;
+    }
+    .callout .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 10px;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .callout .label::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--blue);
+    }
+    .callout p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.3;
+      color: white;
+      letter-spacing: -0.005em;
+    }
+    .callout p em {
+      color: var(--blue); font-style: italic;
+    }
+    .callout .signoff {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .callout .signoff .who {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
+    }
+    .callout .signoff .what {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 13px; color: white;
+    }
+    .callout .signoff .what .blue { color: var(--blue); }
+
+    /* ─── BAND 06: CTA / Contact ─── */
+    .cta-band {
+      padding: 22px 50px;
+      flex: 0 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 20px;
+    }
+    .cta-band .cta-text .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 4px;
+    }
+    .cta-band .cta-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 24px;
+      letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .cta-band .cta-text h3 em {
+      font-style: italic; color: var(--blue);
+    }
+    .cta-band .cta-btn {
+      flex: 0 0 auto;
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 13px 18px;
+      background: var(--blue);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10.5px; font-weight: 900; letter-spacing: 0.25em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 24px -10px rgba(9,124,244,0.55);
+    }
+
+    /* ─── BAND 07: Bottom contact strip ─── */
+    .bottom-strip {
+      background: var(--black);
+      color: white;
+      padding: 14px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex: 0 0 auto;
+    }
+    .bottom-strip .row {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .bottom-strip .item {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 700;
+      color: white;
+      letter-spacing: 0.04em;
+    }
+    .bottom-strip .item .ic {
+      width: 22px; height: 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .bottom-strip .item .ic svg { width: 11px; height: 11px; }
+    .bottom-strip .copy {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 700; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Editorial Letter</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Print &amp; Distribute</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top strip -->
+      <div class="top-strip">
+        <span class="pulse">Tech Career · IT Solutions LLP</span>
+        <span><span class="blue">A Letter</span> · April 2025</span>
+      </div>
+
+      <!-- Masthead -->
+      <div class="masthead">
+        <div class="brand">
+          Tech <span class="accent">Career</span><span class="dot">.</span>
+        </div>
+        <div class="meta">
+          <span><span class="blue">Web Development</span> Studio</span>
+          <span>Ahmedabad &middot; India</span>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="hero">
+        <span class="eyebrow">A Note for Every Business Owner</span>
+        <h1>Your business<br/>deserves a<br/><em>professional</em> website<span class="dot">.</span></h1>
+      </div>
+
+      <!-- Body editorial -->
+      <div class="body-text">
+        <p class="lead first">
+          In today's digital world, having a website is <span class="strong">no longer optional</span>
+          &mdash; it's <span class="blue">essential for growth</span>. Your business deserves a platform
+          that works for you 24/7, builds trust, and turns visitors into paying customers.
+        </p>
+
+        <div class="divider"><span class="ln"></span><span class="di"></span><span class="ln"></span></div>
+
+        <p class="lead para">
+          At <span class="strong">Tech Career IT Solutions LLP</span>, we create high-quality
+          business websites designed to deliver real results &mdash; honest pricing, real
+          timelines, and GST invoices included.
+        </p>
+      </div>
+
+      <!-- Black quote callout -->
+      <div class="callout">
+        <span class="label">The truth is</span>
+        <p>Don't limit your business to offline or social media <em>only</em>. Give it the digital presence it truly deserves.</p>
+        <div class="signoff">
+          <span class="who">— Faizan Pathan, Founder</span>
+          <span class="what">Tech <span class="blue">Career</span>.</span>
+        </div>
+      </div>
+
+      <!-- CTA band -->
+      <div class="cta-band">
+        <div class="cta-text">
+          <div class="lbl">— Time to grow</div>
+          <h3>Grow your business <em>online</em>.</h3>
+        </div>
+        <a class="cta-btn">
+          DM Us Now &nbsp;→
+        </a>
+      </div>
+
+      <!-- Bottom contact strip -->
+      <div class="bottom-strip">
+        <div class="row">
+          <div class="item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+              </svg>
+            </span>
+            <span>techcareer.site</span>
+          </div>
+          <div class="item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+              </svg>
+            </span>
+            <span>inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <span class="copy">© 2025 · Edition 04</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

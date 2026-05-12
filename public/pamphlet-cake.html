@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · Cake Shop Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --pink: #EC4899;
+      --pink-deep: #BE185D;
+      --pink-soft: #FCE7F3;
+      --brown: #78350F;
+      --brown-deep: #451A03;
+      --cream: #FFF7ED;
+      --paper: #FFFAF3;
+      --gray: #78716C;
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e8d5d0;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--brown-deep); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--pink); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--brown-deep); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--pink); }
+    .btn.secondary {
+      background: white; color: var(--brown-deep);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--pink); color: white; border-color: var(--pink); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4  595 × 842 → 1190 × 1684 PNG       */
+    /* PATISSERIE — soft pink + chocolate, invitation   */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(190,24,93,0.25);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--brown-deep);
+      position: relative;
+    }
+
+    /* Soft pink dot pattern background */
+    .pamphlet::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(236,72,153,0.07) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── TOP SCALLOPED PINK STRIP ─── */
+    .top-strip {
+      background: var(--pink);
+      color: white;
+      padding: 10px 36px 14px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+      position: relative; z-index: 2;
+    }
+    /* Scallop frosting effect at bottom */
+    .top-strip::after {
+      content: '';
+      position: absolute;
+      bottom: -8px; left: 0; right: 0;
+      height: 10px;
+      background-image:
+        radial-gradient(circle 8px at 12px 0, var(--pink) 99%, transparent 100%);
+      background-repeat: repeat-x;
+      background-size: 24px 10px;
+      background-position: top;
+    }
+    .top-strip .pulse {
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .top-strip .pulse::before {
+      content: '\2766'; font-size: 13px; line-height: 1;
+    }
+
+    /* ─── INNER FRAME ─── */
+    .inner-frame {
+      flex: 1;
+      margin: 22px 26px 0;
+      border: 1.5px solid var(--pink);
+      padding: 24px 28px 20px;
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      background: var(--paper);
+    }
+    /* Decorative pink corners on frame */
+    .inner-frame::before, .inner-frame::after {
+      content: '\2766';
+      position: absolute;
+      font-size: 14px;
+      color: var(--pink);
+      background: var(--paper);
+      padding: 0 6px;
+      line-height: 1;
+    }
+    .inner-frame::before {
+      top: -8px; left: 22px;
+    }
+    .inner-frame::after {
+      top: -8px; right: 22px;
+    }
+    .inner-frame .bot-orn-l, .inner-frame .bot-orn-r {
+      position: absolute;
+      bottom: -8px;
+      font-size: 14px;
+      color: var(--pink);
+      background: var(--paper);
+      padding: 0 6px;
+      line-height: 1;
+    }
+    .inner-frame .bot-orn-l { left: 22px; }
+    .inner-frame .bot-orn-r { right: 22px; }
+
+    /* Brand line */
+    .brand-line {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(190,24,93,0.3);
+    }
+    .brand-line .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--brown-deep);
+    }
+    .brand-line .brand .accent { color: var(--pink); font-style: italic; }
+    .brand-line .brand .dot { color: var(--pink); }
+    .brand-line .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--pink-deep);
+    }
+
+    /* ─── HERO (centered invitation) ─── */
+    .hero {
+      padding: 22px 0 18px;
+      text-align: center;
+    }
+    .hero .ornament-top {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--pink);
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    .hero .ornament-top .ln {
+      width: 50px; height: 1px; background: var(--pink);
+    }
+    .hero .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--pink-deep);
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 50px;
+      letter-spacing: -0.02em;
+      color: var(--brown-deep);
+      line-height: 0.98;
+    }
+    .hero h1 .pink { color: var(--pink); }
+    .hero h1 .dot { color: var(--pink); font-style: normal; }
+    .hero .lead {
+      margin-top: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: rgba(69,26,3,0.75);
+      max-width: 380px;
+      margin-left: auto; margin-right: auto;
+      line-height: 1.6;
+    }
+    .hero .lead .strong { color: var(--brown-deep); font-weight: 700; }
+    .hero .lead .pink { color: var(--pink-deep); font-weight: 700; }
+    .hero .ornament-bot {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--pink);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    .hero .ornament-bot .ln {
+      width: 50px; height: 1px; background: var(--pink);
+    }
+
+    /* ─── TODAY'S MENU section ─── */
+    .menu-section {
+      padding: 18px 0 16px;
+      border-top: 1px dashed rgba(190,24,93,0.3);
+    }
+    .menu-section .head {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .menu-section .head .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--pink-deep);
+      display: inline-flex; align-items: center; gap: 12px;
+    }
+    .menu-section .head .lbl::before, .menu-section .head .lbl::after {
+      content: '\2766'; font-size: 12px; color: var(--pink); line-height: 1;
+    }
+    .menu-section .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 18px;
+    }
+    .menu-section .item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 6px 0;
+    }
+    .menu-section .item .tier {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      background: var(--pink);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 800;
+      font-size: 11px;
+    }
+    .menu-section .item .info .t {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 13.5px;
+      color: var(--brown-deep); line-height: 1.1;
+      letter-spacing: -0.005em;
+    }
+    .menu-section .item .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 500;
+      color: var(--gray);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* ─── PRICING ─── */
+    .pricing-row {
+      padding: 16px 0 14px;
+      border-top: 1px dashed rgba(190,24,93,0.3);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .pricing-row .col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--pink-deep);
+      margin-bottom: 5px;
+    }
+    .pricing-row .col .v {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 32px;
+      color: var(--brown-deep);
+      line-height: 1;
+      letter-spacing: -0.025em;
+    }
+    .pricing-row .col .v .pink { color: var(--pink); }
+    .pricing-row .col .sub {
+      margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px; font-weight: 600;
+      color: var(--gray);
+    }
+
+    /* ─── CTA ─── */
+    .cta-area {
+      flex: 1 0 auto;
+      padding: 14px 0 0;
+      display: flex; flex-direction: column;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .cta-area .msg {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--brown-deep);
+      line-height: 1.2;
+    }
+    .cta-area .msg .pink { color: var(--pink); }
+    .cta-area .cta-btn {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      background: var(--pink);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 900; letter-spacing: 0.28em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 24px -10px rgba(236,72,153,0.55);
+    }
+    .cta-area .cta-btn .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      background: white;
+      color: var(--pink);
+      font-size: 13px; font-weight: 900;
+      border-radius: 50%;
+    }
+
+    /* ─── BOTTOM CHOCOLATE STRIP ─── */
+    .bottom-strip {
+      background: var(--brown-deep);
+      color: var(--cream);
+      padding: 12px 36px;
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      flex: 0 0 auto;
+      position: relative; z-index: 2;
+    }
+    .bottom-strip .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .bottom-strip .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(255,247,237,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--pink-soft);
+    }
+    .bottom-strip .item .ic svg { width: 11px; height: 11px; }
+    .bottom-strip .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .bottom-strip .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,247,237,0.5);
+    }
+    .bottom-strip .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: var(--cream);
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Cake Shop</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Soft Pink + Chocolate Patisserie</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top scalloped pink strip -->
+      <div class="top-strip">
+        <span class="pulse">Tech Career · Patisserie Studio</span>
+        <span>Sweet · 2025</span>
+      </div>
+
+      <!-- Inner pink-bordered frame -->
+      <div class="inner-frame">
+        <span class="bot-orn-l">&#10086;</span>
+        <span class="bot-orn-r">&#10086;</span>
+
+        <!-- Brand line -->
+        <div class="brand-line">
+          <div class="brand">
+            Tech <span class="accent">Career</span><span class="dot">.</span>
+          </div>
+          <div class="meta">For Bakeries &amp; Cake Shops</div>
+        </div>
+
+        <!-- HERO -->
+        <div class="hero">
+          <div class="ornament-top">
+            <span class="ln"></span><span>&#10086;</span><span class="ln"></span>
+          </div>
+
+          <span class="eyebrow">A Note for Cake Shops</span>
+          <h1>Sweet websites<br/>for <span class="pink">sweeter</span><br/>businesses<span class="dot">.</span></h1>
+
+          <p class="lead">
+            From <span class="strong">home bakers</span> to <span class="strong">multi-outlet patisseries</span>,
+            we bake websites that show off your cakes, take custom orders, and
+            <span class="pink">deliver smiles</span> across the city &mdash; all online.
+          </p>
+
+          <div class="ornament-bot">
+            <span class="ln"></span><span>&#10086;</span><span class="ln"></span>
+          </div>
+        </div>
+
+        <!-- Today's Menu (features) -->
+        <div class="menu-section">
+          <div class="head">
+            <span class="lbl">Today's Menu</span>
+          </div>
+
+          <div class="grid">
+            <div class="item">
+              <span class="tier">i</span>
+              <div class="info">
+                <div class="t">Cake Gallery</div>
+                <div class="d">HD photos, categories, occasions.</div>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tier">ii</span>
+              <div class="info">
+                <div class="t">Custom Orders</div>
+                <div class="d">Flavour, design, size form &mdash; one click.</div>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tier">iii</span>
+              <div class="info">
+                <div class="t">Online Payments</div>
+                <div class="d">Razorpay, UPI, COD &mdash; all secure.</div>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tier">iv</span>
+              <div class="info">
+                <div class="t">Same-Day Delivery</div>
+                <div class="d">Slot selection + auto SMS &amp; tracking.</div>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tier">v</span>
+              <div class="info">
+                <div class="t">Wedding Cakes</div>
+                <div class="d">Showcase tiers, themes, testimonials.</div>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tier">vi</span>
+              <div class="info">
+                <div class="t">Reviews &amp; Photos</div>
+                <div class="d">Google + Insta feed automatically.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing-row">
+          <div class="col">
+            <div class="lbl">— Starts From</div>
+            <div class="v">&#8377;15K<span class="pink">.</span></div>
+            <div class="sub">Honest fixed quote &middot; GST bill</div>
+          </div>
+          <div class="col">
+            <div class="lbl">— Goes Live In</div>
+            <div class="v"><em>10 days</em></div>
+            <div class="sub">Gallery, orders, payments &middot; ready</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-area">
+          <p class="msg">Ready to put your cakes <span class="pink">online</span>?</p>
+          <a class="cta-btn">
+            Order Your Demo
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom chocolate contact strip -->
+      <div class="bottom-strip">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FFFAF3',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-cake.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

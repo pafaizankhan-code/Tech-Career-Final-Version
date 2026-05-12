@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · We Build Websites for Every Industry · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #097CF4; --black: #111111; }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e5e7eb;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-head {
+      max-width: 1240px;
+      margin: 0 auto 32px;
+      background: white;
+      padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--blue); }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Left vertical blue accent bar (signature element) */
+    .slide .vbar {
+      position: absolute;
+      top: 70px;
+      bottom: 70px;
+      left: 50px;
+      width: 3px;
+      background: var(--blue);
+    }
+
+    /* ─── SHARED META BARS ─── */
+    .s-top, .s-bot {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .s-top { top: 60px; }
+    .s-bot { bottom: 60px; }
+
+    .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .ptag.blue { color: var(--blue); }
+
+    /* Brand wordmark */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* ─── COVER SLIDE (s1) — BLACK ─── */
+    .s-cover {
+      background: var(--black); color: white;
+    }
+    .s-cover .vbar { background: var(--blue); }
+    .s-cover .ptag { color: rgba(255,255,255,0.45); }
+    .s-cover .brand-mark .name { color: white; }
+    .s-cover .brand-mark .sub { color: rgba(255,255,255,0.5); }
+    .s-cover::before {
+      content: ''; position: absolute;
+      top: -120px; right: -120px;
+      width: 320px; height: 320px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(50px); pointer-events: none;
+    }
+    .s-cover .body {
+      position: absolute;
+      inset: 0;
+      padding: 0 70px 0 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+    .s-cover .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .s-cover .label::before {
+      content: ''; width: 28px; height: 1.5px; background: var(--blue);
+    }
+    .s-cover h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px; font-weight: 900;
+      letter-spacing: -0.025em; color: white; line-height: 1;
+    }
+    .s-cover h2 .accent { color: var(--blue); font-style: italic; }
+    .s-cover .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(255,255,255,0.7); max-width: 400px;
+    }
+    .s-cover .stats {
+      display: flex; gap: 20px; margin-top: 10px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+    .s-cover .stats .st .k {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 800; color: white;
+      line-height: 1;
+    }
+    .s-cover .stats .st .k .dot { color: var(--blue); }
+    .s-cover .stats .st .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      margin-top: 5px;
+    }
+
+    /* ─── CATEGORY SLIDE — WHITE ─── */
+    .s-cat .body {
+      position: absolute;
+      top: 120px; left: 80px; right: 70px; bottom: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* Big icon badge (top-right floating) */
+    .icon-hero {
+      position: absolute;
+      top: 90px; right: 60px;
+      width: 78px; height: 78px;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+    }
+    .icon-hero svg { width: 38px; height: 38px; }
+
+    .s-cat .cat-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .s-cat .cat-num::before {
+      content: ''; width: 24px; height: 1.5px; background: var(--blue);
+    }
+
+    .s-cat h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 900;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 1;
+      max-width: 340px;
+    }
+    .s-cat h2 .accent { color: var(--blue); font-style: italic; }
+    .s-cat .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; line-height: 1.55;
+      color: rgba(0,0,0,0.65);
+      max-width: 360px;
+      margin-top: 12px;
+    }
+    .s-cat .sep {
+      margin: 22px 0 14px;
+      width: 44px; height: 2px; background: var(--black);
+    }
+    .s-cat .d-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.35em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45);
+      margin-bottom: 10px;
+    }
+    .s-cat .d-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .s-cat .d-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 5px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px; font-weight: 700; color: var(--black);
+    }
+    .s-cat .d-list li::before {
+      content: ''; flex: 0 0 auto;
+      width: 6px; height: 6px; margin-top: 7px;
+      background: var(--blue);
+    }
+
+    /* ─── CTA SLIDE (s10) — BLACK ─── */
+    .s-cta {
+      background: var(--black); color: white;
+    }
+    .s-cta .vbar { background: var(--blue); }
+    .s-cta .ptag { color: rgba(255,255,255,0.45); }
+    .s-cta .brand-mark .name { color: white; font-size: 22px; }
+    .s-cta .brand-mark .sub { color: rgba(255,255,255,0.55); font-size: 8px; }
+    .s-cta::before {
+      content: ''; position: absolute;
+      top: -140px; left: -140px;
+      width: 360px; height: 360px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.32) 0%, transparent 70%);
+      filter: blur(55px); pointer-events: none;
+    }
+    .s-cta::after {
+      content: ''; position: absolute;
+      bottom: -140px; right: -140px;
+      width: 340px; height: 340px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.22) 0%, transparent 70%);
+      filter: blur(55px); pointer-events: none;
+    }
+    .s-cta .body {
+      position: absolute;
+      inset: 0;
+      padding: 120px 70px 140px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .s-cta .top-text { display: flex; flex-direction: column; gap: 14px; }
+    .s-cta .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .s-cta .label::before {
+      content: ''; width: 26px; height: 1.5px; background: var(--blue);
+    }
+    .s-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 900;
+      letter-spacing: -0.025em; color: white; line-height: 1;
+    }
+    .s-cta h2 .accent { color: var(--blue); font-style: italic; }
+    .s-cta .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(255,255,255,0.7); max-width: 380px;
+    }
+    .s-cta .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .s-cta .c-card .c-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      margin-bottom: 4px;
+    }
+    .s-cta .c-card .c-val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 700; color: white;
+    }
+    .s-cta .c-card .c-val.small { font-size: 11px; }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>We build for <span class="accent">every</span> industry.</h1>
+      <p>10-Slide Carousel · 1080 × 1080 PNG · Instagram-Ready</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (10 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 10 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'we-build-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cover" id="s1">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">01 / 10</span>
+         
+        </div>
+
+        <div class="body">
+          <span class="label">We Build Websites For</span>
+          <h2>Every industry.<br/>Every <span class="accent">business</span>.</h2>
+          <p class="sub">
+            A focused studio building custom websites, stores, apps,
+            CRM &amp; digital marketing for businesses across 8+ verticals
+            in India.
+          </p>
+          <div class="stats">
+            <div class="st">
+              <div class="k">08<span class="dot">.</span></div>
+              <div class="v">Categories</div>
+            </div>
+            <div class="st">
+              <div class="k">100%<span class="dot">.</span></div>
+              <div class="v">Custom Built</div>
+            </div>
+            <div class="st">
+              <div class="k">&lt; 24h<span class="dot">.</span></div>
+              <div class="v">Reply Time</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">— Ahmedabad · 2025</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — RESTAURANTS & CAFES                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 10 · Restaurants &amp; Cafes</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'we-build-02-restaurants.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s2">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">02 / 10</span>
+          <span class="ptag blue">— Industry 01</span>
+        </div>
+        <div class="icon-hero">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fork -->
+  <path d="M6 2v6M8 2v6M10 2v6M8 8v14" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Knife -->
+  <path d="M16 2c1.5 2 1.5 5 0 7l-2 2v11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 01</span>
+          <h2>Restaurants &amp;<br/><span class="accent">Cafes</span>.</h2>
+          <p class="tagline">Turn walk-ins into repeat customers — with menus, orders and tables, all online.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Digital menu with QR codes</li>
+            <li>Online ordering + Razorpay</li>
+            <li>Reservation &amp; waitlist system</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — RETAIL & E-COMMERCE                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 10 · Retail &amp; E-commerce</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'we-build-03-retail.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s3">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">03 / 10</span>
+          <span class="ptag blue">— Industry 02</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 2l-3 6v13a1 1 0 001 1h16a1 1 0 001-1V8l-3-6H6zM3 8h18M16 12a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 02</span>
+          <h2>Retail &amp;<br/><span class="accent">E-commerce</span>.</h2>
+          <p class="tagline">Your shelf, now online — Shopify, WooCommerce or custom stores ready to sell.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Shopify / WooCommerce store setup</li>
+            <li>COD + Razorpay / Stripe payments</li>
+            <li>Inventory, orders &amp; shipping</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — HEALTHCARE & CLINICS                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 10 · Healthcare &amp; Clinics</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'we-build-04-healthcare.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s4">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">04 / 10</span>
+          <span class="ptag blue">— Industry 03</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="9"/>
+            <path stroke-linecap="round" d="M12 8v8M8 12h8"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 03</span>
+          <h2>Healthcare &amp;<br/><span class="accent">Clinics</span>.</h2>
+          <p class="tagline">Care made accessible — appointments, patient portals and lab reports online.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Appointment scheduling system</li>
+            <li>Patient portal &amp; medical records</li>
+            <li>Doctor profiles, reviews &amp; specialisations</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — REAL ESTATE                                          -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 10 · Real Estate</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'we-build-05-real-estate.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s5">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">05 / 10</span>
+          <span class="ptag blue">— Industry 04</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18M5 22V10l7-5 7 5v12M9 22V13h6v9"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 04</span>
+          <h2>Real<br/><span class="accent">Estate</span>.</h2>
+          <p class="tagline">Every property, one tap away — listings, broker portals and a built-in CRM.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Property listing &amp; search pages</li>
+            <li>Broker portal + lead CRM</li>
+            <li>Virtual tours, maps &amp; galleries</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — EDUCATION & COACHING                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 10 · Education &amp; Coaching</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'we-build-06-education.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s6">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">06 / 10</span>
+          <span class="ptag blue">— Industry 05</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zM12 14v7M5 11v6a2 2 0 001 1.7l5 2.8a2 2 0 002 0l5-2.8a2 2 0 001-1.7v-6"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 05</span>
+          <h2>Education &amp;<br/><span class="accent">Coaching</span>.</h2>
+          <p class="tagline">Classrooms, digitised — course sites, enrolments and student portals that scale.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Course catalogue &amp; enrolment</li>
+            <li>Student login + LMS dashboard</li>
+            <li>Online payments &amp; certificates</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 07 — FITNESS & SALONS                                     -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 07 / 10 · Fitness &amp; Salons</span>
+        <button class="slide-dl" onclick="downloadSlide('s7', 'we-build-07-fitness.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s7">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">07 / 10</span>
+          <span class="ptag blue">— Industry 06</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" d="M6 6l12 12M6 18L18 6M2 12h4M18 12h4M9 3v4M9 17v4M15 3v4M15 17v4"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 06</span>
+          <h2>Fitness &amp;<br/><span class="accent">Salons</span>.</h2>
+          <p class="tagline">Book, sweat, repeat — class slots, memberships and trainers, all in one app.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Class &amp; slot booking engine</li>
+            <li>Membership plans + renewals</li>
+            <li>Trainer profiles &amp; attendance</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 08 — PROFESSIONAL SERVICES                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 08 / 10 · Professional Services</span>
+        <button class="slide-dl" onclick="downloadSlide('s8', 'we-build-08-professional.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s8">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">08 / 10</span>
+          <span class="ptag blue">— Industry 07</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="7" width="18" height="13" rx="1"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 07</span>
+          <h2>Professional<br/><span class="accent">Services</span>.</h2>
+          <p class="tagline">Credibility, visible — CA, legal, consulting &amp; agency websites that win trust.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Service &amp; portfolio pages</li>
+            <li>Consultation &amp; contact forms</li>
+            <li>Client testimonials &amp; case studies</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 09 — HOTELS & HOSPITALITY                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 09 / 10 · Hotels &amp; Hospitality</span>
+        <button class="slide-dl" onclick="downloadSlide('s9', 'we-build-09-hotels.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cat" id="s9">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">09 / 10</span>
+          <span class="ptag blue">— Industry 08</span>
+        </div>
+        <div class="icon-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 22h18M5 22V12a2 2 0 012-2h10a2 2 0 012 2v10M9 22v-6h6v6M8 7h8M9 3h6v4H9z"/>
+          </svg>
+        </div>
+
+        <div class="body">
+          <span class="cat-num">Category 08</span>
+          <h2>Hotels &amp;<br/><span class="accent">Hospitality</span>.</h2>
+          <p class="tagline">Rooms, always sold — direct booking engines, availability calendars &amp; payments.</p>
+          <div class="sep"></div>
+          <div class="d-label">What we build</div>
+          <ul class="d-list">
+            <li>Direct-to-guest booking engine</li>
+            <li>Real-time room availability</li>
+            <li>Secure payments + confirmation emails</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 10 — CTA                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 10 / 10 · Call to Action</span>
+        <button class="slide-dl" onclick="downloadSlide('s10', 'we-build-10-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cta" id="s10">
+        <span class="vbar"></span>
+        <div class="s-top">
+          <span class="ptag">10 / 10</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="top-text">
+            <span class="label">Don't see your industry?</span>
+            <h2>We build for <span class="accent">you</span> too.</h2>
+            <p class="sub">
+              Every business has its own quirks. Tell us yours and we'll
+              design the site around how you actually work — from ₹8,000.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="c-card">
+              <div class="c-label">— Phone / WhatsApp</div>
+              <div class="c-val">+91 70966 08771</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Email</div>
+              <div class="c-val small">inquiry.techcareer@gmail.com</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Website</div>
+              <div class="c-val">www.techcareer.site</div>
+            </div>
+            <div class="c-card">
+              <div class="c-label">— Instagram</div>
+              <div class="c-val">@techcareer.llp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1',  name: 'we-build-01-cover.png' },
+        { id: 's2',  name: 'we-build-02-restaurants.png' },
+        { id: 's3',  name: 'we-build-03-retail.png' },
+        { id: 's4',  name: 'we-build-04-healthcare.png' },
+        { id: 's5',  name: 'we-build-05-real-estate.png' },
+        { id: 's6',  name: 'we-build-06-education.png' },
+        { id: 's7',  name: 'we-build-07-fitness.png' },
+        { id: 's8',  name: 'we-build-08-professional.png' },
+        { id: 's9',  name: 'we-build-09-hotels.png' },
+        { id: 's10', name: 'we-build-10-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

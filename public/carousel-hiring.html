@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · We're Hiring · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --blue: #097CF4; --black: #111111; }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #e5e7eb;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-head {
+      max-width: 1240px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--blue); }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      background: white;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+    /* SIGNATURE: L-shape corner frame top-left + bottom-right */
+    .slide .l-tl, .slide .l-br {
+      position: absolute;
+      width: 40px; height: 40px;
+      pointer-events: none;
+    }
+    .slide .l-tl {
+      top: 56px; left: 60px;
+      border-top: 2.5px solid var(--black);
+      border-left: 2.5px solid var(--black);
+    }
+    .slide .l-br {
+      bottom: 56px; right: 60px;
+      border-bottom: 2.5px solid var(--blue);
+      border-right: 2.5px solid var(--blue);
+    }
+
+    /* ─── META STRIPS ─── */
+    .s-top, .s-bot {
+      position: absolute; left: 70px; right: 70px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .s-top { top: 60px; }
+    .s-bot { bottom: 60px; }
+
+    .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .ptag.blue { color: var(--blue); }
+
+    /* Brand wordmark */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* ─── EMPLOYMENT CHIPS ─── */
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.28em;
+      text-transform: uppercase; color: white;
+    }
+    .chip.intern { background: var(--blue); }
+    .chip.fulltime { background: var(--black); }
+    .chip::before {
+      content: ''; width: 6px; height: 6px; background: white;
+      border-radius: 50%;
+    }
+
+    /* ─── COVER (s1) — BLACK ─── */
+    .s-cover { background: var(--black); color: white; }
+    .s-cover .l-tl { border-color: var(--blue); }
+    .s-cover .l-br { border-color: white; }
+    .s-cover .ptag { color: rgba(255,255,255,0.45); }
+    .s-cover .brand-mark .name { color: white; }
+    .s-cover .brand-mark .sub { color: rgba(255,255,255,0.55); }
+    .s-cover::before {
+      content: ''; position: absolute;
+      top: -140px; right: -140px; width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(60px); pointer-events: none;
+    }
+    .s-cover .body {
+      position: absolute; inset: 0;
+      padding: 140px 70px 140px 80px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .s-cover .top-area { display: flex; flex-direction: column; gap: 14px; }
+    .s-cover .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.48em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .s-cover .label::before {
+      content: ''; width: 14px; height: 8px;
+      background: var(--blue);
+      animation: blink 1.2s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .s-cover h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px; font-weight: 900;
+      letter-spacing: -0.03em; color: white; line-height: 0.95;
+    }
+    .s-cover h2 .accent { color: var(--blue); font-style: italic; }
+    .s-cover .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(255,255,255,0.7); max-width: 400px;
+    }
+    .s-cover .counts {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+    .s-cover .ct .k {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 800; color: white;
+      line-height: 1;
+    }
+    .s-cover .ct .k .dot { color: var(--blue); }
+    .s-cover .ct .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      margin-top: 5px;
+    }
+
+    /* ─── ROLE SLIDE (s2–s7) ─── */
+    .role .body {
+      position: absolute;
+      top: 100px; left: 80px; right: 80px; bottom: 110px;
+      display: flex; flex-direction: column;
+    }
+
+    .role .header-row {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .role .num-badge {
+      width: 46px; height: 46px;
+      background: var(--black); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 22px;
+      flex: 0 0 auto;
+    }
+
+    .role h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px; font-weight: 900;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 1;
+    }
+    .role h2 .accent { color: var(--blue); font-style: italic; }
+    .role .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px; line-height: 1.55;
+      color: rgba(0,0,0,0.62);
+      margin-top: 8px;
+    }
+
+    /* Info strip: 3 cells with dividers */
+    .info-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 18px;
+      border: 1.5px solid var(--black);
+    }
+    .info-strip .cell {
+      padding: 9px 12px;
+      border-right: 1px solid rgba(0,0,0,0.2);
+    }
+    .info-strip .cell:last-child { border-right: 0; }
+    .info-strip .cell .ck {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7.5px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .info-strip .cell .cv {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px; font-weight: 800; color: var(--black);
+      margin-top: 3px;
+    }
+
+    /* Responsibilities */
+    .resp-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.38em;
+      text-transform: uppercase; color: var(--blue);
+      margin-top: 16px; margin-bottom: 8px;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .resp-label::before {
+      content: ''; width: 22px; height: 1.5px; background: var(--blue);
+    }
+    .resp-list { list-style: none; padding: 0; margin: 0; }
+    .resp-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 5px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 700; color: var(--black);
+      line-height: 1.35;
+    }
+    .resp-list li::before {
+      content: '\25B8'; /* ▸ */
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 11px;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+
+    /* ─── CTA (s8) — BLACK ─── */
+    .s-cta { background: var(--black); color: white; }
+    .s-cta .l-tl { border-color: var(--blue); }
+    .s-cta .l-br { border-color: white; }
+    .s-cta .ptag { color: rgba(255,255,255,0.45); }
+    .s-cta .brand-mark .name { color: white; font-size: 22px; }
+    .s-cta .brand-mark .sub { color: rgba(255,255,255,0.55); font-size: 8px; }
+    .s-cta::before {
+      content: ''; position: absolute;
+      bottom: -140px; left: -140px;
+      width: 340px; height: 340px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(60px); pointer-events: none;
+    }
+    .s-cta .body {
+      position: absolute; inset: 0;
+      padding: 140px 70px 140px 80px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .s-cta .top-area { display: flex; flex-direction: column; gap: 14px; }
+    .s-cta .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.48em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .s-cta .label::before {
+      content: ''; width: 24px; height: 1.5px; background: var(--blue);
+    }
+    .s-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 900;
+      letter-spacing: -0.025em; color: white; line-height: 1;
+    }
+    .s-cta h2 .accent { color: var(--blue); font-style: italic; }
+    .s-cta .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(255,255,255,0.7); max-width: 400px;
+    }
+    .s-cta .email-box {
+      margin-top: 8px;
+      padding: 14px 16px;
+      background: rgba(9,124,244,0.12);
+      border-left: 3px solid var(--blue);
+    }
+    .s-cta .email-box .el {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+    .s-cta .email-box .ev {
+      font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace;
+      font-size: 13px; font-weight: 700; color: white;
+    }
+    .s-cta .email-box .eh {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700;
+      color: rgba(255,255,255,0.6); margin-top: 6px;
+    }
+    .s-cta .eh em { color: var(--blue); font-style: normal; font-weight: 800; }
+    .s-cta .bottom-info {
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .s-cta .bi .bl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      margin-bottom: 3px;
+    }
+    .s-cta .bi .bv {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>We're <span class="accent">Hiring</span>.</h1>
+      <p>8-Slide Carousel · 6 Open Positions · 1080 × 1080 PNG</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (8 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 08 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'hiring-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cover" id="s1">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Now Hiring · 2025</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="top-area">
+            <span class="label">Careers · Open Roles</span>
+            <h2>We're<br/><span class="accent">hiring</span>.</h2>
+            <p class="sub">
+              Join our founder-led studio in Ahmedabad. Real
+              ownership from day one, no layers of management,
+              and interesting first clients.
+            </p>
+          </div>
+
+          <div class="counts">
+            <div class="ct">
+              <div class="k">06<span class="dot">.</span></div>
+              <div class="v">Open Roles</div>
+            </div>
+            <div class="ct">
+              <div class="k">03<span class="dot">.</span></div>
+              <div class="v">Internships</div>
+            </div>
+            <div class="ct">
+              <div class="k">03<span class="dot">.</span></div>
+              <div class="v">Full-Time</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <span class="ptag">iHub · Ahmedabad</span>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — SALES EXECUTIVE INTERN                               -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 08 · Sales Executive Intern</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'hiring-02-sales-intern.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s2">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 01 / 06</span>
+          <span class="chip intern">Internship</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">01</div>
+            <h2>Sales Executive<br/><span class="accent">Intern</span>.</h2>
+          </div>
+          <p class="tagline">
+            Join our founder-led sales team — cold outreach, qualifying
+            leads, demo support and closing first-batch client deals.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Internship</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Duration</div>
+              <div class="cv">3&ndash;6 months</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">Hybrid · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>Lead prospecting &amp; daily cold outreach</li>
+            <li>Qualify leads and support founder demos</li>
+            <li>CRM updates, follow-ups &amp; deal tracking</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — BDE INTERN                                           -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 08 · BDE Intern</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'hiring-03-bde-intern.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s3">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 02 / 06</span>
+          <span class="chip intern">Internship</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">02</div>
+            <h2>Business Dev<br/><span class="accent">Intern</span>.</h2>
+          </div>
+          <p class="tagline">
+            Help grow our client pipeline — research target industries,
+            write outreach, prep proposals and own your numbers.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Internship</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Duration</div>
+              <div class="cv">3&ndash;6 months</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">Hybrid · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>Research industries &amp; build target account lists</li>
+            <li>LinkedIn &amp; email outreach, meeting booking</li>
+            <li>Proposal drafts &amp; client follow-ups</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — HR INTERN                                            -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 08 · HR Intern</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'hiring-04-hr-intern.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s4">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 03 / 06</span>
+          <span class="chip intern">Internship</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">03</div>
+            <h2>HR<br/><span class="accent">Intern</span>.</h2>
+          </div>
+          <p class="tagline">
+            Help us find &amp; onboard the next ten teammates — source on
+            LinkedIn, screen profiles, coordinate interviews and onboarding.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Internship</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Duration</div>
+              <div class="cv">3 months</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">On-site · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>Source &amp; screen candidates on LinkedIn, Naukri</li>
+            <li>Schedule interviews &amp; assessment coordination</li>
+            <li>Onboarding, documentation &amp; HR admin</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — FULL STACK DEVELOPER                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 08 · Full Stack Developer</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'hiring-05-fullstack.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s5">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 04 / 06</span>
+          <span class="chip fulltime">Full-Time</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">04</div>
+            <h2>Full-Stack<br/><span class="accent">Developer</span>.</h2>
+          </div>
+          <p class="tagline">
+            Own features end-to-end across React/Next, Node and MongoDB.
+            Ship weekly, review code, and build real products for real clients.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Full-Time</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Experience</div>
+              <div class="cv">1&ndash;3 years</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">On-site · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>Build features across React/Next &amp; Node/Express</li>
+            <li>Design MongoDB schemas &amp; REST APIs</li>
+            <li>Code reviews, deployments &amp; client demos</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — FRONTEND DEVELOPER                                   -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 08 · Frontend Developer</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'hiring-06-frontend.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s6">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 05 / 06</span>
+          <span class="chip fulltime">Full-Time</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">05</div>
+            <h2>Frontend<br/><span class="accent">Developer</span>.</h2>
+          </div>
+          <p class="tagline">
+            Turn Figma into pixel-perfect, fast, accessible React UIs.
+            Own animations, performance and the polish every page deserves.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Full-Time</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Experience</div>
+              <div class="cv">1&ndash;2 years</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">On-site · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>React / Next.js with Tailwind &amp; TypeScript</li>
+            <li>Figma-to-code with animations &amp; micro-interactions</li>
+            <li>Performance, accessibility &amp; responsive QA</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 07 — BACKEND DEVELOPER                                    -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 07 / 08 · Backend Developer</span>
+        <button class="slide-dl" onclick="downloadSlide('s7', 'hiring-07-backend.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide role" id="s7">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Position 06 / 06</span>
+          <span class="chip fulltime">Full-Time</span>
+        </div>
+
+        <div class="body">
+          <div class="header-row">
+            <div class="num-badge">06</div>
+            <h2>Backend<br/><span class="accent">Developer</span>.</h2>
+          </div>
+          <p class="tagline">
+            Design APIs, schemas and integrations that scale. Own auth,
+            payments &amp; third-party hooks — the engine under every product.
+          </p>
+
+          <div class="info-strip">
+            <div class="cell">
+              <div class="ck">— Type</div>
+              <div class="cv">Full-Time</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Experience</div>
+              <div class="cv">1&ndash;3 years</div>
+            </div>
+            <div class="cell">
+              <div class="ck">— Mode</div>
+              <div class="cv">On-site · Ahmedabad</div>
+            </div>
+          </div>
+
+          <div class="resp-label">Key Responsibilities</div>
+          <ul class="resp-list">
+            <li>Node/Express APIs &amp; MongoDB schema design</li>
+            <li>Auth, payments (Razorpay) &amp; webhooks</li>
+            <li>Logging, monitoring &amp; production deployments</li>
+          </ul>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag blue">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 08 — CTA / HOW TO APPLY                                   -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 08 / 08 · How to Apply</span>
+        <button class="slide-dl" onclick="downloadSlide('s8', 'hiring-08-apply.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cta" id="s8">
+        <span class="l-tl"></span>
+        <span class="l-br"></span>
+
+        <div class="s-top">
+          <span class="ptag">Last Page · How to Apply</span>
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+        </div>
+
+        <div class="body">
+          <div class="top-area">
+            <span class="label">Ready to Apply?</span>
+            <h2>Send your<br/><span class="accent">resume</span>.</h2>
+            <p class="sub">
+              Email us your CV, portfolio (if any) and the role you're
+              applying for. We reply to every application within 48 hours.
+            </p>
+            <div class="email-box">
+              <div class="el">— Apply To</div>
+              <div class="ev">inquiry.techcareer@gmail.com</div>
+              <div class="eh">Subject: <em>Application · [Role Name] · [Your Name]</em></div>
+            </div>
+          </div>
+
+          <div class="bottom-info">
+            <div class="bi">
+              <div class="bl">— WhatsApp</div>
+              <div class="bv">+91 70966 08771</div>
+            </div>
+            <div class="bi">
+              <div class="bl">— Instagram</div>
+              <div class="bv">@techcareer.llp</div>
+            </div>
+            <div class="bi">
+              <div class="bl">— Website</div>
+              <div class="bv">techcareer.site</div>
+            </div>
+            <div class="bi">
+              <div class="bl">— Location</div>
+              <div class="bv">iHub · Ahmedabad</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'hiring-01-cover.png' },
+        { id: 's2', name: 'hiring-02-sales-intern.png' },
+        { id: 's3', name: 'hiring-03-bde-intern.png' },
+        { id: 's4', name: 'hiring-04-hr-intern.png' },
+        { id: 's5', name: 'hiring-05-fullstack.png' },
+        { id: 's6', name: 'hiring-06-frontend.png' },
+        { id: 's7', name: 'hiring-07-backend.png' },
+        { id: 's8', name: 'hiring-08-apply.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

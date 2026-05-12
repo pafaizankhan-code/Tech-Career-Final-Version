@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · 3 Reasons Your Business Deserves a Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0F0F0F;
+      --blue: #097CF4;
+      --blue-deep: #0461C5;
+      --paper: #FBFAF7;
+      --gray: #6B7280;
+      --rule: rgba(0,0,0,0.1);
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4 595 × 842 → 1190 × 1684 PNG       */
+    /* "3 REASONS" — editorial feature article layout  */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.3);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* ─── BAND 01: Top thin black strip (masthead) ─── */
+    .top-strip {
+      background: var(--black);
+      color: white;
+      padding: 9px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+      flex: 0 0 auto;
+    }
+    .top-strip .blue { color: var(--blue); }
+    .top-strip .left {
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .top-strip .left::before {
+      content: '\25B6'; color: var(--blue); font-size: 8px;
+    }
+
+    /* ─── BAND 02: Brand line ─── */
+    .brand-line {
+      padding: 14px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--rule);
+      flex: 0 0 auto;
+    }
+    .brand-line .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--black);
+    }
+    .brand-line .brand .accent { color: var(--blue); font-style: italic; }
+    .brand-line .brand .dot { color: var(--blue); }
+    .brand-line .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .brand-line .meta .blue { color: var(--blue); }
+
+    /* ─── BAND 03: HERO HEADLINE ─── */
+    .hero {
+      padding: 24px 36px 22px;
+      flex: 0 0 auto;
+      position: relative;
+    }
+    .hero .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .hero .eyebrow::before {
+      content: ''; width: 24px; height: 1.5px; background: var(--blue);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--blue);
+    }
+    .hero h1 .dot {
+      color: var(--blue); font-style: normal;
+    }
+    .hero .lead {
+      margin-top: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px; font-weight: 500;
+      color: var(--gray);
+      max-width: 460px;
+      line-height: 1.6;
+    }
+    .hero .lead .strong { color: var(--black); font-weight: 700; }
+
+    /* ─── BAND 04: REASONS SECTION ─── */
+    .reasons {
+      flex: 1;
+      display: flex; flex-direction: column;
+      border-top: 2px solid var(--black);
+      border-bottom: 2px solid var(--black);
+      position: relative;
+    }
+    .reasons .reason {
+      flex: 1;
+      padding: 20px 36px 18px;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: center;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .reasons .reason:last-child {
+      border-bottom: 0;
+    }
+    .reasons .reason .num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 76px;
+      letter-spacing: -0.04em;
+      color: var(--blue);
+      line-height: 0.9;
+      text-align: right;
+    }
+    .reasons .reason .num .dot { color: var(--black); font-style: normal; }
+    .reasons .reason .body .topline {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 6px;
+    }
+    .reasons .reason .body .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .reasons .reason .body .lbl::before {
+      content: '';
+      display: inline-block;
+      width: 16px; height: 1.5px; background: var(--blue);
+      vertical-align: middle; margin-right: 6px;
+    }
+    .reasons .reason .body .stat {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 900; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: white;
+      padding: 3px 8px;
+    }
+    .reasons .reason .body h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.015em;
+      color: var(--black);
+      line-height: 1.1;
+    }
+    .reasons .reason .body h2 em {
+      font-style: italic; color: var(--blue);
+    }
+    .reasons .reason .body p {
+      margin-top: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px; font-weight: 500;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    .reasons .reason .body p .strong {
+      color: var(--black); font-weight: 700;
+    }
+
+    /* ─── BAND 05: CTA ROW ─── */
+    .cta-row {
+      padding: 18px 36px 14px;
+      flex: 0 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
+    .cta-row .left {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .cta-row .left .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--blue);
+    }
+    .cta-row .left h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px;
+      color: var(--black); line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .cta-row .left h3 em {
+      font-style: italic; color: var(--blue);
+    }
+    .cta-row .left .price {
+      margin-top: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700;
+      color: var(--gray);
+    }
+    .cta-row .left .price .strong {
+      color: var(--black); font-weight: 800;
+    }
+    .cta-row .cta-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 14px 22px;
+      background: var(--blue);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px; font-weight: 900; letter-spacing: 0.28em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 24px -10px rgba(9,124,244,0.55);
+    }
+    .cta-row .cta-btn .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      background: white;
+      color: var(--blue);
+      font-size: 14px; font-weight: 900;
+    }
+
+    /* ─── BAND 06: Bottom contact strip ─── */
+    .contact {
+      background: var(--black);
+      color: white;
+      padding: 12px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+    .contact .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .contact .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .contact .item .ic svg { width: 11px; height: 11px; }
+    .contact .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .contact .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .contact .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: white;
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page head -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">3 Reasons</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · Editorial Feature Layout</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top thin black strip -->
+      <div class="top-strip">
+        <span class="left">Tech Career · Founder Letter</span>
+        <span><span class="blue">Issue 04</span> · 2026</span>
+      </div>
+
+      <!-- Brand line -->
+      <div class="brand-line">
+        <div class="brand">
+          Tech <span class="accent">Career</span><span class="dot">.</span>
+        </div>
+        <div class="meta">
+          <span class="blue">Essential Reading</span> &middot; For Business Owners
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <span class="eyebrow">A Note from the Studio</span>
+        <h1>Three reasons<br/>your business deserves<br/>a <em>website</em><span class="dot">.</span></h1>
+        <p class="lead">
+          If you run a business in 2026 and don't have a website, you're
+          <span class="strong">leaving money on the table every single day</span>. Here are the
+          three reasons it's worth fixing — today, not next quarter.
+        </p>
+      </div>
+
+      <!-- 3 REASONS -->
+      <div class="reasons">
+
+        <div class="reason">
+          <div class="num">01<span class="dot">.</span></div>
+          <div class="body">
+            <div class="topline">
+              <span class="lbl">Reason One</span>
+              <span class="stat">24 / 7</span>
+            </div>
+            <h2>Your shop closes. Your <em>website</em> doesn't.</h2>
+                     </div>
+        </div>
+
+        <div class="reason">
+          <div class="num">02<span class="dot">.</span></div>
+          <div class="body">
+            <div class="topline">
+              <span class="lbl">Reason Two</span>
+              <span class="stat">75% Trust</span>
+            </div>
+            <h2>People <em>Google</em> you before they call.</h2>
+            
+          </div>
+        </div>
+
+        <div class="reason">
+          <div class="num">03<span class="dot">.</span></div>
+          <div class="body">
+            <div class="topline">
+              <span class="lbl">Reason Three</span>
+              <span class="stat">Auto Leads</span>
+            </div>
+            <h2>Capture <em>leads</em> while you focus on work.</h2>
+           
+          </div>
+        </div>
+
+      </div>
+
+     
+
+      <!-- Contact strip -->
+      <div class="contact">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FBFAF7',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-3-reasons.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

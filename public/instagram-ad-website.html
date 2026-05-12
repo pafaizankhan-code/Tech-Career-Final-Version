@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Ad · Make Your Business Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0F0F0F;
+      --blue: #097CF4;
+      --blue-deep: #0461C5;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #2a2a2a;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 720px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--blue); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--blue); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+
+    /* ─── AD CONTAINER ─── */
+    .ad-wrap {
+      max-width: 720px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* THE AD — 540 × 540  →  1080 × 1080 PNG          */
+    /* HORIZONTAL SPLIT: Black hero (top) / White card (bottom) */
+    /* ═══════════════════════════════════════════════ */
+    .ad {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+      box-shadow: 0 25px 70px -20px rgba(0,0,0,0.45);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ─── TOP HERO — BLACK ─── */
+    .ad .hero {
+      flex: 1.5;
+      background: var(--black);
+      color: white;
+      padding: 46px 56px 36px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle blue glow in black half */
+    .ad .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.28) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    /* Faint white grid in black */
+    .ad .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    /* Brand row in black */
+    .ad .brand-row {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      position: relative; z-index: 2;
+    }
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
+      color: white; line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .ad .brand-row .meta {
+      text-align: right;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    /* Headline area in black */
+    .ad .headline-area {
+      position: relative; z-index: 2;
+    }
+    .ad .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--blue);
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .ad .eyebrow::before {
+      content: ''; width: 24px; height: 1.5px; background: var(--blue);
+    }
+    .ad h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 50px;
+      letter-spacing: -0.025em;
+      color: white;
+      line-height: 1;
+    }
+    .ad h2 em {
+      font-style: italic;
+      color: var(--blue);
+    }
+    .ad h2 .dot {
+      color: var(--blue); font-style: normal;
+    }
+
+    /* ─── BOTTOM CARD — WHITE ─── */
+    .ad .card {
+      flex: 1;
+      background: white;
+      padding: 28px 56px 30px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      gap: 16px;
+      position: relative;
+    }
+    /* Thin blue strip at the very top of the white card (joining detail) */
+    .ad .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--blue);
+    }
+
+    /* Offer line — single elegant row */
+    .ad .offer-line {
+      display: flex; align-items: baseline; gap: 16px;
+      font-family: 'Playfair Display', serif;
+    }
+    .ad .offer-line .price {
+      font-size: 38px; font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.025em;
+      line-height: 1;
+    }
+    .ad .offer-line .price-dot { color: var(--blue); }
+    .ad .offer-line .pipe {
+      width: 1.5px; height: 28px;
+      background: rgba(0,0,0,0.18);
+      align-self: center;
+    }
+    .ad .offer-line .delivery {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--black);
+      line-height: 1;
+    }
+    .ad .offer-line .delivery .blue { color: var(--blue); }
+    .ad .offer-line .meta-col {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .ad .offer-line .meta-col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+
+    /* CTA */
+    .ad .cta {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 22px;
+      background: var(--blue);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px; font-weight: 900; letter-spacing: 0.26em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 28px -10px rgba(9,124,244,0.5);
+    }
+    .ad .cta .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px;
+      background: white;
+      color: var(--blue);
+      font-size: 14px; font-weight: 900;
+    }
+
+    /* Footer */
+    .ad .footer {
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45);
+    }
+    .ad .footer .blue { color: var(--blue); }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Instagram <span class="accent">Ad</span>.</h1>
+      <p>Single Post · 1080 × 1080 PNG · Bold Split Layout</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAd()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Ad -->
+  <div class="ad-wrap">
+    <div class="ad" id="ad">
+
+      <!-- TOP — BLACK HERO -->
+      <div class="hero">
+        <div class="brand-row">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="meta">
+            Est. 2025<br/>Ahmedabad, India
+          </span>
+        </div>
+
+        <div class="headline-area">
+          <span class="eyebrow">Web Development</span>
+          <h2>Your business<br/>deserves a<br/>better <em>website</em><span class="dot">.</span></h2>
+        </div>
+      </div>
+
+      <!-- BOTTOM — WHITE CARD -->
+      <div class="card">
+        <div class="offer-line">
+          <div class="meta-col">
+            <span class="lbl">— From</span>
+            <span class="price">&#8377;15K<span class="price-dot">.</span></span>
+          </div>
+          <span class="pipe"></span>
+          <div class="meta-col">
+            <span class="lbl">— Live In</span>
+            <span class="delivery"><em><span class="blue">7 days</span></em></span>
+          </div>
+        </div>
+
+        <a class="cta">
+          DM Us To Get Started
+          <span class="arrow">→</span>
+        </a>
+
+        <div class="footer">
+          <span>techcareer.site</span>
+          <span class="blue">·</span>
+          <span>+91 70966 08771</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadAd() {
+      await document.fonts.ready;
+      const el = document.getElementById('ad');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-instagram-ad-website.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pamphlet · Restaurant Website · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111111;
+      --red: #DC2626;
+      --red-deep: #991B1B;
+      --cream: #FFF8F0;
+      --paper: #FFFBF3;
+      --gray: #6B5E4F;
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .pamphlet { box-shadow: none !important; margin: 0 !important; }
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8d4cc;
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1180px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--red); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--red); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--red); color: white; border-color: var(--red); }
+
+    .pamphlet-wrap {
+      max-width: 700px; margin: 0 auto;
+      display: flex; justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* PAMPHLET — A4  595 × 842  → 1190 × 1684 PNG     */
+    /* Menu-card aesthetic with red double rules        */
+    /* ═══════════════════════════════════════════════ */
+    .pamphlet {
+      width: 595px; height: 842px;
+      background: var(--paper);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.35);
+      font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      color: var(--black);
+      position: relative;
+    }
+
+    /* ─── BAND 01: Top thin strip ─── */
+    .top-strip {
+      background: var(--black);
+      color: white;
+      padding: 9px 36px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+    .top-strip .red { color: var(--red); }
+    .top-strip .pulse {
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .top-strip .pulse::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--red); border-radius: 50%;
+      box-shadow: 0 0 6px var(--red);
+    }
+
+    /* SIGNATURE: Red double horizontal rules (menu-card frame) */
+    .red-rules {
+      padding: 6px 36px;
+      flex: 0 0 auto;
+    }
+    .red-rules .l1 { height: 2px; background: var(--red); display: block; }
+    .red-rules .l2 { height: 1px; background: var(--red); display: block; margin-top: 4px; }
+
+    /* ─── BAND 02: HERO ─── */
+    .hero {
+      padding: 28px 50px 24px;
+      flex: 0 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    /* Center stamp top-right corner */
+    .hero .stamp {
+      position: absolute;
+      top: 18px; right: 32px;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      border: 1.5px solid var(--red);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transform: rotate(-10deg);
+      background: var(--paper);
+    }
+    .hero .stamp::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      border: 1px dashed var(--red);
+      opacity: 0.4;
+    }
+    .hero .stamp .top {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 6.5px; font-weight: 900; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .hero .stamp .mid {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 14px; color: var(--red-deep);
+      line-height: 1;
+      margin: 2px 0;
+    }
+    .hero .stamp .bot {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 6px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    .hero .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 6px;
+      text-align: left;
+    }
+    .hero .brand .accent { color: var(--red); font-style: italic; }
+    .hero .brand .dot { color: var(--red); }
+
+    .hero .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--red);
+      display: inline-flex; align-items: center; gap: 12px;
+      margin: 12px 0 14px;
+    }
+    .hero .eyebrow::before, .hero .eyebrow::after {
+      content: ''; width: 26px; height: 1.5px; background: var(--red);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 0.96;
+    }
+    .hero h1 .red { color: var(--red); }
+    .hero h1 .dot { color: var(--red); font-style: normal; }
+
+    .hero .lead {
+      margin-top: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: rgba(0,0,0,0.7);
+      line-height: 1.55;
+      max-width: 420px;
+      margin-left: auto; margin-right: auto;
+    }
+    .hero .lead .strong { color: var(--black); font-weight: 700; }
+    .hero .lead .red { color: var(--red); font-weight: 700; }
+
+    /* ─── BAND 03: MENU CARD ─── */
+    .menu-card {
+      padding: 22px 50px 20px;
+      flex: 0 0 auto;
+    }
+    .menu-card .menu-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(220,38,38,0.4);
+    }
+    .menu-card .menu-head .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.45em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .menu-card .menu-head .right {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gray);
+    }
+
+    /* Menu-style item with leader dots */
+    .menu-item {
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px dotted rgba(0,0,0,0.18);
+    }
+    .menu-item:last-child { border-bottom: 0; }
+    .menu-item .num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 800;
+      font-size: 16px; color: var(--red);
+      line-height: 1;
+    }
+    .menu-item .info .t {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 16px;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .menu-item .info .t .ital {
+      font-style: italic; color: var(--red-deep);
+    }
+    .menu-item .info .d {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px; font-weight: 500;
+      color: var(--gray);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+    .menu-item .pill {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 900; letter-spacing: 0.25em;
+      text-transform: uppercase; color: white;
+      background: var(--red);
+      padding: 4px 9px;
+    }
+    .menu-item .pill.alt {
+      background: var(--paper);
+      color: var(--red);
+      border: 1.5px solid var(--red);
+    }
+
+    /* ─── BAND 04: PRICING ROW ─── */
+    .pricing-row {
+      padding: 18px 50px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex: 0 0 auto;
+    }
+    .pricing-row .col {
+      padding: 0;
+    }
+    .pricing-row .col .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--red);
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-bottom: 6px;
+    }
+    .pricing-row .col .lbl::before {
+      content: ''; width: 18px; height: 1.5px; background: var(--red);
+    }
+    .pricing-row .col .v {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .pricing-row .col .v .red { color: var(--red); }
+    .pricing-row .col .sub {
+      margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px; font-weight: 600;
+      color: var(--gray);
+    }
+
+    /* ─── BAND 05: CTA ─── */
+    .cta-band {
+      padding: 14px 50px 18px;
+      flex: 1 0 auto;
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .cta-band .cta-msg {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--black);
+      text-align: center;
+    }
+    .cta-band .cta-msg .red { color: var(--red); }
+    .cta-band .cta-btn {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px;
+      padding: 14px 22px;
+      background: var(--red);
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px; font-weight: 900; letter-spacing: 0.28em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 28px -10px rgba(220,38,38,0.55);
+    }
+    .cta-band .cta-btn .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      background: white;
+      color: var(--red);
+      font-size: 14px; font-weight: 900;
+    }
+
+    /* ─── BAND 06: Bottom contact strip ─── */
+    .bottom-strip {
+      background: var(--black);
+      color: white;
+      padding: 12px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+    .bottom-strip .item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .bottom-strip .item .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--red);
+    }
+    .bottom-strip .item .ic svg { width: 11px; height: 11px; }
+    .bottom-strip .item .txt {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .bottom-strip .item .lbl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .bottom-strip .item .v {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700;
+      color: white;
+      letter-spacing: 0.005em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head no-print">
+    <div class="info">
+      <h1>Pamphlet · <span class="accent">Restaurant Website</span></h1>
+      <p>A4 Single-Side · 1190 × 1684 PNG · White + Red Menu Card Layout</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadPamphlet()">↓ Download PNG</button>
+      <button class="btn secondary" onclick="window.print()">Print</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- The Pamphlet -->
+  <div class="pamphlet-wrap">
+    <div class="pamphlet" id="pamphlet">
+
+      <!-- Top strip -->
+      <div class="top-strip">
+        <span class="pulse">Tech Career · IT Solutions LLP</span>
+        <span><span class="red">★</span> Specials · 2025</span>
+      </div>
+
+      <!-- Red double rule top -->
+      <div class="red-rules">
+        <span class="l1"></span>
+        <span class="l2"></span>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="stamp">
+          <span class="top">For</span>
+          <span class="mid">Cafes</span>
+          <span class="bot">2025</span>
+        </div>
+
+        <div class="brand">
+          Tech <span class="accent">Career</span><span class="dot">.</span>
+        </div>
+
+        <span class="eyebrow">A Note for Restaurants</span>
+        <h1>Restaurant<br/>websites that<br/><span class="red">fill tables</span><span class="dot">.</span></h1>
+
+        <p class="lead">
+          From <span class="strong">cafes &amp; cloud kitchens</span> to fine dining &mdash; we
+          build websites that show your menu, take orders, and book tables &mdash;
+          <span class="red">all online, all the time</span>.
+        </p>
+      </div>
+
+      <!-- Red double rule middle -->
+      <div class="red-rules">
+        <span class="l1"></span>
+        <span class="l2"></span>
+      </div>
+
+      <!-- MENU CARD: What's on the menu -->
+      <div class="menu-card">
+        <div class="menu-head">
+          <span class="lbl">— What's on the menu</span>
+          <span class="right">Section 01</span>
+        </div>
+
+        <div class="menu-item">
+          <span class="num">01.</span>
+          <div class="info">
+            <div class="t">QR Digital <span class="ital">Menu</span></div>
+            <div class="d">Customers scan a QR, see your menu, order in seconds.</div>
+          </div>
+          <span class="pill">Included</span>
+        </div>
+        <div class="menu-item">
+          <span class="num">02.</span>
+          <div class="info">
+            <div class="t">Online <span class="ital">Ordering</span></div>
+            <div class="d">Razorpay, COD, UPI &mdash; takeaway &amp; delivery.</div>
+          </div>
+          <span class="pill alt">Razorpay</span>
+        </div>
+        <div class="menu-item">
+          <span class="num">03.</span>
+          <div class="info">
+            <div class="t">Table <span class="ital">Reservations</span></div>
+            <div class="d">Slot booking, capacity rules, SMS confirmations.</div>
+          </div>
+          <span class="pill">24 / 7</span>
+        </div>
+        <div class="menu-item">
+          <span class="num">04.</span>
+          <div class="info">
+            <div class="t">Google <span class="ital">Reviews</span></div>
+            <div class="d">Show 5-star reviews + Instagram feed on your site.</div>
+          </div>
+          <span class="pill alt">Auto</span>
+        </div>
+      </div>
+
+      <!-- Red double rule -->
+      <div class="red-rules">
+        <span class="l1"></span>
+        <span class="l2"></span>
+      </div>
+
+      <!-- PRICING ROW -->
+      <div class="pricing-row">
+        <div class="col">
+          <span class="lbl">— Starts From</span>
+          <div class="v">&#8377;15K<span class="red">.</span></div>
+          <div class="sub">Honest fixed quote &middot; GST bill</div>
+        </div>
+        <div class="col">
+          <span class="lbl">— Goes Live In</span>
+          <div class="v"><em><span class="red">7 days</span></em></div>
+          <div class="sub">Menu, orders, tables &mdash; ready</div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-band">
+        <p class="cta-msg">Don't let walk-ins decide your day. <br/>Take your <span class="red">restaurant online</span>.</p>
+        <a class="cta-btn">
+          Taste the Demo
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Bottom contact strip -->
+      <div class="bottom-strip">
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Phone</span>
+            <span class="v">+91 70966 08771</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Email</span>
+            <span class="v">inquiry.techcareer@gmail.com</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Web</span>
+            <span class="v">techcareer.site</span>
+          </div>
+        </div>
+        <div class="item">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="4.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="txt">
+            <span class="lbl">Insta</span>
+            <span class="v">@techcareer.llp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    async function downloadPamphlet() {
+      await document.fonts.ready;
+      const el = document.getElementById('pamphlet');
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#FFFBF3',
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = 'tech-career-pamphlet-restaurant.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

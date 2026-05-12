@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · Restaurant Websites · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #DC2626;
+      --red-deep: #991B1B;
+      --black: #111111;
+      --cream: #FFF8F0;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #f1ebe3;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1240px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--red); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--red); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--red); color: white; border-color: var(--red); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--red); }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      background: white;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Red L-shape corner brackets (signature element) */
+    .slide .dot-tl, .slide .dot-tr, .slide .dot-bl, .slide .dot-br {
+      position: absolute;
+      width: 28px; height: 28px;
+      pointer-events: none;
+    }
+    .slide .dot-tl {
+      top: 40px; left: 40px;
+      border-top: 2.5px solid var(--red);
+      border-left: 2.5px solid var(--red);
+    }
+    .slide .dot-tr {
+      top: 40px; right: 40px;
+      border-top: 2.5px solid var(--red);
+      border-right: 2.5px solid var(--red);
+    }
+    .slide .dot-bl {
+      bottom: 40px; left: 40px;
+      border-bottom: 2.5px solid var(--red);
+      border-left: 2.5px solid var(--red);
+    }
+    .slide .dot-br {
+      bottom: 40px; right: 40px;
+      border-bottom: 2.5px solid var(--red);
+      border-right: 2.5px solid var(--red);
+    }
+
+    /* Top + bottom strips */
+    .s-top, .s-bot {
+      position: absolute;
+      left: 70px; right: 70px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .s-top { top: 56px; }
+    .s-bot { bottom: 56px; }
+
+    .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .ptag.red { color: var(--red); }
+
+    /* Brand wordmark */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--red); font-style: italic; }
+    .brand-mark .name .dot { color: var(--red); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* "Hot tag" — small red flag at top */
+    .hot-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px;
+      background: var(--red); color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+    .hot-tag::before {
+      content: ''; width: 6px; height: 6px;
+      background: white; border-radius: 50%;
+    }
+
+    /* Body region */
+    .body {
+      position: absolute;
+      top: 110px; left: 70px; right: 70px; bottom: 110px;
+      display: flex; flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 18px;
+    }
+
+    /* ─── COMPACT CIRCULAR ICON BADGE (signature element) ─── */
+    .icon-badge {
+      width: 124px; height: 124px;
+      border-radius: 50%;
+      background: var(--red);
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      position: relative;
+      box-shadow: 0 12px 26px -10px rgba(220,38,38,0.45);
+    }
+    .icon-badge::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 1.5px dashed var(--red);
+      opacity: 0.4;
+    }
+    .icon-badge::after {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 1px dotted var(--red);
+      opacity: 0.18;
+    }
+    .icon-badge svg { width: 56px; height: 56px; }
+
+    /* Tiny creative ornament — three dots + line under headline */
+    .ornament {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: -4px;
+    }
+    .ornament .ln {
+      width: 28px; height: 1.5px;
+      background: var(--red);
+    }
+    .ornament .pt {
+      width: 5px; height: 5px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+    .ornament .pt.hollow {
+      background: transparent;
+      border: 1.5px solid var(--red);
+    }
+
+    /* ONE-WORD MASSIVE HEADLINE */
+    .big-word {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 76px;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 0.95;
+    }
+    .big-word .red { color: var(--red); }
+    .big-word .dot { color: var(--red); font-style: normal; }
+
+    /* Friendly short tagline */
+    .tag-line {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px; font-weight: 700;
+      color: rgba(0,0,0,0.65);
+      letter-spacing: 0.04em;
+      max-width: 360px;
+      line-height: 1.45;
+    }
+
+    /* ─── COVER (s1) — slightly different ─── */
+    .s-cover .body { gap: 22px; }
+    .s-cover .pre-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--red);
+    }
+    .s-cover h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900; font-size: 50px;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 0.98;
+    }
+    .s-cover h2 .ital { color: var(--red); font-style: italic; }
+    .s-cover .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: rgba(0,0,0,0.6); max-width: 360px;
+    }
+
+    /* ─── PRICE SLIDE ─── */
+    .price-big {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 130px;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 0.85;
+    }
+    .price-big .red { color: var(--red); }
+    .price-pre {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* ─── CTA SLIDE ─── */
+    .s-cta .body { gap: 16px; }
+    .cta-contact {
+      margin-top: 6px;
+      display: flex; flex-direction: column; gap: 8px;
+      align-items: center;
+    }
+    .cta-row {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 22px;
+      background: white;
+      border: 2px solid var(--red);
+    }
+    .cta-row .ic {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      color: var(--red);
+    }
+    .cta-row .ic svg { width: 100%; height: 100%; }
+    .cta-row .val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px; font-weight: 800; color: var(--black);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Restaurant <span class="accent">Websites</span>.</h1>
+      <p>7-Slide Carousel · 1080 × 1080 PNG · White + Red Theme</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (7 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 07 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'restaurant-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cover" id="s1">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">Hot · For Restaurants</span>
+          <span class="ptag">01 / 07</span>
+        </div>
+
+        <div class="body">
+
+          <span class="pre-label">— We Make</span>
+          <h2>Restaurant<br/><span class="ital">Websites</span>.</h2>
+          <div class="ornament"><span class="ln"></span><span class="pt"></span><span class="pt hollow"></span><span class="pt"></span><span class="ln"></span></div>
+          <p class="sub">Menu &middot; Orders &middot; Bookings &middot; Reviews — sab kuch online.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — MENU (QR)                                            -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 07 · Menu</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'restaurant-02-menu.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s2">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">No 1</span>
+          <span class="ptag">02 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="icon-badge">
+            <!-- QR code icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="3" width="7" height="7" stroke-linejoin="round"/>
+              <rect x="14" y="3" width="7" height="7" stroke-linejoin="round"/>
+              <rect x="3" y="14" width="7" height="7" stroke-linejoin="round"/>
+              <path stroke-linecap="round" d="M14 14h3v3M21 21v-7M17 17h4M14 21h3"/>
+              <rect x="5.5" y="5.5" width="2" height="2" fill="currentColor"/>
+              <rect x="16.5" y="5.5" width="2" height="2" fill="currentColor"/>
+              <rect x="5.5" y="16.5" width="2" height="2" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Menu<span class="dot">.</span></h2>
+          <div class="ornament"><span class="ln"></span><span class="pt"></span><span class="pt hollow"></span><span class="pt"></span><span class="ln"></span></div>
+          <p class="tag-line">Customers scan, see, &amp; order in seconds.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — ORDER                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 07 · Order</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'restaurant-03-order.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s3">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">No 2</span>
+          <span class="ptag">03 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="icon-badge">
+            <!-- Takeaway bag icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 7l1.5-3h11L19 7M5 7v13a1 1 0 001 1h12a1 1 0 001-1V7M5 7h14M9 11v3M15 11v3"/>
+              <path stroke-linecap="round" d="M12 7c0-1.5 1-3 0-3s0 1.5 0 3z"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Order<span class="dot">.</span></h2>
+          <div class="ornament"><span class="ln"></span><span class="pt"></span><span class="pt hollow"></span><span class="pt"></span><span class="ln"></span></div>
+          <p class="tag-line">Online ordering with payment &amp; delivery.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — BOOK A TABLE                                         -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 07 · Book a Table</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'restaurant-04-book.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s4">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">No 3</span>
+          <span class="ptag">04 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="icon-badge">
+            <!-- Calendar / table reservation icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="3" y="5" width="18" height="16" rx="1" stroke-linejoin="round"/>
+              <path stroke-linecap="round" d="M3 10h18M8 3v4M16 3v4"/>
+              <rect x="7" y="13" width="3" height="3" fill="currentColor"/>
+              <rect x="12" y="13" width="3" height="3" fill="currentColor" opacity="0.5"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Book<span class="dot">.</span></h2>
+          <div class="ornament"><span class="ln"></span><span class="pt"></span><span class="pt hollow"></span><span class="pt"></span><span class="ln"></span></div>
+          <p class="tag-line">Guests reserve a table 24/7 — no calls.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — REVIEWS                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 07 · Reviews</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'restaurant-05-reviews.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s5">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">No 4</span>
+          <span class="ptag">05 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="icon-badge">
+            <!-- 5 stars icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M12 2l2.39 7.36H22l-6.18 4.49L18.21 21 12 16.51 5.79 21l2.39-7.15L2 9.36h7.61z"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Reviews<span class="dot">.</span></h2>
+          <div class="ornament"><span class="ln"></span><span class="pt"></span><span class="pt hollow"></span><span class="pt"></span><span class="ln"></span></div>
+          <p class="tag-line">Show 5-star Google reviews on your site.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — PRICE                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 07 · Price</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'restaurant-06-price.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s6">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">Best Deal</span>
+          <span class="ptag">06 / 07</span>
+        </div>
+
+        <div class="body">
+          <span class="price-pre">— Starts From</span>
+          <div class="price-big">&#8377;15K<span class="red">.</span></div>
+          <h2 class="big-word" style="font-size: 38px;">Live in <span class="red">7 days</span>.</h2>
+          <p class="tag-line">Everything included &middot; No hidden fees &middot; GST bill.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 07 — CTA                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 07 / 07 · Call Us</span>
+        <button class="slide-dl" onclick="downloadSlide('s7', 'restaurant-07-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cta" id="s7">
+        <span class="dot-tl"></span><span class="dot-tr"></span>
+        <span class="dot-bl"></span><span class="dot-br"></span>
+
+        <div class="s-top">
+          <span class="hot-tag">Order Now</span>
+          <span class="ptag">07 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="icon-badge">
+            <!-- Phone icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+
+          <h2 class="big-word">Call<span class="dot">.</span></h2>
+
+          <div class="cta-contact">
+            <div class="cta-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </span>
+              <span class="val">+91 70966 08771</span>
+            </div>
+            <div class="cta-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="4.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="val">@techcareer.llp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag red">Save this ★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'restaurant-01-cover.png' },
+        { id: 's2', name: 'restaurant-02-menu.png' },
+        { id: 's3', name: 'restaurant-03-order.png' },
+        { id: 's4', name: 'restaurant-04-book.png' },
+        { id: 's5', name: 'restaurant-05-reviews.png' },
+        { id: 's6', name: 'restaurant-06-price.png' },
+        { id: 's7', name: 'restaurant-07-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>

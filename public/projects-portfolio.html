@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Portfolio · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── PRINT / PAGE SETUP ─── */
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { background: white !important; }
+      .no-print { display: none !important; }
+      .page { page-break-after: always; box-shadow: none !important; margin: 0 !important; }
+      .page:last-child { page-break-after: auto; }
+    }
+
+    /* ─── RESET & BASE ─── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      background: #f3f4f6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    :root { --blue: #097CF4; --black: #111111; }
+
+    /* ─── PAGE WRAPPER ─── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 18mm 16mm;
+      margin: 24px auto;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+    }
+
+    /* ─── CORNERS ─── */
+    .corner-tl, .corner-tr, .corner-bl, .corner-br {
+      position: absolute; width: 14px; height: 14px; pointer-events: none;
+    }
+    .corner-tl { top: 8mm; left: 8mm; border-top: 2px solid var(--blue); border-left: 2px solid var(--blue); }
+    .corner-tr { top: 8mm; right: 8mm; border-top: 2px solid var(--blue); border-right: 2px solid var(--blue); }
+    .corner-bl { bottom: 8mm; left: 8mm; border-bottom: 2px solid var(--blue); border-left: 2px solid var(--blue); }
+    .corner-br { bottom: 8mm; right: 8mm; border-bottom: 2px solid var(--blue); border-right: 2px solid var(--blue); }
+
+    /* ─── HEADER & FOOTER ─── */
+    .page-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 8mm;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      margin-bottom: 10mm;
+    }
+    .page-header .meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .page-footer {
+      position: absolute; bottom: 10mm; left: 16mm; right: 16mm;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 700; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.4);
+      padding-top: 6mm; border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* ─── BRAND WORDMARK ─── */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px;
+      line-height: 1; text-decoration: none;
+    }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--blue); font-style: italic; }
+    .brand-mark .name .dot { color: var(--blue); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7.5px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .cover .brand-mark .name { color: white; font-size: 34px; }
+    .cover .brand-mark .sub { color: rgba(255,255,255,0.55); font-size: 9px; }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 12px;
+    }
+    .section-label::before { content: ''; width: 28px; height: 1px; background: var(--blue); }
+
+    h1.display, h2.display, h3.display {
+      font-family: 'Playfair Display', serif;
+      color: var(--black); letter-spacing: -0.02em; line-height: 1.1;
+    }
+    h1.display { font-size: 44px; font-weight: 800; }
+    h2.display { font-size: 32px; font-weight: 800; }
+    h3.display { font-size: 22px; font-weight: 800; }
+    .accent { color: var(--blue); font-style: italic; }
+
+    p.body {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px; line-height: 1.65; color: rgba(0,0,0,0.72);
+    }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 9px; background: rgba(9,124,244,0.08); color: var(--blue);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;
+    }
+
+    /* ─── COVER ─── */
+    .cover {
+      background: var(--black); color: white; padding: 0;
+      display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+    }
+    .cover .corner-tl, .cover .corner-tr, .cover .corner-bl, .cover .corner-br {
+      border-color: var(--blue) !important;
+    }
+    .cover-inner {
+      padding: 18mm 16mm; flex: 1;
+      display: flex; flex-direction: column; justify-content: space-between; position: relative;
+    }
+    .cover-glow {
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,124,244,0.35) 0%, transparent 70%);
+      filter: blur(80px); pointer-events: none;
+    }
+    .cover-glow.tl { top: -200px; left: -200px; }
+    .cover-glow.br { bottom: -200px; right: -200px; }
+    .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+    .cover-top .meta {
+      text-align: right;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5); line-height: 1.6;
+    }
+    .cover-center { position: relative; padding: 28mm 0; }
+    .cover-center .pill {
+      background: rgba(9,124,244,0.18); color: var(--blue); margin-bottom: 24px;
+    }
+    .cover-center h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 84px; font-weight: 800; line-height: 0.95;
+      letter-spacing: -0.03em; color: white; margin-bottom: 18px;
+    }
+    .cover-center h1 .accent { color: var(--blue); font-style: italic; }
+    .cover-center p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.7); max-width: 480px;
+    }
+    .cover-bottom {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+      position: relative; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px;
+    }
+    .cover-bottom .stat-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px;
+    }
+    .cover-bottom .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800; color: white; letter-spacing: -0.01em;
+    }
+    .cover-bottom .stat-value .dot { color: var(--blue); }
+
+    /* ─── TABLE OF CONTENTS ─── */
+    .toc-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 90px;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      align-items: center;
+      page-break-inside: avoid;
+    }
+    .toc-row .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 800; color: var(--blue); line-height: 1;
+      border-left: 3px solid var(--blue); padding-left: 14px;
+    }
+    .toc-row .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 800; color: var(--black); margin-bottom: 4px;
+    }
+    .toc-row .desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; color: rgba(0,0,0,0.65); line-height: 1.5;
+    }
+    .toc-row .page-no {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45);
+      text-align: right;
+    }
+
+    /* ─── PROJECT PAGE ─── */
+    .project-hero {
+      display: flex; align-items: flex-start; gap: 18px;
+      margin-bottom: 14px;
+    }
+    .project-hero .num-badge {
+      flex: 0 0 auto;
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; font-weight: 800; color: var(--blue);
+      line-height: 0.9; letter-spacing: -0.04em;
+      border-left: 3px solid var(--blue); padding-left: 14px;
+    }
+    .project-hero .info { flex: 1; padding-top: 4px; }
+    .project-hero .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; font-weight: 800; color: var(--black);
+      letter-spacing: -0.02em; line-height: 1.05;
+    }
+    .project-hero .title .accent { color: var(--blue); font-style: italic; }
+    .project-hero .subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--blue); margin-top: 8px;
+    }
+
+    .project-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px; line-height: 1.6; color: rgba(0,0,0,0.72);
+      margin: 14px 0 22px;
+    }
+
+    /* ─── FEATURES GRID ─── */
+    .feat-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;
+    }
+    .feat {
+      display: flex; align-items: center; gap: 10px;
+      border: 1px solid rgba(9,124,244,0.18);
+      background: rgba(9,124,244,0.04);
+      padding: 10px 12px;
+    }
+    .feat::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+    .feat span {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; color: var(--black);
+      letter-spacing: 0.01em;
+    }
+
+    /* ─── TECH STACK CHIPS ─── */
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .chip {
+      display: inline-block; padding: 5px 11px; background: var(--black); color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ─── LIVE DEMO + CREDENTIALS BLOCK ─── */
+    .demo-block {
+      margin-top: 10px;
+      border: 1px solid var(--blue);
+      background: rgba(9,124,244,0.04);
+      padding: 14px;
+    }
+    .demo-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 12px;
+      padding-bottom: 12px; border-bottom: 1px dashed rgba(9,124,244,0.3);
+    }
+    .demo-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue); color: white;
+      padding: 9px 16px; text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10.5px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .demo-btn::after {
+      content: '\2192'; font-size: 14px; line-height: 1;
+    }
+    .demo-status {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .demo-status::before {
+      content: ''; width: 7px; height: 7px;
+      background: #16a34a; border-radius: 50%;
+    }
+    .creds-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    }
+    .cred-card {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 10px 12px;
+    }
+    .cred-role {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .cred-role::before {
+      content: ''; width: 14px; height: 1px; background: var(--blue);
+    }
+    .cred-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.08);
+    }
+    .cred-row:last-child { border-bottom: none; }
+    .cred-key {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .cred-val {
+      font-family: 'Inter', monospace;
+      font-size: 10.5px; font-weight: 600; color: var(--black);
+      letter-spacing: 0.01em;
+    }
+
+    /* ─── PROJECT HIGHLIGHT QUOTE ─── */
+    .highlight {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: var(--black); color: white;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .highlight .h-icon {
+      flex: 0 0 auto;
+      width: 28px; height: 28px;
+      border: 1.5px solid var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; font-weight: 800;
+      color: var(--blue);
+    }
+    .highlight p {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px; line-height: 1.5; color: rgba(255,255,255,0.85);
+    }
+
+    /* ─── GALLERY PLACEHOLDER ─── */
+    .gallery-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;
+    }
+    .shot {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+      border: 1px solid rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .shot.full { grid-column: span 2; aspect-ratio: 16/8; }
+    .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .shot::before {
+      content: attr(data-label);
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.35);
+      text-align: center; padding: 8px;
+    }
+    .shot:has(img)::before { display: none; }
+
+    /* ─── HIGHLIGHT BLOCK ─── */
+    .role-block {
+      margin-top: 16px;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
+    }
+    .role-block .role-card {
+      border-top: 2px solid var(--blue);
+      padding-top: 8px;
+    }
+    .role-block .role-card .role-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.45); margin-bottom: 4px;
+    }
+    .role-block .role-card .role-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-weight: 800; color: var(--black);
+    }
+
+    /* ─── SECTION HEADING (small) ─── */
+    .sub-section {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.28em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+      margin: 22px 0 8px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .sub-section::before { content: ''; width: 18px; height: 1px; background: var(--blue); }
+
+    /* ─── CONTACT ─── */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px;
+    }
+    .contact-card {
+      border: 1px solid rgba(0,0,0,0.1); padding: 18px;
+    }
+    .contact-card .label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 8px;
+    }
+    .contact-card .value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px; font-weight: 700; color: var(--black);
+    }
+    .contact-card .value small {
+      display: block; font-size: 11px; font-weight: 500;
+      color: rgba(0,0,0,0.6); margin-top: 4px; line-height: 1.5;
+    }
+
+    /* ─── PRINT BUTTON ─── */
+    .print-bar {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1000;
+      display: flex; gap: 10px;
+    }
+    .print-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--black); color: white;
+      padding: 12px 20px; border: none; cursor: pointer;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+      transition: background 200ms;
+    }
+    .print-btn:hover { background: var(--blue); }
+    .print-btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .print-btn.secondary:hover { background: var(--blue); color: white; border-color: var(--blue); }
+  </style>
+</head>
+<body>
+  <!-- Print button -->
+  <div class="print-bar no-print">
+    <button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+    <button class="print-btn secondary" onclick="window.close()">Close</button>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 1 — COVER                                                  -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page cover">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+    <div class="cover-glow tl"></div>
+    <div class="cover-glow br"></div>
+
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="brand-mark">
+          <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+          <span class="sub">IT Solutions LLP</span>
+        </div>
+        <div class="meta">
+          Project Portfolio<br />
+          Edition · 2025 / 26
+        </div>
+      </div>
+
+      <div class="cover-center">
+        <div class="pill">Selected Work · 7 Featured Products · Multi-Industry</div>
+        <h1>
+          Selected<br />
+          <span class="accent">Work</span>.
+        </h1>
+        <p>
+          A curated showcase of products designed and engineered by
+          Tech Career IT Solutions LLP — across education, retail,
+          fitness, healthcare, mobility, doorstep service and mobile
+          commerce. Each one shipped, hosted and live.
+        </p>
+      </div>
+
+      <div class="cover-bottom">
+        <div>
+          <div class="stat-label">Projects</div>
+          <div class="stat-value">07 Featured<span class="dot">.</span></div>
+        </div>
+        <div>
+          <div class="stat-label">Industries</div>
+          <div class="stat-value">07 Verticals<span class="dot">.</span></div>
+        </div>
+        <div>
+          <div class="stat-label">Status</div>
+          <div class="stat-value">All Live<span class="dot">.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 2 — TABLE OF CONTENTS                                      -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">Index · Table of Contents</span>
+    </div>
+
+    <div class="section-label">Inside this Portfolio</div>
+    <h1 class="display">Table of <span class="accent">Contents.</span></h1>
+    <p class="body" style="margin-top: 12px; max-width: 90%;">
+      Seven featured products built by Tech Career IT Solutions LLP — each
+      with a clear problem, a focused feature set, a production-tested
+      stack and a working live demo. Pages 03 to 09.
+    </p>
+
+    <div style="margin-top: 18px;">
+      <div class="toc-row">
+        <div class="num">01</div>
+        <div>
+          <div class="title">Learning Craft</div>
+          <div class="desc">Scalable role-based LMS for students, instructors and admins.</div>
+        </div>
+        <div class="page-no">Page 03</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">02</div>
+        <div>
+          <div class="title">GROCIFY</div>
+          <div class="desc">Comprehensive grocery & retail management system.</div>
+        </div>
+        <div class="page-no">Page 04</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">03</div>
+        <div>
+          <div class="title">FitOrbit</div>
+          <div class="desc">Streamlined fitness & gym training management software.</div>
+        </div>
+        <div class="page-no">Page 05</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">04</div>
+        <div>
+          <div class="title">Medcare Hospital</div>
+          <div class="desc">Hospital management software for clinics and multi-speciality care.</div>
+        </div>
+        <div class="page-no">Page 06</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">05</div>
+        <div>
+          <div class="title">Vulead</div>
+          <div class="desc">Mobility solution — a full-stack web taxi-booking platform.</div>
+        </div>
+        <div class="page-no">Page 07</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">06</div>
+        <div>
+          <div class="title">FixAtDoor</div>
+          <div class="desc">Doorstep mobile-repair booking — book a technician from home.</div>
+        </div>
+        <div class="page-no">Page 08</div>
+      </div>
+      <div class="toc-row">
+        <div class="num">07</div>
+        <div>
+          <div class="title">Aayesha Mobile Point</div>
+          <div class="desc">Mobile retail & service management — sales, repairs and inventory.</div>
+        </div>
+        <div class="page-no">Page 09</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 02</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 3 — LEARNING CRAFT                                         -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">01 / Learning Craft</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">01</div>
+      <div class="info">
+        <div class="title">Learning <span class="accent">Craft</span>.</div>
+        <div class="subtitle">Education · Learning Management System</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      Learning Craft is a modern digital education platform that blends
+      advanced technology with effective teaching methods to create an
+      engaging, role-based learning environment for students, instructors
+      and administrators — built to scale from a single coaching class to
+      a multi-campus institution. Course discovery, live classes, quizzes,
+      assignments, certificates and a community forum, all under one roof.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>Three independent role experiences — Student, Instructor and
+      Admin — each with its own dashboard, permissions and analytics view.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">EdTech / LMS</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web Application</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Student · Tutor · Admin</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Role-Based Access Control</span></div>
+      <div class="feat"><span>Comprehensive Course Library</span></div>
+      <div class="feat"><span>Performance Tracking &amp; Analytics</span></div>
+      <div class="feat"><span>Interactive Learning Experience</span></div>
+      <div class="feat"><span>Mobile-Friendly Responsive UI</span></div>
+      <div class="feat"><span>Performance &amp; Revenue Analytics</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">JWT Auth</span><span class="chip">Tailwind CSS</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://learning-craft-tan.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+      <div class="creds-grid">
+        <div class="cred-card">
+          <div class="cred-role">Admin Login</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">admin@demo.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">Admin@123</span></div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-role">Student Login</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">student@student.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">student@123</span></div>
+        </div>
+        <div class="cred-card">
+          <div class="cred-role">Instructor Login</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">instructor@instructor.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">instructor@123</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 03</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 4 — GROCIFY                                                -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">02 / GROCIFY</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">02</div>
+      <div class="info">
+        <div class="title"><span class="accent">GROCIFY</span>.</div>
+        <div class="subtitle">Retail · Grocery Management System</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      A complete software solution tailored for supermarkets, hypermarkets
+      and retail stores to handle products, inventory, billing, suppliers
+      and customer orders from a single platform — designed to keep
+      day-to-day operations smooth, reduce manual errors, and deliver a
+      noticeably better experience for both staff and customers.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>One unified system for billing at the till, restocking from
+      suppliers, and tracking shrinkage — replacing 3–4 different tools
+      a typical store juggles.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">Retail / Grocery</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web &middot; POS &middot; Admin</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Cashier &middot; Manager &middot; Admin</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Centralized Dashboard Overview</span></div>
+      <div class="feat"><span>Product &amp; Category Management</span></div>
+      <div class="feat"><span>Real-Time Inventory Tracking</span></div>
+      <div class="feat"><span>Stock Alerts &amp; Adjustments</span></div>
+      <div class="feat"><span>Supplier &amp; Purchase Order Handling</span></div>
+      <div class="feat"><span>Customer Database Management</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">Tailwind CSS</span><span class="chip">REST APIs</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://grocery-manage-grocify.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+      <div class="creds-grid">
+        <div class="cred-card">
+          <div class="cred-role">Super Admin</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">admin@admin.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">admin@admin.com</span></div>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 04</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 5 — FITORBIT                                               -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">03 / FitOrbit</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">03</div>
+      <div class="info">
+        <div class="title">Fit<span class="accent">Orbit</span>.</div>
+        <div class="subtitle">Fitness · Gym &amp; Training Management Software</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      A complete gym management solution designed for fitness centres,
+      health clubs and studios to manage memberships, trainers, schedules,
+      billing, attendance and performance tracking — all from one
+      streamlined dashboard, so the front-desk team can spend less time
+      on paperwork and more time on members.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>Built around the daily reality of a gym front desk —
+      walk-in enrolments, plan upgrades, trainer assignment and class
+      bookings, all from a single screen.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">Fitness / Wellness</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web Application</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Member &middot; Trainer &middot; Admin</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Intelligent Operations Dashboard</span></div>
+      <div class="feat"><span>Membership Plan Management</span></div>
+      <div class="feat"><span>Trainer &amp; Class Administration</span></div>
+      <div class="feat"><span>Workout Plan Optimization</span></div>
+      <div class="feat"><span>Schedule &amp; Booking Automation</span></div>
+      <div class="feat"><span>Insightful Revenue &amp; Member Analytics</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">Chart.js</span><span class="chip">Tailwind CSS</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://fitorbit-the-gym-management-softwar.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+      <div class="creds-grid">
+        <div class="cred-card">
+          <div class="cred-role">Gym Admin</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">admin@fitorbit.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">12345678</span></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 05</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 6 — MEDCARE HOSPITAL                                       -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">04 / Medcare Hospital</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">04</div>
+      <div class="info">
+        <div class="title">Medcare <span class="accent">Hospital</span>.</div>
+        <div class="subtitle">Healthcare · Hospital Management Software</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      A comprehensive hospital management solution that streamlines
+      operations while enhancing patient care and service delivery.
+      Built for doctors, nurses, administrators and lab staff — with
+      real-time dashboards, appointment scheduling, billing and an
+      emergency-handling workflow that keeps the right people informed
+      at the right time.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>Four distinct interfaces — doctor, nurse, lab and admin —
+      with role-based permissions, so every team member sees only
+      what they need to act on.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">Healthcare / HMS</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web Application</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Doctor &middot; Nurse &middot; Admin &middot; Lab</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Patient &amp; Inpatient Management</span></div>
+      <div class="feat"><span>Appointment Scheduling System</span></div>
+      <div class="feat"><span>Medical Services &amp; Laboratory</span></div>
+      <div class="feat"><span>Staff &amp; Department Management</span></div>
+      <div class="feat"><span>Permission &amp; Role-Based Access</span></div>
+      <div class="feat"><span>Performance &amp; Revenue Analytics</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">Redux Toolkit</span><span class="chip">JWT</span>
+      <span class="chip">Chart.js</span><span class="chip">Tailwind CSS</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://hospital-manage-medcare.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+      <div class="creds-grid">
+        <div class="cred-card">
+          <div class="cred-role">Hospital Admin</div>
+          <div class="cred-row"><span class="cred-key">Email</span><span class="cred-val">medcare@gmail.com</span></div>
+          <div class="cred-row"><span class="cred-key">Password</span><span class="cred-val">medcare@medace</span></div>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 06</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 7 — VULEAD                                                 -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">05 / Vulead</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">05</div>
+      <div class="info">
+        <div class="title">Vu<span class="accent">lead</span>.</div>
+        <div class="subtitle">Mobility · Web-Based Taxi Booking Platform</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      Vulead is a web-based taxi-booking platform that connects customers,
+      drivers, fleet owners and administrators with a smooth and secure
+      ride-hailing experience. Easy ride booking, real-time driver
+      tracking, fare estimation and secure online payments — all wrapped
+      in a clean, intuitive web interface.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>A four-sided marketplace — riders book, drivers accept,
+      fleet owners manage cars, admins monitor — and they all share
+      one consistent design language.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">Mobility / Ride-Hailing</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web Application</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Rider &middot; Driver &middot; Fleet &middot; Admin</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Administrator Console</span></div>
+      <div class="feat"><span>Fleet Owner Dashboard</span></div>
+      <div class="feat"><span>Driver's Companion Web App</span></div>
+      <div class="feat"><span>Passenger-Side Booking Flow</span></div>
+      <div class="feat"><span>Real-Time Tracking &amp; Fare Estimate</span></div>
+      <div class="feat"><span>System-Wide Reporting &amp; Analytics</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Redux Toolkit</span>
+      <span class="chip">Chart.js</span><span class="chip">JWT</span>
+      <span class="chip">Tailwind CSS</span><span class="chip">REST APIs</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="#" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status" style="color: rgba(0,0,0,0.55);">Demo URL — On Request</span>
+      </div>
+      
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 07</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 8 — FIXATDOOR                                              -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">06 / FixAtDoor</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">06</div>
+      <div class="info">
+        <div class="title">Fix<span class="accent">AtDoor</span>.</div>
+        <div class="subtitle">On-Demand Service &middot; Doorstep Mobile Repair Booking</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      FixAtDoor is a doorstep mobile-repair booking platform that lets
+      customers book screen replacements, battery swaps, charging-port
+      fixes and software repairs from the comfort of their home — and
+      sends a verified technician to their address with the right tools
+      and genuine parts. Transparent pricing, live job tracking and a
+      written service warranty on every repair.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>Built around one promise — the customer never has to leave home.
+      Pick your phone, pick the issue, pick a slot, the technician comes
+      to you with the part already in hand.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">On-Demand Service</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web Application</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Customer &middot; Technician &middot; Admin</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Doorstep Repair Booking Flow</span></div>
+      <div class="feat"><span>Real-Time Technician Tracking</span></div>
+      <div class="feat"><span>Instant Repair Cost Estimator</span></div>
+      <div class="feat"><span>Pickup &amp; Drop Service Option</span></div>
+      <div class="feat"><span>Genuine Parts &amp; Warranty</span></div>
+      <div class="feat"><span>Service History &amp; Invoice Trail</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">Tailwind CSS</span><span class="chip">REST APIs</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://fix-at-door.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+     
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 08</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 9 — AAYESHA MOBILE POINT                                   -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">07 / Aayesha Mobile Point</span>
+    </div>
+
+    <div class="project-hero">
+      <div class="num-badge">07</div>
+      <div class="info">
+        <div class="title">Aayesha <span class="accent">Mobile Point</span>.</div>
+        <div class="subtitle">Mobile Retail &middot; Sales, Service &amp; Repair Management</div>
+      </div>
+    </div>
+
+    <p class="project-desc">
+      A purpose-built retail &amp; service management system for mobile
+      shops — combining a point-of-sale, accessory inventory, repair-job
+      tracking and customer records into one tidy dashboard, so a
+      single-shop owner can run sales and service operations without
+      juggling notebooks and spreadsheets.
+    </p>
+
+    <div class="highlight">
+      <div class="h-icon">&#10022;</div>
+      <p>POS, accessory stock, repair jobs and customer history —
+      one screen, one login, no more paper job-cards or messy
+      WhatsApp followups.</p>
+    </div>
+
+    <div class="role-block">
+      <div class="role-card">
+        <div class="role-label">— Industry</div>
+        <div class="role-value">Mobile Retail / Service</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Platform</div>
+        <div class="role-value">Web &middot; POS &middot; Admin</div>
+      </div>
+      <div class="role-card">
+        <div class="role-label">— Roles</div>
+        <div class="role-value">Owner &middot; Cashier &middot; Technician</div>
+      </div>
+    </div>
+
+    <div class="sub-section">Key Features &amp; Functionality</div>
+    <div class="feat-grid">
+      <div class="feat"><span>Point-of-Sale &amp; Billing</span></div>
+      <div class="feat"><span>Accessory &amp; Stock Inventory</span></div>
+      <div class="feat"><span>Customer &amp; Contact Records</span></div>
+      <div class="feat"><span>Repair Job-Card Tracking</span></div>
+      <div class="feat"><span>Service History &amp; Warranty</span></div>
+      <div class="feat"><span>Sales &amp; Revenue Reports</span></div>
+    </div>
+
+    <div class="sub-section">Technology Stack</div>
+    <div class="chip-row">
+      <span class="chip">React.js</span><span class="chip">Node.js</span>
+      <span class="chip">Express.js</span><span class="chip">MongoDB</span>
+      <span class="chip">Tailwind CSS</span><span class="chip">REST APIs</span>
+    </div>
+
+    <div class="sub-section">Live Demo &amp; Test Credentials</div>
+    <div class="demo-block">
+      <div class="demo-row">
+        <a class="demo-btn" href="https://aayesh-mobile.vercel.app/" target="_blank" rel="noopener">View Live Demo</a>
+        <span class="demo-status">Hosted &amp; Live</span>
+      </div>
+     
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 09</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PAGE 10 — CONTACT / CLOSING                                     -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section class="page">
+    <span class="corner-tl"></span><span class="corner-tr"></span>
+    <span class="corner-bl"></span><span class="corner-br"></span>
+
+    <div class="page-header">
+      <div class="brand-mark">
+        <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+        <span class="sub">IT Solutions LLP</span>
+      </div>
+      <span class="meta">08 / Get in Touch</span>
+    </div>
+
+    <div class="section-label">Let's Build the Next One Together</div>
+    <h2 class="display">Have a project <span class="accent">in mind?</span></h2>
+    <p class="body" style="margin-top: 12px; max-width: 90%;">
+      Every product on the previous pages started with a single discovery
+      call. If you have a similar idea — or a brand-new one — share a few
+      details and one of the founders will personally reply within 24
+      hours, with a realistic quote and timeline. NDA on request, free
+      discovery call, no obligation.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="label">— Email</div>
+        <div class="value">inquiry.techcareer@gmail.com<small>Founder replies within 24 hours · NDA on request</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Phone / WhatsApp</div>
+        <div class="value">+91 70966 08771<small>Mon — Sat · 10:00 — 20:00 IST</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Studio</div>
+        <div class="value">iHub, University Area<small>Ahmedabad, Gujarat · 380015 · India</small></div>
+      </div>
+      <div class="contact-card">
+        <div class="label">— Online</div>
+        <div class="value">www.techcareer.site<small>Instagram · @techcareer.llp</small></div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div style="margin-top: 48px; text-align: center; padding: 28px 0; border-top: 2px solid var(--black); border-bottom: 2px solid var(--black);">
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.4em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px;">
+        — Thank you for reading —
+      </div>
+      <div style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 800; color: var(--black); letter-spacing: -0.02em; line-height: 1.2;">
+        Built with <span class="accent">care</span>.<br />
+        Delivered with honesty.
+      </div>
+      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(0,0,0,0.45); margin-top: 14px;">
+        Tech Career IT Solutions LLP · Ahmedabad · 2025
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tech Career IT Solutions LLP</span>
+      <span>Page 10</span>
+    </div>
+  </section>
+
+</body>
+</html>

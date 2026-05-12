@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"d:/Faizan Khan Pathan Khan's/Tech Career New Version/tech-career-nextjs\")",
+      "Bash(rsync -a --exclude='node_modules' --exclude='dist' --exclude='.git' --exclude='package-lock.json' --exclude='.vscode' ./ \"d:/Faizan Khan Pathan Khan's/Tech Career New Version/tech-career-nextjs/\")",
+      "Read(//d/Faizan Khan Pathan Khan's/Tech Career New Version/**)"
+    ]
+  }
+}

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" spellcheck="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel · Clothing & Fashion Websites · Tech Career IT Solutions LLP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brown: #6B4423;
+      --brown-deep: #3F2418;
+      --brown-soft: #C9B59C;
+      --cream: #F5EFE5;
+      --paper: #FAF6EE;
+      --black: #111111;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #d8cfbf;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 24px 100px;
+    }
+
+    /* ─── PAGE HEAD ─── */
+    .page-head {
+      max-width: 1240px; margin: 0 auto 32px;
+      background: white; padding: 28px 32px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .page-head .info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--black); margin-bottom: 6px;
+    }
+    .page-head .info h1 .accent { color: var(--brown); font-style: italic; }
+    .page-head .info p {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .page-head .actions { display: flex; gap: 10px; }
+    .btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--brown-deep); color: white;
+      padding: 12px 18px; border: none; cursor: pointer;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .btn:hover { background: var(--brown); }
+    .btn.secondary {
+      background: white; color: var(--black);
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+    .btn.secondary:hover { background: var(--brown); color: white; border-color: var(--brown); }
+
+    /* ─── CAROUSEL GRID ─── */
+    .carousel {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      gap: 32px;
+    }
+    .slide-wrap .slide-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .slide-wrap .slide-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .slide-wrap .slide-dl {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--brown-deep); color: white;
+      padding: 8px 14px; border: none; cursor: pointer;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+      text-transform: uppercase; transition: background 200ms;
+    }
+    .slide-wrap .slide-dl:hover { background: var(--brown); }
+
+    /* ─── SLIDE BASE ─── */
+    .slide {
+      width: 540px; height: 540px;
+      position: relative; overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+    /* Subtle paper texture (radial dot grain) */
+    .slide::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(107,68,35,0.05) 1px, transparent 1px);
+      background-size: 18px 18px;
+      pointer-events: none;
+    }
+
+    /* Brown L-shape corner brackets — kept as you asked */
+    .slide .c-tl, .slide .c-tr, .slide .c-bl, .slide .c-br {
+      position: absolute;
+      width: 28px; height: 28px;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .slide .c-tl { top: 36px; left: 36px; border-top: 2.5px solid var(--brown); border-left: 2.5px solid var(--brown); }
+    .slide .c-tr { top: 36px; right: 36px; border-top: 2.5px solid var(--brown); border-right: 2.5px solid var(--brown); }
+    .slide .c-bl { bottom: 36px; left: 36px; border-bottom: 2.5px solid var(--brown); border-left: 2.5px solid var(--brown); }
+    .slide .c-br { bottom: 36px; right: 36px; border-bottom: 2.5px solid var(--brown); border-right: 2.5px solid var(--brown); }
+
+    /* GHOST background number — signature element */
+    .slide .ghost {
+      position: absolute;
+      bottom: -40px; right: -25px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 900;
+      font-size: 360px;
+      letter-spacing: -0.06em;
+      color: var(--brown);
+      opacity: 0.06;
+      line-height: 0.7;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Top + bottom strips */
+    .s-top, .s-bot {
+      position: absolute;
+      left: 80px; right: 80px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 4;
+    }
+    .s-top { top: 56px; }
+    .s-bot { bottom: 56px; }
+
+    .ptag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.5);
+    }
+    .ptag.brown { color: var(--brown); }
+
+    /* Brand wordmark */
+    .brand-mark {
+      display: inline-flex; flex-direction: column; gap: 3px; line-height: 1;
+      text-decoration: none;
+    }
+    .brand-mark *, .brand-mark { text-decoration: none !important; }
+    .brand-mark .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.02em;
+      color: var(--black); line-height: 1;
+    }
+    .brand-mark .name .accent { color: var(--brown); font-style: italic; }
+    .brand-mark .name .dot { color: var(--brown); }
+    .brand-mark .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 800; letter-spacing: 0.32em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+
+    /* Outlined luxury label tag */
+    .label-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 12px;
+      background: var(--paper);
+      border: 1.5px solid var(--brown);
+      color: var(--brown);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase;
+    }
+    .label-tag .swatch {
+      width: 7px; height: 7px;
+      background: var(--brown);
+    }
+
+    /* ═══════════════════════════════════════════════ */
+    /* NEW BODY — ASYMMETRIC HORIZONTAL SPLIT          */
+    /* Left column: text content (left-aligned)        */
+    /* Right column: hanging swing-tag with icon       */
+    /* ═══════════════════════════════════════════════ */
+    .body {
+      position: absolute;
+      top: 110px; left: 80px; right: 80px; bottom: 110px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 26px;
+      z-index: 2;
+    }
+    .text-col {
+      flex: 1;
+      display: flex; flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+
+    /* ─── SWING TAG (hanging clothing label) ─── */
+    .swing-tag {
+      flex: 0 0 auto;
+      width: 130px;
+      position: relative;
+      transform: rotate(4deg);
+      transform-origin: top center;
+    }
+    /* Hole + string at top */
+    .swing-tag::before {
+      content: '';
+      position: absolute;
+      top: -32px; left: 50%;
+      width: 1.5px; height: 32px;
+      background: var(--brown);
+      transform: translateX(-50%);
+    }
+    .swing-tag::after {
+      content: '';
+      position: absolute;
+      top: 12px; left: 50%;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 1.5px solid var(--brown);
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .swing-tag .tag-body {
+      width: 130px; height: 170px;
+      background: var(--brown);
+      color: white;
+      padding: 30px 12px 16px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between;
+      position: relative;
+      box-shadow: 0 14px 30px -10px rgba(63,36,24,0.45);
+    }
+    /* Notched corners (cut top corners for tag feel) */
+    .swing-tag .tag-body {
+      clip-path: polygon(0 14px, 14px 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+    }
+    .swing-tag .tag-icon svg {
+      width: 50px; height: 50px;
+      color: white;
+    }
+    .swing-tag .tag-foot {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 7px; font-weight: 900; letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+    }
+
+    /* ─── HEADLINE & ORNAMENT (left-aligned) ─── */
+    .pre-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 13px; color: var(--brown);
+      letter-spacing: 0.05em;
+    }
+    .big-word {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 64px;
+      letter-spacing: -0.025em;
+      color: var(--black);
+      line-height: 0.95;
+    }
+    .big-word .brown { color: var(--brown); }
+    .big-word .dot { color: var(--brown); font-style: normal; }
+
+    /* Single elegant divider — different from restaurant ornament */
+    .divider {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: -2px;
+    }
+    .divider .ln-thick {
+      width: 36px; height: 2px;
+      background: var(--brown);
+    }
+    .divider .ln-thin {
+      width: 14px; height: 1px;
+      background: var(--brown);
+      opacity: 0.5;
+    }
+
+    .tag-line {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: rgba(0,0,0,0.62);
+      letter-spacing: 0.02em;
+      max-width: 240px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* ─── COVER (s1) — different layout, full-bleed ─── */
+    .s-cover .body {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 18px;
+    }
+    .s-cover .swing-tag {
+      align-self: flex-end;
+      transform: rotate(-6deg);
+      margin-bottom: 12px;
+      width: 110px;
+    }
+    .s-cover .swing-tag .tag-body {
+      width: 110px; height: 145px;
+      padding: 26px 10px 14px;
+    }
+    .s-cover .swing-tag .tag-icon svg { width: 44px; height: 44px; }
+    .s-cover .pre-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.5em;
+      text-transform: uppercase; color: var(--brown);
+    }
+    .s-cover h2 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700; font-size: 56px;
+      letter-spacing: -0.025em; color: var(--black);
+      line-height: 0.98;
+    }
+    .s-cover h2 .brown { color: var(--brown); }
+    .s-cover .sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      color: rgba(0,0,0,0.6); max-width: 380px;
+    }
+
+    /* ─── PRICE SLIDE (s6) — also different ─── */
+    .s-price .body {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 6px;
+    }
+    .price-pre {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.4em;
+      text-transform: uppercase; color: rgba(0,0,0,0.55);
+    }
+    .price-big {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 150px;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 0.85;
+    }
+    .price-big .brown { color: var(--brown); }
+    .price-tag {
+      margin-top: 12px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 700;
+      font-size: 30px; color: var(--brown);
+    }
+    .price-foot {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px; font-weight: 700;
+      color: rgba(0,0,0,0.6);
+      max-width: 380px;
+      margin-top: 6px;
+    }
+
+    /* ─── CTA (s7) — boutique notice style ─── */
+    .s-cta .body {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 12px;
+    }
+    .cta-block {
+      margin-top: 8px;
+      display: flex; flex-direction: column; gap: 6px;
+      width: 100%;
+    }
+    .cta-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      background: var(--brown);
+      color: white;
+    }
+    .cta-row.alt {
+      background: var(--paper);
+      color: var(--brown);
+      border: 1.5px solid var(--brown);
+    }
+    .cta-row .ic { flex: 0 0 auto; width: 18px; height: 18px; }
+    .cta-row .ic svg { width: 100%; height: 100%; }
+    .cta-row .val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page header -->
+  <div class="page-head">
+    <div class="info">
+      <h1>Clothing &amp; Fashion <span class="accent">Websites</span>.</h1>
+      <p>7-Slide Carousel · 1080 × 1080 PNG · Asymmetric Boutique Design</p>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="downloadAll()">↓ Download All (7 PNGs)</button>
+      <button class="btn secondary" onclick="window.close()">Close</button>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 01 — COVER (vertical, swing-tag top-right)                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 01 / 07 · Cover</span>
+        <button class="slide-dl" onclick="downloadSlide('s1', 'cloth-01-cover.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cover" id="s1">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">01</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> For Clothing Brands</span>
+          <span class="ptag">01 / 07</span>
+        </div>
+
+        <div class="body">
+          
+
+          <span class="pre-label">— We Make</span>
+          <h2>Fashion<br/><span class="brown">Websites</span>.</h2>
+          <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 02 — CATALOG                                              -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 02 / 07 · Catalog</span>
+        <button class="slide-dl" onclick="downloadSlide('s2', 'cloth-02-catalog.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s2">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">02</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> No 1</span>
+          <span class="ptag">02 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="text-col">
+            <span class="pre-num"><em>i.</em> Built-in</span>
+            <h2 class="big-word">Catalog<span class="dot">.</span></h2>
+            <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+            <p class="tag-line">Show every product, every colour, every size &mdash; on one beautiful page.</p>
+          </div>
+          <div class="swing-tag">
+            <div class="tag-body">
+              <div class="tag-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="7" height="7" stroke-linejoin="round"/>
+                  <rect x="14" y="3" width="7" height="7" stroke-linejoin="round"/>
+                  <rect x="3" y="14" width="7" height="7" stroke-linejoin="round"/>
+                  <rect x="14" y="14" width="7" height="7" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="tag-foot">Catalog</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 03 — CART                                                 -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 03 / 07 · Cart</span>
+        <button class="slide-dl" onclick="downloadSlide('s3', 'cloth-03-cart.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s3">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">03</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> No 2</span>
+          <span class="ptag">03 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="text-col">
+            <span class="pre-num"><em>ii.</em> One-Click</span>
+            <h2 class="big-word">Cart<span class="dot">.</span></h2>
+            <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+            <p class="tag-line">Razorpay, COD, UPI &mdash; secure checkout for every customer.</p>
+          </div>
+          <div class="swing-tag">
+            <div class="tag-body">
+              <div class="tag-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1 12a1 1 0 01-1 1H7a1 1 0 01-1-1L5 8zM9 8V5a3 3 0 016 0v3"/>
+                </svg>
+              </div>
+              <span class="tag-foot">Cart</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 04 — SIZES                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 04 / 07 · Sizes</span>
+        <button class="slide-dl" onclick="downloadSlide('s4', 'cloth-04-sizes.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s4">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">04</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> No 3</span>
+          <span class="ptag">04 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="text-col">
+            <span class="pre-num"><em>iii.</em> Smart</span>
+            <h2 class="big-word">Sizes<span class="dot">.</span></h2>
+            <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+            <p class="tag-line">Built-in size charts &mdash; fewer returns, happier buyers.</p>
+          </div>
+          <div class="swing-tag">
+            <div class="tag-body">
+              <div class="tag-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="9" width="20" height="6" rx="0.5" stroke-linejoin="round"/>
+                  <path stroke-linecap="round" d="M6 9v3M10 9v4M14 9v3M18 9v4"/>
+                </svg>
+              </div>
+              <span class="tag-foot">Sizes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 05 — SHIPPING                                             -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 05 / 07 · Shipping</span>
+        <button class="slide-dl" onclick="downloadSlide('s5', 'cloth-05-shipping.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide" id="s5">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">05</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> No 4</span>
+          <span class="ptag">05 / 07</span>
+        </div>
+
+        <div class="body">
+          <div class="text-col">
+            <span class="pre-num"><em>iv.</em> Door-to-Door</span>
+            <h2 class="big-word">Ship<span class="dot">.</span></h2>
+            <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+            <p class="tag-line">Pan-India delivery, live tracking &amp; auto SMS updates.</p>
+          </div>
+          <div class="swing-tag">
+            <div class="tag-body">
+              <div class="tag-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="1" y="6" width="13" height="11" stroke-linejoin="round"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 9h4l3 4v4h-7M5.5 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                </svg>
+              </div>
+              <span class="tag-foot">Ship</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 06 — PRICE                                                -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 06 / 07 · Price</span>
+        <button class="slide-dl" onclick="downloadSlide('s6', 'cloth-06-price.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-price" id="s6">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">06</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> Best Price</span>
+          <span class="ptag">06 / 07</span>
+        </div>
+
+        <div class="body">
+          <span class="price-pre">— Starts From</span>
+          <div class="price-big">&#8377;15K<span class="brown">.</span></div>
+          <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+          <div class="price-tag"><em>Live in 10 days.</em></div>
+          <p class="price-foot">Catalog &middot; Cart &middot; Payments &middot; SEO &mdash; sab kuch included.</p>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Swipe →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <!-- SLIDE 07 — CTA                                                  -->
+    <!-- ════════════════════════════════════════════════════════════════ -->
+    <div class="slide-wrap">
+      <div class="slide-meta">
+        <span class="slide-num">— 07 / 07 · Get In Touch</span>
+        <button class="slide-dl" onclick="downloadSlide('s7', 'cloth-07-cta.png')">↓ Download PNG</button>
+      </div>
+      <div class="slide s-cta" id="s7">
+        <span class="c-tl"></span><span class="c-tr"></span>
+        <span class="c-bl"></span><span class="c-br"></span>
+        <span class="ghost">07</span>
+
+        <div class="s-top">
+          <span class="label-tag"><span class="swatch"></span> Talk Today</span>
+          <span class="ptag">07 / 07</span>
+        </div>
+
+        <div class="body">
+          <span class="pre-num"><em></em> Yours Truly</span>
+          <h2 class="big-word">Let's<br/><span class="brown">Talk</span>.</h2>
+          <div class="divider"><span class="ln-thick"></span><span class="ln-thin"></span></div>
+
+          <div class="cta-block">
+            <div class="cta-row">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </span>
+              <span class="val">+91 70966 08771</span>
+            </div>
+            <div class="cta-row alt">
+              <span class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="4.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="val">@techcareer.llp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-bot">
+          <div class="brand-mark">
+            <span class="name">Tech <span class="accent">Career</span><span class="dot">.</span></span>
+            <span class="sub">IT Solutions LLP</span>
+          </div>
+          <span class="ptag brown">Save this ★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    async function downloadSlide(id, filename) {
+      await document.fonts.ready;
+      const el = document.getElementById(id);
+      const canvas = await html2canvas(el, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+        logging: false,
+      });
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+
+    async function downloadAll() {
+      const slides = [
+        { id: 's1', name: 'cloth-01-cover.png' },
+        { id: 's2', name: 'cloth-02-catalog.png' },
+        { id: 's3', name: 'cloth-03-cart.png' },
+        { id: 's4', name: 'cloth-04-sizes.png' },
+        { id: 's5', name: 'cloth-05-shipping.png' },
+        { id: 's6', name: 'cloth-06-price.png' },
+        { id: 's7', name: 'cloth-07-cta.png' },
+      ];
+      for (const s of slides) {
+        await downloadSlide(s.id, s.name);
+        await new Promise(r => setTimeout(r, 400));
+      }
+    }
+  </script>
+
+</body>
+</html>
