@@ -4,11 +4,11 @@ import React from 'react'
 
 const milestones = [
   { year: '2025', title: 'LLP Registered', desc: 'Tech Career IT Solutions LLP is officially incorporated in Ahmedabad, Gujarat.', metric: 'Day', metricLabel: 'One' },
-  { year: '2025', title: 'iHub Studio', desc: 'Set up our first studio space at iHub, University Area — our home for building.', metric: '01', metricLabel: 'Office' },
-  { year: '2026', title: 'Open for Projects', desc: 'Publicly open for first clients — launch-friendly pricing, founder-led delivery.', metric: 'Now', metricLabel: 'Booking' },
-  { year: 'Next', title: 'First 5 Clients', desc: 'Partnering with a small, hand-picked set of first clients — every one a flagship.', metric: '05', metricLabel: 'Flagship Slots' },
-  { year: 'Next', title: 'Growing the Team', desc: 'Adding designers, developers and a growth lead — hiring only for the work in hand.', metric: '3–5', metricLabel: 'Early Hires' },
-  { year: 'Goal', title: 'Long-Term Partners', desc: 'The long game — building a studio our first clients still recommend five years in.', metric: '5y+', metricLabel: 'Partnerships' },
+  { year: '2025', title: 'iHub Studio', desc: 'Set up our first studio space at iHub, University Area - our home for building.', metric: '01', metricLabel: 'Office' },
+  { year: '2026', title: 'Open for Projects', desc: 'Publicly open for first clients - launch-friendly pricing, founder-led delivery.', metric: 'Now', metricLabel: 'Booking' },
+  { year: 'Next', title: 'First 5 Clients', desc: 'Partnering with a small, hand-picked set of first clients - every one a flagship.', metric: '05', metricLabel: 'Flagship Slots' },
+  { year: 'Next', title: 'Growing the Team', desc: 'Adding designers, developers and a growth lead - hiring only for the work in hand.', metric: '3–5', metricLabel: 'Early Hires' },
+  { year: 'Goal', title: 'Long-Term Partners', desc: 'The long game - building a studio our first clients still recommend five years in.', metric: '5y+', metricLabel: 'Partnerships' },
 ]
 
 const Milestones = () => {
@@ -47,7 +47,7 @@ const Milestones = () => {
           </h2>
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[620px] mx-auto">
-            We are a new studio — so here is our timeline so far, and what we are working toward next. No back-dated wins, no invented history.
+            We are a new studio - so here is our timeline so far, and what we are working toward next. No back-dated wins, no invented history.
           </p>
         </div>
 

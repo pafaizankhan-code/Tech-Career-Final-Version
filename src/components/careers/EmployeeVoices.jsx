@@ -9,7 +9,7 @@ const cards = [
     name: 'Faizan Pathan',
     role: 'Founder',
     quote:
-      'I am hiring people I would have wanted to work for when I was starting out. That is the whole hiring bar — no jargon, no ego, no fake urgency. If you like building real things for real clients, this is a good place to be.',
+      'I am hiring people I would have wanted to work for when I was starting out. That is the whole hiring bar - no jargon, no ego, no fake urgency. If you like building real things for real clients, this is a good place to be.',
   },
   {
     initials: 'We',
@@ -25,7 +25,7 @@ const cards = [
     name: 'Honest Warning',
     role: 'New Studio',
     quote:
-      'We are new. You will sometimes be the only designer or the only developer on a project. If that sounds exciting, you will thrive here. If you need a 200-person org to hide inside, this is not it — and that is OK.',
+      'We are new. You will sometimes be the only designer or the only developer on a project. If that sounds exciting, you will thrive here. If you need a 200-person org to hide inside, this is not it - and that is OK.',
   },
 ]
 
@@ -75,7 +75,7 @@ const EmployeeVoices = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            We have no employees yet — so instead of fake testimonials, here is what the founder,
+            We have no employees yet - so instead of fake testimonials, here is what the founder,
             your first week, and the tradeoffs actually look like.
           </p>
         </div>
@@ -150,7 +150,7 @@ const EmployeeVoices = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — What We Commit To
+              - What We Commit To
             </p>
             <h3
               className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.1] tracking-tight"

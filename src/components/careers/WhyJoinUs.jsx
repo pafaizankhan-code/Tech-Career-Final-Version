@@ -6,7 +6,7 @@ const benefits = [
   {
     no: '01',
     title: 'Real Ownership',
-    desc: 'You work directly with the founder — your code ships to real clients, and your voice actually shapes product decisions.',
+    desc: 'You work directly with the founder - your code ships to real clients, and your voice actually shapes product decisions.',
     tag: 'Impact',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -17,7 +17,7 @@ const benefits = [
   {
     no: '02',
     title: 'Fair Starting Pay',
-    desc: 'A clean, market-fair salary for Ahmedabad — no lowball startup excuses, with transparent reviews as the studio grows.',
+    desc: 'A clean, market-fair salary for Ahmedabad - no lowball startup excuses, with transparent reviews as the studio grows.',
     tag: 'Pay',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -40,7 +40,7 @@ const benefits = [
   {
     no: '04',
     title: 'Learn on Real Work',
-    desc: 'No sandbox projects. You ship for paying clients from day one — the fastest way to genuinely level up.',
+    desc: 'No sandbox projects. You ship for paying clients from day one - the fastest way to genuinely level up.',
     tag: 'Growth',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -51,7 +51,7 @@ const benefits = [
   {
     no: '05',
     title: 'Founder Mentorship',
-    desc: 'One-on-one time with the founder every week — architecture reviews, code feedback, career conversations, no HR layer.',
+    desc: 'One-on-one time with the founder every week - architecture reviews, code feedback, career conversations, no HR layer.',
     tag: 'Mentorship',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -62,7 +62,7 @@ const benefits = [
   {
     no: '06',
     title: 'Modern Tech Stack',
-    desc: 'React, Next.js, Node, React Native, Shopify, Tailwind — you use what is actually being paid to use today, not legacy Java.',
+    desc: 'React, Next.js, Node, React Native, Shopify, Tailwind - you use what is actually being paid to use today, not legacy Java.',
     tag: 'Stack',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -73,7 +73,7 @@ const benefits = [
   {
     no: '07',
     title: 'Shape the Culture',
-    desc: 'You are one of the first — which means your habits, your standards and your taste become the studio\'s default.',
+    desc: 'You are one of the first - which means your habits, your standards and your taste become the studio\'s default.',
     tag: 'Culture',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -97,7 +97,7 @@ const benefits = [
 const manifest = [
   'We hire for ownership, not years of experience.',
   'We ship small, ship weekly, and learn in the open.',
-  'We write plain-language scopes — no jargon.',
+  'We write plain-language scopes - no jargon.',
   'We say "I do not know" out loud, often.',
   'We treat our first clients as partners, not transactions.',
 ]
@@ -139,7 +139,7 @@ const WhyJoinUs = () => {
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[640px]">
-              We are not a big IT firm with slick perks — we are a new team in Ahmedabad offering
+              We are not a big IT firm with slick perks - we are a new team in Ahmedabad offering
               the thing big firms cannot: ownership, clarity, and the chance to grow with a studio
               you helped build.
             </p>
@@ -155,7 +155,7 @@ const WhyJoinUs = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — The Team Manifest
+                - The Team Manifest
               </p>
 
               <ul className="space-y-3" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
@@ -191,7 +191,7 @@ const WhyJoinUs = () => {
                     className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors block"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {b.no}
+                    - {b.no}
                   </span>
                   <span
                     className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#097CF4] block mt-1"

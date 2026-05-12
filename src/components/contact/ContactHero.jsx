@@ -86,7 +86,7 @@ const ContactHero = () => {
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
               No chatbots, no call-centre scripts. Every message lands directly with the founder,
-              and you get a personal reply within 24 hours — usually faster on WhatsApp. Tell us
+              and you get a personal reply within 24 hours - usually faster on WhatsApp. Tell us
               what you're building.
             </p>
 
@@ -128,7 +128,7 @@ const ContactHero = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Direct Lines
+                - Direct Lines
               </p>
 
               <dl className="space-y-4 text-[13px]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>

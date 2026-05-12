@@ -13,7 +13,7 @@ const BlogSection = () => {
       className="relative bg-white py-20 lg:py-28 overflow-hidden"
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
-      {/* Subtle grid background — matches OurServices */}
+      {/* Subtle grid background - matches OurServices */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{
@@ -51,7 +51,7 @@ const BlogSection = () => {
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Plain-English explainers for business owners, students and curious
-              minds — no jargon, no ego, just the bits that actually matter.
+              minds - no jargon, no ego, just the bits that actually matter.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const BlogSection = () => {
                     }`}
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {post.no}
+                    - {post.no}
                   </span>
                 </div>
 

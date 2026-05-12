@@ -9,7 +9,7 @@ const items = [
     kind: 'Mission',
     title: 'Make good software feel within reach.',
     body:
-      'Give small and mid-sized Indian businesses the kind of websites, stores and internal tools that usually only big-budget teams get — at a price and pace that actually fits their business.',
+      'Give small and mid-sized Indian businesses the kind of websites, stores and internal tools that usually only big-budget teams get - at a price and pace that actually fits their business.',
     keyword: 'Within reach',
   },
   {
@@ -17,7 +17,7 @@ const items = [
     kind: 'Vision',
     title: 'Grow slowly. Build things that last.',
     body:
-      'Become the studio that businesses in Ahmedabad and across India recommend to the next business — without us ever asking. One happy client at a time.',
+      'Become the studio that businesses in Ahmedabad and across India recommend to the next business - without us ever asking. One happy client at a time.',
     keyword: 'That last',
   },
 ]
@@ -74,13 +74,13 @@ const MissionVision = () => {
             className="mt-5 sm:mt-6 text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.7] text-black/60 max-w-[600px] mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            We are a new studio — that means we have everything to prove and
+            We are a new studio - that means we have everything to prove and
             nothing to coast on. Here is what drives the work, and where we
             want to be ten years from now.
           </p>
         </div>
 
-        {/* The two cards — split with center divider */}
+        {/* The two cards - split with center divider */}
         <div className="relative grid grid-cols-1 lg:grid-cols-2 lg:divide-x lg:divide-black/10">
           {items.map((item, i) => (
             <article
@@ -148,7 +148,7 @@ const MissionVision = () => {
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
           >
             <span className="text-[#097CF4] font-bold uppercase tracking-[0.18em] mr-2">
-              — In short:
+              - In short:
             </span>
             small studio, founder-led, built for the long haul.
           </div>

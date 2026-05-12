@@ -116,7 +116,7 @@ const Banner = () => {
 
   return (
     <section className="relative bg-white overflow-hidden" style={{ fontFamily: 'Inter, sans-serif' }}>
-      {/* Soft dot grid background — edge to edge */}
+      {/* Soft dot grid background - edge to edge */}
       <div
         className="absolute inset-0 opacity-[0.25] pointer-events-none"
         style={{
@@ -137,10 +137,10 @@ const Banner = () => {
       <span className="pointer-events-none absolute top-6 right-6 w-4 h-4 border-t-2 border-r-2 border-[#097CF4] hidden md:block"></span>
 
       <div className="relative max-w-[1440px] mx-auto px-5 sm:px-6 lg:px-10 pt-12 sm:pt-14 lg:pt-20 pb-12 lg:pb-14">
-        {/* Announcement chip — left on mobile, centered on md+ */}
+        {/* Announcement chip - left on mobile, centered on md+ */}
        
 
-        {/* Giant headline — left on mobile, centered on md+ */}
+        {/* Giant headline - left on mobile, centered on md+ */}
         <h1
           className="mt-6 sm:mt-8 lg:mt-10 text-left md:text-center font-extrabold text-black leading-[0.95] tracking-[-0.03em]"
           style={{ fontFamily: 'Playfair Display, serif' }}
@@ -153,17 +153,17 @@ const Banner = () => {
           </span>
         </h1>
 
-        {/* Subtitle — left on mobile, centered on md+ */}
+        {/* Subtitle - left on mobile, centered on md+ */}
         <p
           className="mt-5 sm:mt-7 lg:mt-9 max-w-[780px] md:mx-auto text-left md:text-center text-[14.5px] sm:text-[18px] lg:text-[19px] leading-[1.65] text-black/65"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           We build <span className="text-black font-semibold">websites, online stores, custom CRM &amp; HRMS and mobile apps</span> for
-          businesses across every category — restaurants to real estate, clinics to coaching classes, factories to fashion brands. Pick
+          businesses across every category - restaurants to real estate, clinics to coaching classes, factories to fashion brands. Pick
           your category below.
         </p>
 
-        {/* CTAs — full-width stacked on mobile, inline on md+ */}
+        {/* CTAs - full-width stacked on mobile, inline on md+ */}
         <div
           className="mt-7 sm:mt-9 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center sm:justify-center gap-3 sm:gap-4"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
@@ -191,7 +191,7 @@ const Banner = () => {
           </Link>
         </div>
 
-        {/* Trust bar — left + stacked on mobile, inline + centered on md+ */}
+        {/* Trust bar - left + stacked on mobile, inline + centered on md+ */}
         <div className="mt-8 sm:mt-9 lg:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-start md:justify-center gap-y-2.5 sm:gap-y-3 sm:gap-x-6">
           <span
             className="inline-flex items-center gap-2 text-[12px] font-semibold text-black/70"
@@ -237,7 +237,7 @@ const Banner = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Pick Your Business Type
+                - Pick Your Business Type
               </p>
               <h2
                 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-black leading-[1.05] tracking-tight"
@@ -252,12 +252,12 @@ const Banner = () => {
               className="max-w-[380px] text-[14px] leading-[1.7] text-black/60"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Every category has its own quirks — what works for a restaurant fails for a clinic. We design around how
+              Every category has its own quirks - what works for a restaurant fails for a clinic. We design around how
               your industry actually operates.
             </p>
           </div>
 
-          {/* Categories grid — 2 col mobile, 4 col desktop */}
+          {/* Categories grid - 2 col mobile, 4 col desktop */}
           <div className="grid grid-cols-1 lg:grid-cols-4 border-t border-l border-black/10">
             {businessCategories.map((cat, i) => {
               const isActive = activeCategory === i
@@ -296,7 +296,7 @@ const Banner = () => {
                       }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      — {String(i + 1).padStart(2, '0')}
+                      - {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
 
@@ -339,7 +339,7 @@ const Banner = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-1"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Don't see your category?
+                - Don't see your category?
               </p>
               <p
                 className="text-[14px] sm:text-[15px] font-semibold text-black"

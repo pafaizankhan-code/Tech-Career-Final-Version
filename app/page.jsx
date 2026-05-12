@@ -5,10 +5,10 @@ const BRAND = 'Tech Career IT Solutions LLP'
 
 export const metadata = {
   title: {
-    absolute: 'Best Web Development Company in Ahmedabad | Tech Career IT Solutions LLP',
+    absolute: 'Tech Career IT Solutions LLP — Web & App Agency, Ahmedabad',
   },
   description:
-    'Tech Career IT Solutions LLP — Ahmedabad-based company for custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS and digital marketing. SEO-ready builds, transparent pricing, founder-led delivery.',
+    'Tech Career IT Solutions LLP - Ahmedabad-based company for custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS and digital marketing. SEO-ready builds, transparent pricing, founder-led delivery.',
   keywords: [
     'custom website', 'custom software', 'custom mobile app',
     'custom website development', 'custom software development', 'custom mobile app development',
@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: 'Custom Web, App & Software | Tech Career IT Solutions LLP',
     description:
-      'Custom websites, software, mobile apps, e-commerce, CRM/HRMS & digital marketing by Tech Career IT Solutions LLP — Ahmedabad, India.',
+      'Custom websites, software, mobile apps, e-commerce, CRM/HRMS & digital marketing by Tech Career IT Solutions LLP - Ahmedabad, India.',
     url: `${SITE_URL}/`,
     siteName: BRAND,
     type: 'website',

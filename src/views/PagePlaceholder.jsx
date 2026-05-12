@@ -10,7 +10,7 @@ const PagePlaceholder = ({ title, subtitle }) => {
           className="text-xs font-semibold tracking-[0.3em] uppercase text-[#097CF4] mb-4"
           style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
         >
-          — {title} Page
+          - {title} Page
         </p>
         <h2
           className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-black leading-[1.05]"

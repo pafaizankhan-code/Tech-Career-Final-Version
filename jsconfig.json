@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "https://techcareer.site/",
     "paths": {
       "@/*": ["./src/*"]
     }

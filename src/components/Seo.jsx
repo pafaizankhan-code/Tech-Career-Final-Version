@@ -17,7 +17,7 @@ export const SITE = {
   email: 'inquiry.techcareer@gmail.com',
 }
 
-// Render-time SEO primitive. Uses React 19 native head hoisting — no extra dependencies.
+// Render-time SEO primitive. Uses React 19 native head hoisting - no extra dependencies.
 const Seo = ({
   title,
   description,
@@ -47,7 +47,7 @@ const Seo = ({
       <meta name="author" content={SITE.brand} />
       <meta name="publisher" content={SITE.brand} />
 
-      {/* Geo / regional signals (India focus — Ahmedabad) */}
+      {/* Geo / regional signals (India focus - Ahmedabad) */}
       <meta name="geo.region" content={SITE.region} />
       <meta name="geo.placename" content="Ahmedabad, Gujarat, India" />
       <meta name="geo.position" content="23.0225;72.5714" />
@@ -55,7 +55,7 @@ const Seo = ({
       <meta name="language" content="English" />
       <meta httpEquiv="content-language" content="en-IN" />
 
-      {/* Canonical — self-referencing */}
+      {/* Canonical - self-referencing */}
       <link rel="canonical" href={url} />
 
       {/* Open Graph */}
@@ -88,7 +88,7 @@ const Seo = ({
   )
 }
 
-// Reusable Organization / LocalBusiness schema — injected on the Home page.
+// Reusable Organization / LocalBusiness schema - injected on the Home page.
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': ['ProfessionalService', 'LocalBusiness', 'Organization'],
@@ -105,7 +105,7 @@ export const organizationJsonLd = {
   },
   image: SITE.defaultImage,
   description:
-    'Tech Career IT Solutions LLP — a founder-led web development, e-commerce, custom CRM / HRMS, mobile app and digital marketing agency based in Ahmedabad, India.',
+    'Tech Career IT Solutions LLP - a founder-led web development, e-commerce, custom CRM / HRMS, mobile app and digital marketing agency based in Ahmedabad, India.',
   slogan: 'Crafting Digital Excellence from Ahmedabad.',
   foundingDate: '2025',
   foundingLocation: {
@@ -209,7 +209,7 @@ export const organizationJsonLd = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Tech Career IT Solutions LLP — Services',
+    name: 'Tech Career IT Solutions LLP - Services',
     itemListElement: [
       {
         '@type': 'OfferCatalog',
@@ -337,7 +337,7 @@ export const buildJobPostingJsonLd = (job) => ({
   }),
 })
 
-// Primary site navigation — surfaced as SiteNavigationElement so Google
+// Primary site navigation - surfaced as SiteNavigationElement so Google
 // understands which links are the main menu (a strong sitelinks signal).
 export const PRIMARY_NAV = [
   { name: 'Home', path: '/', description: 'Tech Career IT Solutions home page' },
@@ -345,7 +345,7 @@ export const PRIMARY_NAV = [
   { name: 'Services', path: '/services', description: 'Web, e-commerce, CRM, mobile and marketing services' },
   { name: 'Portfolio', path: '/portfolio', description: 'Capability showcase and project case studies' },
   { name: 'Careers', path: '/careers', description: 'Open roles and internships in Ahmedabad' },
-  { name: 'Contact', path: '/contact', description: 'Get in touch — free discovery call' },
+  { name: 'Contact', path: '/contact', description: 'Get in touch - free discovery call' },
 ]
 
 export const SECONDARY_NAV = [
@@ -359,7 +359,7 @@ export const SECONDARY_NAV = [
   { name: 'Digital Marketing', path: '/services/digital-marketing', description: 'SEO, content and paid acquisition' },
 ]
 
-// SiteNavigationElement JSON-LD — explicit signal of primary site links.
+// SiteNavigationElement JSON-LD - explicit signal of primary site links.
 export const siteNavigationJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [...PRIMARY_NAV, ...SECONDARY_NAV].map((n, i) => ({

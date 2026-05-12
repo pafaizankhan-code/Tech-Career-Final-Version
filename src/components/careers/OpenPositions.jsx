@@ -52,7 +52,7 @@ export const jobs = [
     experience: '2 to 4 years running SEO, paid ads and content programs for SMBs or agencies.',
     salary: 'Market fair',
     description:
-      'Digital marketing lead role at Tech Career IT Solutions LLP, Ahmedabad. Own SEO, paid ads and content for a small but growing roster of clients — technical enough to work with developers, analytical enough to report what actually moves.',
+      'Digital marketing lead role at Tech Career IT Solutions LLP, Ahmedabad. Own SEO, paid ads and content for a small but growing roster of clients - technical enough to work with developers, analytical enough to report what actually moves.',
     datePosted: '2026-04-01',
     validThrough: '2026-07-31',
     badges: [],
@@ -85,7 +85,7 @@ export const jobs = [
     employmentType: 'INTERN',
     category: 'Marketing',
     exp: 'Any',
-    experience: 'Any background — we care about clear writing, curiosity and comfort with data.',
+    experience: 'Any background - we care about clear writing, curiosity and comfort with data.',
     salary: 'Paid stipend',
     description:
       '3-month content and SEO internship at Tech Career IT Solutions LLP. Research keywords, write case studies and support on-page SEO for the agency and its clients. Remote-friendly, paid stipend.',
@@ -162,7 +162,7 @@ const OpenPositions = () => {
 
             <p className="mt-4 text-[14px] leading-[1.7] text-black/65 max-w-[520px]">
               A few honest roles to get this studio off the ground. If the listing resonates, drop
-              us a short note — a résumé plus two lines on why you are keen is enough to start.
+              us a short note - a résumé plus two lines on why you are keen is enough to start.
             </p>
           </div>
 
@@ -363,7 +363,7 @@ const OpenPositions = () => {
               className="text-[14px] text-black/50"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              No roles match your filters right now. Try widening the search — or{' '}
+              No roles match your filters right now. Try widening the search - or{' '}
               <a href="#general" className="text-[#097CF4] font-bold underline">
                 send us a general application →
               </a>
@@ -384,7 +384,7 @@ const OpenPositions = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Don't see your role?
+              - Don't see your role?
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-black leading-tight"

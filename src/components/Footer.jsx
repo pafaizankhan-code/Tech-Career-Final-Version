@@ -180,7 +180,7 @@ const Footer = () => {
             </Link>
 
             <p className="mt-6 text-[14px] leading-[1.7] text-white/65 max-w-[360px]">
-              An enterprise IT partner for ambitious teams — designing, building, and scaling
+              An enterprise IT partner for ambitious teams - designing, building, and scaling
               software that earns trust from boardroom to production.
             </p>
 
@@ -194,7 +194,7 @@ const Footer = () => {
                     className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#097CF4]"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {o.city}
+                    - {o.city}
                   </p>
                   <p className="mt-1.5 text-[12px] leading-[1.6] text-white/60">{o.address}</p>
                 </div>
@@ -349,7 +349,7 @@ const Footer = () => {
       <div className="relative bg-[#097CF4] text-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.2em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
           <p className="font-semibold">
-            © {year} Tech Career IT Solutions LLP — All rights reserved.
+            © {year} Tech Career IT Solutions LLP - All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <Link to="/privacy" className="hover:underline">Privacy</Link>

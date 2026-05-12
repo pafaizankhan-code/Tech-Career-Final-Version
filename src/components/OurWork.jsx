@@ -10,7 +10,7 @@ const projects = [
     category: 'Web App',
     client: 'Admin Dashboards',
     title: 'Turn your data into decisions.',
-    desc: 'Custom admin panels and analytics dashboards — from internal tools replacing spreadsheets to full SaaS control rooms. Role-based access, clean charts, and exports your team actually uses.',
+    desc: 'Custom admin panels and analytics dashboards - from internal tools replacing spreadsheets to full SaaS control rooms. Role-based access, clean charts, and exports your team actually uses.',
     stack: ['Next.js', 'React', 'PostgreSQL', 'Tailwind'],
     metrics: [
       { k: '3–6', v: 'Week Build' },
@@ -25,7 +25,7 @@ const projects = [
     category: 'Mobile App',
     client: 'Mobile Applications',
     title: 'One codebase. Both stores.',
-    desc: 'iOS and Android apps built once in React Native or Flutter — with push notifications, payments, biometric auth and a backend that scales as you grow.',
+    desc: 'iOS and Android apps built once in React Native or Flutter - with push notifications, payments, biometric auth and a backend that scales as you grow.',
     stack: ['React Native', 'Flutter', 'Node.js', 'Firebase'],
     metrics: [
       { k: 'iOS +', v: 'Android' },
@@ -40,7 +40,7 @@ const projects = [
     category: 'E-commerce',
     client: 'Online Stores',
     title: 'Sell everywhere, manage in one place.',
-    desc: 'Shopify builds or custom e-commerce with catalogue management, Razorpay / Stripe checkout, inventory, shipping zones and order tracking — ready to launch and optimised for conversions.',
+    desc: 'Shopify builds or custom e-commerce with catalogue management, Razorpay / Stripe checkout, inventory, shipping zones and order tracking - ready to launch and optimised for conversions.',
     stack: ['Shopify', 'WooCommerce', 'Razorpay', 'Stripe'],
     metrics: [
       { k: '2–4', v: 'Week Launch' },
@@ -55,7 +55,7 @@ const projects = [
     category: 'Custom Software',
     client: 'CRM & HRMS',
     title: 'Software that fits your workflow.',
-    desc: 'Custom CRM, HRMS, billing tools and internal portals — tailored to exactly how your team works. No bloated off-the-shelf tool trying to bend around you.',
+    desc: 'Custom CRM, HRMS, billing tools and internal portals - tailored to exactly how your team works. No bloated off-the-shelf tool trying to bend around you.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
     metrics: [
       { k: 'Custom', v: 'Workflows' },
@@ -70,7 +70,7 @@ const projects = [
     category: 'Digital Marketing',
     client: 'Marketing & Growth',
     title: 'Bring traffic the website deserves.',
-    desc: 'SEO, Google Ads, Meta Ads and organic social handled by a team that understands your tech stack — measurable campaigns with clear monthly reporting, not vanity metrics.',
+    desc: 'SEO, Google Ads, Meta Ads and organic social handled by a team that understands your tech stack - measurable campaigns with clear monthly reporting, not vanity metrics.',
     stack: ['SEO', 'Google Ads', 'Meta Ads', 'Analytics'],
     metrics: [
       { k: 'SEO', v: 'Audit + Fix' },
@@ -301,7 +301,7 @@ const OurWork = () => {
               className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[560px]"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              We're a new LLP — so instead of old case studies, here is exactly what we can build
+              We're a new LLP - so instead of old case studies, here is exactly what we can build
               for you, the stack we use, and a realistic timeline.
             </p>
           </div>
@@ -444,7 +444,7 @@ const OurWork = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Capability · {project.client}
+                  - Capability · {project.client}
                 </p>
 
                 <h3
@@ -532,7 +532,7 @@ const OurWork = () => {
           </div>
         </div>
 
-        {/* Bottom strip — honest CTA */}
+        {/* Bottom strip - honest CTA */}
         <div className="mt-16 lg:mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t-2 border-black">
           <div className="flex items-center gap-4">
             <span className="w-12 h-12 bg-[#097CF4] flex items-center justify-center">

@@ -67,7 +67,7 @@ const CareerHero = () => {
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
               We are a brand-new founder-led studio based at iHub, Ahmedabad. If you want real
               ownership, direct access to the founder, and the chance to shape a studio rather than
-              slot into someone else's org chart — there's a seat for you.
+              slot into someone else's org chart - there's a seat for you.
             </p>
 
             <div
@@ -109,7 +109,7 @@ const CareerHero = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Featured Role
+                  - Featured Role
                 </span>
                 <span className="px-2 py-1 bg-[#097CF4] text-white text-[9px] font-bold uppercase tracking-[0.25em]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                   New

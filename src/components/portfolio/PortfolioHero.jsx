@@ -61,7 +61,7 @@ const PortfolioHero = () => {
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
-              We are a new studio — so instead of a decade of client logos, here is a transparent
+              We are a new studio - so instead of a decade of client logos, here is a transparent
               showcase of exactly what we can build for you: the formats, the stack, and honest
               timelines for each. Your project could be the first one we feature here.
             </p>
@@ -76,7 +76,7 @@ const PortfolioHero = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Launch-Client Offer
+                - Launch-Client Offer
               </p>
 
               <p

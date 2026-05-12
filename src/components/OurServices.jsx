@@ -7,7 +7,7 @@ const services = [
   {
     no: '01',
     title: 'Web Development',
-    desc: 'Fast, SEO-friendly websites and web apps — from business sites and landing pages to custom portals built with modern frameworks.',
+    desc: 'Fast, SEO-friendly websites and web apps - from business sites and landing pages to custom portals built with modern frameworks.',
     tags: ['React', 'Next.js', 'Node.js', 'WordPress'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -19,7 +19,7 @@ const services = [
   {
     no: '02',
     title: 'E-commerce Stores',
-    desc: 'Online stores that convert — Shopify builds and custom e-commerce with secure payments, stock management and smooth checkout.',
+    desc: 'Online stores that convert - Shopify builds and custom e-commerce with secure payments, stock management and smooth checkout.',
     tags: ['Shopify', 'WooCommerce', 'Razorpay', 'Stripe'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -30,7 +30,7 @@ const services = [
   {
     no: '03',
     title: 'Custom CRM & HRMS',
-    desc: 'Tailored business software — CRM, HRMS, admin dashboards and internal tools that replace spreadsheets and scale with your team.',
+    desc: 'Tailored business software - CRM, HRMS, admin dashboards and internal tools that replace spreadsheets and scale with your team.',
     tags: ['CRM', 'HRMS', 'Dashboards', 'Automation'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -41,7 +41,7 @@ const services = [
   {
     no: '04',
     title: 'Mobile Applications',
-    desc: 'Cross-platform iOS and Android apps with a shared codebase — clean UI, secure APIs and Play Store / App Store ready.',
+    desc: 'Cross-platform iOS and Android apps with a shared codebase - clean UI, secure APIs and Play Store / App Store ready.',
     tags: ['React Native', 'Flutter', 'iOS', 'Android'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -53,7 +53,7 @@ const services = [
   {
     no: '05',
     title: 'UI / UX Design',
-    desc: 'Wireframes, prototypes and design systems crafted in Figma — built around real user flows, not just pretty screens.',
+    desc: 'Wireframes, prototypes and design systems crafted in Figma - built around real user flows, not just pretty screens.',
     tags: ['Figma', 'Wireframes', 'Prototypes', 'Design System'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -65,7 +65,7 @@ const services = [
   {
     no: '06',
     title: 'Digital Marketing',
-    desc: 'SEO, Google Ads, Meta Ads and organic social — measurable campaigns that bring your website the traffic and leads it deserves.',
+    desc: 'SEO, Google Ads, Meta Ads and organic social - measurable campaigns that bring your website the traffic and leads it deserves.',
     tags: ['SEO', 'Google Ads', 'Meta Ads', 'Social'],
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -121,7 +121,7 @@ const OurServices = () => {
               className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              From your first website to custom business software and full digital marketing —
+              From your first website to custom business software and full digital marketing -
               one founder-led team in Ahmedabad, one transparent quote, one clear timeline.
             </p>
           </div>
@@ -181,7 +181,7 @@ const OurServices = () => {
                     }`}
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {s.no}
+                    - {s.no}
                   </span>
                 </div>
 
@@ -262,7 +262,7 @@ const OurServices = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Don't see what you need?
+              - Don't see what you need?
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-black leading-tight"

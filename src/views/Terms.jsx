@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import LegalLayout from '../components/LegalLayout'
 
 const LAST_UPDATED = '22 April 2026'
@@ -10,7 +10,7 @@ const termsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/terms`,
-  name: 'Terms of Service — Tech Career IT Solutions LLP',
+  name: 'Terms of Service - Tech Career IT Solutions LLP',
   description:
     'The terms and conditions that govern use of techcareer.site and the web development, digital marketing and consulting services provided by Tech Career IT Solutions LLP.',
   url: `${SITE.baseUrl}/terms`,
@@ -121,7 +121,7 @@ const sections = [
         <p>
           We warrant that our services will be performed in a professional manner and the
           deliverables will materially conform to the agreed scope for 30 days after launch. To
-          the fullest extent permitted by law, all other warranties — express or implied — are
+          the fullest extent permitted by law, all other warranties - express or implied - are
           disclaimed. The website and any content are provided on an "as is" basis.
         </p>
       </>
@@ -221,18 +221,15 @@ const sections = [
 
 const Terms = () => (
   <>
-    <Seo
-      title="Terms of Service | Tech Career IT Solutions"
-      description="Read the Terms of Service for techcareer.site & engagements with Tech Career IT Solutions — an Ahmedabad web development & digital marketing studio."
-      canonical="https://www.techcareer.site/terms"
-      ogType="article"
-      jsonLd={termsJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(termsJsonLd) }}
     />
     <LegalLayout
       breadcrumb="Terms of Service"
       eyebrow="Legal · Terms"
       title="Terms of Service"
-      intro="These Terms set the rules of engagement between Tech Career IT Solutions LLP and the businesses that hire us — written plainly so there are no surprises when the work begins."
+      intro="These Terms set the rules of engagement between Tech Career IT Solutions LLP and the businesses that hire us - written plainly so there are no surprises when the work begins."
       lastUpdated={LAST_UPDATED}
       sections={sections}
     />

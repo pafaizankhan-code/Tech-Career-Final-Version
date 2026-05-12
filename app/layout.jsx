@@ -9,11 +9,11 @@ const BRAND = 'Tech Career IT Solutions LLP'
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Tech Career IT Solutions LLP — Ahmedabad',
+    default: 'Tech Career IT Solutions LLP - Ahmedabad',
     template: '%s | Tech Career IT Solutions LLP',
   },
   description:
-    'Tech Career IT Solutions LLP — custom website, custom software, custom mobile app, e-commerce, CRM/HRMS and digital marketing company in Ahmedabad, India. SEO-ready builds, transparent pricing, founder-led delivery.',
+    'Tech Career IT Solutions LLP - custom website, custom software, custom mobile app, e-commerce, CRM/HRMS and digital marketing company in Ahmedabad, India. SEO-ready builds, transparent pricing, founder-led delivery.',
   applicationName: BRAND,
   authors: [{ name: BRAND, url: SITE_URL }],
   creator: BRAND,
@@ -66,7 +66,7 @@ export const metadata = {
   openGraph: {
     title: 'Custom Web, App & Software | Tech Career IT Solutions LLP',
     description:
-      'Custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS & digital marketing by Tech Career IT Solutions LLP — Ahmedabad, India.',
+      'Custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS & digital marketing by Tech Career IT Solutions LLP - Ahmedabad, India.',
     url: `${SITE_URL}/`,
     siteName: BRAND,
     type: 'website',
@@ -79,7 +79,7 @@ export const metadata = {
     creator: '@techcareerllp',
     title: 'Custom Website, Software & Mobile App Development in Ahmedabad',
     description:
-      'Custom websites, software, mobile apps, e-commerce, CRM/HRMS & digital marketing — Tech Career IT Solutions LLP, Ahmedabad.',
+      'Custom websites, software, mobile apps, e-commerce, CRM/HRMS & digital marketing - Tech Career IT Solutions LLP, Ahmedabad.',
     images: ['/og-default.jpg'],
   },
   verification: {
@@ -139,7 +139,7 @@ const organizationJsonLd = {
   },
   image: `${SITE_URL}/og-default.jpg`,
   description:
-    'Tech Career IT Solutions LLP — founder-led custom website, custom software, custom mobile app, e-commerce, CRM/HRMS and digital marketing company in Ahmedabad, India.',
+    'Tech Career IT Solutions LLP - founder-led custom website, custom software, custom mobile app, e-commerce, CRM/HRMS and digital marketing company in Ahmedabad, India.',
   slogan: 'Crafting Digital Excellence from Ahmedabad.',
   foundingDate: '2025',
   founder: {
@@ -217,7 +217,7 @@ const organizationJsonLd = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Tech Career IT Solutions LLP — Services',
+    name: 'Tech Career IT Solutions LLP - Services',
     itemListElement: [
       {
         '@type': 'OfferCatalog',
@@ -282,7 +282,7 @@ export default function RootLayout({ children }) {
         <noscript
           dangerouslySetInnerHTML={{
             __html:
-              "You need to enable JavaScript to run this app. Tech Career IT Solutions LLP — Web Development &amp; Digital Marketing Agency in Ahmedabad, India.",
+              "You need to enable JavaScript to run this app. Tech Career IT Solutions LLP - Web Development &amp; Digital Marketing Agency in Ahmedabad, India.",
           }}
         />
         <div className="min-h-screen bg-white flex flex-col">

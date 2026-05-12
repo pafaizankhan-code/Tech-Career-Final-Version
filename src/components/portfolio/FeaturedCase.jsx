@@ -132,14 +132,14 @@ const FeaturedCase = () => {
               label: 'What We Build',
               title: 'A website you will keep for years.',
               body:
-                'A modern, SEO-friendly business website — 5 to 10 pages — built in Next.js or WordPress, fully responsive, with a simple CMS so your team can update content without calling us every time.',
+                'A modern, SEO-friendly business website - 5 to 10 pages - built in Next.js or WordPress, fully responsive, with a simple CMS so your team can update content without calling us every time.',
               accent: 'bg-[#097CF4]',
             },
             {
               label: 'How We Do It',
               title: 'Written scope first. No surprises.',
               body:
-                'A free discovery call, a written scope with a fixed quote, Figma designs you sign off before we code, and weekly demos on a staging link — so you always know exactly where we are.',
+                'A free discovery call, a written scope with a fixed quote, Figma designs you sign off before we code, and weekly demos on a staging link - so you always know exactly where we are.',
               accent: 'bg-black',
             },
             {
@@ -159,7 +159,7 @@ const FeaturedCase = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — {b.label}
+                  - {b.label}
                 </span>
                 <span
                   className={`w-9 h-9 ${b.accent} text-white flex items-center justify-center font-extrabold text-[11px]`}
@@ -225,7 +225,7 @@ const FeaturedCase = () => {
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               We would rather build one website really well than ten websites half-way.
-              That is the whole point of starting with first clients — you get the quality a
+              That is the whole point of starting with first clients - you get the quality a
               studio usually saves for its biggest accounts.
             </p>
 
@@ -249,7 +249,7 @@ const FeaturedCase = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Typical Engagement
+                - Typical Engagement
               </p>
               <dl
                 className="space-y-3 text-[12px]"

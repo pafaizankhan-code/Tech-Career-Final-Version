@@ -6,7 +6,7 @@ const leaders = [
   {
     name: 'Faizan Pathan',
     role: 'Founder',
-    bio: 'Full-stack developer and the person you will actually work with. Handles strategy, scoping, development and delivery — and answers his own phone.',
+    bio: 'Full-stack developer and the person you will actually work with. Handles strategy, scoping, development and delivery - and answers his own phone.',
     initials: 'FP',
     accent: 'blue',
     meta: ['Founder', 'Ahmedabad'],
@@ -16,7 +16,7 @@ const leaders = [
   {
     name: 'Design Partner',
     role: 'UI / UX Lead',
-    bio: 'We partner with a trusted design lead on Figma wireframes, prototypes and UI systems — brought in when a project needs design depth.',
+    bio: 'We partner with a trusted design lead on Figma wireframes, prototypes and UI systems - brought in when a project needs design depth.',
     initials: 'UI',
     accent: 'black',
     meta: ['Figma', 'Design Systems'],
@@ -26,7 +26,7 @@ const leaders = [
   {
     name: 'Joining Soon',
     role: 'Full-Stack Developer',
-    bio: 'We are hiring a second full-stack engineer to grow with our first clients. If that sounds like you, send a note — no long JD, no pointless rounds.',
+    bio: 'We are hiring a second full-stack engineer to grow with our first clients. If that sounds like you, send a note - no long JD, no pointless rounds.',
     initials: '+',
     accent: 'blue',
     meta: ['React', 'Node.js'],
@@ -73,7 +73,7 @@ const Leadership = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            We are a small, founder-led studio — so the person you meet in the sales call is the same person building your product. No bait-and-switch.
+            We are a small, founder-led studio - so the person you meet in the sales call is the same person building your product. No bait-and-switch.
           </p>
         </div>
 
@@ -142,7 +142,7 @@ const Leadership = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — {l.role}
+                  - {l.role}
                 </p>
                 <h3
                   className="text-[26px] font-extrabold text-black leading-tight tracking-tight"
@@ -178,7 +178,7 @@ const Leadership = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Early Team
+              - Early Team
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-black leading-tight"

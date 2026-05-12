@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-// EmailJS credentials — replace with your actual values
+// EmailJS credentials - replace with your actual values
 const EMAILJS_SERVICE_ID = 'service_jmozsp3'
 const EMAILJS_TEMPLATE_ID = 'template_2mgxt76'
 const EMAILJS_PUBLIC_KEY = 'aZTtrOPB50PcZGuB1'
@@ -80,7 +80,7 @@ const ContactForm = () => {
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* LEFT — narrative */}
+          {/* LEFT - narrative */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
             <div
               className="inline-flex items-center gap-3 mb-6"
@@ -102,7 +102,7 @@ const ContactForm = () => {
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/85 max-w-[420px]">
               The more context you share, the better our first reply. If you have a brief, a deck,
-              or screenshots of a reference — attach it. We read everything.
+              or screenshots of a reference - attach it. We read everything.
             </p>
 
             <ul
@@ -127,7 +127,7 @@ const ContactForm = () => {
             </ul>
           </div>
 
-          {/* RIGHT — form card */}
+          {/* RIGHT - form card */}
           <div className="lg:col-span-8">
             <form
               ref={formRef}
@@ -146,7 +146,7 @@ const ContactForm = () => {
 
               <div className="flex items-center justify-between mb-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-                  — What brings you here?
+                  - What brings you here?
                 </p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40">
                   * required

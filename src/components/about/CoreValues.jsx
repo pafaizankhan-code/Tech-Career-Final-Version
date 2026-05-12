@@ -6,7 +6,7 @@ const values = [
   {
     no: '01',
     title: 'Craft Over Speed',
-    desc: 'We ship fast, but we ship right — tested, documented, reviewed. A website we hand over today should still feel good six months in.',
+    desc: 'We ship fast, but we ship right - tested, documented, reviewed. A website we hand over today should still feel good six months in.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -16,7 +16,7 @@ const values = [
   {
     no: '02',
     title: 'Truth Over Theatre',
-    desc: 'Honest quotes, real weekly progress, and straight answers. If something will slip, you hear it from us before the deadline — not after.',
+    desc: 'Honest quotes, real weekly progress, and straight answers. If something will slip, you hear it from us before the deadline - not after.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7" />
@@ -26,7 +26,7 @@ const values = [
   {
     no: '03',
     title: 'Ownership as Default',
-    desc: 'Every engineer treats the product like it is theirs — because while we build it, it is.',
+    desc: 'Every engineer treats the product like it is theirs - because while we build it, it is.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
@@ -36,7 +36,7 @@ const values = [
   {
     no: '04',
     title: 'Learn in the Open',
-    desc: 'We explain decisions in plain language — not jargon or buzzwords. You should understand what we are building, and why, even if you are non-technical.',
+    desc: 'We explain decisions in plain language - not jargon or buzzwords. You should understand what we are building, and why, even if you are non-technical.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 20h9M4 4h16v12H4zM4 8h16" />
@@ -102,7 +102,7 @@ const CoreValues = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Not slogans on a wall — these are the filters we actually use when we ship, when we hire, and when we choose which projects to take on.
+            Not slogans on a wall - these are the filters we actually use when we ship, when we hire, and when we choose which projects to take on.
           </p>
         </div>
 
@@ -123,7 +123,7 @@ const CoreValues = () => {
                   className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — {v.no}
+                  - {v.no}
                 </span>
               </div>
 

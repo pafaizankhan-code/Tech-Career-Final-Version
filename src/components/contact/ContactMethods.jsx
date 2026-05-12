@@ -19,7 +19,7 @@ const channels = [
   {
     no: '02',
     title: 'WhatsApp / Call',
-    sub: 'Mon — Sat · 10:00 – 20:00 IST',
+    sub: 'Mon - Sat · 10:00 – 20:00 IST',
     value: '+91 70966 08771',
     cta: 'Chat on WhatsApp',
     href: 'https://wa.me/917096608771',
@@ -121,7 +121,7 @@ const ContactMethods = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — {c.no}
+                  - {c.no}
                 </span>
               </div>
 

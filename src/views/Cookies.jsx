@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import LegalLayout from '../components/LegalLayout'
 
 const LAST_UPDATED = '22 April 2026'
@@ -10,7 +10,7 @@ const cookiesJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/cookies`,
-  name: 'Cookies Policy — Tech Career IT Solutions LLP',
+  name: 'Cookies Policy - Tech Career IT Solutions LLP',
   description:
     'How techcareer.site uses cookies and similar technologies, what they are used for, and how you can control them in your browser.',
   url: `${SITE.baseUrl}/cookies`,
@@ -32,7 +32,7 @@ const sections = [
         <p>
           Cookies are small text files stored on your device when you visit a website. They are
           widely used to make sites work, or work more efficiently, as well as to provide
-          reporting information. Similar technologies — local storage, pixels — are covered by
+          reporting information. Similar technologies - local storage, pixels - are covered by
           this policy.
         </p>
       </>
@@ -58,20 +58,20 @@ const sections = [
       <>
         <ul className="list-disc pl-5 space-y-3">
           <li>
-            <strong>Strictly necessary</strong> — enable core features such as page navigation,
+            <strong>Strictly necessary</strong> - enable core features such as page navigation,
             form security tokens and load balancing. These cannot be switched off.
           </li>
           <li>
-            <strong>Preferences</strong> — remember your language and theme choices so the site
+            <strong>Preferences</strong> - remember your language and theme choices so the site
             feels consistent between visits.
           </li>
           <li>
-            <strong>Analytics</strong> — help us understand which pages are useful, so we can
+            <strong>Analytics</strong> - help us understand which pages are useful, so we can
             improve them. We use privacy-respecting analytics that anonymise IP addresses and
             avoid cross-site tracking.
           </li>
           <li>
-            <strong>Security</strong> — used by our CDN and firewall partners (e.g. Cloudflare)
+            <strong>Security</strong> - used by our CDN and firewall partners (e.g. Cloudflare)
             to protect the site from abuse.
           </li>
         </ul>
@@ -97,7 +97,7 @@ const sections = [
     body: (
       <>
         <p>
-          You can control cookies through your browser settings — accept, block, or delete them.
+          You can control cookies through your browser settings - accept, block, or delete them.
           Help pages for popular browsers:
         </p>
         <ul className="list-disc pl-5 space-y-2">
@@ -160,18 +160,15 @@ const sections = [
 
 const Cookies = () => (
   <>
-    <Seo
-      title="Cookies Policy | Tech Career IT Solutions"
-      description="Understand how techcareer.site uses cookies & similar technologies, what each type does, and how to manage or disable them in your browser settings."
-      canonical="https://www.techcareer.site/cookies"
-      ogType="article"
-      jsonLd={cookiesJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(cookiesJsonLd) }}
     />
     <LegalLayout
       breadcrumb="Cookies Policy"
       eyebrow="Legal · Cookies"
       title="Cookies Policy"
-      intro="We keep cookies to a minimum — only what's needed to run the site, remember your preferences and learn what's working. Here is exactly what we use and how you can control it."
+      intro="We keep cookies to a minimum - only what's needed to run the site, remember your preferences and learn what's working. Here is exactly what we use and how you can control it."
       lastUpdated={LAST_UPDATED}
       sections={sections}
     />

@@ -16,7 +16,7 @@ const OurStory = () => {
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* LEFT — narrative */}
+          {/* LEFT - narrative */}
           <div className="lg:col-span-7">
             <div
               className="inline-flex items-center gap-3 mb-6"
@@ -37,18 +37,18 @@ const OurStory = () => {
 
             <div className="mt-8 space-y-6 text-[15px] sm:text-[16px] leading-[1.8] text-black/75 max-w-[640px]">
               <p>
-                Tech Career IT Solutions LLP was founded in 2025, out of a simple frustration —
+                Tech Career IT Solutions LLP was founded in 2025, out of a simple frustration -
                 that small and mid-sized Indian businesses kept paying for websites and software
                 that looked fine in a demo but fell apart two months after handover.
               </p>
               <p>
-                So we set up a small, <span className="text-black font-semibold">founder-led studio at iHub, Ahmedabad</span> — focused on
+                So we set up a small, <span className="text-black font-semibold">founder-led studio at iHub, Ahmedabad</span> - focused on
                 the work we love doing: clean websites, reliable e-commerce stores, custom CRM and
                 HRMS tools, mobile apps, and the <span className="text-black font-semibold">digital marketing</span> that
                 actually brings traffic in.
               </p>
               <p>
-                We are new as a company. But we are not new to the craft — which is why our first
+                We are new as a company. But we are not new to the craft - which is why our first
                 clients get something most agencies stop offering after year three: direct access,
                 honest estimates, and a team that finishes what it quotes.
               </p>
@@ -76,7 +76,7 @@ const OurStory = () => {
             </div>
           </div>
 
-          {/* RIGHT — quote pull card */}
+          {/* RIGHT - quote pull card */}
           <aside className="lg:col-span-5">
             <div className="relative bg-black text-white p-8 lg:p-10 mt-2">
               <span className="pointer-events-none absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[#097CF4]"></span>
@@ -93,7 +93,7 @@ const OurStory = () => {
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
                 We would rather have ten happy first clients than a hundred half-finished ones.
-                Every project right now is a flagship — because right now, every project is ours.
+                Every project right now is a flagship - because right now, every project is ours.
               </p>
 
               <div className="mt-8 pt-6 border-t border-white/20 flex items-center justify-between">
@@ -101,7 +101,7 @@ const OurStory = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — House Rule #1
+                  - House Rule #1
                 </span>
                 <span className="flex gap-1">
                   {[...Array(3)].map((_, i) => (

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import LegalLayout from '../components/LegalLayout'
 
 const LAST_UPDATED = '22 April 2026'
@@ -10,7 +10,7 @@ const privacyJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/privacy`,
-  name: 'Privacy Policy — Tech Career IT Solutions LLP',
+  name: 'Privacy Policy - Tech Career IT Solutions LLP',
   description:
     'How Tech Career IT Solutions LLP collects, uses, stores and protects your personal information when you use techcareer.site and our services.',
   url: `${SITE.baseUrl}/privacy`,
@@ -50,10 +50,10 @@ const sections = [
       <>
         <p>We collect only the data we need to run our studio and serve you well:</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Contact data</strong> — name, email, phone, company, country — submitted through our contact form, WhatsApp or email.</li>
-          <li><strong>Project data</strong> — brief, scope, brand assets and content you share so we can deliver the work.</li>
-          <li><strong>Billing data</strong> — GSTIN, invoicing address and payment references, processed through regulated Indian payment providers.</li>
-          <li><strong>Usage data</strong> — pages visited, device type, approximate location and referral source, collected via privacy-friendly analytics.</li>
+          <li><strong>Contact data</strong> - name, email, phone, company, country - submitted through our contact form, WhatsApp or email.</li>
+          <li><strong>Project data</strong> - brief, scope, brand assets and content you share so we can deliver the work.</li>
+          <li><strong>Billing data</strong> - GSTIN, invoicing address and payment references, processed through regulated Indian payment providers.</li>
+          <li><strong>Usage data</strong> - pages visited, device type, approximate location and referral source, collected via privacy-friendly analytics.</li>
         </ul>
       </>
     ),
@@ -139,7 +139,7 @@ const sections = [
         <p>
           We use TLS in transit, encrypted storage at rest, access controls, multi-factor
           authentication and least-privilege principles across our tooling. No online service is
-          100% secure, but we keep raising the bar — and we will notify affected users of any
+          100% secure, but we keep raising the bar - and we will notify affected users of any
           material breach without undue delay.
         </p>
       </>
@@ -205,18 +205,15 @@ const sections = [
 
 const Privacy = () => (
   <>
-    <Seo
-      title="Privacy Policy | Tech Career IT Solutions"
-      description="Read the Tech Career IT Solutions privacy policy — how our Ahmedabad web & marketing studio collects, uses & protects your personal data on our website."
-      canonical="https://www.techcareer.site/privacy"
-      ogType="article"
-      jsonLd={privacyJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }}
     />
     <LegalLayout
       breadcrumb="Privacy Policy"
       eyebrow="Legal · Privacy"
       title="Privacy Policy"
-      intro="Your privacy matters. This policy explains what data we collect, why we collect it, and the choices you have — written in plain language by the same founders who build your product."
+      intro="Your privacy matters. This policy explains what data we collect, why we collect it, and the choices you have - written in plain language by the same founders who build your product."
       lastUpdated={LAST_UPDATED}
       sections={sections}
     />

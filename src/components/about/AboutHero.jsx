@@ -65,7 +65,7 @@ const AboutHero = () => {
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
               Tech Career IT Solutions LLP is a founder-led web development, e-commerce and digital
-              marketing studio based at iHub, Ahmedabad — building software and campaigns for
+              marketing studio based at iHub, Ahmedabad - building software and campaigns for
               growing Indian businesses with honest scopes, honest quotes and a team that answers
               its own phone.
             </p>
@@ -81,7 +81,7 @@ const AboutHero = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Company At-a-Glance
+                - Company At-a-Glance
               </p>
 
               <dl className="space-y-3 text-[13px]">

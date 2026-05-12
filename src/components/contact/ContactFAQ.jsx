@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Do you sign an NDA before a call?',
-    a: 'Yes — happily. Send yours or we can send ours. A simple e-signed PDF is enough. Your ideas stay your ideas.',
+    a: 'Yes - happily. Send yours or we can send ours. A simple e-signed PDF is enough. Your ideas stay your ideas.',
   },
   {
     q: 'What size projects do you work on?',
@@ -22,15 +22,15 @@ const faqs = [
   },
   {
     q: 'Do you work with startups or only established businesses?',
-    a: 'Both — we are built for small and mid-sized Indian businesses, early-stage founders and growing brands. If you know what you want to build and want it done honestly, you are our kind of client.',
+    a: 'Both - we are built for small and mid-sized Indian businesses, early-stage founders and growing brands. If you know what you want to build and want it done honestly, you are our kind of client.',
   },
   {
     q: 'Will I own the code and accounts?',
-    a: 'Absolutely. Domain, hosting, GitHub, analytics, ad accounts — everything is created in your name or transferred to you at handover. No vendor lock-in, ever.',
+    a: 'Absolutely. Domain, hosting, GitHub, analytics, ad accounts - everything is created in your name or transferred to you at handover. No vendor lock-in, ever.',
   },
   {
     q: 'Where are you based and how do you work remotely?',
-    a: 'We are based at iHub, University Area, Ahmedabad. For clients outside Gujarat, we work entirely over WhatsApp, email, and Google Meet with weekly video demos — no on-site visits required.',
+    a: 'We are based at iHub, University Area, Ahmedabad. For clients outside Gujarat, we work entirely over WhatsApp, email, and Google Meet with weekly video demos - no on-site visits required.',
   },
   {
     q: 'What happens after the project goes live?',
@@ -57,7 +57,7 @@ const ContactFAQ = () => {
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* LEFT — intro */}
+          {/* LEFT - intro */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 self-start">
             <div
               className="inline-flex items-center gap-3 mb-6"
@@ -77,7 +77,7 @@ const ContactFAQ = () => {
             </h2>
 
             <p className="mt-6 text-[14px] leading-[1.7] text-black/65 max-w-[380px]">
-              A few of the questions we get most often. Still wondering? Ask us directly — we promise to answer honestly.
+              A few of the questions we get most often. Still wondering? Ask us directly - we promise to answer honestly.
             </p>
 
             {/* Contact card */}
@@ -89,7 +89,7 @@ const ContactFAQ = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Didn't Find Your Answer?
+                - Didn't Find Your Answer?
               </p>
               <p
                 className="text-[18px] font-extrabold text-black leading-tight mb-4"
@@ -110,7 +110,7 @@ const ContactFAQ = () => {
             </div>
           </div>
 
-          {/* RIGHT — accordion */}
+          {/* RIGHT - accordion */}
           <div className="lg:col-span-8">
             <ul className="border-t-2 border-black">
               {faqs.map((f, i) => {

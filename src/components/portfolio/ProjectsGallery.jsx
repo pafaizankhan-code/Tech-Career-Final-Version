@@ -5,9 +5,9 @@ import { Link } from '../../lib/router-compat'
 
 const allProjects = [
   { id: 1, year: '2–3 wk', tag: 'web', category: 'Business Website', title: 'Brand Website', desc: '5–10 page responsive site with CMS, forms and analytics.', accent: 'blue', span: 'lg:col-span-2', stack: 'Next.js · WordPress' },
-  { id: 2, year: '2–4 wk', tag: 'ecom', category: 'E-commerce', title: 'Shopify Store', desc: 'Catalogue, payments, shipping and checkout — ready to sell.', accent: 'black', stack: 'Shopify · Razorpay' },
+  { id: 2, year: '2–4 wk', tag: 'ecom', category: 'E-commerce', title: 'Shopify Store', desc: 'Catalogue, payments, shipping and checkout - ready to sell.', accent: 'black', stack: 'Shopify · Razorpay' },
   { id: 3, year: '4–8 wk', tag: 'mobile', category: 'Mobile App', title: 'iOS + Android App', desc: 'Cross-platform app with push, auth and payments.', accent: 'blue', stack: 'React Native · Flutter' },
-  { id: 4, year: '4–6 wk', tag: 'crm', category: 'Custom CRM', title: 'Sales CRM', desc: 'Leads, pipelines, reports and team roles — tailored to your flow.', accent: 'black', stack: 'React · Node.js' },
+  { id: 4, year: '4–6 wk', tag: 'crm', category: 'Custom CRM', title: 'Sales CRM', desc: 'Leads, pipelines, reports and team roles - tailored to your flow.', accent: 'black', stack: 'React · Node.js' },
   { id: 5, year: '3–6 wk', tag: 'ecom', category: 'E-commerce', title: 'Custom Storefront', desc: 'WooCommerce or headless store with Razorpay / Stripe.', accent: 'blue', stack: 'WooCommerce · Next.js' },
   { id: 6, year: '4–8 wk', tag: 'crm', category: 'HRMS', title: 'HR Management System', desc: 'Attendance, payroll, leave and onboarding in one portal.', accent: 'black', span: 'lg:col-span-2', stack: 'React · PostgreSQL' },
   { id: 7, year: '3–5 wk', tag: 'web', category: 'SaaS Landing', title: 'SaaS Marketing Site', desc: 'High-converting landing pages with SEO and analytics built in.', accent: 'blue', stack: 'Next.js · Tailwind' },
@@ -107,7 +107,7 @@ const ProjectsGallery = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Filter by capability or timeline. Every card below is a real format we can build for you — click to request a quote.
+            Filter by capability or timeline. Every card below is a real format we can build for you - click to request a quote.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ const ProjectsGallery = () => {
           >
             Don't see your exact need?{' '}
             <Link to="/contact" className="text-[#097CF4] font-bold underline">
-              Tell us about your project — we'll scope it for free →
+              Tell us about your project - we'll scope it for free →
             </Link>
           </p>
 

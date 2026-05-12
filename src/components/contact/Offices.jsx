@@ -10,7 +10,7 @@ const offices = [
     address: 'iHub, University Area,\nAhmedabad, Gujarat\n380015 · India',
     phone: '+91 70966 08771',
     email: 'inquiry.techcareer@gmail.com',
-    hours: 'Mon — Sat · 10:00 – 20:00 IST',
+    hours: 'Mon - Sat · 10:00 – 20:00 IST',
     coords: '23.0225° N · 72.5714° E',
   },
   {
@@ -20,7 +20,7 @@ const offices = [
     address: 'We work with clients across India\non email, WhatsApp & Google Meet\nNo office visit required',
     phone: '+91 70966 08771',
     email: 'inquiry.techcareer@gmail.com',
-    hours: 'Mon — Sat · IST hours',
+    hours: 'Mon - Sat · IST hours',
     coords: 'Pan-India · Remote-First',
   },
 ]
@@ -114,7 +114,7 @@ const Offices = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Drop in at iHub for a chai and a whiteboard session if you are near Ahmedabad —
+            Drop in at iHub for a chai and a whiteboard session if you are near Ahmedabad -
             or work with us remotely from anywhere in India. Both work equally well.
           </p>
         </div>
@@ -164,7 +164,7 @@ const Offices = () => {
             {/* Floating chip with city name */}
             <div className="absolute top-6 left-6 bg-white border-2 border-black px-4 py-2">
               <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#097CF4]" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                — Visiting
+                - Visiting
               </p>
               <p className="text-[16px] font-extrabold text-black" style={{ fontFamily: 'Playfair Display, serif' }}>
                 {current.city}
@@ -178,7 +178,7 @@ const Offices = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — {current.role}
+              - {current.role}
             </p>
 
             <h3

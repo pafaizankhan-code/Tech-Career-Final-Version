@@ -6,7 +6,7 @@ const BRAND = 'Tech Career IT Solutions LLP'
 export const metadata = {
   title: 'Web, App & Software Services',
   description:
-    'Explore our services — custom website development, custom software, custom mobile apps, e-commerce, CRM/HRMS, UI/UX design, brand identity, SEO and digital marketing in Ahmedabad.',
+    'Explore our services - custom website development, custom software, custom mobile apps, e-commerce, CRM/HRMS, UI/UX design, brand identity, SEO and digital marketing in Ahmedabad.',
   keywords: [
     'custom website development services', 'custom software development services',
     'custom mobile app development services', 'web development services Ahmedabad',
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: 'Web, App & Software Services | Tech Career IT Solutions LLP',
     description:
-      'Full-service technology partner — custom web, software, mobile, e-commerce, design and digital marketing from Tech Career IT Solutions, Ahmedabad.',
+      'Full-service technology partner - custom web, software, mobile, e-commerce, design and digital marketing from Tech Career IT Solutions, Ahmedabad.',
     url: `${SITE_URL}/services`,
     siteName: BRAND,
     type: 'website',

@@ -3,7 +3,7 @@
 import React from 'react'
 import { Link } from '../lib/router-compat'
 import { categories, services, getServicesByCategory } from '../data/services'
-import Seo, { buildBreadcrumbJsonLd, buildItemListJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, buildItemListJsonLd, SITE } from '../components/Seo'
 import StartProject from '../components/StartProject'
 
 const servicesJsonLd = {
@@ -11,7 +11,7 @@ const servicesJsonLd = {
   '@type': 'CollectionPage',
   name: 'Web, E-commerce & Digital Marketing Services in Ahmedabad',
   description:
-    'A curated set of services from Tech Career IT Solutions LLP — web development, e-commerce stores, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing, delivered from our studio at iHub, Ahmedabad.',
+    'A curated set of services from Tech Career IT Solutions LLP - web development, e-commerce stores, custom CRM / HRMS, mobile apps, UI / UX design and digital marketing, delivered from our studio at iHub, Ahmedabad.',
   url: `${SITE.baseUrl}/services`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -26,7 +26,7 @@ const servicesJsonLd = {
   })),
 }
 
-// ItemList — lets Google render a carousel / ordered list of services.
+// ItemList - lets Google render a carousel / ordered list of services.
 const servicesItemListJsonLd = buildItemListJsonLd({
   name: 'Services offered by Tech Career IT Solutions LLP',
   description:
@@ -41,11 +41,9 @@ const servicesItemListJsonLd = buildItemListJsonLd({
 
 const Services = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
-    <Seo
-      title="Our Services | Web Development & Marketing Ahmedabad"
-      description="Explore our services — custom web development, e-commerce, CRM/HRMS, mobile apps, UI/UX & digital marketing from a top Ahmedabad agency. Get started today."
-      canonical="https://www.techcareer.site/services"
-      jsonLd={servicesJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
     />
     {/* Secondary ItemList JSON-LD for service carousels */}
     <script
@@ -98,7 +96,7 @@ const Services = () => (
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[680px]">
               From your first website to custom business software, mobile apps and digital
-              marketing — a focused set of services, delivered by a founder-led team in Ahmedabad,
+              marketing - a focused set of services, delivered by a founder-led team in Ahmedabad,
               with fixed quotes and realistic timelines on every engagement.
             </p>
           </div>
@@ -112,7 +110,7 @@ const Services = () => (
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Jump to Practice
+                - Jump to Practice
               </p>
               <ul className="space-y-2" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 {categories.map((c) => (
@@ -291,7 +289,7 @@ const Services = () => (
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Not sure which service fits?
+              - Not sure which service fits?
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[38px] font-extrabold text-black leading-tight"

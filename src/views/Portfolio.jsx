@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import PortfolioHero from '../components/portfolio/PortfolioHero'
 import FeaturedCase from '../components/portfolio/FeaturedCase'
 import ProjectsGallery from '../components/portfolio/ProjectsGallery'
@@ -15,7 +15,7 @@ const portfolioJsonLd = {
   '@type': 'CollectionPage',
   name: 'What We Build · Capability Showcase',
   description:
-    'A capability showcase from Tech Career IT Solutions LLP — the websites, e-commerce stores, custom CRM / HRMS, mobile apps and marketing work we build for Indian businesses from our studio in Ahmedabad.',
+    'A capability showcase from Tech Career IT Solutions LLP - the websites, e-commerce stores, custom CRM / HRMS, mobile apps and marketing work we build for Indian businesses from our studio in Ahmedabad.',
   url: `${SITE.baseUrl}/portfolio`,
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -25,11 +25,9 @@ const portfolioJsonLd = {
 
 const Portfolio = () => (
   <>
-    <Seo
-      title="Our Portfolio | Web & App Development Ahmedabad"
-      description="View our portfolio — custom websites, Shopify stores, CRM/HRMS platforms & mobile apps built by Tech Career IT Solutions, an Ahmedabad web studio."
-      canonical="https://www.techcareer.site/portfolio"
-      jsonLd={portfolioJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioJsonLd) }}
     />
     <PortfolioHero />
     <FeaturedCase />

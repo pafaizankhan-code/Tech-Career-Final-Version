@@ -140,7 +140,7 @@ const Industries = () => {
             className="max-w-[360px] text-[14px] leading-[1.7] text-white/65"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Every industry has its own quirks — these are the ones our founder-led team already understands and is actively open to working in.
+            Every industry has its own quirks - these are the ones our founder-led team already understands and is actively open to working in.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ const Industries = () => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 group-hover:text-white transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — {ind.no}
+                  - {ind.no}
                 </span>
               </div>
 

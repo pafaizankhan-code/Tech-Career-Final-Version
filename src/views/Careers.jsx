@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, buildJobPostingJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, buildJobPostingJsonLd, SITE } from '../components/Seo'
 import CareerHero from '../components/careers/CareerHero'
 import WhyJoinUs from '../components/careers/WhyJoinUs'
 import OpenPositions, { jobs } from '../components/careers/OpenPositions'
@@ -27,17 +27,14 @@ const careersJsonLd = {
   },
 }
 
-// One JobPosting JSON-LD per open role — each eligible for Google Jobs rich results.
+// One JobPosting JSON-LD per open role - each eligible for Google Jobs rich results.
 const jobPostingsJsonLd = jobs.map(buildJobPostingJsonLd)
 
 const Careers = () => (
   <>
-    <Seo
-      title="Careers | Web Development Jobs in Ahmedabad"
-      description="Join Tech Career IT Solutions — Ahmedabad studio hiring full-stack developers, UI/UX designers, digital marketers & interns. Real ownership from day one."
-      canonical="https://www.techcareer.site/careers"
-      ogType="article"
-      jsonLd={careersJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(careersJsonLd) }}
     />
     {/* Per-role JobPosting JSON-LD (Google Jobs rich results) */}
     {jobPostingsJsonLd.map((ld, i) => (

@@ -35,7 +35,7 @@ const StartProject = () => {
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* LEFT — narrative */}
+          {/* LEFT - narrative */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div
               className="inline-flex items-center gap-3 mb-6"
@@ -55,7 +55,7 @@ const StartProject = () => {
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/80 max-w-[460px]">
-              Share a few details and one of the founders will personally reply within 24 hours —
+              Share a few details and one of the founders will personally reply within 24 hours -
               with a realistic quote and timeline, not a sales pitch.
             </p>
 
@@ -66,7 +66,7 @@ const StartProject = () => {
             >
               {[
                 'Founder replies within 24 hours',
-                'NDA signed on request — ideas stay yours',
+                'NDA signed on request - ideas stay yours',
                 'Free discovery call, no obligation',
                 'Fixed quote before any work starts',
               ].map((p) => (
@@ -144,7 +144,7 @@ const StartProject = () => {
             </div>
           </div>
 
-          {/* RIGHT — form card */}
+          {/* RIGHT - form card */}
           <div className="lg:col-span-7">
             <form
               onSubmit={(e) => e.preventDefault()}
@@ -156,7 +156,7 @@ const StartProject = () => {
 
               <div className="flex items-center justify-between mb-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-                  — Project Brief
+                  - Project Brief
                 </p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40">
                   Step 01 / 01

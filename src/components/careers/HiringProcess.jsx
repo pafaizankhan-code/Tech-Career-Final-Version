@@ -58,8 +58,8 @@ const stages = [
     no: '05',
     label: 'Offer',
     duration: 'Day 14',
-    title: 'A clear, signed offer — within 48 hours.',
-    desc: 'Transparent salary, role and scope in writing. You negotiate with numbers, not nerves, and we say yes or no quickly — no ghosting.',
+    title: 'A clear, signed offer - within 48 hours.',
+    desc: 'Transparent salary, role and scope in writing. You negotiate with numbers, not nerves, and we say yes or no quickly - no ghosting.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -118,7 +118,7 @@ const HiringProcess = () => {
 
           <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[620px] mx-auto">
             A tiny studio means a tiny interview loop. Here is the entire journey, written out
-            — so you know what to expect before you even apply.
+            - so you know what to expect before you even apply.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ const HiringProcess = () => {
                       className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      — {s.no}
+                      - {s.no}
                     </span>
                     <span
                       className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50"
@@ -237,7 +237,7 @@ const HiringProcess = () => {
                       className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      — {s.no} · {s.label}
+                      - {s.no} · {s.label}
                     </span>
                     <span
                       className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50"

@@ -8,30 +8,7 @@ import {
   getServicesByCategory,
   getRelatedServices,
 } from '../data/services'
-import Seo, { buildServiceJsonLd, buildBreadcrumbJsonLd, SITE } from '../components/Seo'
 import StartProject from '../components/StartProject'
-
-// Build per-service SEO title (~50–60 chars) and description (~150–160 chars).
-const buildServiceSeo = (service) => {
-  const title = `${service.title} in Ahmedabad | Tech Career IT`
-  const introTrimmed = service.intro.slice(0, 100).trim().replace(/[.,;]$/, '')
-  const description = `${introTrimmed}. By Tech Career IT — an Ahmedabad web & digital marketing studio.`
-  return { title, description }
-}
-
-// FAQ JSON-LD so Google can build "People also ask" snippets.
-const buildFaqJsonLd = (faqs) => ({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: f.a,
-    },
-  })),
-})
 
 const defaultProcess = [
   { no: '01', phase: 'Discovery', duration: 'Week 1', title: 'Understand the brief.' },
@@ -59,33 +36,9 @@ const ServiceDetail = ({ slug: propSlug }) => {
   const category = getCategory(service.category)
   const sibling = getServicesByCategory(service.category).filter((s) => s.slug !== slug)
   const related = getRelatedServices(slug, 3)
-  const seo = buildServiceSeo(service)
-  const serviceJsonLd = {
-    ...buildServiceJsonLd(service),
-    breadcrumb: buildBreadcrumbJsonLd([
-      { name: 'Home', path: '/' },
-      { name: 'Services', path: '/services' },
-      { name: service.title, path: `/services/${service.slug}` },
-    ]),
-  }
-  const faqJsonLd = buildFaqJsonLd(service.faqs || [])
 
   return (
     <div style={{ fontFamily: 'Inter, sans-serif' }}>
-      <Seo
-        title={seo.title}
-        description={seo.description}
-        canonical={`${SITE.baseUrl}/services/${service.slug}`}
-        ogType="article"
-        jsonLd={serviceJsonLd}
-      />
-      {/* Second LD block — FAQ schema for rich snippets */}
-      {service.faqs && service.faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      )}
       {/* ─── HERO ──────────────────────────────────────── */}
       <section className="relative bg-white pt-20 lg:pt-28 pb-16 lg:pb-20 overflow-hidden">
         <div
@@ -181,7 +134,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-white mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Signature Result
+                  - Signature Result
                 </p>
 
                 <p
@@ -262,7 +215,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                   className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 group-hover:text-[#097CF4] transition-colors"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — 0{i + 1}
+                  - 0{i + 1}
                 </span>
 
                 <h3
@@ -291,7 +244,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — What's in Every Engagement
+                - What's in Every Engagement
               </p>
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
@@ -316,7 +269,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-5"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Our Stack
+                - Our Stack
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -480,7 +433,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                       }`}
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      — Tier
+                      - Tier
                     </p>
                     <h3
                       className={`text-2xl lg:text-[30px] font-extrabold leading-tight ${featured ? 'text-black' : 'text-white'}`}
@@ -701,7 +654,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                     className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {cat?.label}
+                    - {cat?.label}
                   </p>
                   <h3
                     className="text-[22px] lg:text-[26px] font-extrabold leading-tight tracking-tight"
@@ -738,7 +691,7 @@ const ServiceDetail = ({ slug: propSlug }) => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — More in {category?.label}
+                - More in {category?.label}
               </p>
               <div className="flex flex-wrap gap-2">
                 {sibling.map((s) => (

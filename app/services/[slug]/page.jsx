@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 const SITE_URL = 'https://www.techcareer.site'
 const BRAND = 'Tech Career IT Solutions LLP'
 
-// Per-service SEO map — drives titles, descriptions and keyword variants for
+// Per-service SEO map - drives titles, descriptions and keyword variants for
 // each service detail page. Targets the high-intent search phrases people
 // actually type: "custom software development company", "custom website
 // developer in Ahmedabad", "mobile app development company near me", etc.
@@ -13,7 +13,7 @@ const SERVICE_SEO = {
   'web-development': {
     title: 'Custom Website Development',
     description:
-      'Custom website development in Ahmedabad — business websites, web apps & SaaS landings built in Next.js, React & WordPress. SEO-ready, mobile-first, launched in 2–4 weeks.',
+      'Custom website development in Ahmedabad - business websites, web apps & SaaS landings built in Next.js, React & WordPress. SEO-ready, mobile-first, launched in 2–4 weeks.',
     keywords: [
       'custom website development', 'custom website developer', 'custom website',
       'website development company in Ahmedabad', 'web development services Ahmedabad',
@@ -26,7 +26,7 @@ const SERVICE_SEO = {
   ecommerce: {
     title: 'E-commerce Development',
     description:
-      'E-commerce website development in Ahmedabad — Shopify, WooCommerce & custom D2C stores with Razorpay, UPI, COD, GST invoicing & shipping. Launch-ready in 2–4 weeks.',
+      'E-commerce website development in Ahmedabad - Shopify, WooCommerce & custom D2C stores with Razorpay, UPI, COD, GST invoicing & shipping. Launch-ready in 2–4 weeks.',
     keywords: [
       'ecommerce website development', 'ecommerce development company in Ahmedabad',
       'Shopify development company India', 'custom ecommerce store',
@@ -38,7 +38,7 @@ const SERVICE_SEO = {
   'mobile-apps': {
     title: 'Custom Mobile App Development',
     description:
-      'Custom mobile app development in Ahmedabad — iOS & Android apps in React Native and Flutter. Custom apps for startups, retailers and SaaS, shipped to the Play Store and App Store.',
+      'Custom mobile app development in Ahmedabad - iOS & Android apps in React Native and Flutter. Custom apps for startups, retailers and SaaS, shipped to the Play Store and App Store.',
     keywords: [
       'custom app development', 'custom mobile app development', 'custom app developer',
       'mobile app development company in Ahmedabad', 'iOS app development India',
@@ -50,7 +50,7 @@ const SERVICE_SEO = {
   'custom-software': {
     title: 'Custom Software Development',
     description:
-      'Custom software development in Ahmedabad — bespoke CRM, ERP and internal tools tailored to how your team actually works. Web-based, cloud-hosted and easy to maintain.',
+      'Custom software development in Ahmedabad - bespoke CRM, ERP and internal tools tailored to how your team actually works. Web-based, cloud-hosted and easy to maintain.',
     keywords: [
       'custom software', 'custom software development', 'custom software company',
       'custom software development company in Ahmedabad', 'custom CRM development',
@@ -63,7 +63,7 @@ const SERVICE_SEO = {
   hrms: {
     title: 'Custom HRMS Development',
     description:
-      'Custom HRMS development in Ahmedabad — lightweight HR, attendance, leave and payroll software for growing companies. Web & mobile, GST/PF/ESIC compliant.',
+      'Custom HRMS development in Ahmedabad - lightweight HR, attendance, leave and payroll software for growing companies. Web & mobile, GST/PF/ESIC compliant.',
     keywords: [
       'HRMS software development', 'custom HRMS development', 'HR software company India',
       'attendance software developer', 'payroll software Ahmedabad',
@@ -74,7 +74,7 @@ const SERVICE_SEO = {
   'ui-ux-design': {
     title: 'UI / UX Design Agency',
     description:
-      'UI / UX design agency in Ahmedabad — wireframes, prototypes, design systems and product design for SaaS, web apps and mobile. Figma-first workflow.',
+      'UI / UX design agency in Ahmedabad - wireframes, prototypes, design systems and product design for SaaS, web apps and mobile. Figma-first workflow.',
     keywords: [
       'UI UX design agency', 'UI UX designer Ahmedabad', 'product design agency India',
       'mobile app design company', 'SaaS UI design', 'Figma design agency',
@@ -84,7 +84,7 @@ const SERVICE_SEO = {
   'brand-identity': {
     title: 'Brand Identity & Logo Design',
     description:
-      'Brand identity design in Ahmedabad — logos, brand systems, guidelines and visual identity for startups and growing businesses across India.',
+      'Brand identity design in Ahmedabad - logos, brand systems, guidelines and visual identity for startups and growing businesses across India.',
     keywords: [
       'brand identity design', 'logo design Ahmedabad', 'branding agency India',
       'startup branding company', 'visual identity designer Ahmedabad',
@@ -94,7 +94,7 @@ const SERVICE_SEO = {
   'digital-marketing': {
     title: 'Digital Marketing & SEO',
     description:
-      'Digital marketing agency in Ahmedabad — SEO, content marketing, Google Ads, Meta Ads and lead generation. Monthly reports in plain English, no jargon.',
+      'Digital marketing agency in Ahmedabad - SEO, content marketing, Google Ads, Meta Ads and lead generation. Monthly reports in plain English, no jargon.',
     keywords: [
       'digital marketing agency in Ahmedabad', 'SEO services Ahmedabad',
       'SEO company India', 'content marketing agency', 'lead generation agency India',
@@ -105,7 +105,7 @@ const SERVICE_SEO = {
   'paid-ads': {
     title: 'Google & Meta Ads Agency',
     description:
-      'Performance marketing in Ahmedabad — Google Ads, Meta Ads, YouTube and remarketing campaigns. Weekly optimisation, ROAS-focused, monthly reports.',
+      'Performance marketing in Ahmedabad - Google Ads, Meta Ads, YouTube and remarketing campaigns. Weekly optimisation, ROAS-focused, monthly reports.',
     keywords: [
       'Google Ads agency Ahmedabad', 'Meta Ads agency India', 'Facebook ads expert Ahmedabad',
       'PPC agency Ahmedabad', 'performance marketing agency India',
@@ -115,7 +115,7 @@ const SERVICE_SEO = {
   'social-media': {
     title: 'Social Media Marketing',
     description:
-      'Social media marketing in Ahmedabad — Instagram, LinkedIn, YouTube content, reels, posts and growth. Monthly content calendars and reporting.',
+      'Social media marketing in Ahmedabad - Instagram, LinkedIn, YouTube content, reels, posts and growth. Monthly content calendars and reporting.',
     keywords: [
       'social media agency in Ahmedabad', 'Instagram marketing agency India',
       'social media management company', 'reels content agency', 'LinkedIn marketing Ahmedabad',
@@ -125,7 +125,7 @@ const SERVICE_SEO = {
   'care-retainer': {
     title: 'Website Maintenance & Support',
     description:
-      'Post-launch website care in Ahmedabad — bug fixes, security updates, monthly changes and growth work. Simple retainer, predictable monthly cost.',
+      'Post-launch website care in Ahmedabad - bug fixes, security updates, monthly changes and growth work. Simple retainer, predictable monthly cost.',
     keywords: [
       'website maintenance Ahmedabad', 'website support company India',
       'monthly website retainer', 'WordPress maintenance service',
@@ -146,7 +146,7 @@ export async function generateMetadata({ params }) {
   const seo = SERVICE_SEO[slug] || {}
   const fallbackIntro = service.intro.slice(0, 155).trim().replace(/[.,;]$/, '')
   const title = seo.title || service.title
-  const description = seo.description || `${fallbackIntro}. By ${BRAND} — Ahmedabad.`
+  const description = seo.description || `${fallbackIntro}. By ${BRAND} - Ahmedabad.`
   const url = `${SITE_URL}/services/${slug}`
   // OG / Twitter titles bypass the Next.js title.template, so we attach the
   // brand explicitly here so every social preview still says "Tech Career IT Solutions LLP".

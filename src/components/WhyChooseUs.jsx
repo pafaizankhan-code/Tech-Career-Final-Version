@@ -7,7 +7,7 @@ const reasons = [
   {
     no: '01',
     title: 'Founder-Led Attention',
-    desc: 'You talk directly to the people writing the code — no account managers, no handoffs, no game of telephone.',
+    desc: 'You talk directly to the people writing the code - no account managers, no handoffs, no game of telephone.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87m10-4a4 4 0 10-8 0 4 4 0 008 0z" />
@@ -17,7 +17,7 @@ const reasons = [
   {
     no: '02',
     title: 'Transparent Pricing',
-    desc: 'Fixed scope, fixed quote, GST invoice. You see the breakdown before we start — no surprise invoices, no hidden scope.',
+    desc: 'Fixed scope, fixed quote, GST invoice. You see the breakdown before we start - no surprise invoices, no hidden scope.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
@@ -27,7 +27,7 @@ const reasons = [
   {
     no: '03',
     title: 'Modern Tech Stack',
-    desc: 'React, Next.js, Node, React Native, Shopify, WordPress — we pick what is right for the job, not what is old and familiar.',
+    desc: 'React, Next.js, Node, React Native, Shopify, WordPress - we pick what is right for the job, not what is old and familiar.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 3l-4 18" />
@@ -37,7 +37,7 @@ const reasons = [
   {
     no: '04',
     title: 'Launch-Client Pricing',
-    desc: 'We are a new studio in 2025 — our first clients get real attention, launch-friendly pricing, and a team that has everything to prove.',
+    desc: 'We are a new studio in 2025 - our first clients get real attention, launch-friendly pricing, and a team that has everything to prove.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -47,7 +47,7 @@ const reasons = [
   {
     no: '05',
     title: 'Ahmedabad Based · India Timezone',
-    desc: 'We work out of iHub, University Area, Ahmedabad — you can meet the team in person, or work with us remotely across India and beyond.',
+    desc: 'We work out of iHub, University Area, Ahmedabad - you can meet the team in person, or work with us remotely across India and beyond.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
@@ -58,7 +58,7 @@ const reasons = [
   {
     no: '06',
     title: 'Support After Launch',
-    desc: 'Launching is only day one. We stay for bug fixes, small changes and roadmap work on a simple monthly retainer — or zero pressure if you do not need one.',
+    desc: 'Launching is only day one. We stay for bug fixes, small changes and roadmap work on a simple monthly retainer - or zero pressure if you do not need one.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-3-6.7L21 8" />
@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
 
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* LEFT — sticky intro */}
+          {/* LEFT - sticky intro */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div
               className="inline-flex items-center gap-3 mb-6"
@@ -119,7 +119,7 @@ const WhyChooseUs = () => {
             </h2>
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-white/70 max-w-[460px]">
-              We're a new studio from Ahmedabad — which means our first clients get the kind of
+              We're a new studio from Ahmedabad - which means our first clients get the kind of
               attention, ownership and pricing only a small, hungry team can offer.
             </p>
 
@@ -163,7 +163,7 @@ const WhyChooseUs = () => {
             </Link>
           </div>
 
-          {/* RIGHT — reasons list */}
+          {/* RIGHT - reasons list */}
           <div className="lg:col-span-7">
             <div className="border-t border-white/15">
               {reasons.map((r) => (

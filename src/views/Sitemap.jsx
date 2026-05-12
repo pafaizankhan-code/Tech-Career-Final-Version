@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Link } from '../lib/router-compat'
-import Seo, {
+import {
   buildBreadcrumbJsonLd,
   buildItemListJsonLd,
   PRIMARY_NAV,
@@ -14,7 +14,7 @@ import { services as serviceData, categories as serviceCategories } from '../dat
 const sitemapItems = [
   {
     title: 'Main Pages',
-    blurb: 'Start here — the core of techcareer.site.',
+    blurb: 'Start here - the core of techcareer.site.',
     links: PRIMARY_NAV,
   },
   {
@@ -50,9 +50,9 @@ const sitemapJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${SITE.baseUrl}/sitemap`,
-  name: 'Sitemap — Tech Career IT Solutions',
+  name: 'Sitemap - Tech Career IT Solutions',
   description:
-    'A complete, browsable map of techcareer.site — main pages, every service, legal policies and machine-readable XML sitemap.',
+    'A complete, browsable map of techcareer.site - main pages, every service, legal policies and machine-readable XML sitemap.',
   url: `${SITE.baseUrl}/sitemap`,
   inLanguage: 'en-IN',
   isPartOf: { '@id': `${SITE.baseUrl}/#website` },
@@ -63,7 +63,7 @@ const sitemapJsonLd = {
 }
 
 const sitemapItemListJsonLd = buildItemListJsonLd({
-  name: 'Tech Career IT Solutions — Sitemap',
+  name: 'Tech Career IT Solutions - Sitemap',
   description: 'All pages on techcareer.site.',
   url: `${SITE.baseUrl}/sitemap`,
   items: [
@@ -81,11 +81,9 @@ const sitemapItemListJsonLd = buildItemListJsonLd({
 
 const Sitemap = () => (
   <div style={{ fontFamily: 'Inter, sans-serif' }}>
-    <Seo
-      title="Sitemap | Tech Career IT Solutions Ahmedabad"
-      description="Browse the full sitemap of Tech Career IT Solutions — every page, service and resource on techcareer.site, organised for quick and easy access."
-      canonical="https://www.techcareer.site/sitemap"
-      jsonLd={sitemapJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(sitemapJsonLd) }}
     />
     <script
       type="application/ld+json"
@@ -134,7 +132,7 @@ const Sitemap = () => (
             </h1>
 
             <p className="mt-8 text-[16px] sm:text-[18px] leading-[1.7] text-black/70 max-w-[720px]">
-              A clean, browsable index of every page on techcareer.site — main sections, services,
+              A clean, browsable index of every page on techcareer.site - main sections, services,
               service categories and legal policies. Need the machine-readable version?{' '}
               <a
                 href="/sitemap.xml"
@@ -154,7 +152,7 @@ const Sitemap = () => (
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Quick stats
+                - Quick stats
               </p>
               <p className="text-[42px] font-extrabold leading-none" style={{ fontFamily: 'Playfair Display, serif' }}>
                 {sitemapItems.reduce((acc, s) => acc + s.links.length, 0)}
@@ -182,7 +180,7 @@ const Sitemap = () => (
                 className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — {String(gi + 1).padStart(2, '0')} / {String(sitemapItems.length).padStart(2, '0')}
+                - {String(gi + 1).padStart(2, '0')} / {String(sitemapItems.length).padStart(2, '0')}
               </span>
               <h2
                 id={`sitemap-${gi}`}

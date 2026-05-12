@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, {
+import {
   organizationJsonLd,
   buildFaqPageJsonLd,
   buildItemListJsonLd,
@@ -23,9 +23,9 @@ import StartProject from '../components/StartProject'
 
 const homeFaqJsonLd = buildFaqPageJsonLd(homeFaqs, `${SITE.baseUrl}/`)
 
-// Primary destinations as an ItemList — strongest hint we can give for sitelinks.
+// Primary destinations as an ItemList - strongest hint we can give for sitelinks.
 const primaryDestinationsJsonLd = buildItemListJsonLd({
-  name: 'Tech Career IT Solutions — Main Sections',
+  name: 'Tech Career IT Solutions - Main Sections',
   description: 'Primary navigation destinations on techcareer.site.',
   url: `${SITE.baseUrl}/`,
   items: PRIMARY_NAV.filter((n) => n.path !== '/').map((n) => ({
@@ -37,23 +37,21 @@ const primaryDestinationsJsonLd = buildItemListJsonLd({
 
 const Home = () => (
   <>
-    <Seo
-      title="Best Web Development Company in Ahmedabad | Tech Career IT Solutions LLP"
-      description="Top web development & digital marketing agency in Ahmedabad. Custom websites, e-commerce, mobile apps & SEO by Tech Career IT Solutions LLP."
-      canonical="https://www.techcareer.site/"
-      jsonLd={organizationJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
     />
     {/* Secondary FAQPage JSON-LD for "People also ask" rich results */}
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
     />
-    {/* SiteNavigationElement — declares primary site links for sitelink generation */}
+    {/* SiteNavigationElement - declares primary site links for sitelink generation */}
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationJsonLd) }}
     />
-    {/* Primary-destinations ItemList — additional sitelinks hint */}
+    {/* Primary-destinations ItemList - additional sitelinks hint */}
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(primaryDestinationsJsonLd) }}

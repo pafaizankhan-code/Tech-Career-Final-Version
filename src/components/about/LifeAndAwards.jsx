@@ -25,8 +25,8 @@ const founderNote = {
   role: 'Founder · Tech Career IT Solutions LLP',
   lines: [
     'We do not have ten years of case studies yet.',
-    'What we have is a small team, a clear focus, and the patience to earn every client the slow way — by doing the work well.',
-    'If you are a business in Ahmedabad or anywhere in India looking for a studio that will pick up the phone, write an honest quote, and ship what it promised — we would love to talk.',
+    'What we have is a small team, a clear focus, and the patience to earn every client the slow way - by doing the work well.',
+    'If you are a business in Ahmedabad or anywhere in India looking for a studio that will pick up the phone, write an honest quote, and ship what it promised - we would love to talk.',
   ],
 }
 
@@ -70,7 +70,7 @@ const LifeAndAwards = () => {
               className="max-w-[360px] text-[14px] leading-[1.7] text-black/65"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              We are small on purpose — which means every client gets the full attention a big agency saves for its biggest accounts.
+              We are small on purpose - which means every client gets the full attention a big agency saves for its biggest accounts.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ const LifeAndAwards = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-6"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — A Note from the Founder
+                - A Note from the Founder
               </p>
 
               <div className="space-y-4">
@@ -217,7 +217,7 @@ const LifeAndAwards = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Tools We Work With
+                - Tools We Work With
               </p>
 
               <div className="flex flex-wrap gap-2">

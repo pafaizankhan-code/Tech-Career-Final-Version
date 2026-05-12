@@ -45,7 +45,7 @@ const MissionVision = () => {
               kind: 'Mission',
               title: 'Make good software feel within reach.',
               body:
-                'To give small and mid-sized Indian businesses the kind of websites, stores and internal tools that usually only big-budget teams get — at a price and pace that actually fits their business.',
+                'To give small and mid-sized Indian businesses the kind of websites, stores and internal tools that usually only big-budget teams get - at a price and pace that actually fits their business.',
               bullets: [
                 'Founder-led attention, end-to-end',
                 'Transparent scopes and GST invoices',
@@ -58,7 +58,7 @@ const MissionVision = () => {
               kind: 'Vision',
               title: 'Grow slowly. Build things that last.',
               body:
-                'To grow one happy client at a time — and become the studio that businesses in Ahmedabad and across India recommend to the next business, without us ever asking.',
+                'To grow one happy client at a time - and become the studio that businesses in Ahmedabad and across India recommend to the next business, without us ever asking.',
               bullets: [
                 'Launch-client pricing, done right',
                 'Every project treated as flagship',
@@ -80,7 +80,7 @@ const MissionVision = () => {
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   <span className={`w-10 h-px ${card.accent}`}></span>
-                  — {card.kind}
+                  - {card.kind}
                 </span>
                 <span className={`w-10 h-10 ${card.accent} flex items-center justify-center`}>
                   <svg className={`w-4 h-4 ${card.kind === 'Mission' ? 'text-white' : 'text-white'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

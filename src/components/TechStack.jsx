@@ -214,7 +214,7 @@ const CATEGORIES = [
   {
     key: 'mobile',
     label: 'Mobile',
-    desc: 'iOS and Android apps from one codebase — or fully native when performance demands it.',
+    desc: 'iOS and Android apps from one codebase - or fully native when performance demands it.',
     items: [
       { name: 'React Native', use: 'Cross-platform apps', icon: 'rn' },
       { name: 'Flutter', use: 'Pixel-perfect apps', icon: 'flutter' },
@@ -225,7 +225,7 @@ const CATEGORIES = [
   {
     key: 'database',
     label: 'Database',
-    desc: 'The right datastore for the job — relational, document, key-value or realtime.',
+    desc: 'The right datastore for the job - relational, document, key-value or realtime.',
     items: [
       { name: 'PostgreSQL', use: 'Relational data', icon: 'postgres' },
       { name: 'MongoDB', use: 'Flexible documents', icon: 'mongo' },
@@ -237,7 +237,7 @@ const CATEGORIES = [
   {
     key: 'devops',
     label: 'DevOps',
-    desc: 'Ship daily, sleep nightly — automated deploys, monitoring and zero-downtime releases.',
+    desc: 'Ship daily, sleep nightly - automated deploys, monitoring and zero-downtime releases.',
     items: [
       { name: 'Docker', use: 'Containerised apps', icon: 'docker' },
       { name: 'AWS', use: 'Cloud infrastructure', icon: 'aws' },
@@ -349,13 +349,13 @@ const TechStack = () => {
 
         {/* Main split: category nav + items grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* LEFT — Category nav */}
+          {/* LEFT - Category nav */}
           <aside className="lg:col-span-4">
             <div
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-5"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Categories
+              - Categories
             </div>
 
             <ul className="border-t border-black/10">
@@ -415,7 +415,7 @@ const TechStack = () => {
             </ul>
           </aside>
 
-          {/* RIGHT — Active category panel */}
+          {/* RIGHT - Active category panel */}
           <div className="lg:col-span-8">
             {/* Panel header */}
             <div className="border-2 border-black p-6 sm:p-8 mb-6 relative">
@@ -426,7 +426,7 @@ const TechStack = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — {current.label} Stack
+                - {current.label} Stack
               </p>
               <h3
                 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-black leading-tight"

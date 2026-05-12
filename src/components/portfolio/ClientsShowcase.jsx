@@ -70,7 +70,7 @@ const ClientsShowcase = () => {
             className="mt-6 text-[15px] sm:text-[16px] leading-[1.7] text-black/70 max-w-[620px] mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            We are a new studio — no client logos yet. Instead, here are the kinds of businesses we
+            We are a new studio - no client logos yet. Instead, here are the kinds of businesses we
             are built to serve best. If you see yourself in this list, you are exactly who we want
             to work with.
           </p>
@@ -109,7 +109,7 @@ const ClientsShowcase = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Our Focus
+                - Our Focus
               </p>
               <h3
                 className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-black leading-tight"
@@ -156,7 +156,7 @@ const ClientsShowcase = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Ready to be our first?
+              - Ready to be our first?
             </p>
             <h4
               className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold leading-tight"

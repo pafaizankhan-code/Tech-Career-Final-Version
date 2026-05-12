@@ -3,7 +3,6 @@
 import React, { useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from '../lib/router-compat'
 import { getBlog, getRelatedBlogs } from '../data/blogs'
-import Seo, { SITE } from '../components/Seo'
 import StartProject from '../components/StartProject'
 
 const BlogDetail = ({ slug: propSlug }) => {
@@ -21,39 +20,8 @@ const BlogDetail = ({ slug: propSlug }) => {
 
   const related = getRelatedBlogs(slug, 2)
 
-  // Keep SEO title ~50–60 chars and description ~150–160 chars.
-  const seoTitle =
-    post.title.length > 46 ? post.title : `${post.title} | Tech Career IT`
-  const seoDescription =
-    post.excerpt.length > 158
-      ? `${post.excerpt.slice(0, 155).trim().replace(/[.,;]$/, '')}…`
-      : post.excerpt
-
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    author: { '@type': 'Organization', name: post.author },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.brand,
-      logo: { '@type': 'ImageObject', url: `${SITE.baseUrl}/logo.png` },
-    },
-    datePublished: post.date,
-    mainEntityOfPage: `${SITE.baseUrl}/blog/${post.slug}`,
-  }
-
   return (
     <div style={{ fontFamily: 'Inter, sans-serif' }}>
-      <Seo
-        title={seoTitle}
-        description={seoDescription}
-        canonical={`${SITE.baseUrl}/blog/${post.slug}`}
-        ogType="article"
-        jsonLd={articleJsonLd}
-      />
-
       {/* HERO */}
       <section className="relative bg-white pt-28 lg:pt-36 pb-16 lg:pb-20 overflow-hidden">
         {/* Subtle grid */}
@@ -91,7 +59,7 @@ const BlogDetail = ({ slug: propSlug }) => {
           >
             <span className="w-10 h-px bg-[#097CF4]"></span>
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-              {post.category} — Article {post.no}
+              {post.category} - Article {post.no}
             </span>
           </div>
 
@@ -138,7 +106,7 @@ const BlogDetail = ({ slug: propSlug }) => {
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
                   <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]">
-                    — {String(i + 1).padStart(2, '0')}
+                    - {String(i + 1).padStart(2, '0')}
                   </span>
                 </div>
                 <h2
@@ -167,7 +135,7 @@ const BlogDetail = ({ slug: propSlug }) => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — In short
+              - In short
             </p>
             <p
               className="text-[20px] sm:text-[22px] lg:text-[24px] font-extrabold text-black leading-[1.35]"
@@ -268,7 +236,7 @@ const BlogDetail = ({ slug: propSlug }) => {
                     className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 mb-5"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    <span className="text-[#097CF4]">— {r.no}</span>
+                    <span className="text-[#097CF4]">- {r.no}</span>
                     <span>{r.category}</span>
                     <span className="w-1 h-1 rounded-full bg-white/40"></span>
                     <span>{r.readTime}</span>

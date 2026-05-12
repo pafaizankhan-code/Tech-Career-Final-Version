@@ -62,7 +62,7 @@ const LegalLayout = ({ breadcrumb, eyebrow, title, intro, lastUpdated, sections 
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Last Updated
+                  - Last Updated
                 </p>
                 <p
                   className="text-[24px] font-extrabold leading-tight"
@@ -126,7 +126,7 @@ const LegalLayout = ({ breadcrumb, eyebrow, title, intro, lastUpdated, sections 
                       className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4]"
                       style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                     >
-                      — {String(i + 1).padStart(2, '0')}
+                      - {String(i + 1).padStart(2, '0')}
                     </span>
                     <h2
                       className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-black leading-[1.15] tracking-tight"
@@ -153,7 +153,7 @@ const LegalLayout = ({ breadcrumb, eyebrow, title, intro, lastUpdated, sections 
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Need Clarification?
+                - Need Clarification?
               </p>
               <h4
                 className="text-2xl sm:text-3xl lg:text-[38px] font-extrabold text-black leading-tight"

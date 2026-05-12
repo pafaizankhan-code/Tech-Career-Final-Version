@@ -46,7 +46,7 @@ const serviceCategories = [
   {
     key: 'development',
     group: 'Development',
-    blurb: 'Websites, online stores and apps — built the way you would if you had the time.',
+    blurb: 'Websites, online stores and apps - built the way you would if you had the time.',
     icon: categoryIcons.dev,
     items: [
       { title: 'Web Development', desc: 'Business websites & web apps.', slug: 'web-development' },
@@ -77,7 +77,7 @@ const serviceCategories = [
   {
     key: 'growth',
     group: 'Digital Marketing',
-    blurb: 'SEO, Google Ads, Meta Ads and social — measurable monthly marketing.',
+    blurb: 'SEO, Google Ads, Meta Ads and social - measurable monthly marketing.',
     icon: categoryIcons.trend,
     items: [
       { title: 'SEO & Organic Growth', desc: 'Technical SEO + content.', slug: 'digital-marketing' },
@@ -88,7 +88,7 @@ const serviceCategories = [
   {
     key: 'care',
     group: 'Support & Care',
-    blurb: 'Post-launch care — bug fixes, updates and growth work on a simple retainer.',
+    blurb: 'Post-launch care - bug fixes, updates and growth work on a simple retainer.',
     icon: categoryIcons.care,
     items: [
       { title: 'Post-Launch Care', desc: 'Monthly retainer for updates.', slug: 'care-retainer' },
@@ -139,7 +139,7 @@ const products = [
     category: 'Retail · POS',
     period: '2025',
     description:
-      'A full-featured Grocery Management System tailored for supermarkets and retail chains. Supports product management, inventory tracking, sales & POS, order and supplier handling — with detailed reports and role-based access.',
+      'A full-featured Grocery Management System tailored for supermarkets and retail chains. Supports product management, inventory tracking, sales & POS, order and supplier handling - with detailed reports and role-based access.',
     technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Redux Toolkit', 'Chart.js'],
     features: [
       'Centralized Dashboard Overview',
@@ -496,7 +496,7 @@ const Header = () => {
 
   return (
     <>
-    {/* Mega-menu backdrop — dims the page but stays BELOW the header */}
+    {/* Mega-menu backdrop - dims the page but stays BELOW the header */}
     <div
       className={`hidden lg:block fixed left-0 right-0 bottom-0 z-40 bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 ${
         activeMegaLink ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -587,7 +587,7 @@ const Header = () => {
        
 
         <div className="max-w-[1440px] mx-auto px-3 lg:px-10 flex items-center justify-between h-[64px] lg:h-[72px]">
-          {/* Logo — official brand image */}
+          {/* Logo - official brand image */}
           <Link
             to="/"
             className="flex items-center shrink-0 group"
@@ -732,7 +732,7 @@ const Header = () => {
           ></div>
         </div>
 
-        {/* Full-width MEGA MENU — redesigned, lighter, premium */}
+        {/* Full-width MEGA MENU - redesigned, lighter, premium */}
         <div
           className={`hidden lg:block absolute left-0 right-0 top-full z-20 bg-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] transition-all duration-300 origin-top ${
             activeMegaLink
@@ -746,7 +746,7 @@ const Header = () => {
           {activeMegaLink && activeMegaLink.megaType === 'services' && (
             <div className="relative bg-white">
               <div className="relative  mx-auto grid grid-cols-12 gap-0">
-                {/* LEFT — practice list */}
+                {/* LEFT - practice list */}
                 <aside className="col-span-3 py-7 pl-8 pr-4 border-r border-black/[0.08] bg-[#fafafa]">
                   <p
                     className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#097CF4] mb-4"
@@ -815,7 +815,7 @@ const Header = () => {
                   </Link>
                 </aside>
 
-                {/* MIDDLE — service cards */}
+                {/* MIDDLE - service cards */}
                 <div className="col-span-6 py-6 px-7">
                   <div className="mb-5">
                     <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#097CF4] mb-1.5">
@@ -867,7 +867,7 @@ const Header = () => {
                   </div>
                 </div>
 
-                {/* RIGHT — spotlight / CTA */}
+                {/* RIGHT - spotlight / CTA */}
                 <aside className="col-span-3 relative bg-gradient-to-br from-black via-black to-[#0a1a2e] text-white py-6 px-7 overflow-hidden">
                   <span className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#097CF4]/20 blur-3xl pointer-events-none"></span>
 
@@ -884,7 +884,7 @@ const Header = () => {
                     </h4>
 
                     <p className="text-[12.5px] leading-[1.6] text-white/65 mb-5">
-                      Tell us the problem — a founder will scope it on a free 30-minute call. No sales pressure.
+                      Tell us the problem - a founder will scope it on a free 30-minute call. No sales pressure.
                     </p>
 
                     <Link
@@ -945,7 +945,7 @@ const Header = () => {
               ></div>
 
               <div className="relative max-w-[1440px] mx-auto grid grid-cols-12 gap-0">
-                {/* LEFT — product tabs */}
+                {/* LEFT - product tabs */}
                 <aside className="col-span-4 py-8 pl-10 pr-6 border-r border-black/10">
                   <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#097CF4]/10 text-[#097CF4] text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
                     <span className="w-1.5 h-1.5 bg-[#097CF4]"></span>
@@ -1033,7 +1033,7 @@ const Header = () => {
                   </Link>
                 </aside>
 
-                {/* RIGHT — product detail */}
+                {/* RIGHT - product detail */}
                 <div className="col-span-8 bg-white">
                   {(() => {
                     const p = products[activeProduct]
@@ -1088,7 +1088,7 @@ const Header = () => {
 
                             <div className="mb-6">
                               <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2.5">
-                                — Tech Stack
+                                - Tech Stack
                               </p>
                               <div className="flex flex-wrap gap-1.5">
                                 {p.technologies.map((t) => (
@@ -1105,7 +1105,7 @@ const Header = () => {
 
                             <div className="mb-6">
                               <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2.5">
-                                — Key Features
+                                - Key Features
                               </p>
                               <ul className="space-y-2">
                                 {p.features.map((f) => (
@@ -1179,7 +1179,7 @@ const Header = () => {
         }`}
       >
         <div className="h-full overflow-y-auto">
-          {/* Mobile menu top bar — explicit close */}
+          {/* Mobile menu top bar - explicit close */}
           <div className="sticky top-0 z-10 bg-white border-b-2 border-black flex items-center justify-between px-5 h-[64px]">
             <div className="flex items-center gap-2.5">
               <div className="relative">
@@ -1221,7 +1221,7 @@ const Header = () => {
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-2"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Navigation
+              - Navigation
             </p>
             <h3
               className="text-3xl font-extrabold text-black"

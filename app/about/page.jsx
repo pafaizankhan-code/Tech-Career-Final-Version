@@ -4,9 +4,9 @@ const SITE_URL = 'https://www.techcareer.site'
 const BRAND = 'Tech Career IT Solutions LLP'
 
 export const metadata = {
-  title: 'About — Ahmedabad Web Studio',
+  title: 'About - Ahmedabad Web Studio',
   description:
-    'Meet Tech Career IT Solutions LLP — a founder-led Ahmedabad studio building custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS & digital marketing for businesses across India.',
+    'Meet Tech Career IT Solutions LLP - a founder-led Ahmedabad studio building custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS & digital marketing for businesses across India.',
   keywords: [
     'about Tech Career IT Solutions', 'web development agency Ahmedabad',
     'software company in Ahmedabad', 'app development company Ahmedabad',
@@ -15,7 +15,7 @@ export const metadata = {
   ],
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Tech Career IT Solutions LLP — Ahmedabad',
+    title: 'About Tech Career IT Solutions LLP - Ahmedabad',
     description:
       'A founder-led Ahmedabad studio for custom websites, software, mobile apps, e-commerce, CRM/HRMS and digital marketing.',
     url: `${SITE_URL}/about`,

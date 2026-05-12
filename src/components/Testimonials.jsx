@@ -4,20 +4,20 @@ import React, { useState } from 'react'
 
 export const homeFaqs = [
   {
-    q: 'You are a new studio — why should I trust you with my project?',
-    a: 'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+    q: 'You are a new studio - why should I trust you with my project?',
+    a: 'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds - launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
   },
   {
     q: 'How long will it take to build my website, app or CRM?',
-    a: 'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope — and if we ever slip, we tell you before the deadline, not after.',
+    a: 'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope - and if we ever slip, we tell you before the deadline, not after.',
   },
   {
     q: 'How do you price projects? Any hidden costs?',
-    a: 'We quote a fixed price based on a written scope before any work starts — with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre — if scope grows mid-project, we quote the delta upfront.',
+    a: 'We quote a fixed price based on a written scope before any work starts - with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre - if scope grows mid-project, we quote the delta upfront.',
   },
   {
     q: 'Where are you based? Can we meet in person?',
-    a: 'We are based at iHub, University Area, Ahmedabad, Gujarat — 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
+    a: 'We are based at iHub, University Area, Ahmedabad, Gujarat - 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
   },
 ]
 
@@ -25,9 +25,9 @@ const faqs = [
   {
     id: 1,
     tag: 'Trust',
-    question: 'You are a new studio — why should I trust you with my project?',
+    question: 'You are a new studio - why should I trust you with my project?',
     answer:
-      'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds — launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
+      'Fair question. Tech Career IT Solutions LLP is a new company, but the people building your product are not new to building products. Our first clients get the best of both worlds - launch-friendly pricing, a founder-led team with something to prove, and a fixed-quote scope so you are not taking a blind risk.',
     initials: 'Q1',
     accent: 'blue',
   },
@@ -36,7 +36,7 @@ const faqs = [
     tag: 'Timeline',
     question: 'How long will it take to build my website, app or CRM?',
     answer:
-      'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope — and if we ever slip, we tell you before the deadline, not after.',
+      'A simple business website: 2–3 weeks. An e-commerce store: 2–4 weeks. A custom CRM, HRMS or mobile app: 4–8 weeks for a first version. We commit to a fixed timeline in the written scope - and if we ever slip, we tell you before the deadline, not after.',
     initials: 'Q2',
     accent: 'black',
   },
@@ -45,7 +45,7 @@ const faqs = [
     tag: 'Pricing',
     question: 'How do you price projects? Any hidden costs?',
     answer:
-      'We quote a fixed price based on a written scope before any work starts — with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre — if scope grows mid-project, we quote the delta upfront.',
+      'We quote a fixed price based on a written scope before any work starts - with a clear breakdown of design, development and any third-party costs (hosting, domains, Razorpay, etc.). GST invoices included. No change-order theatre - if scope grows mid-project, we quote the delta upfront.',
     initials: 'Q3',
     accent: 'blue',
   },
@@ -54,7 +54,7 @@ const faqs = [
     tag: 'Location',
     question: 'Where are you based? Can we meet in person?',
     answer:
-      'We are based at iHub, University Area, Ahmedabad, Gujarat — 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
+      'We are based at iHub, University Area, Ahmedabad, Gujarat - 380015. If you are in or near Ahmedabad, we can absolutely meet at our office or yours. For clients outside Gujarat (or India), we work over WhatsApp, email and Google Meet with weekly demo calls.',
     initials: 'Q4',
     accent: 'black',
   },
@@ -229,7 +229,7 @@ const Testimonials = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Availability
+                - Availability
               </p>
 
               <p
@@ -269,7 +269,7 @@ const Testimonials = () => {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
               >
-                — Other Questions
+                - Other Questions
               </p>
 
               <ul className="divide-y divide-black/10">

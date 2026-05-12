@@ -9,7 +9,7 @@ const steps = [
     phase: 'Discovery',
     duration: 'Week 1',
     title: 'Understand the problem.',
-    desc: 'A free discovery call, competitor teardown, and a written scope we both sign off on — so there are no surprises later.',
+    desc: 'A free discovery call, competitor teardown, and a written scope we both sign off on - so there are no surprises later.',
     deliverables: ['Free Call', 'Scope Doc', 'Fixed Quote'],
   },
   {
@@ -17,7 +17,7 @@ const steps = [
     phase: 'Strategy & Design',
     duration: 'Week 2–3',
     title: 'Blueprint the build.',
-    desc: 'Information architecture, UX flows, UI system, and architecture diagrams — validated with clickable prototypes.',
+    desc: 'Information architecture, UX flows, UI system, and architecture diagrams - validated with clickable prototypes.',
     deliverables: ['Wireframes', 'Design System', 'Architecture'],
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     phase: 'Development',
     duration: 'Week 4–8',
     title: 'Ship, sprint by sprint.',
-    desc: 'Weekly demos on WhatsApp / video call. Code reviewed, tested, deployed to a staging link you can click on every Friday — no big-bang releases.',
+    desc: 'Weekly demos on WhatsApp / video call. Code reviewed, tested, deployed to a staging link you can click on every Friday - no big-bang releases.',
     deliverables: ['Weekly Demos', 'Staging Link', 'WhatsApp Group'],
   },
   {
@@ -33,7 +33,7 @@ const steps = [
     phase: 'Launch',
     duration: 'Week 9',
     title: 'Go live, confidently.',
-    desc: 'Deploy to your hosting, connect your domain, set up analytics and basic monitoring — plus a handover walkthrough so your team owns the product.',
+    desc: 'Deploy to your hosting, connect your domain, set up analytics and basic monitoring - plus a handover walkthrough so your team owns the product.',
     deliverables: ['Deploy + Domain', 'Analytics', 'Handover Doc'],
   },
   {
@@ -41,7 +41,7 @@ const steps = [
     phase: 'Support & Growth',
     duration: 'Ongoing',
     title: 'Evolve, don’t erode.',
-    desc: 'Optional monthly retainer for bug fixes, small features, SEO and digital marketing — so your product keeps improving without scrambling for help.',
+    desc: 'Optional monthly retainer for bug fixes, small features, SEO and digital marketing - so your product keeps improving without scrambling for help.',
     deliverables: ['Monthly Retainer', 'Bug Fixes', 'Growth Work'],
   },
 ]
@@ -60,14 +60,14 @@ const OurProcess = () => {
       style={{ fontFamily: 'Inter, sans-serif' }}
     >
       <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10">
-        {/* ── EDITORIAL INTRO — two-column ───────────────── */}
+        {/* ── EDITORIAL INTRO - two-column ───────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-14 pb-10 lg:pb-14 border-b border-black/10">
           <div className="lg:col-span-7">
             <p
               className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
-              — Our Process
+              - Our Process
             </p>
 
             <h2
@@ -92,7 +92,7 @@ const OurProcess = () => {
               {/* Active marker on hover */}
               <span className="hidden lg:block absolute left-0 top-7 bottom-7 w-[2px] bg-[#097CF4] opacity-0 group-hover:opacity-100 transition-opacity"></span>
 
-              {/* LEFT — Number + phase meta */}
+              {/* LEFT - Number + phase meta */}
               <div className="lg:col-span-4 flex items-start gap-4 lg:pl-5">
                 <span
                   className="text-[72px] sm:text-[88px] lg:text-[100px] font-extrabold leading-[0.85] tracking-[-0.05em] text-black/[0.06] group-hover:text-[#097CF4]/30 transition-colors select-none"
@@ -105,7 +105,7 @@ const OurProcess = () => {
                     className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-1.5"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                   >
-                    — {s.phase}
+                    - {s.phase}
                   </p>
                   <p
                     className="text-[10px] font-bold uppercase tracking-[0.22em] text-black/45"
@@ -116,7 +116,7 @@ const OurProcess = () => {
                 </div>
               </div>
 
-              {/* MIDDLE — Title + description */}
+              {/* MIDDLE - Title + description */}
               <div className="lg:col-span-5">
                 <h3
                   className="text-[22px] sm:text-[26px] lg:text-[28px] font-extrabold text-black leading-[1.15] tracking-[-0.015em] mb-2.5"
@@ -129,13 +129,13 @@ const OurProcess = () => {
                 </p>
               </div>
 
-              {/* RIGHT — Deliverables */}
+              {/* RIGHT - Deliverables */}
               <div className="lg:col-span-3">
                 <p
                   className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2.5"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
                 >
-                  — Deliverables
+                  - Deliverables
                 </p>
                 <ul className="space-y-2">
                   {s.deliverables.map((d) => (
@@ -154,7 +154,7 @@ const OurProcess = () => {
           ))}
         </ol>
 
-        {/* ── BOTTOM CTA — editorial banner ────────────────── */}
+        {/* ── BOTTOM CTA - editorial banner ────────────────── */}
         <div className="mt-16 lg:mt-24 relative bg-black text-white overflow-hidden">
           <div className="absolute inset-0 opacity-[0.07] pointer-events-none"
             style={{
@@ -165,7 +165,7 @@ const OurProcess = () => {
           ></div>
 
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 lg:p-14">
-            {/* Left — number */}
+            {/* Left - number */}
             <div className="lg:col-span-2 flex items-start">
               <span
                 className="text-[64px] lg:text-[88px] font-extrabold leading-[0.85] tracking-[-0.04em] text-[#097CF4]"
@@ -176,7 +176,7 @@ const OurProcess = () => {
               </span>
             </div>
 
-            {/* Middle — content */}
+            {/* Middle - content */}
             <div className="lg:col-span-7">
               <p
                 className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#097CF4] mb-3"
@@ -192,11 +192,11 @@ const OurProcess = () => {
                 <span className="italic text-[#097CF4]">7 days from today.</span>
               </h4>
               <p className="mt-3 text-[14px] leading-[1.65] text-white/65 max-w-[560px]">
-                Book a 30-minute discovery call. We'll scope the problem, agree on a timeline, and send a fixed quote — no obligations.
+                Book a 30-minute discovery call. We'll scope the problem, agree on a timeline, and send a fixed quote - no obligations.
               </p>
             </div>
 
-            {/* Right — CTA */}
+            {/* Right - CTA */}
             <div className="lg:col-span-3 flex lg:items-end lg:justify-end">
               <Link
                 to="/contact"

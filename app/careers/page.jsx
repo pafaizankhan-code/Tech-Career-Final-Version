@@ -6,7 +6,7 @@ const BRAND = 'Tech Career IT Solutions LLP'
 export const metadata = {
   title: 'Careers in Ahmedabad',
   description:
-    'Join Tech Career IT Solutions LLP — open roles and internships in Ahmedabad across web development, mobile app development, software engineering, design and digital marketing.',
+    'Join Tech Career IT Solutions LLP - open roles and internships in Ahmedabad across web development, mobile app development, software engineering, design and digital marketing.',
   keywords: [
     'web developer jobs Ahmedabad', 'React developer jobs Ahmedabad',
     'Next.js developer jobs India', 'mobile app developer jobs Ahmedabad',
@@ -16,7 +16,7 @@ export const metadata = {
   ],
   alternates: { canonical: '/careers' },
   openGraph: {
-    title: 'Careers at Tech Career IT Solutions LLP — Ahmedabad',
+    title: 'Careers at Tech Career IT Solutions LLP - Ahmedabad',
     description:
       'Open engineering, design and marketing roles at Tech Career IT Solutions LLP, Ahmedabad. Apply now.',
     url: `${SITE_URL}/careers`,

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Seo, { buildBreadcrumbJsonLd, buildPersonJsonLd, SITE } from '../components/Seo'
+import { buildBreadcrumbJsonLd, buildPersonJsonLd, SITE } from '../components/Seo'
 import AboutHero from '../components/about/AboutHero'
 import OurStory from '../components/about/OurStory'
 import MissionVision from '../components/about/MissionVision'
@@ -18,7 +18,7 @@ const aboutJsonLd = {
   name: 'About Tech Career IT Solutions LLP',
   url: `${SITE.baseUrl}/about`,
   description:
-    'Meet Tech Career IT Solutions LLP — a new, founder-led web development, e-commerce and digital marketing studio based in Ahmedabad, India. Our story, mission, values and team.',
+    'Meet Tech Career IT Solutions LLP - a new, founder-led web development, e-commerce and digital marketing studio based in Ahmedabad, India. Our story, mission, values and team.',
   mainEntity: { '@id': `${SITE.baseUrl}/#organization` },
   breadcrumb: buildBreadcrumbJsonLd([
     { name: 'Home', path: '/' },
@@ -26,7 +26,7 @@ const aboutJsonLd = {
   ]),
 }
 
-// Person JSON-LD for the leadership team — supports Google "Knowledge" and employee rich results.
+// Person JSON-LD for the leadership team - supports Google "Knowledge" and employee rich results.
 const leadershipJsonLd = [
   buildPersonJsonLd({
     id: `${SITE.baseUrl}/about#founder`,
@@ -49,12 +49,9 @@ const leadershipJsonLd = [
 
 const About = () => (
   <>
-    <Seo
-      title="About Us | Web Development Agency in Ahmedabad"
-      description="Meet Tech Career IT Solutions — a founder-led Ahmedabad studio building custom websites, e-commerce, CRM/HRMS, mobile apps & digital marketing."
-      canonical="https://www.techcareer.site/about"
-      ogType="article"
-      jsonLd={aboutJsonLd}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
     />
     {/* Person JSON-LD for each leader */}
     {leadershipJsonLd.map((ld, i) => (
