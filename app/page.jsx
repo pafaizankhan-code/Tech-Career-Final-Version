@@ -5,7 +5,7 @@ const BRAND = 'Tech Career IT Solutions LLP'
 
 export const metadata = {
   title: {
-    absolute: 'Tech Career IT Solutions LLP — Web & App Agency, Ahmedabad',
+    absolute: 'Tech Career IT Solutions LLP - Web & App Agency, Ahmedabad',
   },
   description:
     'Tech Career IT Solutions LLP - Ahmedabad-based company for custom websites, custom software, custom mobile apps, e-commerce, CRM/HRMS and digital marketing. SEO-ready builds, transparent pricing, founder-led delivery.',
